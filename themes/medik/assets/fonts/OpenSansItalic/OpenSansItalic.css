@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'OpenSansItalic';
+    src: url('OpenSansItalic/OpenSansItalic.eot');
+    src: url('OpenSansItalic/OpenSansItalic.eot') format('embedded-opentype'),
+         url('OpenSansItalic/OpenSansItalic.woff2') format('woff2'),
+         url('OpenSansItalic/OpenSansItalic.woff') format('woff'),
+         url('OpenSansItalic/OpenSansItalic.ttf') format('truetype'),
+         url('OpenSansItalic/OpenSansItalic.svg#OpenSansItalic') format('svg');
+}

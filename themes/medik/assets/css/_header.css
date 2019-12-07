@@ -1,0 +1,211 @@
+/**
+Start header
+*/
+header .header{
+	padding: 15px 0 0;
+}
+header .hdr-lft-con{
+	float: left;
+	width: 20%;
+}
+header .logo a{
+	display: inline-block;
+	vertical-align: baseline;
+	text-decoration: none;
+}
+header .hdr-top-contact{
+	float: right;
+}
+header .hdr-rgt-con{
+	float: right;
+	width: 80%;
+}
+header .hdr-contact{
+	float: right;
+}
+header .hdr-address-innr{
+	float: right;
+}
+header nav.main-nav {
+	float: right;
+	margin-top: 25px;
+}
+header nav.main-nav ul{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+header nav.main-nav ul li{
+	position: relative;
+	padding-bottom: 16px;
+}
+header nav.main-nav > ul{
+	float: right;
+}
+header nav.main-nav > ul{
+	margin-left: -9px;
+	margin-right: -9px;
+}
+header nav.main-nav > ul > li{
+	float:left;
+	margin: 0 10px;
+	font-size: 17px;
+	line-height: 18px;
+	 font-family: 'LatoBold';
+	 position: relative;
+}
+header nav.main-nav > ul > li::after {
+	content: "";
+	position: absolute;
+	background: #f1dbd0;
+	width: 1px;
+	height: 14px;
+	right: -10px;
+	top: 3px;
+}
+header nav.main-nav > ul > li:nth-child(5)::after{
+	height:0 !important;
+}
+header nav.main-nav > ul > li > a{
+	display: inline-block;
+	vertical-align: baseline;
+	color:#005696;
+	text-decoration: none;
+	text-transform: uppercase;
+	padding-bottom:8px;
+	position: relative;
+}
+
+.header nav.main-nav > ul > li > a::before {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 100%;
+	background: #00adef;
+	height: 1px;
+	width: 0;
+	transition: width .3s;
+	-ms-transition: width .3s;
+	-webkit-transition: width .3s;
+	visibility: hidden;
+}
+
+header nav.main-nav > ul > li a:hover::before {
+	width: 100%;
+	visibility: visible;
+}
+header nav.main-nav > ul > li.menu-item-has-children a:hover::before{
+	width: 0 !important;
+}
+header nav.main-nav > ul > li.current-menu-item:hover::before{
+	content: none;
+}
+
+/*
+-------
+Sub menu
+-------
+*/
+nav.main-nav li.menu-item-has-children > ul.sub-menu{
+	position: absolute;
+	top: 100%;
+	background: #f7fafc;
+	width: 235px;
+	left: 0;
+	z-index: 999999;
+	padding: 30px 30px 48px 30px;
+	top: 100%;
+	transform:translateY(-20px);
+	-ms-transform:translateY(-20px);
+	-webkit-transform:translateY(-20px);
+	-o-transform:translateY(-20px);
+	transition: all .5s;
+	-ms-transition: all .5s;
+	-webkit-transition: all .5s;
+	border-top: 2px solid #00adef;
+	visibility: hidden;
+	opacity: 0;
+}
+
+nav.main-nav li.menu-item-has-children:hover > ul.sub-menu {
+    visibility: visible;
+    opacity: 1;
+    z-index: 9;
+    -ms-transform: translateY(0%);
+    -webkit-transform: translateY(0%);
+    transform: translateY(0%);
+    -webkit-transition-delay: 0s, 0s, 0.3s;
+    -ms-transition-delay: 0s, 0s, 0.3s;
+    transition-delay: 0s, 0s, 0.3s;
+}
+
+nav.main-nav ul li.menu-item-has-children ul li a{
+	display:block;
+	color: inherit;
+	padding: 10px;
+}
+nav.main-nav ul li.menu-item-has-children ul{
+	padding: 10px 15px;
+}
+nav.main-nav ul li.menu-item-has-children ul li{
+	padding: 5px 0;
+	width: 100%;
+	text-align: left;
+	margin-bottom: 8px;
+	text-transform: capitalize;
+	position: relative;
+}
+
+nav.main-nav > ul > li.menu-item-has-children  > a{
+	margin-bottom: 0;
+	position: relative;
+}
+nav.main-nav > ul > li.menu-item-has-children{
+	padding-right: 18px;
+	
+}
+nav.main-nav > ul > li.menu-item-has-children > a:after{
+	content: "\f107";
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+/*--adjust as necessary--*/
+    color: #2fbcf2;
+    font-size: 18px;
+    position: absolute;
+    top:0;
+    right:-18px;
+
+}
+nav.main-nav > ul > li.menu-item-has-children:hover > a:after{
+	content: "\f106";
+}
+
+nav.main-nav li.menu-item-has-children ul.sub-menu a{
+	padding: 2px 0;
+	font-size: 15px;
+	line-height: 16px;
+	transition: none;
+	color: #000;
+	text-decoration: none;
+}
+nav.main-nav > ul > li:hover  a{
+	color: #ff681d;
+}
+nav.main-nav ul li.current-menu-item a{
+	color: #ff681d;
+}
+nav.main-nav ul li.current_page_item > a:before{
+	width: 100%;
+	visibility: visible;
+}
+nav.main-nav li.menu-item-has-children ul.sub-menu a:hover{
+	color:#ff681d;
+}
+nav.main-nav ul li.menu-item-has-children ul li:last-child{
+	margin-bottom: 0;
+}
+nav.main-nav ul li.current-menu-item a{
+	 font-family: 'LatoBold';
+}
