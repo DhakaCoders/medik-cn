@@ -44,6 +44,23 @@ if( $('.main-slider').length ){
     });
 }
 
+if( $('.hm-service-slider').length ){
+    $('.hm-service-slider').slick({
+      pauseOnHover: false,
+      autoplay: false,
+      autoplaySpeed: 6000,
+      dots: true,
+      infinite: false,
+      arrows:true,
+      speed: 1000,
+      slidesToShow: 3,
+      slidesToScroll: 3,
+      fade: true,
+      prevArrow: $('.sersliderarrows .leftArrow'),
+      nextArrow: $('.sersliderarrows .rightArrow'),
+    });
+}
+
 
 /**
 Slick slider
