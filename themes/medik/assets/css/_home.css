@@ -389,3 +389,201 @@ hm-service-sec-wrp
 	background-position: center center;
 	background-repeat: no-repeat;
 }
+
+/*
+---------------------
+hm-campaign-grid-sec-wrp
+---------------------
+*/
+.hm-campaign-grid-sec-wrp{
+	background: url(../images/hm-campaign-grid-sec-bg.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+	padding-top: 55px;
+}
+.hm-campaign-grid-lft-con{
+	width: 50%;
+	float: left;
+}
+.hm-campaign-grid-rgt-con{
+	width: 50%;
+	float: right;
+	padding-left: 15px;
+}
+.hm-campaign-grid-rgt-wrp{
+	background: #fff;
+	padding: 62px 20px 20px 35px;
+	position: relative;
+}
+.hm-campaign-tp-head h3{
+	margin: 0;
+	font-family: 'OpenSans-Italic';
+	font-style: italic;
+	color: #0e857b;
+	margin-bottom: 5px;
+	text-align: center;
+}
+.hm-campaign-tp-head h4{
+	margin: 0;
+	font-size: 31px;
+	line-height: 33px;
+	color: #fd6607;
+	font-family: 'OpenSans-ExtraboldItalic';
+	text-transform: uppercase;
+	text-align: center;
+}
+.hm-campaign-tp-head{
+	padding-bottom: 30px;
+}
+.hm-campaign-tp-head span {
+    position: absolute;
+    top: -45px;
+    left: 50%;
+    transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+}
+.opc-progress-bar-innr {
+    max-width: 330px;
+    width: 100%;
+    display: table;
+    position: relative;
+    margin: 0 auto;
+    margin-bottom: 40px;
+}
+.opc-progress-bar-innr:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 15px;
+    max-width: 330px;
+    width: 100%;
+    height: 1px;
+    background: #eef1f7;
+}
+.opc-progress-bar{
+	float: left;
+	width: 33.3333%;
+}
+.opc-progress-bar:last-of-type{
+	float: right;
+	width: 0;
+}
+.opc-progress-bar span {
+    width: 30px;
+    height: 30px;
+    background: #eef1f7;
+    display: inline-block;
+    vertical-align: baseline;
+    border-radius: 50px;
+    font-size: 15px;
+    line-height: 30px;
+    color: #c7cad1;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+.opc-progress-bar span.active{
+	background: #0e857b;
+	color: #fff;
+}
+.opc-progress-bar-dsc{
+	text-align: center;
+	font-size: 17px;
+	line-height: 22px;
+	padding-bottom: 15px;
+}
+.singup-form-fields{
+	margin: 0 -5px;
+	margin-bottom: 10px;
+}
+.singup-form-field{
+	float: left;
+	width: 50%;
+	padding: 0 5px;
+}
+.singup-form-field input[type="number"],
+.singup-form-field input[type="text"]{
+	width: 100%;
+	height: 55px;
+	background: #fbfbfb;
+	padding: 15px 15px;
+	font-family: 'OpenSans-Light';
+	font-size: 16px;
+	line-height: 18px;
+}
+.submit-btn{
+	max-width: 278px;
+	width: 100%;
+	height: 58px;
+	margin: 0 auto;
+	position: relative;
+	margin-top: 30px;
+}
+.submit-btn:after{
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	background: url(../images/submit-btn-bg.png);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	background-position: center center;
+	z-index: 0;
+}
+.submit-btn input[type="submit"] {
+    width: 100%;
+    height: 58px;
+    background: transparent;
+    position: relative;
+    z-index: 1;
+    color: #ffe4c8;
+    font-size: 25px;
+    line-height: 27px;
+    text-transform: uppercase;
+    font-family: 'OpenSans-Italic';
+    font-style: italic;
+    padding-right: 30px;
+    background: url(../images/main-slider-btn-angle.png);
+    background-repeat: no-repeat;
+    background-position: top 19px right 35px;
+}
+
+.singup-form-field input[type="text"]::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color:#0e857b;
+  opacity: 1;
+}
+.singup-form-field input[type="text"]::-moz-placeholder { /* Firefox 19+ */
+  color:#0e857b;
+  opacity: 1;
+}
+.singup-form-field input[type="text"]:-ms-input-placeholder { /* IE 10+ */
+  color:#0e857b;
+  opacity: 1;
+}
+.singup-form-field input[type="text"]:-moz-placeholder { /* Firefox 18- */
+  color:#0e857b;
+  opacity: 1;
+}
+
+
+.singup-form-field input[type="number"]::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color:#0e857b;
+  opacity: 1;
+}
+.singup-form-field input[type="number"]::-moz-placeholder { /* Firefox 19+ */
+  color:#0e857b;
+  opacity: 1;
+}
+.singup-form-field input[type="number"]:-ms-input-placeholder { /* IE 10+ */
+  color:#0e857b;
+  opacity: 1;
+}
+.singup-form-field input[type="number"]:-moz-placeholder { /* Firefox 18- */
+  color:#0e857b;
+  opacity: 1;
+}
