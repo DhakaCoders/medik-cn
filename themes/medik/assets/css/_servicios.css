@@ -31,6 +31,8 @@
 	background-position: center center;
 	background-repeat: no-repeat;
 	position: relative;
+	text-align: center;
+	color:#fff;
 	display: flex; 
 	align-items: center;
 	justify-content: center;
@@ -38,12 +40,12 @@
 
 .llevamosSlider-item ul li span{
 	display: block;
-	
-
+	font-family: 'OpenSans-Italic';
 }
 .llevamosSlider-item ul li strong{
 	display: block;
-	 font-family: "OpenSans-BoldItalic";
+	font-weight: normal;
+	font-family: "OpenSans-BoldItalic";
 }
 
 
