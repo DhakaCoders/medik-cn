@@ -135,11 +135,11 @@ if( $('.responsive-slider').length ){
 
 
 //accordion
-if ($('.pro-accordion').length){
-  $('.pro-accordion .pro-accordion-title').on('click', function(){
+if ($('.servicios-accordion').length){
+  $('.servicios-accordion .servicios-accordion-title').on('click', function(){
     $(this).parent().siblings().removeClass('active');
-    $(this).next('.pro-accordion-des').slideToggle();
-    $(this).parent().siblings().find('.pro-accordion-des').slideUp();
+    $(this).next('.servicios-accordion-des').slideToggle();
+    $(this).parent().siblings().find('.servicios-accordion-des').slideUp();
     $(this).parent().toggleClass('active');
   });
 }

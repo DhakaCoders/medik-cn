@@ -105,6 +105,8 @@
 .servicios-content-des ul li:last-child{
 	margin-bottom: 0;
 }
+
+.servicios-accordion-des ul li:after,
 .servicios-content-des ul li:after{
 	content: "";
     position: absolute;
@@ -117,8 +119,94 @@
     top: 3px;
 }
 
+.servicios-accordion{
 
+}
+.servicios-accordion-con{
+	border-left: 3px solid #0000;
+	background: #fafbfc;
+	padding-left: 25px;
+	padding-bottom: 10px;
+	cursor: pointer;
+	margin-bottom: 2px;
+}
+.servicios-accordion-con.active{
+	border-left: 3px solid #0e857b;
+	background: #fffbf8;
+}
+.servicios-accordion-title{
+	position: relative;
+	padding-left: 50px;
+	padding-top: 25px;
+	padding-bottom: 15px;
+}
+.servicios-accordion-title:after{	
+	content: "";
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    background-image: url(../images/accordion-dwn-inc.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    right: 0;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	   -moz-transform: translateY(-50%);
+	    -ms-transform: translateY(-50%);
+	     -o-transform: translateY(-50%);
+	        transform: translateY(-50%);
+}
+.servicios-accordion-con.active .servicios-accordion-title:after{	
+	content: "";
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    background-image: url(../images/accordion-up-inc.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    right: 0;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	   -moz-transform: translateY(-50%);
+	    -ms-transform: translateY(-50%);
+	     -o-transform: translateY(-50%);
+	        transform: translateY(-50%);
+}
+.servicios-accordion-title:after{	
+    background-image: url(../images/accordion-dwn-inc.png);
+    background-repeat: no-repeat;
+}
+.servicios-accordion-title i{
+	position: absolute;
+	left: 0;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	   -moz-transform: translateY(-50%);
+	    -ms-transform: translateY(-50%);
+	     -o-transform: translateY(-50%);
+	        transform: translateY(-50%);
+}
+.servicios-accordion-title h4{
+	margin-bottom: 0;
+}
+.servicios-accordion-des{
+	display: none;
+}
+.servicios-accordion-con.active .servicios-accordion-des{
+	display: block;
+}
 
+.servicios-accordion-des{
+	padding-bottom: 20px;
+}
+.servicios-accordion-des ul {
+	padding-left: 47px;
+}
+.servicios-accordion-des ul li{
+	position: relative;
+	padding-left:25px;
+	margin-bottom: 6px;
+}
 
 
 
