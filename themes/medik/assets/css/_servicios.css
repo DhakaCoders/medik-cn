@@ -4,6 +4,55 @@
 
 
 
+.servicios-content{
+	width:72.72%;
+	float: left;
+}
+
+.servicios-siderbar{
+	width:27.28%;
+	float: left;
+	padding-left: 32px;
+}
+.llevamosSlider{
+
+	background-size: cover !important;
+	background-position: center center !important;
+	background-repeat: no-repeat !important;
+	padding: 20px 60px 65px;
+	border-radius: 20px 0 20px 0;
+}
+.llevamosSlider-item ul li{
+	width: 50%;
+	float: left;
+	min-height:67px;
+	background-image: url(../images/llevamosSlider-line-bg.png);
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+	position: relative;
+	display: flex; 
+	align-items: center;
+	justify-content: center;
+}
+
+.llevamosSlider-item ul li span{
+	display: block;
+	
+
+}
+.llevamosSlider-item ul li strong{
+	display: block;
+	 font-family: "OpenSans-BoldItalic";
+}
+
+
+
+
+
+
+
+
 
 
 
