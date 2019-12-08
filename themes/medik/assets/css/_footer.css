@@ -1,4 +1,143 @@
 
+.footer-wrap{
+	color:#FFF;
+}
+.ftr-main{
+	background-size: cover !important;
+	background-position: center center !important;
+	background-repeat: no-repeat !important;
+}
+.ftr-innr{
+	position: relative;
+}
+.ftr-head {
+	position: relative;
+	padding: 12px 0 30px;
+}
+.ftr-head h2{
+	font-family: 'OpenSansItalic';
+	text-transform: uppercase;
+}
+.ftr-head:after{
+	content: "";
+    position: absolute;
+    width: 278px;
+    height: 19px;
+    background-image: url(../images/ftr-head-img.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    left: 50%;
+    bottom: 12px;
+	-webkit-transform: translateX(-50%);
+	-ms-transform: translateX(-50%);
+	transform: translateX(-50%);
+}
+.ftr-head h2 span{
+	font-family: 'OpenSansExtraboldItalic';
+}
+.ftr-col-wrp{
+	padding-left: 28px;
+	padding-bottom: 10px;
+}
+.ftr-col{
+	float: left;
+}
+.ftr-col-1{
+	width:26.84%;
+	padding: 10px 22px 0;
+}
+.ftr-col-2{
+	width:39.43%;
+	padding: 30px 50px 0;
+}
+.ftr-col-3{
+	width:33.73%;
+}
+.ftr-col-1 a.ftr-logo{
+	display: inline-block;
+	vertical-align: baseline;
+	max-width: 230px;
+	margin-bottom: 28px;
+}
+.ftr-col-1 a img{
+	width: 100%;
+}
+
+.ftr-col-2 li{
+	margin-bottom: 18px;
+}
+.ftr-col-2 li a{
+	display: inline-block;
+	vertical-align: baseline;
+	color:#fff;
+}
+.ftr-col-2 li strong{
+	display: inline-block;
+	vertical-align: baseline;
+	font-family: "OpenSans-Bold";
+	margin-bottom: 5px;
+}
+.ftr-col-2 li span{
+	display: inline-block;
+	vertical-align: baseline;
+}
+.ftr-col-2 li span em{
+	display: inline-block;
+	vertical-align: baseline;/*
+	font-family: 'OpenSansItalic';*/
+}
+.ftr-social a{
+	display: inline-block;
+	vertical-align: baseline;
+	margin-right: 15px;
+	max-width: 50px;
+	margin-right: 6px;
+}
+.ftr-social a img{
+	width:100%;
+}
+.ftr-col-3 p{
+	font-size:20px;
+	margin-bottom: 0;
+}
+.ftr-col-3 p span{
+	font-size:14px;
+}
+
+#ftr-map{
+	position: relative;
+	min-height: 300px;
+}
+
+
+
+
+
+
+.ftr-btm-con{
+	background: #008175;
+	padding: 13px 15px;
+}
+
+.ftr-btm-con span{
+	font-size: 14px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
