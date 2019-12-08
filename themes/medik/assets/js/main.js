@@ -65,13 +65,14 @@ if( $('.hm-service-slider').length ){
 /**
 Slick slider
 */
-if( $('.responsive-slider').length ){
-    $('.responsive-slider').slick({
+if( $('.llevamosSlider').length ){
+    $('.llevamosSlider').slick({
       dots: true,
       infinite: false,
       speed: 300,
-      slidesToShow: 4,
-      slidesToScroll: 4,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      dots: true,
       responsive: [
         {
           breakpoint: 1024,
@@ -102,6 +103,47 @@ if( $('.responsive-slider').length ){
       ]
     });
 }
+
+
+
+
+
+
+/*
+  Proshanto
+*/
+
+/**
+Slick slider
+*/
+if( $('.responsive-slider').length ){
+    $('.responsive-slider').slick({
+      pauseOnHover: false,
+      autoplay: false,
+      autoplaySpeed: 6000,
+      dots: true,
+      infinite: false,
+      arrows:true,
+      speed: 1000,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      fade: true,
+      //prevArrow: $('.sersliderarrows .leftArrow'),
+      //nextArrow: $('.sersliderarrows .rightArrow'),
+    });
+}
+
+
+//accordion
+if ($('.pro-accordion').length){
+  $('.pro-accordion .pro-accordion-title').on('click', function(){
+    $(this).parent().siblings().removeClass('active');
+    $(this).next('.pro-accordion-des').slideToggle();
+    $(this).parent().siblings().find('.pro-accordion-des').slideUp();
+    $(this).parent().toggleClass('active');
+  });
+}
+
 
     new WOW().init();
 
