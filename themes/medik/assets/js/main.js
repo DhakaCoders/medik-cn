@@ -27,6 +27,24 @@ var windowWidth = $(window).width();
 //$("[data-fancybox]").fancybox({});
 
 
+if( $('.main-slider').length ){
+    $('.main-slider').slick({
+      pauseOnHover: false,
+      autoplay: false,
+      autoplaySpeed: 6000,
+      dots: false,
+      infinite: false,
+      arrows:true,
+      speed: 1000,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      fade: true,
+      prevArrow: $('.mainsliderarrows .leftArrow'),
+      nextArrow: $('.mainsliderarrows .rightArrow'),
+    });
+}
+
+
 /**
 Slick slider
 */

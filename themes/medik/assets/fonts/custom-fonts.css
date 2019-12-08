@@ -1,5 +1,5 @@
 @font-face {
-    font-family: 'OpenSansRegular';
+    font-family: 'OpenSans-Regular';
     src: url('OpenSans-Regular/OpenSansRegular.eot');
     src: url('OpenSans-Regular/OpenSansRegular.eot') format('embedded-opentype'),
          url('OpenSans-Regular/OpenSansRegular.woff2') format('woff2'),
@@ -11,7 +11,7 @@
 }
 
 @font-face {
-    font-family: 'OpenSansLight';
+    font-family: 'OpenSans-Light';
     src: url('OpenSans-Light/OpenSansLight.eot');
     src: url('OpenSans-Light/OpenSansLight.eot') format('embedded-opentype'),
          url('OpenSans-Light/OpenSansLight.woff2') format('woff2'),
@@ -23,7 +23,7 @@
 }
 
 @font-face {
-    font-family: 'OpenSansItalic';
+    font-family: 'OpenSans-Italic';
     src: url('OpenSans-Italic/OpenSansItalic.eot');
     src: url('OpenSans-Italic/OpenSansItalic.eot') format('embedded-opentype'),
          url('OpenSans-Italic/OpenSansItalic.woff2') format('woff2'),
@@ -35,7 +35,7 @@
 }
 
 @font-face {
-    font-family: 'OpenSansSemibold';
+    font-family: 'OpenSans-Semibold';
     src: url('OpenSans-Semibold/OpenSansSemibold.eot');
     src: url('OpenSans-Semibold/OpenSansSemibold.eot') format('embedded-opentype'),
          url('OpenSans-Semibold/OpenSansSemibold.woff2') format('woff2'),
@@ -47,7 +47,7 @@
 }
 
 @font-face {
-  font-family: 'OpenSansLightItalic';
+  font-family: 'OpenSans-LightItalic';
   src:  url('OpenSans-LightItalic/OpenSansLightItalic.eot?#iefix') format('embedded-opentype'), 
         url('OpenSans-LightItalic/OpenSansLightItalic.woff') format('woff'),
         url('OpenSans-LightItalic/OpenSansLightItalic.ttf')  format('truetype'),
@@ -67,7 +67,17 @@
 }
 
 @font-face {
-  font-family: 'OpenSansExtraboldItalic';
+    font-family: 'OpenSans-SemiboldItalic';
+    src: url('OpenSans-SemiboldItalic/OpenSansSemiboldItalic.eot');
+    src: url('OpenSans-SemiboldItalic/OpenSansSemiboldItalic.eot') format('embedded-opentype'),
+         url('OpenSans-SemiboldItalic/OpenSansSemiboldItalic.woff2') format('woff2'),
+         url('OpenSans-SemiboldItalic/OpenSansSemiboldItalic.woff') format('woff'),
+         url('OpenSans-SemiboldItalic/OpenSansSemiboldItalic.ttf') format('truetype'),
+         url('OpenSans-SemiboldItalic/OpenSansSemiboldItalic.svg#OpenSansSemiboldItalic') format('svg');
+}
+
+@font-face {
+  font-family: 'OpenSans-ExtraboldItalic';
   	src:  url('OpenSans-ExtraboldItalic/OpenSansExtraboldItalic.eot?#iefix') format('embedded-opentype'), 
           url('OpenSans-ExtraboldItalic/OpenSansExtraboldItalic.woff') format('woff'),
         	url('OpenSans-ExtraboldItalic/OpenSansExtraboldItalic.ttf')  format('truetype'),

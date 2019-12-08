@@ -1,0 +1,159 @@
+/*
+------------------
+main-slider-sec-wrp
+------------------
+*/
+.main-slider-sec-wrp{
+	margin-top: 75px;
+	background: url(../images/main-slider-sec-bg.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: 100% 100%;
+	min-height: 515px;
+	padding-top: 140px;
+	position: relative;
+}
+.main-slide-item-dsc{
+	max-width: 565px;
+	width: 100%;
+}
+.main-slide-item-dsc h2{
+	margin: 0;
+	font-family: 'OpenSans-LightItalic';
+	color: #0e857b;
+	text-transform: uppercase;
+	margin-bottom: 8px;
+}
+.main-slide-item-dsc h2 span{
+	display: inline-block;
+	vertical-align: baseline;
+	font-family: 'OpenSans-ExtraboldItalic';
+	color: #fd6607;
+}
+.main-slide-item-dsc h1 {
+    margin: 0;
+    font-family: 'OpenSans-Italic';
+    font-style: italic;
+    color: #414141;
+    line-height: 47px;
+    padding-bottom: 27px;
+    margin-bottom: 3px;
+    text-transform: uppercase;
+    position: relative;
+}
+.main-slide-item-dsc h1:after{
+	content: "";
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	background: url(../images/btm-border-img.png);
+	background-repeat: no-repeat;
+	background-size: 157px 19px;
+	width: 157px;
+	height: 19px;
+}
+.main-slide-item-dsc p{
+    font-size: 18px;
+    line-height: 28px;
+    padding-right: 20px;
+    text-align: left;
+    margin-bottom: 16px;
+}
+.main-slide-item-dsc a{
+	display: inline-block;
+	vertical-align: baseline;
+	text-decoration: none;
+	font-size: 25px;
+	line-height: 27px;
+	font-family: 'OpenSans-Italic';
+	font-style: italic;
+	color: #fff;
+	text-transform: uppercase;
+	position: relative;
+	z-index: 1;
+	padding: 16px 65px 17px 50px;
+}
+.main-slide-item-dsc a:before{
+	content: "";
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	background: url(../images/main-slider-btn-bg.png);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	background-position: center center;
+	z-index: -1;
+}
+.main-slide-item-dsc a:after {
+    content: "";
+    position: absolute;
+    right: 35px;
+    top: 21px;
+    bottom: 0;
+    background: url(../images/main-slider-btn-angle.png);
+    background-repeat: no-repeat;
+    background-size: 20px 20px;
+    background-position: center center;
+    z-index: -1;
+    width: 20px;
+    height: 20px;
+}
+.main-slider .main-slide-item{
+	display: none;
+}
+.main-slider .main-slide-item:first-child{
+	display: block;
+}
+.main-slider.slick-initialized .main-slide-item{
+	display: block;
+}
+.main-slider .slick-dotted.slick-slider {
+	margin-bottom: 0;
+}
+
+/*
+-----------------------------
+ Main Slider Next Prev css
+------------------------------
+*/
+.mainsliderarrows .leftArrow{
+	position: absolute;
+	left:25px;
+	top: 63%;
+	-ms-transform: translateY(-50%);
+	-webkit-transform: translateY(-50%);
+	transform: translateY(-50%);
+	z-index: 5;
+}
+.mainsliderarrows .rightArrow{
+	position: absolute;
+	right:25px;
+	top: 63%;
+	-ms-transform: translateY(-50%);
+	-webkit-transform: translateY(-50%);
+	transform: translateY(-50%);
+	z-index: 5;	
+}
+.mainsliderarrows .leftArrow,
+.mainsliderarrows .rightArrow {
+	display: block;
+	height: 46px;
+	width: 46px;
+	cursor: pointer;
+	color: #fd6406;
+	text-align: center;
+	font-size: 29px;
+	line-height: 34px;
+	border:4px solid #0e857b;
+	border-radius: 50px;
+}
+.mainsliderarrows .rightArrow:hover,
+.mainsliderarrows .leftArrow:hover{
+	color: #0e857b;
+	border-color: #fd6406;
+	transition: all 0.5s;
+	-ms-transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+}
