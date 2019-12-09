@@ -93,12 +93,12 @@
 
 @font-face {
     font-family: 'OpenSans-SemiboldItalic';
-    src: url('OpenSans-SemiboldItalic/OpenSansSemiboldItalic.eot');
-    src: url('OpenSans-SemiboldItalic/OpenSansSemiboldItalic.eot') format('embedded-opentype'),
-         url('OpenSans-SemiboldItalic/OpenSansSemiboldItalic.woff2') format('woff2'),
-         url('OpenSans-SemiboldItalic/OpenSansSemiboldItalic.woff') format('woff'),
-         url('OpenSans-SemiboldItalic/OpenSansSemiboldItalic.ttf') format('truetype'),
-         url('OpenSans-SemiboldItalic/OpenSansSemiboldItalic.svg#OpenSansSemiboldItalic') format('svg');
+    src: url('OpenSans-SemiboldItalic/OpenSans-SemiboldItalic.eot');
+    src: url('OpenSans-SemiboldItalic/OpenSans-SemiboldItalic.eot') format('embedded-opentype'),
+         url('OpenSans-SemiboldItalic/OpenSans-SemiboldItalic.woff2') format('woff2'),
+         url('OpenSans-SemiboldItalic/OpenSans-SemiboldItalic.woff') format('woff'),
+         url('OpenSans-SemiboldItalic/OpenSans-SemiboldItalic.ttf') format('truetype'),
+         url('OpenSans-SemiboldItalic/OpenSans-SemiboldItalic.svg#OpenSansSemiboldItalic') format('svg');
 }
 
 @font-face {
