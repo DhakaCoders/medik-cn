@@ -30,13 +30,14 @@ header .hdr-address {
     padding-left: 13px;
     padding-top: 15px;
 }
-header .hdr-address span{
+header .hdr-address a{
     display: block;
     font-size: 13px;
     line-height: 16px;
     text-align: left;
     font-family: 'OpenSans-LightItalic';
     color: #0e857b;
+    text-decoration: none;
 }
 header .hdr-address span a{
 	color: #262626;
@@ -156,13 +157,12 @@ Sub menu
 */
 nav.main-nav li.menu-item-has-children > ul.sub-menu {
     position: absolute;
-    top: 100%;
+    top: 60px;
     background: #f7fafc;
     width: 200px;
     left: 0;
     z-index: 999999;
     padding: 30px 20px 30px 20px;
-    top: 100%;
     transform: translateY(-20px);
     -ms-transform: translateY(-20px);
     -webkit-transform: translateY(-20px);
