@@ -5,7 +5,7 @@ $('.navbar-toggle').on('click', function(){
 });
 
 	
-
+ 
 /**
 Responsive on 767px
 */
