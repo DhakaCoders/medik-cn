@@ -4,7 +4,7 @@ $('.navbar-toggle').on('click', function(){
 	$('#mobile-nav').slideToggle(300);
 });
 	
-
+ 
 /**
 Responsive on 767px
 */

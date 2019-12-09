@@ -1,0 +1,155 @@
+
+
+
+.citas-main-sec{
+	background: #f8f8f8;
+}
+.citas-main-sec-innr{
+	max-width:980px;
+	margin: 0 auto;
+}
+.citas-main-lft{
+	width:63.26%;
+	float: left;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+.citas-main-rgt{
+	width:36.74%;
+	float: left;
+}
+.citas-main-lft-innr{
+	max-width: 392px;
+}
+.citas-main-lft-innr > i{
+	max-width: 390px;
+}
+.citas-main-lft-innr > i{
+	width:100%;
+}
+
+
+.citas-main-lft-innr ul{
+	margin-top: 5px;
+}
+.citas-main-lft-innr li{
+	margin-bottom: 18px;
+	font-size: 17px;
+}
+
+.citas-main-lft-innr li a{
+	display: inline-block;
+	vertical-align: baseline;
+	color:#464646;
+	font-size: 17px;
+}
+.citas-main-lft-innr li a.tel{
+	color:#008175;
+	font-family: "Lato-BoldItalic";
+}
+.citas-main-lft-innr li a:hover{
+	color:#fa6405;
+}
+.citas-main-lft-innr li strong{
+	display: inline-block;
+	vertical-align: baseline;
+	font-family: "Lato-Black";
+	margin-bottom: 5px;
+	font-weight: normal;
+	color:#fa6405;
+	font-size: 17px;
+}
+.citas-main-lft-innr li span{
+	display: inline-block;
+	vertical-align: baseline;
+	color:#464646;
+	font-size: 17px;
+}
+.citas-main-lft-innr li span em{
+	display: inline-block;
+	vertical-align: baseline;
+	color:#464646;
+}
+.citas-main-lft-innr li:first-child span{
+	font-family: "Lato-Italic";
+}
+
+
+
+
+
+
+#citas-main-contact-form .dft-page-contact-form-hdr h5{
+	font-size: 20px;
+}
+
+#citas-main-contact-form .dft-page-contact-form-hdr strong{
+	font-size: 23px;
+	font-family: "OpenSans-Bold";
+	margin-bottom: 25px;
+	display: block;
+}
+
+
+#citas-main-contact-form .dft-page-contact-form {
+    padding: 52px 20px 10px;
+}
+
+#citas-main-contact-form .form-spn{
+    font-size: 14px;
+    color:#fff;
+    margin-bottom: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
