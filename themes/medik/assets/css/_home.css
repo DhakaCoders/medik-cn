@@ -587,3 +587,74 @@ hm-campaign-grid-sec-wrp
   color:#0e857b;
   opacity: 1;
 }
+/*
+------------------------------
+hm-laboratory-content-sec-wrp
+------------------------------
+*/
+.hm-laboratory-content-sec-wrp{
+	padding-top: 35px;
+	padding-bottom: 30px;
+}
+.hm-laboratory-dsc h3 {
+    margin: 0;
+    font-family: 'OpenSans-Italic';
+    font-style: italic;
+    color: #0e857b;
+    line-height: 30px;
+    text-transform: uppercase;
+    padding-bottom: 32px;
+    position: relative;
+    margin-bottom: 7px;
+}
+.hm-laboratory-dsc h3 span{
+	display: block;
+	color: #fd6607;
+	font-family: 'OpenSans-ExtraboldItalic';
+}
+.hm-laboratory-dsc h3:after{
+	content: "";
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	background: url(../images/head-icon.png);
+	background-repeat: no-repeat;
+	background-size: 157px 19px;
+	width: 100%;
+	max-width: 157px;
+	height: 19px;
+}
+.hm-laboratory-dsc h6{
+	margin: 0;
+	font-size: 18px;
+	line-height: 20px;
+	color: #0e857b;
+	font-family: 'OpenSans-Semibold';
+	margin-top: 28px;
+	margin-bottom: 30px;
+}
+.hm-laboratory-dsc ul{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	padding-left: 15px;
+}
+.hm-laboratory-dsc ul li{
+	font-size: 16px;
+	line-height: 18px;
+	padding-left: 30px;
+	background: url(../images/thik-icon.png);
+	background-repeat: no-repeat;
+	background-size: 17px 17px;
+	padding-bottom: 15px;
+}
+.hm-laboratory-btn{
+	padding-left: 15px;
+}
+.hm-laboratory-btn a{
+	display: inline-block;
+	vertical-align: baseline;
+	text-decoration: none;
+	color: #ffe4c8;
+}
+
