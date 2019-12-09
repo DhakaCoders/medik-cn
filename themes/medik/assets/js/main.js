@@ -55,7 +55,6 @@ if( $('.hm-service-slider').length ){
       speed: 1000,
       slidesToShow: 3,
       slidesToScroll: 3,
-      fade: true,
       prevArrow: $('.sersliderarrows .leftArrow'),
       nextArrow: $('.sersliderarrows .rightArrow'),
     });
@@ -83,34 +82,33 @@ if( $('#HmBrandLogoSlider').length ){
       pauseOnHover: false,
       autoplay: true,
       autoplaySpeed: 6000,
-      dots: true,
-      infinite: false,
-      arrows:true,
-      speed: 1000,
-      slidesToShow: 5,
-      slidesToScroll: 5,
-      fade: true,
-      prevArrow: $('.laboratoryarrows .leftArrow'),
-      nextArrow: $('.laboratoryarrows .rightArrow'),
-    });
-}
-
-/*if( $('#HmBrandLogoSlider').length ){
-    $('#HmBrandLogoSlider').slick({
-      pauseOnHover: false,
-      autoplay: false,
-      autoplaySpeed: 6000,
-      dots: true,
+      dots: false,
       infinite: false,
       arrows:true,
       speed: 1000,
       slidesToShow: 5,
       slidesToScroll: 1,
-      fade: true,
-      //prevArrow: $('.sersliderarrows .leftArrow'),
-      //nextArrow: $('.sersliderarrows .rightArrow'),
+      prevArrow: $('.HmBrandLogoarrows .leftArrow'),
+      nextArrow: $('.HmBrandLogoarrows .rightArrow'),
     });
-}*/
+}
+
+if( $('.HmbtmGridSlider').length ){
+    $('.HmbtmGridSlider').slick({
+      pauseOnHover: false,
+      autoplay: true,
+      autoplaySpeed: 6000,
+      dots: true,
+      infinite: false,
+      arrows:true,
+      speed: 1000,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      fade: true,
+      prevArrow: $('.hmgirdarrows .leftArrow'),
+      nextArrow: $('.hmgirdarrows .rightArrow'),
+    });
+}
 
 
 

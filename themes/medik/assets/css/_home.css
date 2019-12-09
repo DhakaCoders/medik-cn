@@ -306,6 +306,8 @@ hm-service-sec-wrp
  Service Slider Next Prev css
 ------------------------------
 */
+.HmBrandLogoarrows .leftArrow,
+.hmgirdarrows .leftArrow,
 .sersliderarrows .leftArrow{
 	position: absolute;
 	left:-40px;
@@ -315,6 +317,8 @@ hm-service-sec-wrp
 	transform: translateY(-50%);
 	z-index: 5;
 }
+.HmBrandLogoarrows .rightArrow,
+.hmgirdarrows .rightArrow,
 .sersliderarrows .rightArrow{
 	position: absolute;
 	right:-40px;
@@ -324,6 +328,16 @@ hm-service-sec-wrp
 	transform: translateY(-50%);
 	z-index: 5;	
 }
+.HmBrandLogoarrows .leftArrow{
+	left: -20px;
+}
+.HmBrandLogoarrows .rightArrow{
+	right: -20px;
+}
+.HmBrandLogoarrows .leftArrow,
+.HmBrandLogoarrows .rightArrow,
+.hmgirdarrows .leftArrow,
+.hmgirdarrows .rightArrow,
 .sersliderarrows .leftArrow,
 .sersliderarrows .rightArrow {
 	display: block;
@@ -337,6 +351,10 @@ hm-service-sec-wrp
 	border:4px solid #0e857b;
 	border-radius: 50px;
 }
+.HmBrandLogoarrows .rightArrow:hover,
+.HmBrandLogoarrows .leftArrow:hover,
+.hmgirdarrows .rightArrow:hover,
+.hmgirdarrows .leftArrow:hover,
 .sersliderarrows .rightArrow:hover,
 .sersliderarrows .leftArrow:hover{
 	color: #0e857b;
@@ -767,6 +785,12 @@ a.green-btn:after{
 }
 
 
+/*
+----------------
+ Pagination Css
+----------------
+*/
+.HmbtmGridSlider .slick-dots li,
 .hm-laboratory-slider .slick-dots li{
 	background-image: url(../images/sky-pagi.png);
 	background-size: 7px 7px;
@@ -777,6 +801,9 @@ a.green-btn:after{
 	vertical-align: baseline;
 	float: none;
 }
+.HmbtmGridSlider .slick-dots li,
+.HmbtmGridSlider .slick-dots li button,
+.HmbtmGridSlider .slick-dots li button:before,
 .hm-laboratory-slider .slick-dots li,
 .hm-laboratory-slider .slick-dots li button,
 .hm-laboratory-slider .slick-dots li button:before{
@@ -784,15 +811,158 @@ a.green-btn:after{
 	height: 21px;
 	padding: 0;
 }
+.HmbtmGridSlider .slick-dots li button:before,
 .hm-laboratory-slider .slick-dots li button:before{
 	content: "";
 }
+.HmbtmGridSlider .slick-dots li.slick-active,
+.HmbtmGridSlider .slick-dots li:hover,
 .hm-laboratory-slider .slick-dots li.slick-active,
 .hm-laboratory-slider .slick-dots li:hover{
 	background-image: url(../images/yellow-pegi.png);
 	background-size: 21px 21px;
 	background-position: center center;
 	background-repeat: no-repeat;
+}
+.hm-brand-logo-sec-wrp{
+	background: #fafbfc;
+	padding-top: 30px;
+	padding-bottom: 20px;
+}
+.hm-brand-logo{
+	max-width: 880px;
+	width: 100%;
+	margin: 0 auto;
+}
+.hm-brand-logo ul{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+/*
+---------------------
+hm-btm-grid-sec-wrp
+---------------------
+*/
+.hm-btm-grid-sec-wrp {
+    padding-top: 30px;
+    padding-bottom: 50px;
+}
+.HmbtmGridSlider.slick-dotted.slick-slider {
+    margin-bottom: 0;
+}
+.hm-btm-grid-sec-wrp .section-hdr{
+	padding-bottom: 0;
+}
+.hm-btm-grid-sec-wrp .section-hdr p{
+	line-height: 25px;
+	text-align: center;
+}
+.hm-btm-grid-slider-wrp ul{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+.hm-btm-grid-slider-wrp ul li{
+	float: left;
+	width: 25%;
+	padding: 0 10px;
+}
+.hm-btm-grid-dsc-inr {
+    background: #fafbfc;
+    padding: 24px 24px 24px 24px;
+    position: relative;
+    margin-bottom: 25px;
+}
+.hm-btm-grid-dsc{
+	text-align: center;
+}
+.hm-btm-grid-dsc strong{
+	display: inline-block;
+	vertical-align: baseline;
+	font-size: 15px;
+	line-height: 17px;
+	color: #fff;
+	font-family: "OpenSans-BoldItalic";
+	position: relative;
+	max-width: 83px;
+	width: 100%;
+	height: 26px;
+	z-index: 1;
+	padding-top: 5px;
+	text-transform: uppercase;
+	top: -15px;
+}
+.hm-btm-grid-dsc strong:after{
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	background: url(../images/date-bg.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	z-index: -1;
+}
+.hm-btm-grid-dsc h6{
+	font-size: 18px;
+	line-height: 26px;
+	color: #0e857b;
+	font-family: 'OpenSans-SemiboldItalic';
+	text-transform: uppercase;
+	margin: 0;
+	margin-bottom: 25px;
+	height: 65px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-top: 10px;
+}
+.hm-btm-grid-dsc-btn{
+	border-bottom: 2px solid#fa6405;
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+.hm-btm-grid-dsc-btn a{
+	display:block;
+	font-size: 14px;
+	line-height: 16px;
+	color: #fff;
+	font-family: "OpenSans-BoldItalic";
+	text-transform: uppercase;
+	max-width: 135px;
+	width: 100%;
+	height: 38px;
+	position: relative;
+	z-index: 1;
+	text-align: center;
+	padding-top: 11px;
+	margin: 0 auto;
+	margin-bottom: -20px;
+}
+.hm-btm-grid-dsc-btn a:after{
+	content: "";
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	z-index: -1;
+	background: url(../images/hm-btm-grid-dsc-btn-bg.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.hm-btm-grid-orange .hm-btm-grid-dsc-btn a:after{
+	background: url(../images/green-grid-btn-bg.png);
+}
+.hm-btm-grid-orange h6{
+	color: #fa6405;
+}
+.hm-btm-grid-orange .hm-btm-grid-dsc-btn{
+	border-bottom: 2px solid #0e857b;
 }
 
 
