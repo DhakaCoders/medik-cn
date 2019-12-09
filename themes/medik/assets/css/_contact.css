@@ -1,0 +1,29 @@
+/*
+-------------------
+contact-map-sec-wrp
+-------------------
+*/
+.contact-map-sec-wrp{
+	padding-top: 150px;
+}
+.contact-map-sec-wrp .section-hdr{
+	padding-bottom: 40px;
+}
+.contact-tel{
+	padding-top: 5px;
+}
+.contact-tel span a,
+.contact-tel span{
+	font-size: 22px;
+	line-height: 24px;
+	color: #424242;
+	font-family: 'OpenSans-Regular';
+	display: inline-block;
+	vertical-align: baseline;
+}
+.contact-tel span a:hover{
+	color: #0e857b;
+}
+#contactMap{
+	height: 330px;
+}

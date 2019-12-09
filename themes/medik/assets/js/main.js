@@ -3,12 +3,19 @@
 $('.navbar-toggle').on('click', function(){
 	$('#mobile-nav').slideToggle(300);
 });
+
 	
 
 /**
 Responsive on 767px
 */
 var windowWidth = $(window).width();
+
+if($('.matchHeightCol').length){
+    $('.matchHeightCol').matchHeight();
+};
+
+
 // if (windowWidth <= 767) {
 
   $('.toggle-btn').on('click', function(){
@@ -247,6 +254,101 @@ function initialize(){
 google.maps.event.addDomListener(window, 'load', initialize);
 
 
+}
+
+
+
+/*
+-----------------------
+Start Contact Google Map ->> 
+-----------------------
+*/
+if( $('#contactMap').length ){
+    var latitude = $('#contactMap').data('lat');
+    var longitude = $('#contactMap').data('long');
+
+    var myCenter= new google.maps.LatLng(latitude,  longitude);
+    var iconBase = 'https://maps.google.com/mapfiles/kml/shapes/';
+    function initialize(){
+        var mapProp = {
+          center:myCenter,
+
+          //mapTypeControl:false,
+          scrollwheel: false,
+
+          //zoomControl: false,
+          //disableDefaultUI: true,
+          zoom:15,
+          streetViewControl: false,
+          rotateControl: false,
+          mapTypeId:google.maps.MapTypeId.ROADMAP,
+          styles : [
+              {
+                  "featureType": "administrative.country",
+                  "elementType": "geometry",
+                  "stylers": [
+                      {
+                          "visibility": "off"
+                      }
+                  ]
+              },
+              {
+                  "featureType": "administrative.locality",
+                  "elementType": "geometry",
+                  "stylers": [
+                      {
+                          "visibility": "off"
+                      }
+                  ]
+              },
+              {
+                  "featureType": "administrative.locality",
+                  "elementType": "labels",
+                  "stylers": [
+                      {
+                          "visibility": "off"
+                      }
+                  ]
+              },
+              {
+                  "featureType": "landscape",
+                  "elementType": "all",
+                  "stylers": [
+                      {
+                          "visibility": "on"
+                      }
+                  ]
+              },
+              {
+                  "featureType": "landscape",
+                  "elementType": "labels",
+                  "stylers": [
+                      {
+                          "visibility": "on"
+                      }
+                  ]
+              },
+              {
+                  "featureType": "poi",
+                  "elementType": "all",
+                  "stylers": [
+                      {
+                          "visibility": "off"
+                      }
+                  ]
+              }
+          ]
+          };
+
+        var map= new google.maps.Map(document.getElementById('contactMap'),mapProp);
+
+        var marker= new google.maps.Marker({
+          position:myCenter,
+          });
+        marker.setMap(map);
+    }
+
+    google.maps.event.addDomListener(window, 'load', initialize);
 }
 
 
