@@ -37,7 +37,7 @@
 }
 .ftr-col-wrp{
 	padding-left: 28px;
-	padding-bottom: 10px;
+	padding-bottom: 18px;
 }
 .ftr-col{
 	float: left;
@@ -107,6 +107,7 @@
 #ftr-map{
 	position: relative;
 	min-height: 300px;
+	margin-bottom: 10px;
 }
 
 
