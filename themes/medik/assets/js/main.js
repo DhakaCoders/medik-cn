@@ -466,31 +466,29 @@ if($('.blog-grd').length){
 if($('.blog-grd-wrp').length){
     
 
-var Shuffle = window.Shuffle;
-var element = document.querySelector('.my-shuffle-container');
-var sizer = element.querySelector('.my-sizer-element');
+// var Shuffle = window.Shuffle;
+// var element = document.querySelector('.blog-grd-wrp');
 
-var shuffleInstance = new Shuffle(element, {
-  itemSelector: '.picture-item',
-  sizer: sizer 
-});
-// shuffleInstance.filter('animal');
-$("#all").on("click", function(){
-   shuffleInstance.filter();
-});
-$("#btn-animal").on("click", function(){
-   shuffleInstance.filter('animal');
-});
-$("#btn-city").on("click", function(){
-   shuffleInstance.filter('city');
-});
-$("#btn-nature").on("click", function(){
-   shuffleInstance.filter('nature');
-});
+// var shuffleInstance = new Shuffle(element, {
+//   itemSelector: '.blog-item',
+// });
+
+// $("#all").on("click", function(){
+//    shuffleInstance.filter();
+// });
+// $("#btn-animal").on("click", function(){
+//    shuffleInstance.filter('animal');
+// });
+// $("#btn-city").on("click", function(){
+//    shuffleInstance.filter('city');
+// });
+// $("#btn-nature").on("click", function(){
+//    shuffleInstance.filter('nature');
+// });
 
 
 
-}
+// }
     new WOW().init();
 
 })(jQuery);
