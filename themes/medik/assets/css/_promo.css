@@ -3,9 +3,9 @@
 promo-tabs-sec-wrp
 ---------------------
 */
-.promo-tabs-sec-wrp{
-	padding-top: 175px;
-	padding-bottom: 155px;
+.promo-tabs-sec-wrp {
+    padding-top: 27px;
+    padding-bottom: 155px;
 }
 .promo-tabs-wrp .blog-filter-btn{
 	padding-top: 10px;
@@ -19,6 +19,15 @@ promo-tabs-sec-wrp
 	border: 2px solid #eef1f7;
 	padding-top: 15px;
 	padding-left: 10px;
+	position: relative;
+}
+.tabs-box-inr > a{
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	z-index: 1;
 }
 .tabs-dsc-innr ul{
 	list-style: none;
@@ -86,7 +95,7 @@ promo-tabs-sec-wrp
     color: #fff;
     background: #0e857b;
     border-radius: 50px;
-    font-size: 22px;
+    font-size: 30px;
     line-height: 30px;
     text-align: center;
     position: absolute;

@@ -4,7 +4,7 @@ contact-map-sec-wrp
 -------------------
 */
 .contact-map-sec-wrp {
-    padding-top: 180px;
+    padding-top: 27px;
 }
 .contact-map-sec-wrp .section-hdr{
 	padding-bottom: 40px;
@@ -99,6 +99,12 @@ contact-map-sec-wrp
     background-size: 17px 12px;
     width: 17px;
     height: 12px;
+    transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+}
+.location-dsc > a:hover:after{
+	right: 12px;
 }
 .contact-rgt-tel{
 	padding-top: 30px;
@@ -113,6 +119,9 @@ contact-map-sec-wrp
 	color: #4f4f4f;
 	padding-left: 25px;
 	padding-bottom: 12px;
+	transition: all 0.5s;
+	-ms-transition: all 0.5s;
+	-webkit-transition: all 0.5s;
 }
 .orange-tel-icon{
 	background:url(../images/orange-tel-icon.png);
@@ -125,6 +134,12 @@ contact-map-sec-wrp
 	background-repeat: no-repeat;
 	background-size: 16px 16px;
 	background-position: left top 4px;
+}
+a.orange-tel-icon:hover{
+	color: #fd6607;
+}
+a.green-tel-icon:hover{
+	color: #0e857b;
 }
 .contact-rgt-mail a{
 	display: block;

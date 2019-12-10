@@ -3,12 +3,15 @@ Start header
 */
 header.header{
 	padding: 10px 0 20px;
+	border-bottom: 1px solid #eef1f7;
+}
+header.hm-header{
 	position: absolute;
 	left: 0;
 	right: 0;
 	top: 0;
 	z-index: 1;
-	border-bottom: 1px solid #eef1f7;
+	border-bottom: none;
 }
 header .hdr-lft-con{
 	float: left;
@@ -167,7 +170,7 @@ Sub menu
 */
 nav.main-nav li.menu-item-has-children > ul.sub-menu {
     position: absolute;
-    top: 60px;
+    top: 58px;
     background: #f7fafc;
     width: 200px;
     left: 0;

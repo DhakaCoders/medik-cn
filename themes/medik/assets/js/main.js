@@ -34,6 +34,46 @@ if($('.matchHeightCol').length){
 //$("[data-fancybox]").fancybox({});
 
 
+
+$(".fancybox").fancybox({
+    openEffect  : 'none',
+    closeEffect : 'none'
+  });
+
+
+//Shuffle filter
+
+if($('.tabs-dsc-innr').length){
+    
+
+var Shuffle = window.Shuffle;
+var element = document.querySelector('.tabs-dsc-innr ul');
+//var sizer = element.querySelector('.my-sizer-element');
+
+var shuffleInstance = new Shuffle(element, {
+  itemSelector: '.tabs-dsc-innr ul li',
+  //sizer: sizer 
+});
+// shuffleInstance.filter('animal');
+$("#all").on("click", function(){
+   shuffleInstance.filter();
+});
+$("#cat-one").on("click", function(){
+   shuffleInstance.filter('blg-cat-1');
+});
+$("#cat-two").on("click", function(){
+   shuffleInstance.filter('blg-cat-2');
+});
+$("#cat-three").on("click", function(){
+   shuffleInstance.filter('blg-cat-3');
+});
+$("#cat-four").on("click", function(){
+   shuffleInstance.filter('blg-cat-4');
+});
+
+
+}
+
 if( $('.main-slider').length ){
     $('.main-slider').slick({
       pauseOnHover: false,
