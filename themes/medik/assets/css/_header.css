@@ -2,12 +2,13 @@
 Start header
 */
 header.header{
-	padding: 10px 0;
+	padding: 10px 0 20px;
 	position: absolute;
 	left: 0;
 	right: 0;
 	top: 0;
 	z-index: 1;
+	border-bottom: 1px solid #eef1f7;
 }
 header .hdr-lft-con{
 	float: left;
