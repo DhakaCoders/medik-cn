@@ -463,6 +463,16 @@ if($('.blog-grd').length){
 };
 
 
+
+
+$('.blog-filter-btn button').click(function(){
+    $('.blog-filter-btn button').removeClass("active");
+    $(this).addClass("active");
+});
+
+
+//Shuffle filter
+
 if($('.blog-grd-wrp').length){
     
 
