@@ -589,7 +589,7 @@
     -o-transform: translateX(-50%);
     transform: translateX(-50%);
 }
-.blog-main-hdr h2:before
+.blog-main-hdr h2:before,
 .noticias-slider-hdr h2:before{
     content: "";
     position: absolute;
