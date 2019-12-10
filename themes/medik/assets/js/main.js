@@ -456,6 +456,41 @@ if ($('.servicios-siderbar-accordion').length){
     $(this).parent().toggleClass('active');
   });
 }
+
+//matchHeight
+if($('.blog-grd').length){
+    $('.blog-grd').matchHeight();
+};
+
+
+if($('.blog-grd-wrp').length){
+    
+
+var Shuffle = window.Shuffle;
+var element = document.querySelector('.my-shuffle-container');
+var sizer = element.querySelector('.my-sizer-element');
+
+var shuffleInstance = new Shuffle(element, {
+  itemSelector: '.picture-item',
+  sizer: sizer 
+});
+// shuffleInstance.filter('animal');
+$("#all").on("click", function(){
+   shuffleInstance.filter();
+});
+$("#btn-animal").on("click", function(){
+   shuffleInstance.filter('animal');
+});
+$("#btn-city").on("click", function(){
+   shuffleInstance.filter('city');
+});
+$("#btn-nature").on("click", function(){
+   shuffleInstance.filter('nature');
+});
+
+
+
+}
     new WOW().init();
 
 })(jQuery);
