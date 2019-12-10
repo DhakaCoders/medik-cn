@@ -7,6 +7,10 @@ promo-tabs-sec-wrp
 	padding-top: 175px;
 	padding-bottom: 155px;
 }
+.promo-tabs-wrp .blog-filter-btn{
+	padding-top: 10px;
+	padding-bottom: 60px;
+}
 .tabs-box-inr{
 	background-repeat: no-repeat !important;
 	background-size: cover !important;
