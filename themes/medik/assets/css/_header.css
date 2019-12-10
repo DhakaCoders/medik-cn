@@ -86,6 +86,12 @@ header .contact-info a{
 header .contact-info a:last-of-type{
 	color: #0e857b;
 }
+header .contact-info a:hover{
+	color: #0e857b;
+}
+header .contact-info a:last-of-type:hover{
+	color: #fd6507;
+}
 header nav.main-nav {
     float: right;
     margin-top: 13px;
