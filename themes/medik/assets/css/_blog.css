@@ -1,6 +1,8 @@
 
 
-
+.blog-grd-wrp ul li{
+	padding-bottom: 35px;
+}
 
 .blog-grd-wrp ul li:nth-child(4n+1){
 	clear: left;
@@ -38,7 +40,6 @@
 	     -o-transition: all .5s ease;
 	        transition: all .5s ease;
 }
-
 .blog-filter-btn button.active:after,
 .blog-filter-btn button:hover:after{
 	background: #fd6607;

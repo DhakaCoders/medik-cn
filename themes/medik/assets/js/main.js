@@ -372,8 +372,8 @@ if( $('.llevamosSlider').length ){
       slidesToShow: 1,
       slidesToScroll: 1,
       fade: true,
-      //prevArrow: $('.sersliderarrows .leftArrow'),
-      //nextArrow: $('.sersliderarrows .rightArrow'),
+      prevArrow: $('.medik-sliderarrows .leftArrow'),
+      nextArrow: $('.medik-sliderarrows .rightArrow'),
     });
 }
 
@@ -406,8 +406,8 @@ if( $('.siderbarRecentPostSlider').length ){
       slidesToShow: 1,
       slidesToScroll: 1,
       fade: true,
-      //prevArrow: $('.sersliderarrows .leftArrow'),
-      //nextArrow: $('.sersliderarrows .rightArrow'),
+      prevArrow: $('.recentPost-sliderarrows .leftArrow'),
+      nextArrow: $('.recentPost-sliderarrows .rightArrow'),
     });
 }
 
@@ -420,7 +420,9 @@ if( $('.serviciosPartnerSlider').length ){
       speed: 1000,
       arrows:true,
       slidesToShow: 5,
-      slidesToScroll: 1
+      slidesToScroll: 1,
+      prevArrow: $('.medik-sliderarrows .leftArrow'),
+      nextArrow: $('.medik-sliderarrows .rightArrow'),
     });
 }
 
@@ -436,8 +438,8 @@ if( $('.noticiasSlider').length ){
       slidesToShow: 1,
       slidesToScroll: 1,
       fade: true,
-      //prevArrow: $('.sersliderarrows .leftArrow'),
-      //nextArrow: $('.sersliderarrows .rightArrow'),
+      prevArrow: $('.medik-sliderarrows .leftArrow'),
+      nextArrow: $('.medik-sliderarrows .rightArrow'),
     });
 }
 /**
@@ -467,11 +469,21 @@ if($('.blog-grd').length){
 };
 
 
+
+
+$('.blog-filter-btn button').click(function(){
+    $('.blog-filter-btn button').removeClass("active");
+    $(this).addClass("active");
+});
+
+
+//Shuffle filter
+
 if($('.blog-grd-wrp').length){
     
 
 var Shuffle = window.Shuffle;
-var element = document.querySelector('.blog-grd-wrp');
+var element = document.querySelector('.blog-grd-wrp ul');
 //var sizer = element.querySelector('.my-sizer-element');
 
 var shuffleInstance = new Shuffle(element, {
@@ -482,16 +494,18 @@ var shuffleInstance = new Shuffle(element, {
 $("#all").on("click", function(){
    shuffleInstance.filter();
 });
-$("#btn-animal").on("click", function(){
-   shuffleInstance.filter('animal');
+$("#cat-one").on("click", function(){
+   shuffleInstance.filter('blg-cat-1');
 });
-$("#btn-city").on("click", function(){
-   shuffleInstance.filter('city');
+$("#cat-two").on("click", function(){
+   shuffleInstance.filter('blg-cat-2');
 });
-$("#btn-nature").on("click", function(){
-   shuffleInstance.filter('nature');
+$("#cat-three").on("click", function(){
+   shuffleInstance.filter('blg-cat-3');
 });
-
+$("#cat-four").on("click", function(){
+   shuffleInstance.filter('blg-cat-4');
+});
 
 
 }
