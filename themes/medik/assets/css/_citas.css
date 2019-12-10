@@ -1,16 +1,26 @@
-
-
-
 .citas-main-sec{
 	background: #f8f8f8;
-	padding: 25px 0 90px;
+	padding: 25px 0 85px;
+	position: relative;
 }
-.citas-main-sec-innr{
-	max-width:980px;
-	margin: 0 auto;
+.citas-main-sec:after{
+	content: "";
+    position: absolute;
+    width: 666px;
+    height: 812px;
+    background-image: url(../images/citas-main-sec-bg-hart.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    left:30%;
+    top: 50px;
+    z-index: 2;
 }
-
-
+.citas-main-sec-innr {
+    max-width: 980px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 3;
+}
 .citas-main-hdr{
 
 }
@@ -153,22 +163,22 @@
 	display: block;
 }
 #citas-main-contact-form .dft-page-contact-form {
-    padding: 52px 20px 10px;
+    padding: 60px 20px 13px;
     margin-top: 60px;
 }
-
 #citas-main-contact-form .form-spn{
     font-size: 14px;
     color:#fff;
     margin-bottom: 10px;
 }
-
-
-
-
-
-
-
+#citas-main-contact-form .dft-page-contact-form-main select,
+#citas-main-contact-form .dft-page-contact-form-main input {
+	padding: 8px 10px;
+	margin-bottom: 18px;
+}
+#citas-main-contact-form .dft-page-contact-form-main textarea {
+	min-height: 167px;
+}
 
 
 
