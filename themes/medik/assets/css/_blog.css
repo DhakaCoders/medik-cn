@@ -1,6 +1,8 @@
 
 
-
+.blog-grd-wrp ul li{
+	padding-bottom: 40px;
+}
 
 .blog-grd-wrp ul li:nth-child(4n+1){
 	clear: left;
