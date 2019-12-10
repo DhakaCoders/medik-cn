@@ -33,6 +33,10 @@ if($('.matchHeightCol').length){
 
 //$("[data-fancybox]").fancybox({});
 
+$(".fancybox").fancybox({
+    openEffect  : 'none',
+    closeEffect : 'none'
+  });
 
 if( $('.main-slider').length ){
     $('.main-slider').slick({
