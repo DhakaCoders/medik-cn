@@ -368,8 +368,8 @@ if( $('.llevamosSlider').length ){
       slidesToShow: 1,
       slidesToScroll: 1,
       fade: true,
-      //prevArrow: $('.sersliderarrows .leftArrow'),
-      //nextArrow: $('.sersliderarrows .rightArrow'),
+      prevArrow: $('.medik-sliderarrows .leftArrow'),
+      nextArrow: $('.medik-sliderarrows .rightArrow'),
     });
 }
 
@@ -402,8 +402,8 @@ if( $('.siderbarRecentPostSlider').length ){
       slidesToShow: 1,
       slidesToScroll: 1,
       fade: true,
-      //prevArrow: $('.sersliderarrows .leftArrow'),
-      //nextArrow: $('.sersliderarrows .rightArrow'),
+      prevArrow: $('.recentPost-sliderarrows .leftArrow'),
+      nextArrow: $('.recentPost-sliderarrows .rightArrow'),
     });
 }
 
@@ -416,7 +416,9 @@ if( $('.serviciosPartnerSlider').length ){
       speed: 1000,
       arrows:true,
       slidesToShow: 5,
-      slidesToScroll: 1
+      slidesToScroll: 1,
+      prevArrow: $('.medik-sliderarrows .leftArrow'),
+      nextArrow: $('.medik-sliderarrows .rightArrow'),
     });
 }
 
@@ -432,8 +434,8 @@ if( $('.noticiasSlider').length ){
       slidesToShow: 1,
       slidesToScroll: 1,
       fade: true,
-      //prevArrow: $('.sersliderarrows .leftArrow'),
-      //nextArrow: $('.sersliderarrows .rightArrow'),
+      prevArrow: $('.medik-sliderarrows .leftArrow'),
+      nextArrow: $('.medik-sliderarrows .rightArrow'),
     });
 }
 /**
