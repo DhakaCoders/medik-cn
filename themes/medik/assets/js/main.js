@@ -408,8 +408,8 @@ if( $('.llevamosSlider').length ){
       slidesToShow: 1,
       slidesToScroll: 1,
       fade: true,
-      prevArrow: $('.medik-sliderarrows .leftArrow'),
-      nextArrow: $('.medik-sliderarrows .rightArrow'),
+      prevArrow: $('.llevamosSlider-wrp .medik-sliderarrows .leftArrow'),
+      nextArrow: $('.llevamosSlider-wrp .medik-sliderarrows .rightArrow'),
     });
 }
 
@@ -545,7 +545,7 @@ $("#cat-four").on("click", function(){
 
 
 }
-    new WOW().init();
+  new WOW().init();
 
 })(jQuery);
 
