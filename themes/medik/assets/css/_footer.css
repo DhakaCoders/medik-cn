@@ -1,4 +1,3 @@
-
 .footer-wrap{
 	color:#FFF;
 }
@@ -40,7 +39,7 @@
 	padding-bottom: 18px;
 }
 .ftr-col{
-	float: left;
+	float: right;
 }
 .ftr-col-1{
 	width:26.84%;
@@ -62,7 +61,6 @@
 .ftr-col-1 a img{
 	width: 100%;
 }
-
 .ftr-col-2 li{
 	margin-bottom: 18px;
 }
@@ -103,54 +101,33 @@
 .ftr-col-3 p span{
 	font-size:14px;
 }
-
 #ftr-map{
 	position: relative;
 	min-height: 300px;
 	margin-bottom: 10px;
 }
-
-
-
-
-
-
 .ftr-btm-con{
 	background: #008175;
 	padding: 13px 15px;
 }
-
 .ftr-btm-con span{
 	font-size: 14px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.go-top-btn{
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+.go-top-btn{
+	position: absolute;
+	right: 0;
+	top: -32px;
+	display: inline-block;
+	max-width: 70px;
+}
+.go-top-btn img{
+	width:100%;
+}
 
 
 

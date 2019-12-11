@@ -382,45 +382,95 @@ Start Contact Google Map ->>
 
 /*Google map */
 
+
+
 if( $('#ftr-map').length ){
+    var latitude = $('#ftr-map').data('lat');
+    var longitude = $('#ftr-map').data('long');
 
-var latitude = $('#ftr-map').data('latitude');
-var longitude = $('#ftr-map').data('longitude');
+    var myCenter= new google.maps.LatLng(latitude,  longitude);
+    var iconBase = 'https://maps.google.com/mapfiles/kml/shapes/';
+    function initialize(){
+        var mapProp = {
+          center:myCenter,
 
-var myCenter= new google.maps.LatLng(latitude,  longitude);
+          //mapTypeControl:false,
+          scrollwheel: false,
 
-function initialize(){
-    var mapProp = {
-      center:myCenter,
+          //zoomControl: false,
+          //disableDefaultUI: true,
+          zoom:15,
+          streetViewControl: false,
+          rotateControl: false,
+          mapTypeId:google.maps.MapTypeId.ROADMAP,
+          styles : [
+              {
+                  "featureType": "administrative.country",
+                  "elementType": "geometry",
+                  "stylers": [
+                      {
+                          "visibility": "off"
+                      }
+                  ]
+              },
+              {
+                  "featureType": "administrative.locality",
+                  "elementType": "geometry",
+                  "stylers": [
+                      {
+                          "visibility": "off"
+                      }
+                  ]
+              },
+              {
+                  "featureType": "administrative.locality",
+                  "elementType": "labels",
+                  "stylers": [
+                      {
+                          "visibility": "off"
+                      }
+                  ]
+              },
+              {
+                  "featureType": "landscape",
+                  "elementType": "all",
+                  "stylers": [
+                      {
+                          "visibility": "on"
+                      }
+                  ]
+              },
+              {
+                  "featureType": "landscape",
+                  "elementType": "labels",
+                  "stylers": [
+                      {
+                          "visibility": "on"
+                      }
+                  ]
+              },
+              {
+                  "featureType": "poi",
+                  "elementType": "all",
+                  "stylers": [
+                      {
+                          "visibility": "off"
+                      }
+                  ]
+              }
+          ]
+          };
 
-      mapTypeControl:true,
-      scrollwheel: false,
+        var map= new google.maps.Map(document.getElementById('ftr-map'),mapProp);
 
-      zoomControl: true,
-      disableDefaultUI: true,
-      zoom:7,
-      streetViewControl: false,
-      rotateControl: true,
-      mapTypeId:google.maps.MapTypeId.ROADMAP
-      };
+        var marker= new google.maps.Marker({
+          position:myCenter,
+          });
+        marker.setMap(map);
+    }
 
-    var map= new google.maps.Map(document.getElementById('ftr-map'),mapProp);
-
-    var marker= new google.maps.Marker({
-      position:myCenter,
-        icon:'map-marker.png'
-      });
-    marker.setMap(map);
-  [{"featureType":"administrative","elementType":"labels.text.fill","stylers":[{"color":"#0c0b0b"}]},{"featureType":"landscape","elementType":"all","stylers":[{"color":"#f2f2f2"}]},{"featureType":"poi","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"road","elementType":"all","stylers":[{"saturation":-100},{"lightness":45}]},{"featureType":"road","elementType":"labels.text.fill","stylers":[{"color":"#090909"}]},{"featureType":"road.highway","elementType":"all","stylers":[{"visibility":"simplified"}]},{"featureType":"road.arterial","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"transit","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"water","elementType":"all","stylers":[{"color":"#d4e4eb"},{"visibility":"on"}]},{"featureType":"water","elementType":"geometry.fill","stylers":[{"visibility":"on"},{"color":"#fef7f7"}]},{"featureType":"water","elementType":"labels.text.fill","stylers":[{"color":"#9b7f7f"}]},{"featureType":"water","elementType":"labels.text.stroke","stylers":[{"color":"#fef7f7"}]}]
-    
+    google.maps.event.addDomListener(window, 'load', initialize);
 }
-
-google.maps.event.addDomListener(window, 'load', initialize);
-
-
-}
-
-
 
 /*
 -----------------------
@@ -532,8 +582,8 @@ if( $('.llevamosSlider').length ){
       slidesToShow: 1,
       slidesToScroll: 1,
       fade: true,
-      prevArrow: $('.medik-sliderarrows .leftArrow'),
-      nextArrow: $('.medik-sliderarrows .rightArrow'),
+      prevArrow: $('.llevamosSlider-wrp .medik-sliderarrows .leftArrow'),
+      nextArrow: $('.llevamosSlider-wrp .medik-sliderarrows .rightArrow'),
     });
 }
 
@@ -602,6 +652,14 @@ if( $('.noticiasSlider').length ){
       nextArrow: $('.medik-sliderarrows .rightArrow'),
     });
 }
+
+//go-top
+$('.footer-wrap .go-top-btn').on('click', function(e){
+  e.preventDefault();
+  $('html, body').animate( {scrollTop:0}, '500' );
+});
+
+
 /**
 accordion
 */
@@ -629,8 +687,7 @@ if($('.blog-grd').length){
 };
 
 
-
-
+//filter-btn
 $('.blog-filter-btn button').click(function(){
     $('.blog-filter-btn button').removeClass("active");
     $(this).addClass("active");
@@ -669,7 +726,7 @@ $("#cat-four").on("click", function(){
 
 
 }
-    new WOW().init();
+  new WOW().init();
 
 })(jQuery);
 
