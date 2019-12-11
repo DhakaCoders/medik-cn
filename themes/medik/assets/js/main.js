@@ -11,9 +11,12 @@ Responsive on 767px
 */
 var windowWidth = $(window).width();
 
-if($('.matchHeightCol').length){
+if (windowWidth > 768) {
+  if($('.matchHeightCol').length){
     $('.matchHeightCol').matchHeight();
-};
+  };
+}
+
 
 
 // if (windowWidth <= 767) {
@@ -22,6 +25,29 @@ if($('.matchHeightCol').length){
     $(this).toggleClass('menu-expend');
     $('.toggle-bar ul').slideToggle(500);
   });
+
+
+/**
+Responsive on 767px
+*/
+var windowWidth = $(window).width();
+if (windowWidth <= 991) {
+  $('header.header .opener-inner').on('click', function(){
+    $(this).toggleClass('menu-expend');
+    $('header.header nav.main-nav > ul').slideToggle(500);
+  });
+  $('#branding .opener-inner').on('click', function(){
+    $(this).toggleClass('menu-expend');
+    $('#branding nav.main-nav > ul').slideToggle(500);
+  });
+
+  $('nav.main-nav li.menu-item-has-children > a').on('click', function(e){
+    e.preventDefault();
+    $('.main-nav').toggleClass("color-changes-mobile");
+    $(this).toggleClass('menu-expend-sub');
+    $(this).parent().find('.sub-menu').slideToggle(500);
+  });
+}
 
 
 // }
@@ -88,6 +114,17 @@ if( $('.main-slider').length ){
       fade: true,
       prevArrow: $('.mainsliderarrows .leftArrow'),
       nextArrow: $('.mainsliderarrows .rightArrow'),
+      responsive: [
+        {
+          breakpoint: 767,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            infinite: true,
+            dots: true
+          }
+        },
+      ]
     });
 }
 
@@ -104,6 +141,25 @@ if( $('.hm-service-slider').length ){
       slidesToScroll: 3,
       prevArrow: $('.sersliderarrows .leftArrow'),
       nextArrow: $('.sersliderarrows .rightArrow'),
+      responsive: [
+        {
+          breakpoint: 991,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 2,
+            infinite: true,
+            dots: true
+          }
+        },
+        {
+          breakpoint: 767,
+          settings: {
+            dots: true,
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
+        },
+      ]
     });
 }
 
@@ -137,6 +193,44 @@ if( $('#HmBrandLogoSlider').length ){
       slidesToScroll: 1,
       prevArrow: $('.HmBrandLogoarrows .leftArrow'),
       nextArrow: $('.HmBrandLogoarrows .rightArrow'),
+      responsive: [
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 4,
+            slidesToScroll: 4,
+            infinite: true,
+            dots: false
+          }
+        },
+        {
+          breakpoint: 991,
+          settings: {
+            dots: true,
+            slidesToShow: 3,
+            slidesToScroll: 3
+          }
+        },
+        {
+          breakpoint: 767,
+          settings: {
+            dots: true,
+            slidesToShow: 2,
+            slidesToScroll: 2
+          }
+        },
+        {
+          breakpoint: 575,
+          settings: {
+            dots: true,
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
+        }
+        // You can unslick at a given breakpoint now by adding:
+        // settings: "unslick"
+        // instead of a settings object
+      ]
     });
 }
 
@@ -154,6 +248,36 @@ if( $('.HmbtmGridSlider').length ){
       fade: true,
       prevArrow: $('.hmgirdarrows .leftArrow'),
       nextArrow: $('.hmgirdarrows .rightArrow'),
+      responsive: [
+        {
+          breakpoint: 991,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 3,
+            infinite: true,
+            dots: true
+          }
+        },
+        {
+          breakpoint: 767,
+          settings: {
+            dots: true,
+            slidesToShow: 2,
+            slidesToScroll: 2
+          }
+        },
+        {
+          breakpoint: 575,
+          settings: {
+            dots: true,
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
+        },
+        // You can unslick at a given breakpoint now by adding:
+        // settings: "unslick"
+        // instead of a settings object
+      ]
     });
 }
 
