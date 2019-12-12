@@ -977,15 +977,18 @@ hm-btm-grid-sec-wrp
 	line-height: 25px;
 	text-align: center;
 }
-.hm-btm-grid-slider-wrp ul{
-	list-style: none;
-	margin: 0;
-	padding: 0;
+.HmbtmGridSlider .slick-dots{
+	bottom: -30px;
 }
-.hm-btm-grid-slider-wrp ul li{
-	float: left;
-	width: 25%;
+.HmbtmGridSlide-item{
 	padding: 0 10px;
+}
+.hm-btm-grid-img{
+	text-align: center;
+}
+.hm-btm-grid-img img{
+	display: inline-block;
+	vertical-align: baseline;
 }
 .hm-btm-grid-dsc-inr {
     background: #fafbfc;
@@ -1199,12 +1202,10 @@ hm-btm-grid-sec-wrp
 	.hm-brand-logo-sec-wrp {
 	    padding-bottom: 55px;
 	}
-	.HmBrandLogoarrows .leftArrow,
-	.hmgirdarrows .leftArrow{
+	.HmBrandLogoarrows .leftArrow{
 		display: none !important;
 	}
-	.HmBrandLogoarrows .rightArrow,
-	.hmgirdarrows .rightArrow{
+	.HmBrandLogoarrows .rightArrow{
 		display: none !important;
 	}
 	.hm-brand-logo {
@@ -1252,7 +1253,10 @@ hm-btm-grid-sec-wrp
 	    margin-bottom: 30px;
 	}
 	.hm-btm-grid-sec-wrp .section-hdr {
-	    padding-bottom: 25px;
+	    padding-bottom: 20px;
+	    max-width: 550px;
+		width: 100%;
+		margin: 0 auto;
 	}
 	.hm-btm-grid-sec-wrp .section-hdr p br{
 		display: none;
@@ -1330,6 +1334,11 @@ hm-btm-grid-sec-wrp
 		-ms-transform: translateX(-50%);
 		-webkit-transform: translateX(-50%);
 		transform: translateX(-50%);
+		background:url(../images/main-slider-bdr-xs.png);
+		background-repeat: no-repeat;
+		background-size: 278px 19px;
+    	width: 278px;
+    	height: 19px;
 	}
 	.hm-brand-logo {
 	    max-width: 350px;
@@ -1421,10 +1430,16 @@ hm-btm-grid-sec-wrp
 	}
 	.sersliderarrows .leftArrow,
 	.sersliderarrows .rightArrow {
-	    height: 30px;
-	    width: 30px;
-	    font-size: 20px;
+	    height: 35px;
+	    width: 35px;
+	    font-size: 25px;
 	    line-height: 22px;
+	}
+	.hm-btm-grid-dsc-inr {
+	    max-width: 265px;
+	    width: 100%;
+	    margin-left: auto;
+	    margin-right: auto;
 	}
 
 }
@@ -1467,6 +1482,17 @@ hm-btm-grid-sec-wrp
 	.hm-service-wrp {
 	    padding-left: 0;
 	    padding-right: 0;
+	}
+	.HmBrandLogoarrows .leftArrow,
+	.HmBrandLogoarrows .rightArrow,
+	.hmgirdarrows .leftArrow,
+	.hmgirdarrows .rightArrow,
+	.sersliderarrows .leftArrow,
+	.sersliderarrows .rightArrow {
+	    height: 35px;
+	    width: 35px;
+	    font-size: 25px;
+	    line-height: 22px;
 	}
 
 }
