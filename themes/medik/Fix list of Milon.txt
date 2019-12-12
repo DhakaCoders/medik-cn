@@ -32,7 +32,7 @@ Home
 	hover bg ta inline a hobe. just src ta . css gulo external css ai thakbe
 
 10. https://www.screencast.com/t/FfKP77cmO2br
-	hover korle img kata pore
+	hover korle img kata pore panding
 
 11. https://www.screencast.com/t/4E1k9k4g0it
 	prev and next a click korle nicher slider ta kaj korteche
