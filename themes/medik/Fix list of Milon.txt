@@ -1,0 +1,68 @@
+Home
+---------------------
+1. https://www.screencast.com/t/nkSOdrZKMa
+	hover kole text kata pore
+
+2. https://www.screencast.com/t/Gi1GF7aV5N
+	ai bottom padding ta li te dite hobe. bcoz dropdown menu thik thak kaj kortechena
+
+3. https://www.screencast.com/t/pwwhfMRFnoQ
+	i) bg ta inline a hobe.
+	ii) background-size: cover; hobe
+	iii) https://www.screencast.com/t/4jjnrymSwY
+		bg-cover dile. bg ta upore uthe jay. cover deoar por ata fix korte hobe
+4. https://www.screencast.com/t/3WBPx5Ive
+	ata aktai heading ar vitor hobe h1.
+
+5. https://www.screencast.com/t/2AmT7BXvU
+	i) text-align: justify  hobe
+	ii) textgulo border par houa jabena amon thakbe
+
+6.https://www.screencast.com/t/4ES9M9qzi1YI
+	hover out time a transiton lagbe
+
+7. https://www.screencast.com/t/kOoIwFyg3x
+	text-align: justify  hobe
+
+8. https://www.screencast.com/t/mOH2NrvI
+	i) text ending ager moto hobe. borabor
+	ii) word-spacing hobe
+	iii) line height ta amon hobe
+9.https://www.screencast.com/t/zactiNyKCRo0
+	hover bg ta inline a hobe. just src ta . css gulo external css ai thakbe
+
+10. https://www.screencast.com/t/FfKP77cmO2br
+	hover korle img kata pore
+
+11. https://www.screencast.com/t/4E1k9k4g0it
+	prev and next a click korle nicher slider ta kaj korteche
+
+12. https://www.screencast.com/t/0fE54Fun7N
+	hover color lagbe
+
+
+Promo
+-------------
+1. https://www.screencast.com/t/A3skJmqjY3
+	hover korle border ta middle thake 2 pase jabe . ai css effect ta apply koro
+2. https://www.screencast.com/t/sKBw908Ny
+	h1 hobe.
+
+Contact
+--------------
+1. https://www.screencast.com/t/gRrw07Voi
+	h1 hobe
+2. https://www.screencast.com/t/AFJm19mV4
+	https://www.screencast.com/t/2syFk4CisYjl
+	hover color lagbe
+3. https://www.screencast.com/t/4HnYR8PfS
+	i) ai button ar bg mileni
+	ii) arrow ta r aktu niche nambe maybe
+	iii)https://www.screencast.com/t/6gzoZPc4s
+		ai gap ta kom mone hosche
+4.https://www.screencast.com/t/DRrXo2EZc
+	ai gap ta besi hobe. sob gulo borbor thakbe
+
+5. https://www.screencast.com/t/qLfYRp34IqcK
+	ai redius ta besi hoiche. c borabor corner ta hobe
+

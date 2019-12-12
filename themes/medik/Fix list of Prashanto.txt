@@ -1,0 +1,9 @@
+Footer
+---------------------
+1. https://www.screencast.com/t/DNwhJcrT
+	foote ar width maybe choto hoye geche . uporer section ar sathe milay fix koro
+2. https://www.screencast.com/t/aVTknV57tXXC
+	font italic and strong hobe
+3. https://www.screencast.com/t/gfHLLfPxhHX
+	hover korle hover color buja jayna temon
+4. 
