@@ -14,8 +14,12 @@
 	padding: 12px 0 30px;
 }
 .ftr-head h2{
-	font-family: 'OpenSansItalic';
+	font-family: 'OpenSans-Italic';
 	text-transform: uppercase;
+}
+.ftr-head h2 strong{	
+	font-family: 'OpenSans-ExtraboldItalic';
+	font-weight: normal;
 }
 .ftr-head:after{
 	content: "";
@@ -68,6 +72,9 @@
 	display: inline-block;
 	vertical-align: baseline;
 	color:#fff;
+}
+.ftr-col-2 li a:hover{
+	color:#0e857b;
 }
 .ftr-col-2 li strong{
 	display: inline-block;
@@ -124,7 +131,7 @@
 }
 .go-top-btn{
 	position: absolute;
-	right: 0;
+	right: -15px;
 	top: -32px;
 	display: inline-block;
 	max-width: 70px;

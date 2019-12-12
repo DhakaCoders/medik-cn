@@ -1132,7 +1132,16 @@
 
 
 
-
+@media(max-width: 1249px){ 
+	.serviciosPartnerSlider-arrows .leftArrow {
+	    left: -50px;
+	    top: 20%;
+	}
+	.serviciosPartnerSlider-arrows .rightArrow {
+	    right: -50px;
+	    top: 20%;
+	}
+}
 
 
 @media(max-width: 1199px){ 
@@ -1141,6 +1150,15 @@
 	}
 	.llevamosSlider-item ul li span {
 	    font-size: 12px
+	}
+	.noticias-slider-innr-wrp {
+	    max-width: 900px;
+	}
+	.noticiasSlider-arrows .leftArrow {
+	    left: -35px;
+	}
+	.noticiasSlider-arrows .rightArrow {
+	    right: -35px;
 	}
 }
 
