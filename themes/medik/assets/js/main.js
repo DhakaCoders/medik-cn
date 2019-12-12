@@ -577,13 +577,13 @@ if( $('.llevamosSlider').length ){
       autoplaySpeed: 6000,
       dots: true,
       infinite: false,
-      arrows:true,
+      arrows: true,
       speed: 1000,
       slidesToShow: 1,
       slidesToScroll: 1,
       fade: true,
       prevArrow: $('.llevamosSlider-arrows .leftArrow'),
-      nextArrow: $('.llevamosSlider-arrows .rightArrow'),
+      nextArrow: $('.llevamosSlider-arrows .rightArrow')
     });
 }
 
@@ -639,7 +639,7 @@ if( $('.serviciosPartnerSlider').length ){
 if( $('.noticiasSlider').length ){
     $('.noticiasSlider').slick({
       dots: true,
-      autoplay: true,
+      autoplay: false,
       autoplaySpeed: 4000,
       infinite: true,
       speed: 1000,
@@ -648,6 +648,34 @@ if( $('.noticiasSlider').length ){
       slidesToScroll: 1,
       prevArrow: $('.noticiasSlider-arrows .leftArrow'),
       nextArrow: $('.noticiasSlider-arrows .rightArrow'),
+      responsive: [
+        {
+          breakpoint: 992,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            infinite: true,
+            dots: true
+          }
+        },
+        {
+          breakpoint: 600,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 1
+          }
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
+        }
+        // You can unslick at a given breakpoint now by adding:
+        // settings: "unslick"
+        // instead of a settings object
+      ]
     });
 }
 
