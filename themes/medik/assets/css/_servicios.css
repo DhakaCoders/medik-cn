@@ -1057,13 +1057,14 @@
 ----------------
 */
 
-
+.serviciosPartnerSlider .slick-dots,
 .siderbarProSlider .slick-dots,
 .siderbarRecentPostSlider .slick-dots,
 .noticiasSlider .slick-dots,
 .llevamosSlider .slick-dots{
 	left: 0;
 }
+.serviciosPartnerSlider .slick-dots li,
 .siderbarProSlider .slick-dots li,
 .siderbarRecentPostSlider .slick-dots li,
 .noticiasSlider .slick-dots li,
@@ -1077,6 +1078,9 @@
 	vertical-align: baseline;
 	float: none;
 }
+.serviciosPartnerSlider .slick-dots li,
+.serviciosPartnerSlider .slick-dots li button,
+.serviciosPartnerSlider .slick-dots li button:before,
 .siderbarProSlider .slick-dots li,
 .siderbarProSlider .slick-dots li button,
 .siderbarProSlider .slick-dots li button:before,
@@ -1093,13 +1097,15 @@
 	height: 21px;
 	padding: 0;
 }
+.serviciosPartnerSlider .slick-dots li button:before,
 .siderbarProSlider .slick-dots li button:before,
 .siderbarRecentPostSlider .slick-dots li button:before,
 .noticiasSlider .slick-dots li button:before,
 .llevamosSlider .slick-dots li button:before{
 	content: "";
 }
-
+.serviciosPartnerSlider .slick-dots li.slick-active,
+.serviciosPartnerSlider .slick-dots li:hover,
 .siderbarProSlider .slick-dots li.slick-active,
 .siderbarProSlider .slick-dots li:hover,
 .siderbarRecentPostSlider .slick-dots li.slick-active,
@@ -1160,6 +1166,10 @@
 	.noticiasSlider-arrows .rightArrow {
 	    right: -35px;
 	}
+	.serviciosPartnerSlider-wrp{
+		max-width: 850px;
+		margin:0 auto;
+	}
 }
 
 @media(max-width: 991px){
@@ -1203,7 +1213,9 @@
 	.servicios-accordion-des ul li {
 	    font-size: 14px
 	}
-
+	.serviciosPartnerSlider-wrp .serviciosPartnerSlider-arrows{
+		display: none;
+	}
 
 	/*sidebar*/
 	.dft-page-contact-form-hdr p {

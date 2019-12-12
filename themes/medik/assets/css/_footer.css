@@ -74,7 +74,7 @@
 	color:#fff;
 }
 .ftr-col-2 li a:hover{
-	color:#0e857b;
+	color:#bdbdbd;
 }
 .ftr-col-2 li strong{
 	display: inline-block;
@@ -99,7 +99,7 @@
 	margin-right: 6px;
 }
 .ftr-social a:hover{
-	opacity: .5
+	opacity: .7
 }
 .ftr-social a img{
 	width:100%;
@@ -137,7 +137,7 @@
 	max-width: 70px;
 }
 .go-top-btn:hover{
-	opacity: .6
+	opacity: .7
 }
 .go-top-btn img{
 	width:100%;
