@@ -525,7 +525,7 @@
     background-image: url(../images/recentpost-lft-arrow.png);
     background-repeat: no-repeat;
     background-size: 100% 100%;
-	left: 10%;
+	left: 24%;
 	bottom: 0;
 	border-radius: 100%;
 	cursor: pointer;
@@ -545,7 +545,7 @@
     background-image: url(../images/recentpost-rgt-arrow.png);
     background-repeat: no-repeat;
     background-size: 100% 100%;
-	right: 10%;
+	right: 24%;
 	bottom: 0;
 	border-radius: 100%;
 	cursor: pointer;
