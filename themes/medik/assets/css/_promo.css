@@ -172,6 +172,9 @@ promo-tabs-sec-wrp
 	    font-size: 50px;
 	    line-height: 49px;
 	}
+	.promo-tabs-sec-wrp .section-hdr {
+	    padding-bottom: 20px;
+	}
 }
 
 
