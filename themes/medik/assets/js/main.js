@@ -54,7 +54,7 @@ var shuffleInstance = new Shuffle(element, {
   itemSelector: '.tabs-dsc-innr ul li',
   //sizer: sizer 
 });
-// shuffleInstance.filter('animal');
+
 $("#all").on("click", function(){
    shuffleInstance.filter();
 });
@@ -583,7 +583,7 @@ var shuffleInstance = new Shuffle(element, {
   itemSelector: '.blog-item',
   //sizer: sizer 
 });
-// shuffleInstance.filter('animal');
+
 $("#all").on("click", function(){
    shuffleInstance.filter();
 });
