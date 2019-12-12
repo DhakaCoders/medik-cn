@@ -638,16 +638,14 @@ if( $('.serviciosPartnerSlider').length ){
 
 if( $('.noticiasSlider').length ){
     $('.noticiasSlider').slick({
-      pauseOnHover: false,
-      autoplay: false,
-      autoplaySpeed: 6000,
       dots: true,
-      infinite: false,
-      arrows:true,
+      autoplay: true,
+      autoplaySpeed: 4000,
+      infinite: true,
       speed: 1000,
-      slidesToShow: 1,
+      arrows:true,
+      slidesToShow: 4,
       slidesToScroll: 1,
-      fade: true,
       prevArrow: $('.noticiasSlider-arrows .leftArrow'),
       nextArrow: $('.noticiasSlider-arrows .rightArrow'),
     });
