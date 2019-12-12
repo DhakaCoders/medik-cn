@@ -6,4 +6,50 @@ Footer
 	font italic and strong hobe
 3. https://www.screencast.com/t/gfHLLfPxhHX
 	hover korle hover color buja jayna temon
-4. 
+4. https://www.screencast.com/t/7zk6vkfFEPW
+	foote opacity ta khub besi hoye geche r aktu kom daw
+5.https://www.screencast.com/t/GaYOC6rv
+	hover korle onno color try koro. akhon jeta ache setate problem hosche hover korle text ar buja jayna
+6. https://www.screencast.com/t/TWp3uBZjwVS
+	atate hover korle opacity kom daw
+
+
+servicios
+-------------
+1. https://www.screencast.com/t/4QDsIv6mg
+	jehetu banner nai tahole ata h1 hobe
+
+2. https://www.screencast.com/t/0YWxpf8dA1bW
+	https://www.screencast.com/t/1auV7fMdSaac
+	hover out a transiton lagbe. sob gulotei dekho. hover in and out ta
+
+3. https://www.screencast.com/t/oRdndh6dMx
+	img ao link daw
+4.https://www.screencast.com/t/QRgrETbfIuVj
+	focus a border or bg color dite paro
+5. https://www.screencast.com/t/2KGKe5hc
+	ulc class badh diye atar design koro. WP editor thake asle . class use kora jabena
+6. https://www.screencast.com/t/iS85HwjwNw
+	hover kole potita te hobe
+
+
+Citas
+----------------
+1. https://www.screencast.com/t/tIQwcjrr
+	h1 hobe. r check korte hobe ak page a 2ta h1 ache naki
+2. https://www.screencast.com/t/wNGKXRxK0G8
+	ai section ta copy kore thakle pest koro milon ar fix ses hole.
+	hover korle dhaka dische content. home a dekhe nao thik ache kina
+3.https://www.screencast.com/t/nmqvU4vXAP
+	Slider arrow missing. r section ar gray bg ta hobena ai page a
+4. https://www.screencast.com/t/1UfuZUKtlc
+	gap besi hobe
+5. section gulo te gray bg ta hobena maybe check korte valo kore
+
+Blog
+--------------------------
+1. https://www.screencast.com/t/PbNNPJzkq2
+	hover korle ai border ta middle thake 2 pase jabe. oi effect ta dite hobe
+2.https://www.screencast.com/t/ujNGnO4t
+	h1 hobe
+2. lazy load ta kaj kortechena maybe. sob img load hoye ache age thakei. ata last a mone koray dio
