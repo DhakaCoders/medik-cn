@@ -236,16 +236,14 @@ if( $('#HmBrandLogoSlider').length ){
 
 if( $('.HmbtmGridSlider').length ){
     $('.HmbtmGridSlider').slick({
-      pauseOnHover: false,
       autoplay: true,
       autoplaySpeed: 6000,
       dots: true,
-      infinite: false,
+      infinite: true,
       arrows:true,
       speed: 1000,
-      slidesToShow: 1,
+      slidesToShow: 4,
       slidesToScroll: 1,
-      fade: true,
       prevArrow: $('.hmgirdarrows .leftArrow'),
       nextArrow: $('.hmgirdarrows .rightArrow'),
       responsive: [
@@ -261,7 +259,6 @@ if( $('.HmbtmGridSlider').length ){
         {
           breakpoint: 767,
           settings: {
-            dots: true,
             slidesToShow: 2,
             slidesToScroll: 2
           }
@@ -269,17 +266,17 @@ if( $('.HmbtmGridSlider').length ){
         {
           breakpoint: 575,
           settings: {
-            dots: true,
             slidesToShow: 1,
             slidesToScroll: 1
           }
-        },
+        }
         // You can unslick at a given breakpoint now by adding:
         // settings: "unslick"
         // instead of a settings object
       ]
     });
 }
+
 
 
 

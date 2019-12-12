@@ -9,6 +9,10 @@ contact-map-sec-wrp
 .contact-map-sec-wrp .section-hdr{
 	padding-bottom: 40px;
 }
+.contact-map-sec-wrp .section-hdr .sec-hdr-title{
+	font-size: 35px;
+	line-height: 37px;
+}
 .contact-tel{
 	padding-top: 5px;
 }
@@ -73,6 +77,10 @@ contact-map-sec-wrp
 .location-dsc span a{
 	color: #424242;
 }
+.contact-rgt-mail a:hover,
+.location-dsc span a:hover{
+	color: #0e857b;
+}
 .location-dsc > a{
 	display: inline-block;
 	vertical-align: baseline;
@@ -92,8 +100,8 @@ contact-map-sec-wrp
 .location-dsc > a:after {
     content: "";
     position: absolute;
-    right: 16px;
-    top: 10px;
+    right: 13px;
+    top: 11px;
     background: url(../images/arrow-white.png);
     background-repeat: no-repeat;
     background-size: 17px 12px;
@@ -168,7 +176,7 @@ a.green-tel-icon:hover{
 }
 .contact-profile h6{
 	margin: 0;
-	padding-left: 20px;
+	padding-left: 23px;
 	font-size: 16px;
 	line-height: 20px;
 	font-family: "OpenSans-Bold";
@@ -281,7 +289,7 @@ a.green-tel-icon:hover{
 .contact-form .wpforms-form .wpforms-field-container .wpforms-field textarea{
 	height: 205px !important;
 	resize: none;
-	border-radius: 40px;
+	border-radius: 30px;
 }
 .contact-form div.wpforms-container-full .wpforms-form .wpforms-field{
 	padding: 0 !important;
@@ -294,7 +302,7 @@ a.green-tel-icon:hover{
     font-style: normal;
     font-weight: 700;
     font-size: 18px !important;
-    line-height: 20px;
+    line-height: 19px;
     text-align: center;
     text-transform: uppercase;
     color: #fff !important;
@@ -328,4 +336,143 @@ a.green-tel-icon:hover{
 	color: #FF5C26 !important;
 	font-weight: 400 !important;
 	padding-top: 10px;
+}
+
+
+@media(max-width: 1199px){ 
+	.hide-md{
+		display: none!important;
+	}
+	.show-md{
+		display: block!important;
+	}
+	.contact-info-lft {
+	    padding-right: 35px;
+	}
+
+}
+
+
+@media(max-width: 991px){
+	.hide-sm{
+		display: none!important;
+	}
+	.show-sm{
+		display: block!important;
+	}
+	.contact-info-lft {
+	    padding-right: 0;
+	    width: 100%;
+	}
+	.contact-info-rgt {
+	    width: 100%;
+	    padding-top: 35px;
+	}
+
+}
+
+
+@media(max-width: 767px){
+	.hide-xs{
+		display: none!important;
+	}
+	.show-xs{
+		display: block!important;
+	}
+	.contact-info-rgt-dsc h4,
+	.contact-info-dsc h4{
+		text-align: center;
+		padding-bottom: 15px;
+	}
+	.contact-map-sec-wrp .section-hdr {
+	    max-width: 450px;
+	    width: 100%;
+	    padding-bottom: 0;
+	}
+	.contact-map-sec-wrp .section-hdr p{
+		font-size: 17px;
+		line-height: 30px;
+		text-align: center;
+	}
+	.contact-info-sec-wrp {
+	    padding-top: 0;
+	    padding-bottom: 50px;
+	}
+	.contact-info-lft .servicios-siderbar-form-wrp{
+		max-width: 445px;
+		width: 100%;
+		margin: 0 auto;
+	}
+	.contact-map-sec-wrp {
+	    padding-top: 10px;
+	}
+	.contact-info-lft .dft-page-contact-form-hdr h4 {
+	    padding-bottom: 30px;
+	}
+	.contact-info-lft .dft-page-contact-form-main p{
+		font-size: 17px;
+		line-height: 22px;
+		color: #fff;
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+	.contact-info-rgt-dsc-wrp{
+		max-width: 410px;
+		width: 100%;
+		margin: 0 auto;
+	}
+	.contact-info-rgt-dsc{
+		text-align: center;
+	}
+	.contact-info-rgt-dsc a {
+	    padding-top: 20px;
+	}
+	.location-dsc {
+	    padding-bottom: 35px;
+	    text-align: center;
+	    max-width: 365px;
+	    width: 100%;
+	    margin: 0 auto;
+	}
+	.contact-profile,
+	.contact-rgt-mail{
+		text-align: center;
+	}
+	.contact-rgt-mail a{
+		display: inline-block;
+		vertical-align: baseline;
+	}
+	.contact-profile h6{
+		display: inline-block;
+		vertical-align: baseline;
+	}
+}
+
+
+
+@media(max-width: 639px){
+
+}
+
+
+
+@media(max-width: 575px){
+
+
+}
+
+
+@media(max-width: 479px){
+	.contact-info-lft .dft-page-contact-form-main p br{
+		display: none;
+		padding-right: 10px;
+		padding-left: 10px;
+	}
+
+}
+
+
+
+@media(max-width: 359px){
+
 }
