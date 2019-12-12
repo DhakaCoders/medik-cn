@@ -7,3 +7,36 @@ Footer
 3. https://www.screencast.com/t/gfHLLfPxhHX
 	hover korle hover color buja jayna temon
 4. 
+
+
+servicios
+-------------
+1. https://www.screencast.com/t/4QDsIv6mg
+	jehetu banner nai tahole ata h1 hobe
+
+2. https://www.screencast.com/t/0YWxpf8dA1bW
+	https://www.screencast.com/t/1auV7fMdSaac
+	hover out a transiton lagbe. sob gulotei dekho. hover in and out ta
+
+3. https://www.screencast.com/t/oRdndh6dMx
+	img ao link daw
+4.https://www.screencast.com/t/QRgrETbfIuVj
+	focus a border or bg color dite paro
+5. https://www.screencast.com/t/2KGKe5hc
+	ulc class badh diye atar design koro. WP editor thake asle . class use kora jabena
+6. https://www.screencast.com/t/iS85HwjwNw
+	hover kole potita te hobe
+
+
+Citas
+----------------
+1. https://www.screencast.com/t/tIQwcjrr
+	h1 hobe
+2. https://www.screencast.com/t/wNGKXRxK0G8
+	ai section ta copy kore thakle pest koro milon ar fix ses hole.
+	hover korle dhaka dische content. home a dekhe nao thik ache kina
+3.https://www.screencast.com/t/nmqvU4vXAP
+	Slider arrow missing. r section ar gray bg ta hobena ai page a
+4.https://www.screencast.com/t/fYfXSL9j8pfp
+	Slider break hoye geche
+5. Blog
