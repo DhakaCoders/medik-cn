@@ -1,6 +1,6 @@
 .servicios-main-sec {
     margin: 30px 0 80px;
-}
+} 
 .servicios-content{
 	width:72.72%;
 	float: left;
@@ -54,12 +54,12 @@
 }
 .llevamosSlider-item h2{
 	font-family: 'OpenSans-ExtraboldItalic';
-	-webkit-text-stroke: 2px #fd6607;
-    -webkit-text-fill-color: #fff;
     letter-spacing: -1.8px;
     margin-bottom: 55px;
-	/*color:#fff;
-	text-shadow: -1px -1px 0 #fd6607, 1px -1px 0 #fd6607, -1px 1px 0 #fd6607, 1px 1px 0 #fd6607;*/
+	-webkit-text-stroke: 2px #fd6607;
+    -webkit-text-fill-color: #fff;
+	color:#fff;
+	/*text-shadow: -1px -1px 0 #fd6607, 1px -1px 0 #fd6607, -1px 1px 0 #fd6607, 1px 1px 0 #fd6607;*/
 }
 .llevamosSlider-item ul li{
 	width: 	47.75%;
@@ -629,14 +629,7 @@
 .serviciosPartnerSlider{
 	padding: 25px 0;
 }
-.serviciosPartnerSlider-wrp .medik-sliderarrows .leftArrow{
-	left: -155px;
-	top:20%;
-}
-.serviciosPartnerSlider-wrp .medik-sliderarrows .rightArrow{
-	right: -155px;
-	top:20%;
-}
+
 .noticias-slider-sec-wrp{
 	padding-top: 35px;
 }
@@ -823,12 +816,7 @@
 .noticiasSlider-wrp{
 	position: relative;
 }
-.noticiasSlider-wrp .medik-sliderarrows .leftArrow{
-	left: -47px;
-}
-.noticiasSlider-wrp .medik-sliderarrows .rightArrow{
-	right: -47px;
-}
+
 
 .servicios-siderbar-form-wrp{
 	margin-bottom: 25px;
@@ -953,8 +941,15 @@
 }
 
 
+/*
+----------------
+ Sliderarrows Css
+----------------
+*/
 
-.medik-sliderarrows .leftArrow {
+.noticiasSlider-arrows .leftArrow,
+.serviciosPartnerSlider-arrows .leftArrow,
+.llevamosSlider-arrows .leftArrow{
 	content: "";
     position: absolute;
     width: 46px;
@@ -979,7 +974,9 @@
 	     -o-transform: translateY(-50%);
 	        transform: translateY(-50%);
 }
-.medik-sliderarrows .rightArrow {
+.noticiasSlider-arrows .rightArrow, 
+.serviciosPartnerSlider-arrows .rightArrow, 
+.llevamosSlider-arrows .rightArrow {
 	content: "";
     position: absolute;
     width: 46px;
@@ -1004,14 +1001,29 @@
 	     -o-transform: translateY(-50%);
 	        transform: translateY(-50%);
 }
-.medik-sliderarrows .leftArrow:hover,
-.medik-sliderarrows .rightArrow:hover {
+.noticiasSlider-arrows .leftArrow:hover,
+.noticiasSlider-arrows .rightArrow:hover,
+.serviciosPartnerSlider-arrows .leftArrow:hover,
+.serviciosPartnerSlider-arrows .rightArrow:hover,
+.llevamosSlider-arrows .leftArrow:hover,
+.llevamosSlider-arrows .rightArrow:hover{
 	opacity: 1;
 }
+.noticiasSlider-arrows .leftArrow{
+	left: -47px;
+}
+.noticiasSlider-arrows .rightArrow{
+	right: -47px;
+}
 
-
-
-
+.serviciosPartnerSlider-arrows .leftArrow{
+	left: -155px;
+	top:20%;
+}
+.serviciosPartnerSlider-arrows .rightArrow{
+	right: -155px;
+	top:20%;
+}
 
 
 
@@ -1091,24 +1103,34 @@
 
 
 
+@media(max-width: 1199px){ 
+
+}
+
+@media(max-width: 991px){
+
+}
+
+@media(max-width: 767px){
+
+}
+
+@media(max-width: 639px){
+
+}
+
+@media(max-width: 575px){
 
 
+}
+
+@media(max-width: 479px){
 
 
+}
 
+@media(max-width: 359px){
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+}
 
 

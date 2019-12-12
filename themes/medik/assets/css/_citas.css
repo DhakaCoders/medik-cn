@@ -2,7 +2,7 @@
 	background: #f8f8f8;
 	padding: 25px 0 85px;
 	position: relative;
-}
+} 
 .citas-main-sec:after{
 	content: "";
     position: absolute;
@@ -193,35 +193,35 @@
 
 
 
+@media(max-width: 1199px){ 
+
+}
+
+@media(max-width: 991px){
+
+}
+
+@media(max-width: 767px){
+
+}
+
+@media(max-width: 639px){
+
+}
+
+@media(max-width: 575px){
 
 
+}
+
+@media(max-width: 479px){
 
 
+}
 
+@media(max-width: 359px){
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+}
 
 
 

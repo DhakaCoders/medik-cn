@@ -582,8 +582,8 @@ if( $('.llevamosSlider').length ){
       slidesToShow: 1,
       slidesToScroll: 1,
       fade: true,
-      prevArrow: $('.llevamosSlider-wrp .medik-sliderarrows .leftArrow'),
-      nextArrow: $('.llevamosSlider-wrp .medik-sliderarrows .rightArrow'),
+      prevArrow: $('.llevamosSlider-arrows .leftArrow'),
+      nextArrow: $('.llevamosSlider-arrows .rightArrow'),
     });
 }
 
@@ -631,8 +631,8 @@ if( $('.serviciosPartnerSlider').length ){
       arrows:true,
       slidesToShow: 5,
       slidesToScroll: 1,
-      prevArrow: $('.medik-sliderarrows .leftArrow'),
-      nextArrow: $('.medik-sliderarrows .rightArrow'),
+      prevArrow: $('.serviciosPartnerSlider-arrows .leftArrow'),
+      nextArrow: $('.serviciosPartnerSlider-arrows .rightArrow'),
     });
 }
 
@@ -648,8 +648,8 @@ if( $('.noticiasSlider').length ){
       slidesToShow: 1,
       slidesToScroll: 1,
       fade: true,
-      prevArrow: $('.medik-sliderarrows .leftArrow'),
-      nextArrow: $('.medik-sliderarrows .rightArrow'),
+      prevArrow: $('.noticiasSlider-arrows .leftArrow'),
+      nextArrow: $('.noticiasSlider-arrows .rightArrow'),
     });
 }
 
