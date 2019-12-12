@@ -91,6 +91,9 @@
 	max-width: 50px;
 	margin-right: 6px;
 }
+.ftr-social a:hover{
+	opacity: .5
+}
 .ftr-social a img{
 	width:100%;
 }
@@ -125,6 +128,9 @@
 	top: -32px;
 	display: inline-block;
 	max-width: 70px;
+}
+.go-top-btn:hover{
+	opacity: .6
 }
 .go-top-btn img{
 	width:100%;
