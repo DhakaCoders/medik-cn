@@ -469,7 +469,7 @@ nav.main-nav ul li.current-menu-item a{
 	}
 
 	header nav.main-nav > ul > li::after,
-	header nav.main-nav > ul > li::before {
+	header nav.main-nav > ul > li a::before {
 		content: none;
 	}
 	nav.main-nav > ul > li.menu-item-has-children > a:hover:after{
