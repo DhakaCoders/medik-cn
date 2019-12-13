@@ -593,27 +593,39 @@ if( $('.serviciosPartnerSlider').length ){
       nextArrow: $('.serviciosPartnerSlider-arrows .rightArrow'),
       responsive: [
         {
-          breakpoint: 991,
+          breakpoint: 992,
           settings: {
             slidesToShow: 4,
             slidesToScroll: 1,
-            infinite: true,
             arrows:false,
             dots: true
           }
         },
         {
-          breakpoint: 767,
+          breakpoint: 768,
           settings: {
             slidesToShow: 3,
-            slidesToScroll: 1
+            slidesToScroll: 1,
+            arrows:false,
+            dots: true
           }
         },
         {
-          breakpoint: 475,
+          breakpoint: 540,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 1,
+            arrows:false,
+            dots: true
+          }
+        },
+        {
+          breakpoint: 480,
           settings: {
             slidesToShow: 1,
-            slidesToScroll: 1
+            slidesToScroll: 1,
+            arrows:false,
+            dots: true
           }
         }
         // You can unslick at a given breakpoint now by adding:
@@ -640,20 +652,18 @@ if( $('.noticiasSlider').length ){
           breakpoint: 992,
           settings: {
             slidesToShow: 3,
-            slidesToScroll: 1,
-            infinite: true,
-            dots: true
+            slidesToScroll: 1
           }
         },
         {
-          breakpoint: 600,
+          breakpoint: 768,
           settings: {
             slidesToShow: 2,
             slidesToScroll: 1
           }
         },
         {
-          breakpoint: 480,
+          breakpoint: 576,
           settings: {
             slidesToShow: 1,
             slidesToScroll: 1
@@ -700,6 +710,16 @@ if($('.blog-grd').length){
 };
 
 
+
+//xs footer menu
+$('.menu-item-has-children > a').on('click', function(e){
+  e.preventDefault();
+  $('.menu-item-has-children ul').slideToggle(500);
+  $(this).toggleClass("open");
+});
+
+
+
 //filter-btn
 $('.blog-filter-btn button').click(function(){
     $('.blog-filter-btn button').removeClass("active");
@@ -737,8 +757,9 @@ $("#cat-four").on("click", function(){
    shuffleInstance.filter('blg-cat-4');
 });
 
-
 }
+
+
   new WOW().init();
 
 })(jQuery);

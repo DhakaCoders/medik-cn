@@ -71,21 +71,10 @@
     -o-transform: translateX(-50%);
     transform: translateX(-50%);
 }
-
 .citas-main-hdr p{
     font-size:18px;
     margin-bottom: 15px;
 }
-
-
-
-
-/*
-.citas-main-two-part{
-	padding-left: 26px;
-	padding-right: 26px;
-}
-*/
 .citas-main-lft{
 	width:63.26%;
 	float: left;
@@ -104,9 +93,9 @@
 }
 .citas-main-lft-innr > i{
 	width:100%;
+	display: inline-block;
+	vertical-align: baseline;
 }
-
-
 .citas-main-lft-innr ul{
 	margin-top: 5px;
 }
@@ -114,7 +103,6 @@
 	margin-bottom: 18px;
 	font-size: 17px;
 }
-
 .citas-main-lft-innr li a{
 	display: inline-block;
 	vertical-align: baseline;
@@ -151,12 +139,9 @@
 .citas-main-lft-innr li:first-child span{
 	font-family: "Lato-Italic";
 }
-
-
 #citas-main-contact-form .dft-page-contact-form-hdr h5{
 	font-size: 20px;
 }
-
 #citas-main-contact-form .dft-page-contact-form-hdr strong{
 	font-size: 23px;
 	font-family: "OpenSans-Bold";
@@ -180,15 +165,12 @@
 #citas-main-contact-form .dft-page-contact-form-main textarea {
 	min-height: 167px;
 }
-
 #citas-partner-slider-sec{
 	background: #fff;
 }
 #citas-noticias-slider-sec .noticias-slider-innr-wrp{
     margin-bottom: 140px;
 }
-
-
 #citas-service-sec-wrp {
 	padding-top: 55px;
     padding-bottom: 50px;
@@ -202,15 +184,69 @@
 }
 
 @media(max-width: 991px){
-
+	.citas-main-sec:after {
+	    content: none;
+	}
+	#citas-main-contact-form .dft-page-contact-form-hdr strong {
+	    font-size: 18px;
+	}
+	#citas-main-contact-form .dft-page-contact-form-hdr h5 {
+	    font-size: 16px;
+	}
+	.citas-main-lft {
+	    width: 56%;
+	    padding-left: 0;
+	}
+	.citas-main-rgt {
+	    width: 44%;
+	}
+	.citas-main-hdr h1 {
+	    font-size: 30px;
+	}
 }
 
 @media(max-width: 767px){
-
+	.citas-main-lft {
+	    width: 100%;
+	    padding-left: 0;
+	}
+	.citas-main-rgt {
+	    width: 100%;
+	}
+	.citas-main-lft-innr a.tel{
+		font-size: 40px; 
+		color: #008175;
+	}
+	.citas-main-lft-innr a.tel:nth-child(7),
+	.citas-main-lft-innr a.tel:nth-child(3){
+		color:#fd6607;
+	}
+	.citas-main-lft-innr li strong {
+	    color: #008175;
+	}
+	.citas-main-lft-innr {
+	    max-width: 392px;
+	    margin: auto;
+	}
+	#citas-main-contact-form .dft-page-contact-form {
+	    max-width: 550px;
+	    margin: 50px auto 0;
+	}
+	.citas-main-hdr h1 {
+	    font-size: 25px;
+	}
+	.citas-main-hdr h1 span {
+	    display: block;
+	}
+	.citas-main-hdr p {
+	    font-size: 16px;
+	}
 }
 
 @media(max-width: 639px){
-
+	#citas-main-contact-form .form-spn {
+	    font-size: 12px;
+	}
 }
 
 @media(max-width: 575px){
