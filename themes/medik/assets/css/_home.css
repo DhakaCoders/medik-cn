@@ -1042,7 +1042,6 @@ hm-btm-grid-sec-wrp
 .hm-btm-grid-dsc h6{
 	font-size: 18px;
 	line-height: 26px;
-	color: #0e857b;
 	font-family: 'OpenSans-SemiboldItalic';
 	text-transform: uppercase;
 	margin: 0;
@@ -1052,6 +1051,18 @@ hm-btm-grid-sec-wrp
 	align-items: center;
 	justify-content: center;
 	margin-top: 10px;
+}
+.hm-btm-grid-dsc h6 a{
+	color: #0e857b;
+}
+.hm-btm-grid-orange .hm-btm-grid-dsc h6 a{
+	color: #fa5503;
+}
+.hm-btm-grid-dsc h6 a:hover{
+	color: #fa5503;
+}
+.hm-btm-grid-orange .hm-btm-grid-dsc h6 a:hover{
+	color: #0e857b;
 }
 .hm-btm-grid-dsc-btn{
 	border-bottom: 2px solid#fa6405;
