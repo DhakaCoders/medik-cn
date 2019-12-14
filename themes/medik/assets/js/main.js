@@ -36,9 +36,9 @@ if (windowWidth <= 991) {
     $(this).toggleClass('menu-expend');
     $('header.header nav.main-nav > ul').slideToggle(500);
   });
-  $('#branding .opener-inner').on('click', function(){
+  $('.opener-inner').on('click', function(){
     $(this).toggleClass('menu-expend');
-    $('#branding nav.main-nav > ul').slideToggle(500);
+    $('nav.main-nav > ul').slideToggle(500);
   });
 
   $('nav.main-nav li.menu-item-has-children > a').on('click', function(e){
