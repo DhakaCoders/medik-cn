@@ -991,7 +991,7 @@
  Sliderarrows Css
 ----------------
 */
-
+.blogGrdSlider-arrows .leftArrow,
 .noticiasSlider-arrows .leftArrow,
 .serviciosPartnerSlider-arrows .leftArrow,
 .llevamosSlider-arrows .leftArrow{
@@ -1019,6 +1019,7 @@
 	     -o-transform: translateY(-50%);
 	        transform: translateY(-50%);
 }
+.blogGrdSlider-arrows .rightArrow, 
 .noticiasSlider-arrows .rightArrow, 
 .serviciosPartnerSlider-arrows .rightArrow, 
 .llevamosSlider-arrows .rightArrow {
@@ -1046,6 +1047,8 @@
 	     -o-transform: translateY(-50%);
 	        transform: translateY(-50%);
 }
+.blogGrdSlider-arrows .leftArrow:hover,
+.blogGrdSlider-arrows .rightArrow:hover,
 .noticiasSlider-arrows .leftArrow:hover,
 .noticiasSlider-arrows .rightArrow:hover,
 .serviciosPartnerSlider-arrows .leftArrow:hover,
@@ -1054,9 +1057,11 @@
 .llevamosSlider-arrows .rightArrow:hover{
 	opacity: 1;
 }
+.blogGrdSlider-arrows .leftArrow,
 .noticiasSlider-arrows .leftArrow{
 	left: -47px;
 }
+.blogGrdSlider-arrows .rightArrow,
 .noticiasSlider-arrows .rightArrow{
 	right: -47px;
 }
@@ -1077,7 +1082,7 @@
  Pagination Css
 ----------------
 */
-
+.blogGrdSlider .slick-dots,
 .serviciosPartnerSlider .slick-dots,
 .siderbarProSlider .slick-dots,
 .siderbarRecentPostSlider .slick-dots,
@@ -1085,6 +1090,7 @@
 .llevamosSlider .slick-dots{
 	left: 0;
 }
+.blogGrdSlider .slick-dots li,
 .serviciosPartnerSlider .slick-dots li,
 .siderbarProSlider .slick-dots li,
 .siderbarRecentPostSlider .slick-dots li,
@@ -1099,6 +1105,9 @@
 	vertical-align: baseline;
 	float: none;
 }
+.blogGrdSlider .slick-dots li,
+.blogGrdSlider .slick-dots li button,
+.blogGrdSlider .slick-dots li button:before,
 .serviciosPartnerSlider .slick-dots li,
 .serviciosPartnerSlider .slick-dots li button,
 .serviciosPartnerSlider .slick-dots li button:before,
@@ -1123,6 +1132,7 @@
 	     -o-transition: all .25s ease;
 	        transition: all .25s ease;
 }
+.blogGrdSlider .slick-dots li button:before,
 .serviciosPartnerSlider .slick-dots li button:before,
 .siderbarProSlider .slick-dots li button:before,
 .siderbarRecentPostSlider .slick-dots li button:before,
@@ -1130,6 +1140,8 @@
 .llevamosSlider .slick-dots li button:before{
 	content: "";
 }
+.blogGrdSlider .slick-dots li.slick-active,
+.blogGrdSlider .slick-dots li:hover,
 .serviciosPartnerSlider .slick-dots li.slick-active,
 .serviciosPartnerSlider .slick-dots li:hover,
 .siderbarProSlider .slick-dots li.slick-active,
@@ -1394,6 +1406,7 @@
 	    display: block;
 	    margin: 0 auto!important;
 	}
+	.blog-main-sec-innr-wrp,
 	.noticias-slider-innr-wrp {
 	    max-width: 490px;
 	}
@@ -1422,6 +1435,7 @@
 	.servicios-content-des ul li {
 	    margin-bottom: 20px;
 	}
+	.blog-main-sec-innr-wrp,
 	.noticias-slider-innr-wrp {
 	    max-width: 360px;
 	}
@@ -1443,6 +1457,7 @@
 	.servicios-accordion-des {
 	    padding-bottom: 0px;
 	}
+	.blog-main-sec-innr-wrp,
 	.noticias-slider-innr-wrp {
 	    max-width: 300px;
 	}
@@ -1452,6 +1467,7 @@
 }
 
 @media(max-width: 379px){
+	.blogGrdSlider-arrows,
 	.noticiasSlider-arrows{
 		display: none;
 	}

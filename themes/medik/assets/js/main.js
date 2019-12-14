@@ -729,35 +729,82 @@ $('.blog-filter-btn button').click(function(){
 
 //Shuffle filter
 
-if($('.blog-grd-wrp').length){
+// if($('.blog-grd-wrp').length){
     
 
-var Shuffle = window.Shuffle;
-var element = document.querySelector('.blog-grd-wrp ul');
-//var sizer = element.querySelector('.my-sizer-element');
 
-var shuffleInstance = new Shuffle(element, {
-  itemSelector: '.blog-item',
-  //sizer: sizer 
-});
 
-$("#all").on("click", function(){
-   shuffleInstance.filter();
-});
-$("#cat-one").on("click", function(){
-   shuffleInstance.filter('blg-cat-1');
-});
-$("#cat-two").on("click", function(){
-   shuffleInstance.filter('blg-cat-2');
-});
-$("#cat-three").on("click", function(){
-   shuffleInstance.filter('blg-cat-3');
-});
-$("#cat-four").on("click", function(){
-   shuffleInstance.filter('blg-cat-4');
-});
+// }
 
+
+var windowWidth = $(window).width();
+
+if (windowWidth >= 768) {
+  if($('.blog-grd-wrp').length){
+    var Shuffle = window.Shuffle;
+    var element = document.querySelector('.blog-grd-wrp ul');
+    //var sizer = element.querySelector('.my-sizer-element');
+
+    var shuffleInstance = new Shuffle(element, {
+      itemSelector: '.blog-item',
+      //sizer: sizer 
+    });
+
+    $("#all").on("click", function(){
+       shuffleInstance.filter();
+    });
+    $("#cat-one").on("click", function(){
+       shuffleInstance.filter('blg-cat-1');
+    });
+    $("#cat-two").on("click", function(){
+       shuffleInstance.filter('blg-cat-2');
+    });
+    $("#cat-three").on("click", function(){
+       shuffleInstance.filter('blg-cat-3');
+    });
+    $("#cat-four").on("click", function(){
+       shuffleInstance.filter('blg-cat-4');
+    });
+  }
+} else{
+  //.blog-grd-wrp ul
+
+  if( $('.blog-grd-wrp').length ){
+    $('.blogGrdSlider').slick({
+      dots: true,
+      autoplay: false,
+      autoplaySpeed: 4000,
+      infinite: true,
+      speed: 1000,
+      arrows:true,
+      slidesToShow: 4,
+      slidesToScroll: 1,
+      prevArrow: $('.blogGrdSlider-arrows .leftArrow'),
+      nextArrow: $('.blogGrdSlider-arrows .rightArrow'),
+      responsive: [
+        {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 1
+          }
+        },
+        {
+          breakpoint: 576,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
+        }
+        // You can unslick at a given breakpoint now by adding:
+        // settings: "unslick"
+        // instead of a settings object
+      ]
+    });
+  }
 }
+            
+
 
 
   new WOW().init();
