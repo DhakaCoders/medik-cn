@@ -715,7 +715,7 @@ if($('.blog-grd').length){
 $('.menu-item-has-children > a').on('click', function(e){
   e.preventDefault();
   $('.menu-item-has-children ul').slideToggle(500);
-  $(this).toggleClass("open");
+  $(this).toggleClass("sub-menu-expend");
 });
 
 
