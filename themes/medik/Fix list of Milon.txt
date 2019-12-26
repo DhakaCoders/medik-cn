@@ -62,7 +62,7 @@ New
 
 5.  ager fix thake 
 	6. https://www.screencast.com/t/4ES9M9qzi1YI
-	hover out time a transiton lagbe
+	hover out time a transiton lagbe 
 
 6. https://www.screencast.com/t/1tMmVIoB
 	scroll kore aikhane asar por. then jodi first item take hover kora hoy , slider section ta dhakka dey
@@ -83,17 +83,17 @@ New
 		justify daw
 
 9. https://www.screencast.com/t/a8TznqDjXts
-	item a hover korle around boxshadow daw
+	item a hover korle around boxshadow daw <->
 
 
 10. https://www.screencast.com/t/nCHkXqYrUs
 	just ata link hobe
 
-11. https://www.screencast.com/t/z3knC82nD
+11. https://www.screencast.com/t/z3knC82nD <->
 	ata missing 
 
 12. https://www.screencast.com/t/qg8Pefr3
-	bg and des 2 tai slide hobe. mobile ao same
+	bg and des 2 tai slide hobe. mobile ao same <->
 
 
 13. https://www.screencast.com/t/aSrNfLVi
@@ -102,7 +102,7 @@ New
 
 14. https://www.screencast.com/t/2Tym9moisn82
 	ai section tar new design ta ami kore dischi. deskhop and responsive soho.
-	aikhane new  2 ta form akta slider ar moddhe hobe. 
+	aikhane new  2 ta form akta slider ar moddhe hobe.<-> 
 
 Responsive ---->
 

@@ -79,7 +79,7 @@ contact-map-sec-wrp
 }
 .contact-rgt-mail a:hover,
 .location-dsc span a:hover{
-	color: #0e857b;
+	color: #fd6608;
 }
 .location-dsc > a{
 	display: inline-block;
@@ -367,6 +367,15 @@ a.green-tel-icon:hover{
 	.contact-info-rgt {
 	    width: 100%;
 	    padding-top: 35px;
+	}
+	.contact-tel {
+	    text-align: center;
+	}
+	.contact-info-sec-wrp {
+	    padding-top: 0;
+	}
+	.contact-info-dsc {
+	    padding-bottom: 75px;
 	}
 
 }

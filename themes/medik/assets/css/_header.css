@@ -44,8 +44,7 @@ header .hdr-address span a{
 	color: #262626;
 	font-family: 'OpenSans-Regular';
 }
-header .hdr-address span a:hover,
-.hdr-address a:hover{
+header .hdr-address span a:hover{
 	color: #fd6507;
 }
 header .hdr-address-innr{
@@ -100,6 +99,7 @@ header .contact-info a:last-of-type:hover{
 header nav.main-nav {
     float: right;
     margin-top: 13px;
+    margin-right: -22px;
 }
 header nav.main-nav ul{
 	margin: 0;
@@ -164,11 +164,12 @@ header nav.main-nav > ul > li > a{
 	-webkit-transition: all 0.5s;
 	transition: all 0.5s;
 }
-header nav.main-nav > ul > li.current-menu-item a:hover::before{
-	content: none;
-}
 nav.main-nav li.menu-item-has-children > ul.sub-menu  li a:before{
 	content: none;
+}
+nav.main-nav li.menu-item-has-children:hover a:before{
+	visibility: visible;
+	opacity: 1;
 }
 
 /*
