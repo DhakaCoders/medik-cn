@@ -89,6 +89,50 @@ New
 10. https://www.screencast.com/t/nCHkXqYrUs
 	just ata link hobe
 
+11. https://www.screencast.com/t/z3knC82nD
+	ata missing 
+
+12. https://www.screencast.com/t/qg8Pefr3
+	bg and des 2 tai slide hobe. mobile ao same
+
+
+13. https://www.screencast.com/t/aSrNfLVi
+	ai 2 img aksathe hobena. button ar img alada hobe. button ar bg hisabe thakbe button bg ta
+
+
+14. https://www.screencast.com/t/2Tym9moisn82
+	ai section tar new design ta ami kore dischi. deskhop and responsive soho.
+	aikhane new  2 ta form akta slider ar moddhe hobe. 
+
+Responsive ---->
+
+1. https://www.screencast.com/t/S8QFOeaFi
+	xs a ai bg ta missing
+
+2. https://www.screencast.com/t/oiEQ77T3t6FF
+	humbergur btn a click korle menu ber hoy abar dhuke jay. 
+	r j menu ta ber hosche. seta popup daw. pupup a akta close btn o thakbe clickk korle hide hoye jabe
+
+3. https://www.screencast.com/t/76O75SSPW5pV
+	jokhon button ta lege jasche tokhon nicher daw prev and next 2 ta button a
+
+4. https://www.screencast.com/t/msc3K9NslQNb
+	ai property ta hobe.
+
+5. https://www.screencast.com/t/4e4YtLfQq6M
+	button text ar sathe lagano jabena. dorkar hole slider ar left and right a padding daw
+
+6. https://www.screencast.com/t/exWpMJ2ZE
+	text lege jay hover korle
+
+7. https://www.screencast.com/t/l7ErXAW8
+	ager fix ar motoi
+
+8. https://www.screencast.com/t/8giFu6BopT
+	jokhon akta item thakbe tokhon p ar text ar justify thakbena
+
+9. https://www.screencast.com/t/E51OYG0OYc2L
+	lege jay button. ager fix ar motoi korte hobe
 
 
 
@@ -104,6 +148,13 @@ New
 ---------
 1. https://www.screencast.com/t/A3skJmqjY3
 	hover korle border ta middle thake 2 pase jabe . ai css effect ta apply koro
+
+2. https://www.screencast.com/t/zKMUDYvatdgE
+	hover korle ai border ta dhakka dische. kom besi width hoesche maybe
+
+
+Responsive-->
+1.  atar responsive ta niye dadar sathe aktu kotha bolte hobe
 
 
 
@@ -133,6 +184,18 @@ new
 -------
 1. https://www.screencast.com/t/SkbYnsmll8
 	hover korle orange color daw
+
+
+Responsive -->
+
+1. https://www.screencast.com/t/cp5KqhZ2
+	991px a center a daw
+2. https://www.screencast.com/t/gjyPy4650
+	991px ai gap 2 ta komao. onek besi ache , kharap dekhasche
+
+3. https://www.screencast.com/t/rt8gJIPe8Ev8
+	aigulor hieght ar moto hobe. psd thake milay dekhte hobe. joto lage dite hobe
+
 
 
 
