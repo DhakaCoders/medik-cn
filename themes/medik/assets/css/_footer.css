@@ -1,5 +1,5 @@
 .footer-wrap{
-	color:#FFF;
+	color:#FFF; 
 }
 .ftr-main{
 	background-size: cover !important;
@@ -100,7 +100,7 @@
 	margin-right: 6px;
 }
 .ftr-social a:hover{
-	opacity: .7
+	opacity: .8
 }
 .ftr-social a img{
 	width:100%;
@@ -109,9 +109,13 @@
 	font-size:20px;
 	margin-bottom: 0;
 }
-.ftr-col-3 p span{
+.ftr-col-3 p > a{
+	color: #fff;
 	font-size:14px;
 	display: block;
+}
+.ftr-col-3 p > a:hover{
+	color: #bdbdbd;
 }
 #ftr-map{
 	position: relative;
@@ -138,7 +142,7 @@
 	max-width: 70px;
 }
 .go-top-btn:hover{
-	opacity: .7
+	opacity: .8
 }
 .go-top-btn img{
 	width:100%;
@@ -218,8 +222,6 @@
 
 
 
-
-
 @media(max-width: 1199px){ 
 	.ftr-col-wrp {
 	    padding-left: 0;
@@ -238,6 +240,9 @@
 }
 
 @media(max-width: 991px){
+	.ftr-main{
+		background: #fd6306!important;
+	}
 	.ftr-innr{
 	    margin: 0 auto;
 	    max-width: 550px;
@@ -265,7 +270,7 @@
 	    display: block;
 	}
 	.ftr-col-2 li a {
-	    font-size: 40px;
+	    font-size: 22px;
 	}
 	.ftr-col:after{
 		content: "";
@@ -300,8 +305,9 @@
 }
 
 @media(max-width: 479px){
-
-
+	.ftr-col-2 li a {
+	    font-size: 40px;
+	}
 }
 
 @media(max-width: 359px){
