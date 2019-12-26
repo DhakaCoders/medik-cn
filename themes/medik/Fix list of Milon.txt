@@ -134,7 +134,8 @@ Responsive ---->
 9. https://www.screencast.com/t/E51OYG0OYc2L
 	lege jay button. ager fix ar motoi korte hobe
 
-
+10. https://www.screencast.com/t/H1Cxc3yPc5
+	gap besi hobe xs a
 
 Promo
 -------------
@@ -151,6 +152,10 @@ New
 
 2. https://www.screencast.com/t/zKMUDYvatdgE
 	hover korle ai border ta dhakka dische. kom besi width hoesche maybe
+
+3. https://www.screencast.com/t/JKEbDK1Hdq5
+	aita purotai akta img hobe. r fancy ta on hosche .seta thakhbe.
+	ager design ta thak just akhon akta img hobe purota. pore lagle ager disgn ta deoa jabe
 
 
 Responsive-->

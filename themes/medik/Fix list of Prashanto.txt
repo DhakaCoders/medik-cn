@@ -1,55 +1,130 @@
 Footer
----------------------
+--------------------- 
 1. https://www.screencast.com/t/DNwhJcrT
-	foote ar width maybe choto hoye geche . uporer section ar sathe milay fix koro --done
+	foote ar width maybe choto hoye geche . uporer section ar sathe milay fix koro --done <--Ok
+
 2. https://www.screencast.com/t/aVTknV57tXXC
-	font italic and strong hobe ---done
+	font italic and strong hobe ---done  <--ok
+
 3. https://www.screencast.com/t/gfHLLfPxhHX
-	hover korle hover color buja jayna temon ---done
+	hover korle hover color buja jayna temon ---done  <--Ok
+
 4. https://www.screencast.com/t/7zk6vkfFEPW
-	foote opacity ta khub besi hoye geche r aktu kom daw ---done
+	foote opacity ta khub besi hoye geche r aktu kom daw ---done  <--Ok
+
 5.https://www.screencast.com/t/GaYOC6rv
-	hover korle onno color try koro. akhon jeta ache setate problem hosche hover korle text ar buja jayna ---done
+	hover korle onno color try koro. akhon jeta ache setate problem hosche hover korle text ar buja jayna ---done  <--Ok
+
 6. https://www.screencast.com/t/TWp3uBZjwVS
 	atate hover korle opacity kom daw ---done
+
+
+New
+-----------
+1. https://www.screencast.com/t/Il4unXj1G
+	https://www.screencast.com/t/sQZC5LwKDpT
+	hover a opacity .8 or .9 diye dekho --done
+
+2. https://www.screencast.com/t/5WiR2CYH
+	link hobe -done
+
+Responsive--->
+1. https://www.screencast.com/t/dLNKQisKm5
+	1199px a ai des ta hide keno? --done
+2. https://www.screencast.com/t/SI20Ddl6
+	ai gulo 991px thake hobe. bcoz 991px thake header hamburger menu ase --done
+3. https://www.screencast.com/t/AxLquNmdYr
+	border buja jasche. desktop thake fix korte hobe ata --done
+
+4. https://www.screencast.com/t/g4Nq0OYaFEGJ
+	480px ar pore boro boro font size gulo aktu choto koro, jemonta valo lage  --done
 
 
 servicios
 -------------
 1. https://www.screencast.com/t/4QDsIv6mg
-	jehetu banner nai tahole ata h1 hobe ---done
+	jehetu banner nai tahole ata h1 hobe ---done  <--Ok
 
 2. https://www.screencast.com/t/0YWxpf8dA1bW
 	https://www.screencast.com/t/1auV7fMdSaac
-	hover out a transiton lagbe. sob gulotei dekho. hover in and out ta --done
+	hover out a transiton lagbe. sob gulotei dekho. hover in and out ta --done red
+
+	B.N. hover img ta kata pore then thik thake
 
 3. https://www.screencast.com/t/oRdndh6dMx
-	img ao link daw ---done
-4.https://www.screencast.com/t/QRgrETbfIuVj
-	focus a border or bg color dite paro---done
+	img ao link daw ---done  <--Ok
+
+4. https://www.screencast.com/t/QRgrETbfIuVj
+	focus a border or bg color dite paro---done  <--Ok
+
 5. https://www.screencast.com/t/2KGKe5hc
-	ulc class badh diye atar design koro. WP editor thake asle . class use kora jabena---done
+	ulc class badh diye atar design koro. WP editor thake asle . class use kora jabena---done  <--Ok
+
 6. https://www.screencast.com/t/iS85HwjwNw
 	hover kole potita te hobe ---done
+
+	B.N. --- hover korle border ta left thake right a transiton hoye jabe --done
+
+7. https://www.screencast.com/t/TPkMEKpxwny6
+	hover korle title ar color orange daw --done
+
+8. https://www.screencast.com/t/kj1VBRD8OM
+	item a hover korle box shadow daw --done
+
+Responsive-->
+
+1. https://www.screencast.com/t/ddNIwbdvzLKQ
+	aikhane br none hobe. pore xs a lagle abar block kore dite hobe --done
+
+2. https://www.screencast.com/t/jTBf4OV5fL
+	button lege jaoa jabena --done
+
 
 
 Citas
 ----------------
 1. https://www.screencast.com/t/tIQwcjrr
-	h1 hobe. r check korte hobe ak page a 2ta h1 ache naki ---done
+	h1 hobe. r check korte hobe ak page a 2ta h1 ache naki ---done <--Ok
+
 2. https://www.screencast.com/t/wNGKXRxK0G8
 	ai section ta copy kore thakle pest koro milon ar fix ses hole.
 	hover korle dhaka dische content. home a dekhe nao thik ache kina --done
+
 3.https://www.screencast.com/t/nmqvU4vXAP
-	Slider arrow missing. r section ar gray bg ta hobena ai page a ---done
+	Slider arrow missing. r section ar gray bg ta hobena ai page a ---done <--Ok
+
 4. https://www.screencast.com/t/1UfuZUKtlc
-	gap besi hobe ---done
-5. section gulo te gray bg ta hobena maybe check korte valo kore
+	gap besi hobe ---done   <--Ok
+
+5. section gulo te gray bg ta hobena maybe check korte hobe valo kore . ---<ok 
+
+Responsive -->
+1. https://www.screencast.com/t/rIwpybVAMj
+	br none korte hobe. amon text tomar sob page valo kore dekho . kokhon br lagbe r kokhon lagbena nije dekhe dekhe thik koro. --done
+
+
 
 Blog
 --------------------------
 1. https://www.screencast.com/t/PbNNPJzkq2
 	hover korle ai border ta middle thake 2 pase jabe. oi effect ta dite hobe
+
 2.https://www.screencast.com/t/ujNGnO4t
-	h1 hobe ---done
-2. lazy load ta kaj kortechena maybe. sob img load hoye ache age thakei. ata last a mone koray dio
+	h1 hobe ---done  <--Ok
+
+3. lazy load ta kaj kortechena maybe. sob img load hoye ache age thakei. ata last a mone koray dio
+
+4. https://www.screencast.com/t/0Em5tc9eWU6p
+	lazy load use korle aigulo lagbe ki?  
+
+
+Responsive-->
+1. https://www.screencast.com/t/7vdESnRqw
+	Scrollbar ase >>> arrow ta asole xs theke hobe fix kore dichi --done
+
+2. https://www.screencast.com/t/AkuSzNqoymH
+	lege geche button ar sathe --done
+
+3. https://www.screencast.com/t/rbbhbokpikZ3
+	br problem. sob jay valo kore dekhe fix koro --done
+
