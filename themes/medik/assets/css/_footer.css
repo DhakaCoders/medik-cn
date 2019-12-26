@@ -188,7 +188,7 @@
     top: 3px;
     right: -16px;
 }
-.ftr-menu-con > ul > li.menu-item-has-children > a.open:after {
+.ftr-menu-con > ul > li.menu-item-has-children > a.sub-menu-expend:after {
     content: "\f068";
 }
 .ftr-menu-con > ul > li.menu-item-has-children > ul {
@@ -257,7 +257,6 @@
 	.ftr-head {
 	    position: relative;
 	    padding: 25px 0 35px;
-	    margin-bottom: 18px;
 	}
 	.ftr-head h2 {
 	    line-height: 35px;
