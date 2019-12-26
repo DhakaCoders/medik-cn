@@ -1,68 +1,139 @@
 Home
 ---------------------
-1. https://www.screencast.com/t/nkSOdrZKMa
+1. https://www.screencast.com/t/nkSOdrZKMa  ---done
 	hover kole text kata pore
 
-2. https://www.screencast.com/t/Gi1GF7aV5N
+2. https://www.screencast.com/t/Gi1GF7aV5N --done
 	ai bottom padding ta li te dite hobe. bcoz dropdown menu thik thak kaj kortechena
 
-3. https://www.screencast.com/t/pwwhfMRFnoQ
+3. https://www.screencast.com/t/pwwhfMRFnoQ  --done
 	i) bg ta inline a hobe.
 	ii) background-size: cover; hobe
 	iii) https://www.screencast.com/t/4jjnrymSwY
 		bg-cover dile. bg ta upore uthe jay. cover deoar por ata fix korte hobe
-4. https://www.screencast.com/t/3WBPx5Ive
+
+4. https://www.screencast.com/t/3WBPx5Ive  ---done
 	ata aktai heading ar vitor hobe h1.
 
-5. https://www.screencast.com/t/2AmT7BXvU
+5. https://www.screencast.com/t/2AmT7BXvU  ---done
 	i) text-align: justify  hobe
 	ii) textgulo border par houa jabena amon thakbe
 
-6.https://www.screencast.com/t/4ES9M9qzi1YI
+6. https://www.screencast.com/t/4ES9M9qzi1YI  --done
 	hover out time a transiton lagbe
 
-7. https://www.screencast.com/t/kOoIwFyg3x
+7. https://www.screencast.com/t/kOoIwFyg3x --done
 	text-align: justify  hobe
 
-8. https://www.screencast.com/t/mOH2NrvI
+8. https://www.screencast.com/t/mOH2NrvI  --done
 	i) text ending ager moto hobe. borabor
 	ii) word-spacing hobe
 	iii) line height ta amon hobe
-9.https://www.screencast.com/t/zactiNyKCRo0
+
+9. https://www.screencast.com/t/zactiNyKCRo0  --done
 	hover bg ta inline a hobe. just src ta . css gulo external css ai thakbe
 
-10. https://www.screencast.com/t/FfKP77cmO2br
-	hover korle img kata pore panding
+10. https://www.screencast.com/t/FfKP77cmO2br --done
+	hover korle img kata pore 
 
-11. https://www.screencast.com/t/4E1k9k4g0it
+11. https://www.screencast.com/t/4E1k9k4g0it  --done
 	prev and next a click korle nicher slider ta kaj korteche
 
 12. https://www.screencast.com/t/0fE54Fun7N
 	hover color lagbe
 
 
+
+New
+----------------
+1. https://www.screencast.com/t/b30DFCoVImW
+	i) ata aro right a jabe. div tare (-) margin kore right a daw
+	ii) then last item hover kore dekhte hobe  j thik thak thake kina
+
+2. https://www.screencast.com/t/Ja2dDgJg4CXf
+	hover korle ai item ta dekha jayna
+
+3. https://www.screencast.com/t/d4pYuxpc
+	hover kore sub menu te asle bg ta aktive thakena
+
+4. https://www.screencast.com/t/4nTVXcczMxjE
+	i) span k display block daw. 
+	ii) br tag tule daw
+
+5.  ager fix thake 
+	6. https://www.screencast.com/t/4ES9M9qzi1YI
+	hover out time a transiton lagbe
+
+6. https://www.screencast.com/t/1tMmVIoB
+	scroll kore aikhane asar por. then jodi first item take hover kora hoy , slider section ta dhakka dey
+
+7. https://www.screencast.com/t/hzLKsL6Ld
+	title a link hobe
+
+
+8. https://www.screencast.com/t/mOH2NrvI
+	ata mileni 
+	justyfiy hobe. word-specing badh daw
+
+	ata fix korar jonno 
+	i) https://www.screencast.com/t/dWJ0PxN2ks
+	ii)https://www.screencast.com/t/lecEypXVNM
+		br tag tule dite hobe
+	iii) https://www.screencast.com/t/3HiEnghEunqc
+		justify daw
+
+9. https://www.screencast.com/t/a8TznqDjXts
+	item a hover korle around boxshadow daw
+
+
+10. https://www.screencast.com/t/nCHkXqYrUs
+	just ata link hobe
+
+
+
+
 Promo
 -------------
+1. https://www.screencast.com/t/A3skJmqjY3 --done
+	hover korle border ta middle thake 2 pase jabe . ai css effect ta apply koro
+
+2. https://www.screencast.com/t/sKBw908Ny  -done
+	h1 hobe.
+
+New
+---------
 1. https://www.screencast.com/t/A3skJmqjY3
 	hover korle border ta middle thake 2 pase jabe . ai css effect ta apply koro
-2. https://www.screencast.com/t/sKBw908Ny
-	h1 hobe.
+
+
 
 Contact
 --------------
-1. https://www.screencast.com/t/gRrw07Voi
+1. https://www.screencast.com/t/gRrw07Voi  --done
 	h1 hobe
-2. https://www.screencast.com/t/AFJm19mV4
+
+2. https://www.screencast.com/t/AFJm19mV4 --done
 	https://www.screencast.com/t/2syFk4CisYjl
 	hover color lagbe
-3. https://www.screencast.com/t/4HnYR8PfS
+
+3. https://www.screencast.com/t/4HnYR8PfS  --done
 	i) ai button ar bg mileni
 	ii) arrow ta r aktu niche nambe maybe
 	iii)https://www.screencast.com/t/6gzoZPc4s
 		ai gap ta kom mone hosche
-4.https://www.screencast.com/t/DRrXo2EZc
+
+4. https://www.screencast.com/t/DRrXo2EZc  -done
 	ai gap ta besi hobe. sob gulo borbor thakbe
 
-5. https://www.screencast.com/t/qLfYRp34IqcK
+5. https://www.screencast.com/t/qLfYRp34IqcK  --done
 	ai redius ta besi hoiche. c borabor corner ta hobe
+
+
+new
+-------
+1. https://www.screencast.com/t/SkbYnsmll8
+	hover korle orange color daw
+
+
+
 
