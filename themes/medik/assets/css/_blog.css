@@ -48,7 +48,6 @@
 .blog-filter-btn button.active:after,
 .blog-filter-btn button:hover:after{
 	background: #fd6607;
-	width:1px;
 }
 .blog-filter-btn button:before{
 	-webkit-transition: all .5s ease;
@@ -57,22 +56,6 @@
 	     -o-transition: all .5s ease;
 	        transition: all .5s ease;
 }
-.blog-filter-btn button.active:before,
-.blog-filter-btn button:hover:before{
-	content:""; 
-	position: absolute;
-	background: #0e857b;
-	height:1px;
-	width:70%;
-	left:50%;
-	bottom:0;
-	-webkit-transform: translateX(-50%);
-	   -moz-transform: translateX(-50%);
-	    -ms-transform: translateX(-50%);
-	     -o-transform: translateX(-50%);
-	        transform: translateX(-50%);
-}
-
 
 
 
