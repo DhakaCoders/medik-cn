@@ -254,7 +254,7 @@ if( $('#HmBrandLogoSlider').length ){
 
 if( $('.HmbtmGridSlider').length ){
     $('.HmbtmGridSlider').slick({
-      autoplay: true,
+      autoplay: false,
       autoplaySpeed: 6000,
       dots: true,
       infinite: true,

@@ -128,9 +128,67 @@ promo-tabs-sec-wrp
 	-ms-transition: all 0.5s;
 	-webkit-transition: all 0.5s;
 }
-.tabs-box-btn a:hover{
+.promo-tabs-wrp .tabs-box-btn a:hover{
 	background: #17ada0;
 }
+/*.promo-tabs-wrp .blog-filter-btn button.active:before,
+.promo-tabs-wrp .blog-filter-btn button:before{
+	width: 70% !important;
+	transition: all 0.5s !important;
+	-ms-transition: all 0.5s !important;
+	-webkit-transition: all 0.5s !important;
+}
+.promo-tabs-wrp .blog-filter-btn button:hover:before{
+	width: 80% !important;
+	transition: all 0.5s;
+	-ms-transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+}*/
+.promo-tabs-wrp .blog-filter-btn button{
+	position: relative;
+	margin-left: 22px;
+	margin-right: 22px;
+	padding-left: 0;
+	padding-right: 0;
+}
+.promo-tabs-wrp .blog-filter-btn button.active:before,
+.promo-tabs-wrp .blog-filter-btn button:before {
+    content: "";
+    position: absolute;
+    background: #0e857b;
+    height: 1px !important;
+    width: 0% !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    text-align: center !important;
+    display: table;
+    margin: 0 auto;
+    transform: initial;
+}
+.promo-tabs-wrp .blog-filter-btn button.active:before{
+	width: 100% !important;
+}
+.promo-tabs-wrp .blog-filter-btn button:hover:before{
+	left: initial !important;
+	width: 100% !important;
+	transform: initial;
+	text-align: center !important;
+	right: 0 !important;
+	left: 0 !important;
+    display: table;
+    margin: 0 auto;
+
+}
+.promo-tabs-wrp .blog-filter-btn button.active::after,
+.promo-tabs-wrp .blog-filter-btn button:hover::after {
+    background: #fd6607;
+    width: 2px;
+}
+.promo-tabs-wrp .blog-filter-btn button:after{
+	right: -23px !important;
+}
+
 
 
 @media(max-width: 1199px){

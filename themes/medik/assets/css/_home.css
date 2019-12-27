@@ -363,7 +363,7 @@ hm-service-sec-wrp
 	background: url(../images/btn-bg.png);
 	background-repeat: no-repeat;
 	width: 148px;
-	height: 60px;
+	height: 57px;
 	opacity: 0;
 	visibility: hidden;
 	transition: all 0.5s;
@@ -1066,11 +1066,14 @@ hm-btm-grid-sec-wrp
 .HmbtmGridSlide-item{
 	padding: 0 10px;
 }
-.HmbtmGridSlide-item:hover{
-	-webkit-box-shadow: 1px 1px 1px 1px rgb(180,179,179);
-  	-ms-box-shadow: 1px 1px 1px 1px rgb(180,179,179);
-  	box-shadow: 1px 1px 1px 1px rgb(180,179,179);
-}
+.hm-btm-grid-dsc-inr:hover{
+	-webkit-box-shadow: 0 5px 14px -8px rgba(70, 70, 70, 0.61);
+	-ms-box-shadow: 0 5px 14px -8px rgba(70, 70, 70, 0.61);
+	box-shadow: 0 5px 14px -8px rgba(70, 70, 70, 0.61);
+	transition: all 0.5s;
+	-ms-transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+ }
 .hm-btm-grid-img{
 	text-align: center;
 }
@@ -1083,6 +1086,9 @@ hm-btm-grid-sec-wrp
     padding: 24px 24px 24px 24px;
     position: relative;
     margin-bottom: 25px;
+    transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -webkit-transition: all 0.5s;
 }
 .hm-btm-grid-dsc{
 	text-align: center;

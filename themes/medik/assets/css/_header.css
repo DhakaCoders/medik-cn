@@ -451,7 +451,7 @@ nav.main-nav ul li.current-menu-item a{
 	    cursor: pointer;
 	    float: none;
 	    position: absolute;
-	    top: 95px;
+	    top: 25px;
 	    right: 40px;
 	    z-index: 3;
 	}
@@ -467,7 +467,7 @@ nav.main-nav ul li.current-menu-item a{
 	}
 	.xs-menu-close-btn-controller span {
 	    position: absolute;
-	    top: 95px;
+	    top: 25px;
 	    right: 50px;
 	}
 	nav.xs-main-nav ul{

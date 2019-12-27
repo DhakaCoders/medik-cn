@@ -455,6 +455,21 @@ a.green-tel-icon:hover{
 		display: inline-block;
 		vertical-align: baseline;
 	}
+	.servicios-siderbar-form-wrp .dft-page-contact-form-main input {
+	    width: 100%;
+	    padding: 14px 10px;
+	    font-size: 14px;
+	    height: 47px;
+	}
+	.servicios-siderbar-form-wrp .dft-page-contact-form-main select {
+	    height: 47px;
+	}
+	.servicios-siderbar-form-wrp .dft-page-contact-form-main textarea {
+	    min-height: 205px;
+	}
+	.servicios-siderbar-form-wrp .dft-page-contact-form-main textarea {
+	    min-height: 150px;
+	}
 }
 
 
