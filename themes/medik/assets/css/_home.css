@@ -9,7 +9,7 @@ main-slider-sec-wrp
 .main-slide-item{
 	background-repeat: no-repeat !important;
 	background-size: cover !important;
-	background-position: center right;
+	background-position: center right !important;
 	min-height: 440px !important;
 	border-top: 3px solid #eef1f7;
 	border-bottom: 3px solid #eef1f7;
@@ -1524,6 +1524,10 @@ hm-btm-grid-sec-wrp
 	.hm-service-slide-item-dsc p {
 	    text-align: inherit;
 	}
+	.hm-laboratory-slider {
+	    padding-left: 0;
+	    padding-right: 0;
+	}
 }
 
 
@@ -1582,6 +1586,10 @@ hm-btm-grid-sec-wrp
 	    width: 100%;
 	    margin-left: auto;
 	    margin-right: auto;
+	}
+	.hm-service-slider {
+	    padding-left: 30px;
+	    padding-right: 30px;
 	}
 
 }
