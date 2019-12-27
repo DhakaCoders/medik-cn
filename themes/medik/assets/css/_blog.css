@@ -48,7 +48,6 @@
 .blog-filter-btn button.active:after,
 .blog-filter-btn button:hover:after{
 	background: #fd6607;
-	width:1px;
 }
 .blog-filter-btn button:before{
 	-webkit-transition: all .5s ease;
