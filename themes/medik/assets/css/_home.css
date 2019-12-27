@@ -1066,6 +1066,11 @@ hm-btm-grid-sec-wrp
 .HmbtmGridSlide-item{
 	padding: 0 10px;
 }
+.HmbtmGridSlide-item:hover{
+	-webkit-box-shadow: 1px 1px 1px 1px rgb(180,179,179);
+  	-ms-box-shadow: 1px 1px 1px 1px rgb(180,179,179);
+  	box-shadow: 1px 1px 1px 1px rgb(180,179,179);
+}
 .hm-btm-grid-img{
 	text-align: center;
 }
@@ -1078,9 +1083,6 @@ hm-btm-grid-sec-wrp
     padding: 24px 24px 24px 24px;
     position: relative;
     margin-bottom: 25px;
-    -webkit-box-shadow: 1px 1px 1px 1px rgb(180,179,179);
-  	-ms-box-shadow: 1px 1px 1px 1px rgb(180,179,179);
-  	box-shadow: 1px 1px 1px 1px rgb(180,179,179);
 }
 .hm-btm-grid-dsc{
 	text-align: center;
@@ -1527,6 +1529,9 @@ hm-btm-grid-sec-wrp
 	.hm-laboratory-slider {
 	    padding-left: 0;
 	    padding-right: 0;
+	}
+	.hm-btm-grid-sec-wrp {
+	    padding-bottom: 80px;
 	}
 }
 
