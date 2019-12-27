@@ -170,9 +170,13 @@
 	}
 	.blog-filter-btn button {
 	    padding: 0 14px 10px 13px;
+	    margin-bottom: 7px;
 	}
 	.blog-filter-btn button:not(:last-child):after {
 	    top: 2px;
+	}
+	.blog-filter-btn {
+	    padding: 32px 0 20px;
 	}
 }
 
