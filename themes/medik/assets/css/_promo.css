@@ -16,15 +16,15 @@ promo-tabs-sec-wrp
 	padding-top: 10px;
 	padding-bottom: 60px;
 }
-.tabs-box-inr{
-	background-repeat: no-repeat !important;
-	background-size: cover !important;
-	background-position: center center !important;
-	min-height: 219px !important;
-	border: 2px solid #eef1f7;
-	padding-top: 15px;
-	padding-left: 10px;
-	position: relative;
+.tabs-box-inr {
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    background-position: left center!important;
+    min-height: 219px !important;
+    border: 2px solid #eef1f7;
+    padding-top: 15px;
+    padding-left: 10px;
+    position: relative;
 }
 .tabs-box-inr > a{
 	position: absolute;
@@ -131,19 +131,6 @@ promo-tabs-sec-wrp
 .promo-tabs-wrp .tabs-box-btn a:hover{
 	background: #17ada0;
 }
-/*.promo-tabs-wrp .blog-filter-btn button.active:before,
-.promo-tabs-wrp .blog-filter-btn button:before{
-	width: 70% !important;
-	transition: all 0.5s !important;
-	-ms-transition: all 0.5s !important;
-	-webkit-transition: all 0.5s !important;
-}
-.promo-tabs-wrp .blog-filter-btn button:hover:before{
-	width: 80% !important;
-	transition: all 0.5s;
-	-ms-transition: all 0.5s;
-	-webkit-transition: all 0.5s;
-}*/
 .promo-tabs-wrp .blog-filter-btn button{
 	position: relative;
 	margin-left: 22px;

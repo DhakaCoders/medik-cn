@@ -15,7 +15,7 @@
 .blog-filter-btn {
 	padding: 32px 0 38px;
 }
-.blog-filter-btn button{
+/*.blog-filter-btn button{
 	padding: 0 22px 10px 20px;
 	background: #0000;
 	margin: 0;
@@ -71,6 +71,79 @@
 	    -ms-transform: translateX(-50%);
 	     -o-transform: translateX(-50%);
 	        transform: translateX(-50%);
+}*/
+
+.blog-filter-btn button{
+	position: relative;
+	margin-left: 22px;
+	margin-right: 22px;
+	padding: 0 0 10px 0;
+	padding-left: 0;
+	padding-right: 0;
+	transition: all 0.5s;
+	-ms-transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+	background: #0000;
+	color:#424242;
+}
+.blog-filter-btn button:not(:last-child):after{
+	content:""; 
+	position: absolute;
+	background: #fdcdae;
+	height:18px;
+	width:2px;
+	right:0;
+	top: 4px;
+	-webkit-transition: all .5s ease;
+	   -moz-transition: all .5s ease;
+	    -ms-transition: all .5s ease;
+	     -o-transition: all .5s ease;
+	        transition: all .5s ease;
+}
+.blog-filter-btn button.active,
+.blog-filter-btn button:hover{
+	color:#fd6607;
+}
+.blog-filter-btn button.active:before,
+.blog-filter-btn button:before {
+    content: "";
+    position: absolute;
+    background: #0e857b;
+    height: 1px !important;
+    width: 0% !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    text-align: center !important;
+    display: table;
+    margin: 0 auto;
+    transition: all 0.5s;
+	-ms-transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+}
+.blog-filter-btn button.active:before{
+	width: 100% !important;
+}
+.blog-filter-btn button:hover:before{
+	left: initial !important;
+	width: 100% !important;
+	text-align: center !important;
+	right: 0 !important;
+	left: 0 !important;
+    display: table;
+    margin: 0 auto;
+    transition: all 0.5s;
+	-ms-transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+
+}
+.blog-filter-btn button.active::after,
+.blog-filter-btn button:hover::after {
+    background: #fd6607;
+    width: 2px;
+}
+.blog-filter-btn button:after{
+	right: -23px !important;
 }
 
 
