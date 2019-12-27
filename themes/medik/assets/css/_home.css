@@ -11,6 +11,7 @@ main-slider-sec-wrp
 	border-top: 3px solid #eef1f7;
 	border-bottom: 3px solid #eef1f7;
 	padding: 60px 0 70px;
+	position: relative;
 }
 .main-slide-item-img{
 	background-repeat: no-repeat !important;
@@ -1561,6 +1562,12 @@ hm-btm-grid-sec-wrp
 	.hm-btm-grid-sec-wrp {
 	    padding-bottom: 80px;
 	}
+	.mainsliderarrows .leftArrow{
+	    top: 89%;
+	}
+	.mainsliderarrows .rightArrow{
+	    top: 89%;
+	}
 }
 
 
@@ -1685,10 +1692,17 @@ hm-btm-grid-sec-wrp
 	    right: 10px;
 	}
 	.mainsliderarrows .leftArrow {
-	    top: 92%;
+	    top: 91%;
 	}
 	.mainsliderarrows .rightArrow {
-	    top: 92%;
+	    top: 91%;
+	}
+	.mainsliderarrows .leftArrow,
+	.mainsliderarrows .rightArrow {
+	    height: 35px;
+	    width: 35px;
+	    font-size: 25px;
+	    line-height: 22px;
 	}
 
 }
