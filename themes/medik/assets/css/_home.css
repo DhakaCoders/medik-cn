@@ -7,13 +7,21 @@ main-slider-sec-wrp
 	position: relative;
 }
 .main-slide-item{
-	background-repeat: no-repeat !important;
-	background-size: cover !important;
-	background-position: center right !important;
 	min-height: 440px !important;
 	border-top: 3px solid #eef1f7;
 	border-bottom: 3px solid #eef1f7;
 	padding: 60px 0 70px;
+	position: relative;
+}
+.main-slide-item-img{
+	background-repeat: no-repeat !important;
+	background-size: cover !important;
+	background-position: center right !important;
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
 }
 .main-slide-item-dsc{
 	max-width: 565px;
@@ -363,7 +371,7 @@ hm-service-sec-wrp
 	background: url(../images/btn-bg.png);
 	background-repeat: no-repeat;
 	width: 148px;
-	height: 60px;
+	height: 57px;
 	opacity: 0;
 	visibility: hidden;
 	transition: all 0.5s;
@@ -1066,11 +1074,14 @@ hm-btm-grid-sec-wrp
 .HmbtmGridSlide-item{
 	padding: 0 10px;
 }
-.HmbtmGridSlide-item:hover{
-	-webkit-box-shadow: 1px 1px 1px 1px rgb(180,179,179);
-  	-ms-box-shadow: 1px 1px 1px 1px rgb(180,179,179);
-  	box-shadow: 1px 1px 1px 1px rgb(180,179,179);
-}
+.hm-btm-grid-dsc-inr:hover{
+	-webkit-box-shadow: 0 5px 14px -8px rgba(70, 70, 70, 0.61);
+	-ms-box-shadow: 0 5px 14px -8px rgba(70, 70, 70, 0.61);
+	box-shadow: 0 5px 14px -8px rgba(70, 70, 70, 0.61);
+	transition: all 0.5s;
+	-ms-transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+ }
 .hm-btm-grid-img{
 	text-align: center;
 }
@@ -1083,6 +1094,9 @@ hm-btm-grid-sec-wrp
     padding: 24px 24px 24px 24px;
     position: relative;
     margin-bottom: 25px;
+    transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -webkit-transition: all 0.5s;
 }
 .hm-btm-grid-dsc{
 	text-align: center;
@@ -1240,6 +1254,15 @@ hm-btm-grid-sec-wrp
 	}
 	.hm-btm-grid-dsc h6 br{
 		display: none;
+	}
+	.main-slider-sec-wrp {
+	    overflow: hidden;
+	}
+	.hm-laboratory-content-sec-wrp,
+	.hm-brand-logo-sec-wrp,
+	.hm-btm-grid-sec-wrp,
+	.hm-service-sec-wrp {
+	    overflow: hidden;
 	}
 
 }
@@ -1411,11 +1434,12 @@ hm-btm-grid-sec-wrp
 	    position: static;
 	}
 	.main-slide-item{
-		min-height: 440px !important;
-		background-repeat: no-repeat !important;
-		background-size: 100% 100% !important;
-		background-position: center center !important;
-		padding: 20px 0 55px;
+	    min-height: 440px !important;
+	    background-repeat: no-repeat !important;
+	    background-size: 100% 100% !important;
+	    background-position: center center !important;
+	    padding: 0 0 55px;
+	    background: url(../images/xs-main-slider-sec-bg.png);
 	}
 	.main-slider .slick-dots {
 	    bottom: 25px;
@@ -1462,6 +1486,7 @@ hm-btm-grid-sec-wrp
 	    width: 100%;
 	    margin: 0 auto;
 	    text-align: center;
+	    padding-top: 15px;
 	}
 	.main-slide-item-dsc p {
 	    padding-right: 0;
@@ -1477,6 +1502,10 @@ hm-btm-grid-sec-wrp
 		background-size: 278px 19px;
     	width: 278px;
     	height: 19px;
+	}
+	.main-slide-item-img {
+	    position: static;
+	    min-height: 260px;
 	}
 	.hm-brand-logo {
 	    max-width: 350px;
@@ -1532,6 +1561,12 @@ hm-btm-grid-sec-wrp
 	}
 	.hm-btm-grid-sec-wrp {
 	    padding-bottom: 80px;
+	}
+	.mainsliderarrows .leftArrow{
+	    top: 89%;
+	}
+	.mainsliderarrows .rightArrow{
+	    top: 89%;
 	}
 }
 
@@ -1596,6 +1631,10 @@ hm-btm-grid-sec-wrp
 	    padding-left: 30px;
 	    padding-right: 30px;
 	}
+	.HmbtmGridSlider {
+	    padding-left: 25px;
+	    padding-right: 25px;
+	}
 
 }
 
@@ -1644,6 +1683,22 @@ hm-btm-grid-sec-wrp
 	.hmgirdarrows .rightArrow,
 	.sersliderarrows .leftArrow,
 	.sersliderarrows .rightArrow {
+	    height: 35px;
+	    width: 35px;
+	    font-size: 25px;
+	    line-height: 22px;
+	}
+	.nav-opener {
+	    right: 10px;
+	}
+	.mainsliderarrows .leftArrow {
+	    top: 91%;
+	}
+	.mainsliderarrows .rightArrow {
+	    top: 91%;
+	}
+	.mainsliderarrows .leftArrow,
+	.mainsliderarrows .rightArrow {
 	    height: 35px;
 	    width: 35px;
 	    font-size: 25px;
