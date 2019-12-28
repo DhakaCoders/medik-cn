@@ -1,3 +1,27 @@
+<?php 
+  $logoObj = get_field('logo_footer', 'options');
+  if( is_array($logoObj) ){
+    $logo_tag = '<img src="'.$logoObj['url'].'" alt="'.$logoObj['alt'].'" title="'.$logoObj['title'].'">';
+  }else{
+    $logo_tag = '';
+  }
+
+  $spacialArry = array(".", "/", "+", " ");$replaceArray = '';
+  $adres = get_field('address', 'options');
+  $ftaddress1 = $adres['address_footer'];
+  $ftaddress2 = $adres['address_header'];
+  $gmapsurl = get_field('google_maps', 'options');
+  $e_mailadres = get_field('emailaddress', 'options');
+  /*$show_telefoon = get_field('telephone', 'options');
+  $telefoon = trim(str_replace($spacialArry, $replaceArray, $show_telefoon));*/
+  $copyright_text = get_field('copyright_text', 'options');
+  $gmaplink = !empty($gmapsurl)?$gmapsurl: 'javascript:void()';
+  $bwt = get_field('bwt', 'options');
+
+  $fburl = get_field('facebook_url', 'options');
+  $twturl = get_field('twitter_url', 'options');
+  $insturl = get_field('instagram_url', 'options');
+?>
 <footer class="footer-wrap">
   <div class="ftr-main text-center" style="background:url(<?php echo THEME_URI; ?>/assets/images/ftr-bg.jpg);">
     <div class="container-2">
@@ -10,13 +34,13 @@
             <div class="ftr-col-wrp clearfix">  
               <div class="ftr-col ftr-col-3">
                 <div id="ftr-map" data-lat="50.844924" data-long="4.352091"></div>
-                <p>Sófocles 115, Polanco, Polanco II Secc, 11550 Ciudad de México, CDMX  <a href="" target="_blank">>> (Da Clic Aquí Para Llegar Con Google Maps) <<</a></p>
+                <?php if( !empty( $ftaddress2 ) ): ?>
+                <p><?php echo $ftaddress2; ?>  <a href="<?php echo $gmaplink; ?>" target="_blank">>> (Da Clic Aquí Para Llegar Con Google Maps) <<</a></p>
+                <?php  endif;  ?>
               </div>  
               <div class="ftr-col ftr-col-2">
                 <ul class="ulc hide-sm">
-                  <li>
-                    <a href="#">Calle Sófocles 115 Planta Alta<br>Polanco 11560 Ciudad de México, CDMX</a>
-                  </li>
+                  <?php if( !empty( $ftaddress1 ) ) printf('<li><a href="%s">%s</a></li>', $gmaplink, $ftaddress1); ?>
                   <li>
                     <strong>Teléfonos:</strong><br/>
                     <a href="#">(55) 5233-6007 - (55) 5233-2312</a><br/>
@@ -56,8 +80,8 @@
                 </div>
               </div> 
               <div class="ftr-col ftr-col-1">
-                <a class="ftr-logo" href="#">
-                  <img src="<?php echo THEME_URI; ?>/assets/images/ftr-left-logo.png" alt="" />
+                <a class="ftr-logo" href="<?php echo esc_url( home_url('/') );?>">
+                  <?php echo $logo_tag; ?>
                 </a>
                 <p>El objetivo de Medik Rama es ser la primer compañía integradora de servicios de calidad médica y calidez humana a costos accesibles y abierto todo público. Nuestra red esta conformada por los mejores médicos del país, mismos que cuentan con una amplia trayectoria y certificación de acuerdo a su especialidad.</p>
               </div> 
@@ -102,7 +126,7 @@
   </div>
 
   <div class="ftr-btm-con text-center">
-    <span>Derechos reservados © 2019 MedikRama | Aviso de privacidad</span>
+    <?php if( !empty( $copyright_text ) ) printf( '<span>%s</span>', $copyright_text); ?>
   </div>
 </footer>
 
