@@ -25,6 +25,23 @@
 <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
+<?php 
+  $logoObj = get_field('logo_header', 'options');
+  if( is_array($logoObj) ){
+    $logo_tag = '<img src="'.$logoObj['url'].'" alt="'.$logoObj['alt'].'" title="'.$logoObj['title'].'">';
+  }else{
+    $logo_tag = '';
+  }
+
+  $spacialArry = array(".", "/", "+", "-", " ", ")", "(");$replaceArray = '';
+  $adres = get_field('address', 'options');
+  $hdaddress = $adres['address_header'];
+  $gmapsurl = get_field('google_maps', 'options');
+  $telefoon = get_field('telephone', 'options');
+  $hdtelephone = $telefoon['telephone_header'];
+
+  $gmaplink = !empty($gmapsurl)?$gmapsurl: 'javascript:void()';
+?>
 <header class="header hm-header">
   <div class="container">
       <div class="row">
@@ -32,8 +49,8 @@
           <div class="hdr-inner clearfix">
             <div class="hdr-lft-con">
               <div class="logo">
-                <a href="#">
-                  <img src="<?php echo THEME_URI; ?>/assets/images/logo.png">
+                <a href="<?php echo esc_url(home_url('/')); ?>">
+                  <?php echo $logo_tag; ?>
                 </a>
               </div>
             </div>
@@ -42,38 +59,35 @@
                 <div class="hdr-contact">
                   <h6 class="hide-sm">informes y citas</h6>
                   <div class="contact-info">
-                    <a href="tel:(55) 5233-6007"> (55) 5233-6007</a>
-                    <a href="tel:(55) 5233-2312"> (55) 5233-2312</a>
+                  <?php 
+                    if($hdtelephone): 
+                      foreach($hdtelephone as $hdphone):
+                        $trimphone = trim(str_replace($spacialArry, $replaceArray, $hdphone['telephone']));
+                  ?>
+                  <a href="tel:<?php echo $trimphone; ?>"><?php echo $hdphone['telephone']; ?></a>
+                    <?php endforeach; endif; ?>
                   </div>
                   <span><img src="<?php echo THEME_URI; ?>/assets/images/hdr-phone-icon.png"></span>
                 </div>
                 <div class="hdr-address-innr">
                   <div class="hdr-address">
-                    <span><a href="#">Sófocles 115, Polanco, Polanco II Secc, <br> 11550 Ciudad de México, CDMX</a></span>
-                    <a href="#">(Da Clic Aquí Para Llegar Con Google Maps)</a>
+                <?php if( !empty( $hdaddress ) ): ?>
+                <span><a href="<?php echo $gmaplink; ?>"><?php echo $hdaddress; ?></a></span> 
+                <a href="<?php echo $gmaplink; ?>" target="_blank">(Da Clic Aquí Para Llegar Con Google Maps)</a>
+                <?php  endif;  ?>
                   </div> 
                 </div>
               </div> 
               <nav class="main-nav hide-sm">
-                <ul class="clearfix">
-                  <li class="current-menu-item"><a href="#">inicio</a></li>
-                  <li class="menu-item-has-children">
-                    <a href="#">servicios</a>
-                    <ul class="sub-menu">
-                      <li><a href="#">Sub Menu</a></li>
-                      <li><a href="#">Sub Menu</a></li>
-                      <li><a href="#">Sub Menu</a></li>
-                      <li><a href="#">Sub Menu</a></li>
-                      <li><a href="#">Sub Menu</a></li>
-                      <li><a href="#">Sub Menu</a></li>
-                      <li><a href="#">Sub Menu</a></li>
-                    </ul>
-                  </li>
-                  <li><a href="#">citas</a></li>
-                  <li><a href="#">promociones </a></li>
-                  <li><a href="#">blog</a></li>
-                  <li><a href="#">contacto</a></li>                            
-                </ul>
+                <?php 
+                    $cmenuOptions = array( 
+                        'theme_location' => 'cbv_main_menu', 
+                        'menu_class' => 'clearfix ulc',
+                        'container' => 'cmnav',
+                        'container_class' => 'cmainnav'
+                      );
+                    wp_nav_menu( $cmenuOptions ); 
+                  ?>
               </nav>
              </div>
             </div>
@@ -87,25 +101,15 @@
        <span><img src="<?php echo THEME_URI; ?>/assets/images/close-icon.png"></span>
     </div>
     <nav class="xs-main-nav">
-      <ul class="clearfix">
-        <li class="current-menu-item"><a href="#">inicio</a></li>
-        <li class="menu-item-has-children">
-          <a href="#">servicios</a>
-          <ul class="sub-menu">
-            <li><a href="#">Sub Menu</a></li>
-            <li><a href="#">Sub Menu</a></li>
-            <li><a href="#">Sub Menu</a></li>
-            <li><a href="#">Sub Menu</a></li>
-            <li><a href="#">Sub Menu</a></li>
-            <li><a href="#">Sub Menu</a></li>
-            <li><a href="#">Sub Menu</a></li>
-          </ul>
-        </li>
-        <li><a href="#">citas</a></li>
-        <li><a href="#">promociones </a></li>
-        <li><a href="#">blog</a></li>
-        <li><a href="#">contacto</a></li>                            
-      </ul>
+      <?php 
+        $cmenuOptions = array( 
+            'theme_location' => 'cbv_main_menu', 
+            'menu_class' => 'clearfix ulc',
+            'container' => 'cmnav',
+            'container_class' => 'cmainnav'
+          );
+        wp_nav_menu( $cmenuOptions ); 
+      ?>
     </nav>
   </div>
 </div>
