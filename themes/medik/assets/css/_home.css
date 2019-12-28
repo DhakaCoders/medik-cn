@@ -613,52 +613,67 @@ hm-campaign-grid-sec-wrp
     -ms-transform: translateX(-50%);
     -webkit-transform: translateX(-50%);
 }
-.opc-progress-bar-innr {
+.wpcf7cf_steps-dots {
     max-width: 330px;
     width: 100%;
     display: table;
+    height: 30px;
     position: relative;
     margin: 0 auto;
     margin-bottom: 40px;
 }
-.opc-progress-bar-innr:after {
+.step-title{
+	display: none;
+}
+.wpcf7cf_steps-dots:after {
     content: "";
     position: absolute;
     left: 0;
     right: 0;
     top: 15px;
-    max-width: 330px;
+    max-width: 300px;
     width: 100%;
     height: 1px;
     background: #eef1f7;
 }
-.opc-progress-bar{
-	float: left;
-	width: 33.3333%;
-}
-.opc-progress-bar:last-of-type{
-	float: right;
-	width: 0;
-}
-.opc-progress-bar span {
-    width: 30px;
-    height: 30px;
+.dot{
+	width: 30px;
+	height: 30px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
     background: #eef1f7;
-    display: inline-block;
-    vertical-align: baseline;
     border-radius: 50px;
     font-size: 15px;
     line-height: 30px;
     color: #c7cad1;
-    text-align: center;
-    position: relative;
-    z-index: 1;
+    position: absolute;
+    z-index: 2;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
 }
-.opc-progress-bar span.active{
+.dot:nth-child(1){
+	left: 0px;
+}
+.dot:nth-child(2){
+	left: 100px;
+}
+.dot:nth-child(3){
+	left: 200px;
+}
+.dot:last-of-type{
+	left: auto;
+	right: 0;
+}
+
+.dot.active{
 	background: #0e857b;
 	color: #fff;
 }
-.opc-progress-bar-dsc{
+.dot-dsc{
 	text-align: center;
 	font-size: 17px;
 	line-height: 22px;
@@ -1249,7 +1264,7 @@ hm-btm-grid-sec-wrp
 	.show-md{
 		display: block!important;
 	}
-	.opc-progress-bar-dsc p br{
+	.dot-dsc p br{
 		display: none;
 	}
 	.hm-btm-grid-dsc h6 br{
@@ -1602,10 +1617,10 @@ hm-btm-grid-sec-wrp
 	.hm-campaign-grid-rgt-con {
 	    padding-bottom: 30px;
 	}
-	.opc-progress-bar:last-of-type {
+	.dot:last-of-type {
 	    width: 8%;
 	}
-	.opc-progress-bar {
+	.dot {
 	    width: 30%;
 	}
 	.sersliderarrows .leftArrow {
@@ -1644,7 +1659,7 @@ hm-btm-grid-sec-wrp
 	    font-size: 27px;
 	    line-height: 30px;
 	}
-	.opc-progress-bar:last-of-type {
+	.dot:last-of-type {
 	    width: 10%;
 	}
 	.hm-laboratory-btn {

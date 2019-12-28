@@ -470,6 +470,12 @@ a.green-tel-icon:hover{
 	.servicios-siderbar-form-wrp .dft-page-contact-form-main textarea {
 	    min-height: 150px;
 	}
+	.mk-contact-form-des{
+		padding-top: 20px;
+	}
+	.mk-contact-form-des p{
+		margin-bottom: 0;
+	}
 }
 
 
