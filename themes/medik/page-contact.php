@@ -16,11 +16,12 @@ if( is_array($logoObj) ){
 $spacialArry = array(".", "/", "+", "-", " ", ")", "(");$replaceArray = '';
 $contact = get_field('contactus', $thisID);
 $hdaddress = $contact['address'];
+$telefoon = get_field('telephone', 'options');
+$fttelephone = $telefoon['telephone_footer'];
 $gmapsurl = $contact['gmap_link'];
 $dinfo = $contact['director_info'];
 
-$intro = get_field('intro', $thisID);
-$beschrijving = get_field('beschrijving');
+$intro = get_field('introsec', $thisID);
 
 $gmaplink = !empty($gmapsurl)?$gmapsurl: 'javascript:void()';
 
@@ -35,8 +36,19 @@ $gmaplink = !empty($gmapsurl)?$gmapsurl: 'javascript:void()';
             <span><img src="<?php echo THEME_URI; ?>/assets/images/hn-title-icon.png"></span>
           </div>
           <p class="show-xs">Si deseas información más detallada o agendar una visita de valoración, puedes ponerte en contacto con nosotros y con gusto te atenderemos.</p>
+
           <div class="contact-tel hide-xs">
-            <span>Tels. <a href="tel:(55)-5233-2312">(55)-5233-2312</a> • <a href="tel:(55)-5233-2312 ">(55)-5233-2312 </a> • <a href="tel:(55)-5233-6007">(55)-5233-6007</a> • <a href="tel:(55)-5557-5972">(55)-5557-5972</a> • <a href="tel:(55)-5577-5981">(55)-5577-5981</a></span>
+            <span>Tels. 
+              <?php 
+                  if($fttelephone): 
+                    $i = 1;
+                    foreach($fttelephone as $ftphone):
+                      $trimphone = trim(str_replace($spacialArry, $replaceArray, $ftphone['telephone']));
+                      $listdot = ($i != 1)? ' • ': '';
+                ?>
+               <?php echo $listdot; ?><a  href="tel:<?php echo $trimphone; ?>"><?php echo $ftphone['telephone']; ?></a>
+              <?php $i++; endforeach; endif; ?>
+            </span>
           </div>
         </div>
       </div>
