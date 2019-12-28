@@ -203,6 +203,9 @@
 	.citas-main-hdr h1 {
 	    font-size: 30px;
 	}
+	#citas-main-contact-form .form-spn br{
+		display: none;
+	}
 }
 
 @media(max-width: 767px){
@@ -260,7 +263,9 @@
 }
 
 @media(max-width: 359px){
-
+	.citas-main-lft-innr li span {
+	    font-size: 16px;
+	}
 }
 
 

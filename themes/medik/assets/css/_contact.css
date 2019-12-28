@@ -79,7 +79,7 @@ contact-map-sec-wrp
 }
 .contact-rgt-mail a:hover,
 .location-dsc span a:hover{
-	color: #0e857b;
+	color: #fd6608;
 }
 .location-dsc > a{
 	display: inline-block;
@@ -368,6 +368,15 @@ a.green-tel-icon:hover{
 	    width: 100%;
 	    padding-top: 35px;
 	}
+	.contact-tel {
+	    text-align: center;
+	}
+	.contact-info-sec-wrp {
+	    padding-top: 0;
+	}
+	.contact-info-dsc {
+	    padding-bottom: 75px;
+	}
 
 }
 
@@ -445,6 +454,21 @@ a.green-tel-icon:hover{
 	.contact-profile h6{
 		display: inline-block;
 		vertical-align: baseline;
+	}
+	.servicios-siderbar-form-wrp .dft-page-contact-form-main input {
+	    width: 100%;
+	    padding: 14px 10px;
+	    font-size: 14px;
+	    height: 47px;
+	}
+	.servicios-siderbar-form-wrp .dft-page-contact-form-main select {
+	    height: 47px;
+	}
+	.servicios-siderbar-form-wrp .dft-page-contact-form-main textarea {
+	    min-height: 205px;
+	}
+	.servicios-siderbar-form-wrp .dft-page-contact-form-main textarea {
+	    min-height: 150px;
 	}
 }
 

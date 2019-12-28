@@ -1,5 +1,5 @@
 Footer
----------------------
+--------------------- 
 1. https://www.screencast.com/t/DNwhJcrT
 	foote ar width maybe choto hoye geche . uporer section ar sathe milay fix koro --done <--Ok
 
@@ -23,21 +23,21 @@ New
 -----------
 1. https://www.screencast.com/t/Il4unXj1G
 	https://www.screencast.com/t/sQZC5LwKDpT
-	hover a opacity .8 or .9 diye dekho
+	hover a opacity .8 or .9 diye dekho --done
 
 2. https://www.screencast.com/t/5WiR2CYH
-	link hobe
+	link hobe -done
 
 Responsive--->
 1. https://www.screencast.com/t/dLNKQisKm5
-	1199px a ai des ta hide keno? 
+	1199px a ai des ta hide keno? --done
 2. https://www.screencast.com/t/SI20Ddl6
-	ai gulo 991px thake hobe. bcoz 991px thake header hamburger menu ase
+	ai gulo 991px thake hobe. bcoz 991px thake header hamburger menu ase --done
 3. https://www.screencast.com/t/AxLquNmdYr
-	border buja jasche. desktop thake fix korte hobe ata
+	border buja jasche. desktop thake fix korte hobe ata --done
 
 4. https://www.screencast.com/t/g4Nq0OYaFEGJ
-	480px ar pore boro boro font size gulo aktu choto koro, jemonta valo lage
+	480px ar pore boro boro font size gulo aktu choto koro, jemonta valo lage  --done
 
 
 servicios
@@ -47,7 +47,7 @@ servicios
 
 2. https://www.screencast.com/t/0YWxpf8dA1bW
 	https://www.screencast.com/t/1auV7fMdSaac
-	hover out a transiton lagbe. sob gulotei dekho. hover in and out ta --done 
+	hover out a transiton lagbe. sob gulotei dekho. hover in and out ta --done red
 
 	B.N. hover img ta kata pore then thik thake
 
@@ -63,21 +63,21 @@ servicios
 6. https://www.screencast.com/t/iS85HwjwNw
 	hover kole potita te hobe ---done
 
-	B.N. --- hover korle border ta left thake right a transiton hoye jabe
+	B.N. --- hover korle border ta left thake right a transiton hoye jabe --done
 
 7. https://www.screencast.com/t/TPkMEKpxwny6
-	hover korle title ar color orange daw
+	hover korle title ar color orange daw --done
 
 8. https://www.screencast.com/t/kj1VBRD8OM
-	item a hover korle box shadow daw
+	item a hover korle box shadow daw --done
 
 Responsive-->
 
 1. https://www.screencast.com/t/ddNIwbdvzLKQ
-	aikhane br none hobe. pore xs a lagle abar block kore dite hobe
+	aikhane br none hobe. pore xs a lagle abar block kore dite hobe --done
 
 2. https://www.screencast.com/t/jTBf4OV5fL
-	button lege jaoa jabena
+	button lege jaoa jabena --done
 
 
 
@@ -100,7 +100,7 @@ Citas
 
 Responsive -->
 1. https://www.screencast.com/t/rIwpybVAMj
-	br none korte hobe. amon text tomar sob page valo kore dekho . kokhon br lagbe r kokhon lagbena nije dekhe dekhe thik koro.
+	br none korte hobe. amon text tomar sob page valo kore dekho . kokhon br lagbe r kokhon lagbena nije dekhe dekhe thik koro. --done
 
 
 
@@ -120,11 +120,11 @@ Blog
 
 Responsive-->
 1. https://www.screencast.com/t/7vdESnRqw
-	Scrollbar ase
+	Scrollbar ase >>> arrow ta asole xs theke hobe fix kore dichi --done
 
 2. https://www.screencast.com/t/AkuSzNqoymH
-	lege geche button ar sathe
+	lege geche button ar sathe --done
 
 3. https://www.screencast.com/t/rbbhbokpikZ3
-	br problem. sob jay valo kore dekhe fix koro
+	br problem. sob jay valo kore dekhe fix koro --done
 

@@ -1,95 +1,11 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Home page</title>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-  <link rel="stylesheet" href="assets/css/bootstrap-select.min.css">
-  <link rel="stylesheet" type="text/css" href="assets/fonts/font-awesome/font-awesome.css">
-  <link rel="stylesheet" type="text/css" href="assets/css/animate.css">
-  <link rel="stylesheet" type="text/css" href="assets/fancybox3/dist/jquery.fancybox.min.css">
-  <link rel="stylesheet" type="text/css" href="assets/slick.slider/slick-theme.css">
-  <link rel="stylesheet" type="text/css" href="assets/slick.slider/slick.css">
-  <link rel="stylesheet" type="text/css" href="assets/fonts/custom-fonts.css">
-	<link rel="stylesheet" type="text/css" href="style.css">
-	<link rel="stylesheet" type="text/css" href="assets/css/responsive.css">
-
-  <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-  <![endif]-->	
-
-</head>
-<body>
-<header class="header hm-header">
-  <div class="container">
-      <div class="row">
-        <div class="col-sm-12">
-          <div class="hdr-inner clearfix">
-            <div class="hdr-lft-con">
-              <div class="logo">
-                <a href="#">
-                  <img src="assets/images/logo.png">
-                </a>
-              </div>
-            </div>
-            <div class="hdr-rgt-con clearfix">
-              <div class="hdr-top-contact clearfix">
-                <div class="hdr-contact">
-                  <h6 class="hide-sm">informes y citas</h6>
-                  <div class="contact-info">
-                    <a href="tel:(55) 5233-6007"> (55) 5233-6007</a>
-                    <a href="tel:(55) 5233-2312"> (55) 5233-2312</a>
-                  </div>
-                  <span><img src="assets/images/hdr-phone-icon.png"></span>
-                </div>
-                <div class="hdr-address-innr">
-                  <div class="hdr-address">
-                    <span><a href="#">Sófocles 115, Polanco, Polanco II Secc, <br> 11550 Ciudad de México, CDMX</a></span>
-                    <a href="#">(Da Clic Aquí Para Llegar Con Google Maps)</a>
-                  </div> 
-                </div>
-              </div> 
-              <nav class="main-nav hide-sm">
-                <ul class="clearfix">
-                  <li class="current-menu-item"><a href="#">inicio</a></li>
-                  <li class="menu-item-has-children">
-                    <a href="#">servicios</a>
-                    <ul class="sub-menu">
-                      <li><a href="#">Sub Menu</a></li>
-                      <li><a href="#">Sub Menu</a></li>
-                      <li><a href="#">Sub Menu</a></li>
-                      <li><a href="#">Sub Menu</a></li>
-                      <li><a href="#">Sub Menu</a></li>
-                      <li><a href="#">Sub Menu</a></li>
-                      <li><a href="#">Sub Menu</a></li>
-                    </ul>
-                  </li>
-                  <li><a href="#">citas</a></li>
-                  <li><a href="#">promociones </a></li>
-                  <li><a href="#">blog</a></li>
-                  <li><a href="#">contacto</a></li>                            
-                </ul>
-              </nav>
-             </div>
-            </div>
-          </div>
-        </div>
-      </div>
-  </div>
-</header><!-- End of .header -->
-
-<section class="main-slider-sec-wrp">
+<?php get_header(); ?>
+<section class="main-slider-sec-wrp hide-xs">
   <div class="mainsliderarrows">
     <span class="leftArrow"><i class="fa fa-angle-left"></i></span>
     <span class="rightArrow"><i class="fa fa-angle-right"></i></span>
   </div>
-  <div class="main-slider">
-    <div class="main-slide-item">
-      <div class="main-slide-item-img" style="background: url(assets/images/main-slider-sec-bg.png);"></div>
+  <div class="main-slider hide-xs">
+    <div class="main-slide-item" style="background: url(<?php echo THEME_URI; ?>/assets/images/main-slider-sec-bg.png);">
       <div class="container">
         <div class="row">
           <div class="col-sm-12">
@@ -102,8 +18,7 @@
         </div>
       </div>
     </div>
-    <div class="main-slide-item">
-      <div class="main-slide-item-img" style="background: url(assets/images/main-slider-sec-bg.png);"></div>
+    <div class="main-slide-item" style="background: url(<?php echo THEME_URI; ?>/assets/images/main-slider-sec-bg.png);">
       <div class="container">
         <div class="row">
           <div class="col-sm-12">
@@ -116,8 +31,7 @@
         </div>
       </div>
     </div>
-    <div class="main-slide-item">
-      <div class="main-slide-item-img" style="background: url(assets/images/main-slider-sec-bg.png);"></div>
+    <div class="main-slide-item" style="background: url(<?php echo THEME_URI; ?>/assets/images/main-slider-sec-bg.png);">
       <div class="container">
         <div class="row">
           <div class="col-sm-12">
@@ -133,6 +47,49 @@
   </div>    
 </section><!-- end of main-slider-sec-wrp -->
 
+<section class="xs-main-slider-sec-wrp show-xs">
+  <div class="main-slider">
+    <div class="main-slide-item" style="background: url(<?php echo THEME_URI; ?>/assets/images/xs-main-slider-sec-bg.png);">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="main-slide-item-dsc">
+              <h1><span>Salud <strong>Laboral</strong></span> Campañas de Vacunación</h1>
+              <p>La vacunación es una inversión saludable y rentable, ya que reduce las posibilidades de que los colaboradores de tu empresa adquieran enfermedades infecciosas. Además, disminuye el ausentismo y mejora la productividad laboral.</p>
+              <a href="#">cotizar</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="main-slide-item" style="background: url(<?php echo THEME_URI; ?>/assets/images/xs-main-slider-sec-bg.png);">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="main-slide-item-dsc">
+              <h1><span>Salud <strong>Laboral</strong></span> Campañas de Vacunación</h1>
+              <p>La vacunación es una inversión saludable y rentable, ya que reduce las posibilidades de que los colaboradores de tu empresa adquieran enfermedades infecciosas. Además, disminuye el ausentismo y mejora la productividad laboral.</p>
+              <a href="#">cotizar</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="main-slide-item" style="background: url(<?php echo THEME_URI; ?>/assets/images/xs-main-slider-sec-bg.png);">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="main-slide-item-dsc">
+              <h1><span>Salud <strong>Laboral</strong></span> Campañas de Vacunación</h1>
+              <p>La vacunación es una inversión saludable y rentable, ya que reduce las posibilidades de que los colaboradores de tu empresa adquieran enfermedades infecciosas. Además, disminuye el ausentismo y mejora la productividad laboral.</p>
+              <a href="#">cotizar</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> 
+</section>
 
 <section class="hm-service-sec-wrp">
   <div class="container">
@@ -142,7 +99,7 @@
           <h2 class="sec-hdr-title set-hdr-big-title">Servicios <span style="color: #fd6607;">medik Rama</span>
           </h2>
           <div class="sec-hdr-title-divider">
-            <span><img src="assets/images/hn-title-icon.png"></span>
+            <span><img src="<?php echo THEME_URI; ?>/assets/images/hn-title-icon.png"></span>
           </div>
           <p>Calidad Médica y Calidez Humana a Costos Accesibles</p>
         </div>
@@ -158,10 +115,10 @@
           <div class="hm-service-slider">
             <div class="hm-service-slide-item matchHeight">
               <div class="hm-service-slide-item-dsc matchHeightCol">
-                <div class="hm-service-slide-item-hover" style="background: url(assets/images/service-box-img-hover.png);"></div>
+                <div class="hm-service-slide-item-hover" style="background: url(<?php echo THEME_URI; ?>/assets/images/service-box-img-hover.png);"></div>
                 <div class="hm-service-slide-item-hover"></div>
-                <span><img src="assets/images/service-icon-1.png"></span>
-                <span><img src="assets/images/service-icon-w-1.png"></span>
+                <span><img src="<?php echo THEME_URI; ?>/assets/images/service-icon-1.png"></span>
+                <span><img src="<?php echo THEME_URI; ?>/assets/images/service-icon-w-1.png"></span>
                 <h4><a href="#">Salud <br> Ocupacional</a></h4>
                 <p>Consiste  en la planeación y  ejecución  de  actividades de medicina, seguridad e higiene industrial , que tienen como objetivo  mantener y mejorar la salud de los trabajadores en las empresas.</p>
                 <a href="#">leer más</a>
@@ -169,9 +126,9 @@
             </div>
             <div class="hm-service-slide-item matchHeight">
               <div class="hm-service-slide-item-dsc matchHeightCol">
-                <div class="hm-service-slide-item-hover" style="background: url(assets/images/service-box-img-hover.png);"></div>
-                <span><img src="assets/images/service-icon-2.png"></span>
-                <span><img src="assets/images/service-icon-w-2.png"></span>
+                <div class="hm-service-slide-item-hover" style="background: url(<?php echo THEME_URI; ?>/assets/images/service-box-img-hover.png);"></div>
+                <span><img src="<?php echo THEME_URI; ?>/assets/images/service-icon-2.png"></span>
+                <span><img src="<?php echo THEME_URI; ?>/assets/images/service-icon-w-2.png"></span>
                 <h4><a href="#">Campaña de <br> Vacunación</a></h4>
                 <p>La vacunación es una inversión saludable y rentable, ya que reduce las posibilidades de que los colaboradores de tu empresa adquieran enfermedades infecciosas. Además, disminuye el ausentismo y mejora la productividad laboral.</p>
                 <a href="#">leer más</a>
@@ -179,9 +136,9 @@
             </div>
             <div class="hm-service-slide-item matchHeight">
               <div class="hm-service-slide-item-dsc matchHeightCol">
-                <div class="hm-service-slide-item-hover" style="background: url(assets/images/service-box-img-hover.png);"></div>
-                <span><img src="assets/images/service-icon-3.png"></span>
-                <span><img src="assets/images/service-icon-w-3.png"></span>
+                <div class="hm-service-slide-item-hover" style="background: url(<?php echo THEME_URI; ?>/assets/images/service-box-img-hover.png);"></div>
+                <span><img src="<?php echo THEME_URI; ?>/assets/images/service-icon-3.png"></span>
+                <span><img src="<?php echo THEME_URI; ?>/assets/images/service-icon-w-3.png"></span>
                 <h4><a href="#">Estudios <br> Médicos</a></h4>
                 <p>Contamos con una amplia gama de exstudios médicos, Holter de arritmias,  Ecocardiograma transtorácico, Prueba de esfuerzo,  Electrocardiograma,  Holter de presión (M.A.P.A), Espirometría,  Exámenes de ingresos y  Laboratorio clínico</p>
                 <a href="#">leer más</a>
@@ -189,9 +146,9 @@
             </div>
             <div class="hm-service-slide-item matchHeight">
               <div class="hm-service-slide-item-dsc matchHeightCol">
-                <div class="hm-service-slide-item-hover" style="background: url(assets/images/service-box-img-hover.png);"></div>
-                <span><img src="assets/images/service-icon-1.png"></span>
-                <span><img src="assets/images/service-icon-w-1.png"></span>
+                <div class="hm-service-slide-item-hover" style="background: url(<?php echo THEME_URI; ?>/assets/images/service-box-img-hover.png);"></div>
+                <span><img src="<?php echo THEME_URI; ?>/assets/images/service-icon-1.png"></span>
+                <span><img src="<?php echo THEME_URI; ?>/assets/images/service-icon-w-1.png"></span>
                 <h4><a href="#">Salud <br> Ocupacional</a></h4>
                 <p>Consiste  en la planeación y  ejecución  de  actividades de medicina, seguridad e higiene industrial , que tienen como objetivo  mantener y mejorar la salud de los trabajadores en las empresas.</p>
                 <a href="#">leer más</a>
@@ -213,13 +170,13 @@
         <div class="hm-campaign-grid-wrp clearfix">
           <div class="hm-campaign-grid-lft-con hide-sm">
             <div class="hm-campaign-grid-lft-img">
-              <img src="assets/images/hm-campaign-grid-lft-img.png">
+              <img src="<?php echo THEME_URI; ?>/assets/images/hm-campaign-grid-lft-img.png">
             </div>
           </div>
           <div class="hm-campaign-grid-rgt-con">
             <div class="hm-campaign-grid-rgt-wrp clearfix">
               <div class="hm-campaign-tp-head clearfix">
-                <span><img src="assets/images/hm-campaign-tp-icon.png"></span>
+                <span><img src="<?php echo THEME_URI; ?>/assets/images/hm-campaign-tp-icon.png"></span>
                 <h3>COTIZA TU Próxima</h3>
                 <h4>CAMPAÑA DE VACUNACIÓN</h4>
               </div>
@@ -287,7 +244,7 @@
                     <h3 class="show-sm">ESTUDIOS CARDIOLÓGICOS <span>Y DE LABO RATORIO</span></h3>
                   </div>
                   <div class="hm-laboratory-img">
-                    <img src="assets/images/hm-laboratory-img.png">
+                    <img src="<?php echo THEME_URI; ?>/assets/images/hm-laboratory-img.png">
                   </div>
                 </div>
                 <div class="col-md-6 col-sm-12">
@@ -317,7 +274,7 @@
                     <h3 class="show-sm">ESTUDIOS CARDIOLÓGICOS <span>Y DE LABO RATORIO</span></h3>
                   </div>
                   <div class="hm-laboratory-img">
-                    <img src="assets/images/hm-laboratory-img.png">
+                    <img src="<?php echo THEME_URI; ?>/assets/images/hm-laboratory-img.png">
                   </div>
                 </div>
                 <div class="col-md-6 col-sm-12 clearfix">
@@ -347,7 +304,7 @@
                     <h3 class="show-sm">ESTUDIOS CARDIOLÓGICOS <span>Y DE LABO RATORIO</span></h3>
                   </div>
                   <div class="hm-laboratory-img">
-                    <img src="assets/images/hm-laboratory-img.png">
+                    <img src="<?php echo THEME_URI; ?>/assets/images/hm-laboratory-img.png">
                   </div>
                 </div>
                 <div class="col-md-6 col-sm-12">
@@ -391,17 +348,17 @@
             <h2 class="sec-hdr-title set-hdr-big-title">aquí vale <span style="color: #fd6607;">Tu Seguro médico </span>
             </h2>
             <div class="sec-hdr-title-divider">
-              <span><img src="assets/images/hn-title-icon.png"></span>
+              <span><img src="<?php echo THEME_URI; ?>/assets/images/hn-title-icon.png"></span>
             </div>
           </div>
           <div class="hm-brand-logo">
             <ul id="HmBrandLogoSlider">
-              <li><img src="assets/images/partnar-slider-img-001.png"></li>
-              <li><img src="assets/images/partnar-slider-img-002.png"></li>
-              <li><img src="assets/images/partnar-slider-img-003.png"></li>
-              <li><img src="assets/images/partnar-slider-img-004.png"></li>
-              <li><img src="assets/images/partnar-slider-img-005.png"></li>
-              <li><img src="assets/images/partnar-slider-img-001.png"></li>
+              <li><img src="<?php echo THEME_URI; ?>/assets/images/partnar-slider-img-001.png"></li>
+              <li><img src="<?php echo THEME_URI; ?>/assets/images/partnar-slider-img-002.png"></li>
+              <li><img src="<?php echo THEME_URI; ?>/assets/images/partnar-slider-img-003.png"></li>
+              <li><img src="<?php echo THEME_URI; ?>/assets/images/partnar-slider-img-004.png"></li>
+              <li><img src="<?php echo THEME_URI; ?>/assets/images/partnar-slider-img-005.png"></li>
+              <li><img src="<?php echo THEME_URI; ?>/assets/images/partnar-slider-img-001.png"></li>
             </ul>
           </div>
         </div>
@@ -418,7 +375,7 @@
           <h2 class="sec-hdr-title set-hdr-big-title">Noticias de Salud<span style="color: #fd6607;">y Medicina</span>
           </h2>
           <div class="sec-hdr-title-divider">
-            <span><img src="assets/images/hn-title-icon.png"></span>
+            <span><img src="<?php echo THEME_URI; ?>/assets/images/hn-title-icon.png"></span>
           </div>
           <p>Información, actualidad y noticias sobre salud y enfermedades. <br> Novedades y avances en medicina a nivel nacional e internacional</p>
         </div>
@@ -433,25 +390,23 @@
           </div>
             <div class="HmbtmGridSlider">
               <div class="HmbtmGridSlide-item">
-                <div class="HmbtmGridSlide-item-hover">
-                  <div class="hm-btm-grid-dsc-inr">
-                    <div class="hm-btm-grid-img">
-                      <img src="assets/images/hm-btm-grid-img-1.png">
-                    </div>
-                    <div class="hm-btm-grid-dsc">
-                      <strong>Oct 18</strong>
-                      <h6><a href="#">¿Qué hacer ante un <br> posible infarto o <br> ataque al corazón?</a></h6>
-                    </div>
-                    <div class="hm-btm-grid-dsc-btn">
-                      <a href="#">Leer Artículo</a>
-                    </div>
+                <div class="hm-btm-grid-dsc-inr">
+                  <div class="hm-btm-grid-img">
+                    <img src="<?php echo THEME_URI; ?>/assets/images/hm-btm-grid-img-1.png">
+                  </div>
+                  <div class="hm-btm-grid-dsc">
+                    <strong>Oct 18</strong>
+                    <h6><a href="#">¿Qué hacer ante un <br> posible infarto o <br> ataque al corazón?</a></h6>
+                  </div>
+                  <div class="hm-btm-grid-dsc-btn">
+                    <a href="#">Leer Artículo</a>
                   </div>
                 </div>
               </div>
               <div class="HmbtmGridSlide-item">
                 <div class="hm-btm-grid-dsc-inr hm-btm-grid-orange">
                   <div class="hm-btm-grid-img">
-                    <img src="assets/images/hm-btm-grid-img-2.png">
+                    <img src="<?php echo THEME_URI; ?>/assets/images/hm-btm-grid-img-2.png">
                   </div>
                   <div class="hm-btm-grid-dsc">
                     <strong>Oct 11</strong>
@@ -465,7 +420,7 @@
               <div class="HmbtmGridSlide-item">
                 <div class="hm-btm-grid-dsc-inr">
                   <div class="hm-btm-grid-img">
-                    <img src="assets/images/hm-btm-grid-img-3.png">
+                    <img src="<?php echo THEME_URI; ?>/assets/images/hm-btm-grid-img-3.png">
                   </div>
                   <div class="hm-btm-grid-dsc">
                     <strong>ago 28</strong>
@@ -479,7 +434,7 @@
               <div class="HmbtmGridSlide-item">
                 <div class="hm-btm-grid-dsc-inr hm-btm-grid-orange">
                   <div class="hm-btm-grid-img">
-                    <img src="assets/images/hm-btm-grid-img-4.png">
+                    <img src="<?php echo THEME_URI; ?>/assets/images/hm-btm-grid-img-4.png">
                   </div>
                   <div class="hm-btm-grid-dsc">
                     <strong>ago 17</strong>
@@ -493,7 +448,7 @@
               <div class="HmbtmGridSlide-item">
                 <div class="hm-btm-grid-dsc-inr hm-btm-grid-orange">
                   <div class="hm-btm-grid-img">
-                    <img src="assets/images/hm-btm-grid-img-4.png">
+                    <img src="<?php echo THEME_URI; ?>/assets/images/hm-btm-grid-img-4.png">
                   </div>
                   <div class="hm-btm-grid-dsc">
                     <strong>ago 17</strong>
@@ -511,166 +466,4 @@
     </div>
   </div>
 </section><!-- end of hm-btm-grid-sec-wrp -->
-
-
-<footer class="footer-wrap">
-  <div class="ftr-main text-center" style="background:url(assets/images/ftr-bg.jpg);">
-    <div class="container-2">
-      <div class="row">
-        <div class="col-sm-12">
-          <div class="ftr-innr">
-            <div class="ftr-head">
-              <h2>¡Qué Esperas, <strong>agenda tu cita Hoy!</strong></h2>
-            </div>
-            <div class="ftr-col-wrp clearfix">  
-              <div class="ftr-col ftr-col-3">
-                <div id="ftr-map" data-lat="50.844924" data-long="4.352091"></div>
-                <p>Sófocles 115, Polanco, Polanco II Secc, 11550 Ciudad de México, CDMX  <a href="" target="_blank">>> (Da Clic Aquí Para Llegar Con Google Maps) <<</a></p>
-              </div>  
-              <div class="ftr-col ftr-col-2">
-                <ul class="ulc hide-sm">
-                  <li>
-                    <a href="#">Calle Sófocles 115 Planta Alta<br>Polanco 11560 Ciudad de México, CDMX</a>
-                  </li>
-                  <li>
-                    <strong>Teléfonos:</strong><br/>
-                    <a href="#">(55) 5233-6007 - (55) 5233-2312</a><br/>
-                    <a href="#">(55) 5557-5972 - (55) 55775981</a>
-                  </li>
-                  <li>
-                    <strong>Las citas son de Lunes a Viernes de</strong><br/>
-                    <span>9:30a.m. - 7p.m.</span> 
-                  </li>                  
-                  <li>
-                    <span>Sábados de 9.00a.m. a 1p.m.<br/><em>(Trabajamos con Previa Cita)</em></span> 
-                  </li>
-                </ul>
-                <ul class="ulc show-sm">
-                  <li>
-                    <strong>Teléfonos:</strong><br/>
-                    <a href="#">(55) 5233-6007</a><br/>
-                    <a href="#">(55) 5233-2312</a><br/>
-                    <a href="#">(55) 5557-5972</a><br/>
-                    <a href="#">(55) 55775981</a>
-                  </li>
-                  <li>
-                    <strong>Las citas son de Lunes a Viernes de</strong><br/>
-                    <span>9:30a.m. - 7p.m.</span> 
-                  </li>                  
-                  <li>
-                    <span>Sábados de 9.00a.m. a 1p.m.<br/><em>(Trabajamos con Previa Cita)</em></span> 
-                  </li>
-                </ul>
-                <div class="ftr-social">
-                  <a href="#" target="_blank">
-                    <img src="assets/images/ftr-fb.png" alt="" />
-                  </a>                  
-                  <a href="#" target="_blank">
-                    <img src="assets/images/ftr-yt.png" alt="" />
-                  </a>
-                </div>
-              </div> 
-              <div class="ftr-col ftr-col-1">
-                <a class="ftr-logo" href="#">
-                  <img src="assets/images/ftr-left-logo.png" alt="" />
-                </a>
-                <p>El objetivo de Medik Rama es ser la primer compañía integradora de servicios de calidad médica y calidez humana a costos accesibles y abierto todo público. Nuestra red esta conformada por los mejores médicos del país, mismos que cuentan con una amplia trayectoria y certificación de acuerdo a su especialidad.</p>
-              </div> 
-            </div> 
-            <a class="go-top-btn" href="#">
-              <img src="assets/images/go-top.png" alt="">
-            </a> 
-          </div>
-
-          <div class="ftr-menu-con show-sm text-center">
-            <ul class="ulc">
-              <li>
-                <a href="#">inicio</a>
-              </li>
-              <li class="menu-item-has-children">
-                <a href="#">servicios</a>
-                <ul class="ulc sub-menu">
-                  <li><a href="#">Sub Menu</a></li>
-                  <li><a href="#">Sub Menu</a></li>
-                  <li><a href="#">Sub Menu</a></li>
-                  <li><a href="#">Sub Menu</a></li>
-                </ul>
-              </li>
-              <li>
-                <a href="#">citas</a>
-              </li>
-              <li>
-                <a href="#">promociones</a>
-              </li>
-              <li>
-                <a href="#">blog</a>
-              </li>
-              <li>
-                <a href="#">contacto</a>
-              </li>
-
-            </ul>  
-          </div>
-        </div>
-      </div>
-    </div>   
-  </div>
-
-  <div class="ftr-btm-con text-center">
-    <span>Derechos reservados © 2019 MedikRama | Aviso de privacidad</span>
-  </div>
-</footer>
-
-<div class="show-sm">
-  <div class="xs-popup-menu">
-    <div class="xs-menu-close-btn-controller">
-       <span><img src="assets/images/close-icon.png"></span>
-    </div>
-    <nav class="xs-main-nav">
-      <ul class="clearfix">
-        <li class="current-menu-item"><a href="#">inicio</a></li>
-        <li class="menu-item-has-children">
-          <a href="#">servicios</a>
-          <ul class="sub-menu">
-            <li><a href="#">Sub Menu</a></li>
-            <li><a href="#">Sub Menu</a></li>
-            <li><a href="#">Sub Menu</a></li>
-            <li><a href="#">Sub Menu</a></li>
-            <li><a href="#">Sub Menu</a></li>
-            <li><a href="#">Sub Menu</a></li>
-            <li><a href="#">Sub Menu</a></li>
-          </ul>
-        </li>
-        <li><a href="#">citas</a></li>
-        <li><a href="#">promociones </a></li>
-        <li><a href="#">blog</a></li>
-        <li><a href="#">contacto</a></li>                            
-      </ul>
-    </nav>
-  </div>
-</div>
-<div class="nav-opener show-sm">
-  <div class="opener-inner">
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-  </div>
-</div>
-
-
-<script src="https://code.jquery.com/jquery-3.0.0.js"></script>
-<script src="https://code.jquery.com/jquery-migrate-3.0.0.js"></script>
-<script src="assets/js/bootstrap.min.js"></script>
-<script src="assets/js/bootstrap-select.js"></script>
-<script src="assets/js/ie10-viewport-bug-workaround.js"></script>
-<script src="assets/fancybox3/dist/jquery.fancybox.min.js"></script>
-<script src="assets/slick.slider/slick.js"></script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBo2-QJ7RdCkLw3NFZEu71mEKJ_8LczG-c"></script>
-<script src="assets/js/jquery.matchHeight-min.js"></script>
-<script src="assets/js/wow.min.js"></script>
-<script src="assets/js/app.js"></script>
-<script src="assets/js/main.js"></script>
-
-</body>
-</html>
+<?php get_footer(); ?>
