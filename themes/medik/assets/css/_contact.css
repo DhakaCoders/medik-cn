@@ -52,6 +52,9 @@ contact-map-sec-wrp
 	border-bottom: 1px solid #fd6607;
 	padding-bottom: 6px;
 }
+.sec-hdr-title.set-hdr-big-title span {
+    color: #fd6607;
+}
 .contact-info-rgt{
 	width: 37%;
 	float: right;
