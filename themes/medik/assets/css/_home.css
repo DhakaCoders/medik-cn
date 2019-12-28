@@ -564,12 +564,189 @@ hm-campaign-grid-sec-wrp
 ---------------------
 */
 .hm-campaign-grid-sec-wrp{
-	background: url(../images/hm-campaign-grid-sec-bg.jpg);
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: center center;
+	background-repeat: no-repeat!important;
+	background-size: cover!important;
+	background-position: center center!important;
 	padding-top: 55px;
 }
+.vt-form-2-sec-wrap{
+	background-repeat: no-repeat!important;
+	background-size: cover!important;
+	background-position: center center!important;
+	position: relative;	
+	padding: 55px 0 27px;
+}
+.vt-form-2-sec-des-ctlr{
+	background-repeat: no-repeat!important;
+	background-size: cover!important;
+	background-position: center center!important;
+	padding: 70px 55px 22px;	
+}
+.vt-form-2-sec-des-ctlr{
+	position: relative;
+}
+.vt-form-1-sec-wrap,
+.vt-form-2-sec-wrap{
+	min-height: 608px;
+}
+
+.home-form-2-center-icon{
+	position: absolute;
+	left: 50%;
+	top: -54px;
+	max-width: 108px;
+}
+.wpcf7cf_step_inner h3{
+	font-size: 17px;
+	text-align: center;
+	padding-left: 30px;
+	padding-right: 30px;
+	margin-bottom: 25px;
+}
+.wpcf7cf_step{
+	padding-bottom: 30px;
+	min-height: 219px;
+}
+.singup-form-txt-field textarea{
+	width: 100%;
+    height: 130px;
+    background: #fbfbfb;
+    font-family: 'OpenSans-Light';
+    font-size: 16px;
+    line-height: 18px;
+    border: none;
+    color: #0e857b;
+    border-radius: 30px;
+    padding: 30px;
+}
+.singup-form-txt-field textarea
+/*.wpcf7cf_step_controls{
+	position: relative;
+}
+.wpcf7cf_step_controls:after,
+.wpcf7cf_step_controls:before{
+	content: "";
+	display: table;
+	clear: both;
+}*/
+.wpcf7cf_step_controls span{
+	display: inline-block;
+	vertical-align: baseline;
+	line-height: 100%;
+}
+.wpcf7cf_step_controls span button{
+	width: 243px;
+	height: 52px;
+	margin: 0 auto;
+	position: relative;
+	font-size: 21px;
+	font-family: 'OpenSans-Italic';
+	text-transform: uppercase;
+	color: #fff;
+	z-index: 2;
+	display: block;
+	padding-left: 30px;
+	text-align: left;
+	transition: all 0.5s;
+	-ms-transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+}
+.wpcf7cf_step_controls span button.wpcf7cf_next{
+	background: url(../images/sign-up-btn-bg.png);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+.wpcf7cf_step_controls span button.wpcf7cf_next:after{
+	content: "";
+	position: absolute;
+	background: url(../images/wpcf7cf_next_arrow.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+	width: 17px;
+	height: 16px;
+	background-size: 17px 16px;
+	top: 50%;
+	transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	-webkit-transform: translateY(-50%);
+	right: 35px;
+		transition: all 0.5s;
+	-ms-transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+}
+.wpcf7cf_step_controls span button.wpcf7cf_next:hover:after{
+	background: url(../images/wpcf7cf_next_arrow_hover.png);
+	background-position: center center;
+	background-repeat: no-repeat;
+	width: 17px;
+	height: 16px;
+	background-size: 17px 16px;
+	right: 30px;
+}
+.wpcf7cf_step_controls{
+	text-align: center;
+	width: 100%;
+}
+.wpcf7cf_step_controls span button.wpcf7cf_prev.disabled{
+	display: none;
+}
+.wpcf7cf_step_controls span button.wpcf7cf_prev{
+	background: url(../images/sign-up-btn-bg-prv-bg.png);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	padding-right: 0;
+	padding-left: 55px;
+}
+.wpcf7cf_step_controls span button.wpcf7cf_prev:after{
+	content: "";
+    position: absolute;
+    background: url(../images/wpcf7cf_prev_arrow.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+   width: 16px;
+   height: 16px;
+   background-size: 16px 16px;
+   top: 50%;
+   transform: translateY(-50%);
+   -ms-transform: translateY(-50%);
+   -webkit-transform: translateY(-50%);
+   left: 25px;
+	transition: all 0.5s;
+	-ms-transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+}
+.wpcf7cf_step_controls span button.wpcf7cf_prev:hover:after{
+	background: url(../images/wpcf7cf_prev_arrow_hover.png);
+	background-position: center center;
+	background-repeat: no-repeat;
+	width: 17px;
+	height: 16px;
+	background-size: 16px 16px;
+	left: 24px;
+}
+
+.wpcf7cf_step_controls span button.wpcf7cf_prev:hover ,
+.wpcf7cf_step_controls span button.wpcf7cf_next:hover {
+    color: #0e857b;
+}
+
+.wpcf7-form-control-wrap select{
+	width: 100%;
+	height: 55px;
+    background: #fbfbfb;
+    padding: 15px 15px;
+    font-family: 'OpenSans-Light';
+    font-size: 16px;
+    line-height: 18px;
+    border: none;
+    color: #0e857b;
+
+}
+.wpcf7-form-control-wrap select option{
+	    font-size: 16px;
+    line-height: 18px;
+}
+
 .hm-campaign-grid-lft-con{
 	width: 50%;
 	float: left;
