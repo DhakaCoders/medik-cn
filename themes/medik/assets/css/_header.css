@@ -244,7 +244,11 @@ nav.main-nav > ul > li.menu-item-has-children > a:after {
 }
 nav.main-nav > ul > li.menu-item-has-children:hover > a:after{
 	content: "\f068";
-	color:#0e857b;
+	color:#fff;
+}
+
+nav.main-nav li.menu-item-has-children ul.sub-menu a:hover{
+	color: #0e857b!important;
 }
 
 nav.main-nav li.menu-item-has-children ul.sub-menu a{
@@ -263,7 +267,7 @@ nav.main-nav ul li.current-menu-item a{
 }
 nav.main-nav li.menu-item-has-children:hover a,
 nav.main-nav li.menu-item-has-children ul.sub-menu a:hover{
-	color:#0e857b;
+	color:#fff;
 }
 /*nav.main-nav > ul > li.menu-item-has-children:hover > a{
 	color: #0e857b;
@@ -599,7 +603,9 @@ nav.main-nav ul li.current-menu-item a{
 
 
 @media(max-width: 575px){
-
+	.hm-btm-grid-dsc h6 a br{
+		display: none;
+	}
 
 }
 

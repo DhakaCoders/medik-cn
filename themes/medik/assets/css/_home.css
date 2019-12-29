@@ -336,6 +336,7 @@ hm-service-sec-wrp
 	display: inline-block;
 	vertical-align: baseline;
 	padding-bottom: 15px;
+	min-height: 61px;
 }
 .hm-service-slide-item-dsc h4 {
     margin: 0;
@@ -347,12 +348,14 @@ hm-service-sec-wrp
     padding-bottom: 10px;
     position: relative;
     margin-bottom: 9px;
+
 }
 .hm-service-slide-item-dsc h4 a{
 	display: inline-block;
 	vertical-align: baseline;
 	text-decoration: none;
 	color: inherit;
+	transition: initial;
 }
 .hm-service-slide-item-dsc h4:after{
 	content: "";
@@ -362,6 +365,9 @@ hm-service-sec-wrp
 	width: 105px;
 	height: 1px;
 	background: #fff;
+	transition: all 1.5s;
+	-ms-transition: all 1.5s;
+	-webkit-transition: all 1.5s;
 }
 .hm-service-slide-item-dsc > a:before{
 	content: "";
@@ -374,17 +380,14 @@ hm-service-sec-wrp
 	height: 57px;
 	opacity: 0;
 	visibility: hidden;
-	transition: all 0.5s;
-	-ms-transition: all 0.5s;
-	-webkit-transition: all 0.5s;
 	z-index: -1;
+		transition: all 1.5s;
+	-ms-transition: all 1.5s;
+	-webkit-transition: all 1.5s;
 }
 .hm-service-slide-item-dsc:hover > a:before{
 	opacity: 1;
 	visibility: visible;
-	transition: all 0.5s;
-	-ms-transition: all 0.5s;
-	-webkit-transition: all 0.5s;
 }
 .hm-service-slide-item-dsc > a{
 	text-decoration: none;
@@ -1252,10 +1255,14 @@ hm-laboratory-content-sec-wrp
 	background-size: 7px 7px;
 	background-position: center center;
 	background-repeat: no-repeat;
-	margin: 0 5px;
+	padding: 0 5px; 
 	display: inline-block;
 	vertical-align: baseline;
 	float: none;
+}
+.HmbtmGridSlider .slick-dots li button{
+	margin: 0;
+	padding: 0;
 }
 .HmbtmGridSlider .slick-dots li,
 .HmbtmGridSlider .slick-dots li button,
@@ -1272,6 +1279,7 @@ hm-laboratory-content-sec-wrp
 	     -o-transition: all .25s ease;
 	        transition: all .25s ease;
 }
+
 .HmbtmGridSlider .slick-dots li button:before,
 .hm-laboratory-slider .slick-dots li button:before{
 	content: "";
@@ -1828,6 +1836,23 @@ hm-btm-grid-sec-wrp
 	}
 	.mainsliderarrows .rightArrow{
 	    top: 89%;
+	}
+	.main-slider-sec-wrp .leftArrow,
+	.main-slider-sec-wrp .rightArrow{
+		display: none!important;
+	}
+	.main-slide-item{
+		padding-bottom: 85px;
+		border: none;
+	}
+	.main-slider{
+		margin-bottom: 0!important;
+	}
+	.hm-service-sec-wrp .sec-hdr-title.set-hdr-big-title span{
+		display: inline;
+	}
+	.main-slide-item-dsc h1{
+		line-height: 1.1;
 	}
 }
 
