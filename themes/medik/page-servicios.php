@@ -189,17 +189,17 @@ $thisID = get_the_ID();
                 <span class="leftArrow"></span>
                 <span class="rightArrow"></span>
               </div>
+              <div class="siderbarRecentPost-hdr text-center">
+                <h5>Artículos <span>Recientes</span></h5>
+              </div> 
               <div class="siderbarRecentPostSlider">
-                <div class="siderbarRecentPostSlider-item">
-                  <div class="siderbarRecentPost-hdr text-center">
-                    <h5>Artículos <span>Recientes</span></h5>
-                  </div>             
+                <div class="siderbarRecentPostSlider-item">            
                   <div class="servicios-siderbar-recent-post-innr">
                     <ul class="ulc">
                       <li>
                         <i>
                           <a href="#">
-                            <img src="<?php echo THEME_URI; ?>/assets/images/sidebar-recent-post-img-001.jpg" alt="" />
+                            <img src="assets/images/sidebar-recent-post-img-001.jpg" alt="" />
                           </a>                        
                         </i>  
                         <a href="#">Palpitaciones, ¿cuándo debemos preocuparnos?</a>
@@ -208,7 +208,7 @@ $thisID = get_the_ID();
                       <li>
                         <i>
                           <a href="#">
-                            <img src="<?php echo THEME_URI; ?>/assets/images/sidebar-recent-post-img-002.jpg" alt="" />
+                            <img src="assets/images/sidebar-recent-post-img-002.jpg" alt="" />
                           </a>                        
                         </i>  
                         <a href="#">Los cuidados <br/>postinfarto.</a>
@@ -217,7 +217,7 @@ $thisID = get_the_ID();
                       <li>
                         <i>
                           <a href="#">
-                            <img src="<?php echo THEME_URI; ?>/assets/images/sidebar-recent-post-img-003.jpg" alt="" />
+                            <img src="assets/images/sidebar-recent-post-img-003.jpg" alt="" />
                           </a>                        
                         </i>  
                         <a href="#">Aspirina: <br/>consideraciones y <br/>recomendaciones</a>
@@ -226,16 +226,13 @@ $thisID = get_the_ID();
                     </ul>
                   </div>                    
                 </div>
-                <div class="siderbarRecentPostSlider-item">
-                  <div class="siderbarRecentPost-hdr text-center">
-                    <h5>Artículos <span>Recientes</span></h5>
-                  </div>             
+                <div class="siderbarRecentPostSlider-item">            
                   <div class="servicios-siderbar-recent-post-innr">
                     <ul class="ulc">
                       <li>
                         <i>
                           <a href="#">
-                            <img src="<?php echo THEME_URI; ?>/assets/images/sidebar-recent-post-img-001.jpg" alt="" />
+                            <img src="assets/images/sidebar-recent-post-img-001.jpg" alt="" />
                           </a>                        
                         </i>  
                         <a href="#">Palpitaciones, ¿cuándo debemos preocuparnos?</a>
@@ -244,7 +241,7 @@ $thisID = get_the_ID();
                       <li>
                         <i>
                           <a href="#">
-                            <img src="<?php echo THEME_URI; ?>/assets/images/sidebar-recent-post-img-002.jpg" alt="" />
+                            <img src="assets/images/sidebar-recent-post-img-002.jpg" alt="" />
                           </a>                        
                         </i>  
                         <a href="#">Los cuidados <br/>postinfarto.</a>
@@ -253,7 +250,7 @@ $thisID = get_the_ID();
                       <li>
                         <i>
                           <a href="#">
-                            <img src="<?php echo THEME_URI; ?>/assets/images/sidebar-recent-post-img-003.jpg" alt="" />
+                            <img src="assets/images/sidebar-recent-post-img-003.jpg" alt="" />
                           </a>                        
                         </i>  
                         <a href="#">Aspirina: <br/>consideraciones y <br/>recomendaciones</a>
@@ -262,16 +259,13 @@ $thisID = get_the_ID();
                     </ul>
                   </div>                    
                 </div>
-                <div class="siderbarRecentPostSlider-item">
-                  <div class="siderbarRecentPost-hdr text-center">
-                    <h5>Artículos <span>Recientes</span></h5>
-                  </div>             
+                <div class="siderbarRecentPostSlider-item">            
                   <div class="servicios-siderbar-recent-post-innr">
                     <ul class="ulc">
                       <li>
                         <i>
                           <a href="#">
-                            <img src="<?php echo THEME_URI; ?>/assets/images/sidebar-recent-post-img-001.jpg" alt="" />
+                            <img src="assets/images/sidebar-recent-post-img-001.jpg" alt="" />
                           </a>                        
                         </i>  
                         <a href="#">Palpitaciones, ¿cuándo debemos preocuparnos?</a>
@@ -280,7 +274,7 @@ $thisID = get_the_ID();
                       <li>
                         <i>
                           <a href="#">
-                            <img src="<?php echo THEME_URI; ?>/assets/images/sidebar-recent-post-img-002.jpg" alt="" />
+                            <img src="assets/images/sidebar-recent-post-img-002.jpg" alt="" />
                           </a>                        
                         </i>  
                         <a href="#">Los cuidados <br/>postinfarto.</a>
@@ -289,7 +283,7 @@ $thisID = get_the_ID();
                       <li>
                         <i>
                           <a href="#">
-                            <img src="<?php echo THEME_URI; ?>/assets/images/sidebar-recent-post-img-003.jpg" alt="" />
+                            <img src="assets/images/sidebar-recent-post-img-003.jpg" alt="" />
                           </a>                        
                         </i>  
                         <a href="#">Aspirina: <br/>consideraciones y <br/>recomendaciones</a>
