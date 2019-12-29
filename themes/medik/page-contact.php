@@ -35,8 +35,9 @@ $gmaplink = !empty($gmapsurl)?$gmapsurl: 'javascript:void()';
           <div class="sec-hdr-title-divider">
             <span><img src="<?php echo THEME_URI; ?>/assets/images/hn-title-icon.png"></span>
           </div>
-          <p class="show-xs">Si deseas información más detallada o agendar una visita de valoración, puedes ponerte en contacto con nosotros y con gusto te atenderemos.</p>
-
+          <div class="show-xs mk-contact-form-des">
+            <?php if($intro['content']) echo wpautop( $intro['content']); ?>
+          </div>
           <div class="contact-tel hide-xs">
             <span>Tels. 
               <?php 
