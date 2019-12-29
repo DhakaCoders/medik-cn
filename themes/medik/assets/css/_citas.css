@@ -109,9 +109,12 @@
 	color:#464646;
 	font-size: 17px;
 }
-.citas-main-lft-innr li a.tel{
+.citas-main-lft-innr li .tel-wrapper{
 	color:#008175;
 	font-family: "Lato-BoldItalic";
+}
+.citas-main-lft-innr li a.tel{
+	color:#008175;
 }
 .citas-main-lft-innr li a:hover{
 	color:#fa6405;
