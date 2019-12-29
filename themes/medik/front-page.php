@@ -3,6 +3,7 @@
 $banner = get_field('slidesec', HOMEID);
 if($banner):
   $slides = $banner['slide'];
+  
 ?>
 <section class="main-slider-sec-wrp">
   <?php if($slides): ?>
@@ -11,9 +12,12 @@ if($banner):
     <span class="rightArrow"><i class="fa fa-angle-right"></i></span>
   </div>
   <div class="main-slider">
-    <?php foreach($slides as $slide): ?>
+    <?php foreach($slides as $slide): 
+      $slideposter = '';
+      if(!empty($slide['image'])) $slideposter = cbv_get_image_src($slide['image']);
+    ?>
     <div class="main-slide-item">
-      <div class="main-slide-item-img" style="background: url(<?php echo THEME_URI; ?>/assets/images/main-slider-sec-bg.png);"></div>
+      <div class="main-slide-item-img" style="background: url(<?php echo $slideposter; ?>);"></div>
       <div class="container">
         <div class="row">
           <div class="col-sm-12">
@@ -36,19 +40,24 @@ if($banner):
   </div>  
   <?php endif; ?>
 </section><!-- end of main-slider-sec-wrp -->
-<?php endif; ?>
+<?php endif; 
+
+$service = get_field('servicesec', HOMEID);
+if($service):
+  $slides = $service['slide'];
+?>
 
 <section class="hm-service-sec-wrp">
   <div class="container">
     <div class="row">
       <div class="col-sm-12">
         <div class="section-hdr">
-          <h2 class="sec-hdr-title set-hdr-big-title">Servicios <span style="color: #fd6607;">medik Rama</span>
-          </h2>
+          <?php if( !empty( $banner['title'] ) ) printf( '<h2 class="sec-hdr-title set-hdr-big-title">%s</h2>', $banner['title']); ?>
           <div class="sec-hdr-title-divider">
             <span><img src="<?php echo THEME_URI; ?>/assets/images/hn-title-icon.png"></span>
           </div>
           <p>Calidad Médica y Calidez Humana a Costos Accesibles</p>
+          <?php if( !empty( $banner['content'] ) ) echo wpautop($banner['content']); ?>
         </div>
       </div>
     </div>
@@ -109,7 +118,7 @@ if($banner):
     </div>
   </div>
 </section>
-
+<?php endif; ?>
 <div class="vt-home-form-slider">
 <div class="vt-home-form-slide">
   <section class="hm-campaign-grid-sec-wrp vt-form-1-sec-wrap matchHeightCol" style="background: url(<?php echo THEME_URI; ?>/assets/images/hm-campaign-grid-sec-bg.jpg);">
