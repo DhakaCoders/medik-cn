@@ -184,6 +184,15 @@ $thisID = get_the_ID();
               </div>
             </div>
             <?php endif; ?>
+            <?php
+              $nQuery = new WP_Query(array(
+                'post_type' => 'post',
+                'posts_per_page'=> 9,
+                'order'=> 'DESC',
+              ));
+
+              if( $nQuery->have_posts() ){
+            ?>
             <div class="siderbarRecentPostSlider-wrp">
               <div class="recentPost-sliderarrows">
                 <span class="leftArrow"></span>
@@ -193,107 +202,38 @@ $thisID = get_the_ID();
                 <h5>Artículos <span>Recientes</span></h5>
               </div> 
               <div class="siderbarRecentPostSlider">
-                <div class="siderbarRecentPostSlider-item">            
-                  <div class="servicios-siderbar-recent-post-innr">
-                    <ul class="ulc">
+                
+                      <?php
+                      $index = 1; 
+                      $countPost = $nQuery->found_posts;          
+                        while($nQuery->have_posts()): $nQuery->the_post(); 
+                        $gridImage = get_post_thumbnail_id(get_the_ID());
+                        if(!empty($gridImage)){
+                          $refImgtag = cbv_get_image_tag($gridImage, 'hmslgrid');
+                        }else{
+                          $refImgtag = '<img src="'.THEME_URI.'/assets/images/hm-btm-grid-img-1.png" alt="'.get_the_title().'">';
+                        }  
+
+                         
+                        echo ($index % 3 == 1 || $index == 1) ? '<div class="siderbarRecentPostSlider-item"><div class="servicios-siderbar-recent-post-innr"><ul class="ulc">' : '';      
+                      ?>
                       <li>
                         <i>
-                          <a href="#">
-                            <img src="assets/images/sidebar-recent-post-img-001.jpg" alt="" />
+                          <a href="<?php the_permalink(); ?>">
+                            <?php echo $refImgtag; ?>
                           </a>                        
                         </i>  
-                        <a href="#">Palpitaciones, ¿cuándo debemos preocuparnos?</a>
-                        <span class="post-date">Diciembre 11, 2019</span>
+                        <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+                        <span class="post-date"><?php echo get_the_date('F d, Y'); ?></span>
                       </li>
-                      <li>
-                        <i>
-                          <a href="#">
-                            <img src="assets/images/sidebar-recent-post-img-002.jpg" alt="" />
-                          </a>                        
-                        </i>  
-                        <a href="#">Los cuidados <br/>postinfarto.</a>
-                        <span class="post-date">Diciembre 1, 2019</span>
-                      </li>
-                      <li>
-                        <i>
-                          <a href="#">
-                            <img src="assets/images/sidebar-recent-post-img-003.jpg" alt="" />
-                          </a>                        
-                        </i>  
-                        <a href="#">Aspirina: <br/>consideraciones y <br/>recomendaciones</a>
-                        <span class="post-date">Diciembre 12, 2019</span>
-                      </li>
-                    </ul>
-                  </div>                    
-                </div>
-                <div class="siderbarRecentPostSlider-item">            
-                  <div class="servicios-siderbar-recent-post-innr">
-                    <ul class="ulc">
-                      <li>
-                        <i>
-                          <a href="#">
-                            <img src="assets/images/sidebar-recent-post-img-001.jpg" alt="" />
-                          </a>                        
-                        </i>  
-                        <a href="#">Palpitaciones, ¿cuándo debemos preocuparnos?</a>
-                        <span class="post-date">Diciembre 11, 2019</span>
-                      </li>
-                      <li>
-                        <i>
-                          <a href="#">
-                            <img src="assets/images/sidebar-recent-post-img-002.jpg" alt="" />
-                          </a>                        
-                        </i>  
-                        <a href="#">Los cuidados <br/>postinfarto.</a>
-                        <span class="post-date">Diciembre 1, 2019</span>
-                      </li>
-                      <li>
-                        <i>
-                          <a href="#">
-                            <img src="assets/images/sidebar-recent-post-img-003.jpg" alt="" />
-                          </a>                        
-                        </i>  
-                        <a href="#">Aspirina: <br/>consideraciones y <br/>recomendaciones</a>
-                        <span class="post-date">Diciembre 12, 2019</span>
-                      </li>
-                    </ul>
-                  </div>                    
-                </div>
-                <div class="siderbarRecentPostSlider-item">            
-                  <div class="servicios-siderbar-recent-post-innr">
-                    <ul class="ulc">
-                      <li>
-                        <i>
-                          <a href="#">
-                            <img src="assets/images/sidebar-recent-post-img-001.jpg" alt="" />
-                          </a>                        
-                        </i>  
-                        <a href="#">Palpitaciones, ¿cuándo debemos preocuparnos?</a>
-                        <span class="post-date">Diciembre 11, 2019</span>
-                      </li>
-                      <li>
-                        <i>
-                          <a href="#">
-                            <img src="assets/images/sidebar-recent-post-img-002.jpg" alt="" />
-                          </a>                        
-                        </i>  
-                        <a href="#">Los cuidados <br/>postinfarto.</a>
-                        <span class="post-date">Diciembre 1, 2019</span>
-                      </li>
-                      <li>
-                        <i>
-                          <a href="#">
-                            <img src="assets/images/sidebar-recent-post-img-003.jpg" alt="" />
-                          </a>                        
-                        </i>  
-                        <a href="#">Aspirina: <br/>consideraciones y <br/>recomendaciones</a>
-                        <span class="post-date">Diciembre 12, 2019</span>
-                      </li>
-                    </ul>
-                  </div>                    
-                </div>
+                      <?php
+                       echo ($index % 3 == 0 || $index == $countPost) ? '</ul></div></div>' : '';
+                       $index++;
+                       endwhile; 
+                       ?>
               </div>
             </div>
+            <?php } wp_reset_postdata(); ?>
           </div>        
         </div>  
       </div>
@@ -301,15 +241,20 @@ $thisID = get_the_ID();
   </div>    
 </section>
 
-
+<?php 
+$minsurance = get_field('minsurancesec', HOMEID);
+if($minsurance):
+  $logos = $minsurance['logos'];
+?>
 <section class="servicios-partner-slider-sec">
   <div class="container">
     <div class="row">
       <div class="col-sm-12">
         <div class="serviciosPartnerSlider-innr-wrp">
           <div class="serviciosPartnerSlider-hdr">
-            <h2>aquí vale <span>Tu Seguro médico</span></h2>
+            <?php if( !empty( $minsurance['title'] ) ) printf( '<h2>%s</h2>', $minsurance['title']); ?>
           </div>
+          <?php if($logos): ?>
           <div class="serviciosPartnerSlider-wrp">
             <div class="serviciosPartnerSlider-arrows">
               <span class="leftArrow"></span>
@@ -317,145 +262,81 @@ $thisID = get_the_ID();
             </div>
 
             <ul class="ulc clearfix serviciosPartnerSlider">
-              <li class="serviciosPartnerSlider-item">
-                <i>
-                  <img src="<?php echo THEME_URI; ?>/assets/images/partnar-slider-img-001.png" alt="">                
-                </i>
-              </li>
-              <li class="serviciosPartnerSlider-item">
-                <i>
-                  <img src="<?php echo THEME_URI; ?>/assets/images/partnar-slider-img-002.png" alt="">                
-                </i>
-              </li>
-              <li class="serviciosPartnerSlider-item">
-                <i>
-                  <img src="<?php echo THEME_URI; ?>/assets/images/partnar-slider-img-003.png" alt="">                
-                </i>
-              </li>
-              <li class="serviciosPartnerSlider-item">
-                <i>
-                  <img src="<?php echo THEME_URI; ?>/assets/images/partnar-slider-img-004.png" alt="">                
-                </i>
-              </li>
-              <li class="serviciosPartnerSlider-item">
-                <i>
-                  <img src="<?php echo THEME_URI; ?>/assets/images/partnar-slider-img-005.png" alt="">                
-                </i>
-              </li>
-              <li class="serviciosPartnerSlider-item">
-                <i>
-                  <img src="<?php echo THEME_URI; ?>/assets/images/partnar-slider-img-003.png" alt="">                
-                </i>
-              </li>
+              <?php foreach($logos as $logo): ?>
+              <li class="serviciosPartnerSlider-item"><img src="<?php echo $logo['logo']; ?>" alt="<?php echo cbv_get_image_alt( $logo['logo'] ); ?>"></li>
+              <?php endforeach; ?>
             </ul>
           </div>
+          <?php endif; ?>
         </div>
       </div>
     </div>
   </div>    
 </section>
-
-
+<?php endif;?>
+<?php 
+$news = get_field('newssec', HOMEID);
+?>
 <section class="noticias-slider-sec-wrp">
   <div class="container">
     <div class="row">
       <div class="col-sm-12">
         <div class="noticias-slider-innr-wrp">
           <div class="noticias-slider-hdr">
-            <h2>Noticias de Salud <span>y Medicina</span></h2>
-            <p>Información, actualidad y noticias sobre salud y enfermedades. <br/>Novedades y avances en medicina a nivel nacional e internacional</p>
+            <?php
+              if( !empty( $news['title'] ) ) printf( '<h2>%s</h2>', $news['title']);
+              if( !empty( $news['content'] ) ) echo wpautop($news['content']); 
+            ?>
           </div>
+          <?php
+            $pQuery = new WP_Query(array(
+              'post_type' => 'post',
+              'posts_per_page'=> 20,
+              'order'=> 'DESC',
+            ));
+
+            if( $pQuery->have_posts() ){
+          ?>
           <div class="noticiasSlider-wrp">
             <div class="noticiasSlider-arrows">
               <span class="leftArrow"></span>
               <span class="rightArrow"></span>
             </div>          
             <div class="ulc noticiasSlider">
+            <?php 
+              $i = 1;          
+              while($pQuery->have_posts()): $pQuery->the_post(); 
+              $gridImage = get_post_thumbnail_id(get_the_ID());
+              if(!empty($gridImage)){
+                $refImgtag = cbv_get_image_tag($gridImage, 'hmslgrid');
+              }else{
+                $refImgtag = '<img src="'.THEME_URI.'/assets/images/hm-btm-grid-img-1.png" alt="'.get_the_title().'">';
+              }      
+            ?>
               <div class="noticiasSlider-item">
                 <div class="noticiasSlider-grd">
                   <div class="noticiasSlider-grd-img">
-                    <img src="<?php echo THEME_URI; ?>/assets/images/noticiasSlider-grd-img-001.png" alt="">
-                    <a href="#" class="overlay-link"></a>
+                    <?php echo $refImgtag; ?>
+                    <a href="<?php the_permalink(); ?>" class="overlay-link"></a>
                   </div>
                   <div class="noticiasSlider-grd-des">
                     <div class="noticiasSlider-date">
-                      <span>Oct 18</span>                        
+                      <span><?php echo get_the_date('M d'); ?></span>                        
                       <div class="sqew"></div>
                     </div>
-                    <p>¿Qué hacer ante un <br> posible infarto o <br> ataque al corazón?</p>
-                    <a href="#">Leer Artículo</a>
+                    <p><?php the_title(); ?></p>
+                    <a href="<?php the_permalink(); ?>">Leer Artículo</a>
                   </div>
                 </div>
               </div>
-              <div class="noticiasSlider-item">
-                <div class="noticiasSlider-grd">
-                  <div class="noticiasSlider-grd-img">
-                    <img src="<?php echo THEME_URI; ?>/assets/images/noticiasSlider-grd-img-002.png" alt="">
-                    <a href="#" class="overlay-link"></a>
-                  </div>
-                  <div class="noticiasSlider-grd-des">
-                    <div class="noticiasSlider-date">
-                      <span>Ago 28</span>                        
-                      <div class="sqew"></div>
-                    </div>
-                    <p>¿Cómo se trata la <br> diabetes?</p>
-                    <a href="#">Leer Artículo</a>
-                  </div>
-                </div>
-              </div>
-              <div class="noticiasSlider-item">
-                <div class="noticiasSlider-grd">
-                  <div class="noticiasSlider-grd-img">
-                    <img src="<?php echo THEME_URI; ?>/assets/images/noticiasSlider-grd-img-003.png" alt="">
-                    <a href="#" class="overlay-link"></a>
-                  </div>
-                  <div class="noticiasSlider-grd-des">
-                    <div class="noticiasSlider-date">
-                      <span>Ago 17</span>                        
-                      <div class="sqew"></div>
-                    </div>
-                    <p>Cuándo se hace un <br> cateterismo cardíaco</p>
-                    <a href="#">Leer Artículo</a>
-                  </div>
-                </div>
-              </div>
-              <div class="noticiasSlider-item">
-                <div class="noticiasSlider-grd">
-                  <div class="noticiasSlider-grd-img">
-                    <img src="<?php echo THEME_URI; ?>/assets/images/noticiasSlider-grd-img-004.png" alt="">
-                    <a href="#" class="overlay-link"></a>
-                  </div>
-                  <div class="noticiasSlider-grd-des">
-                    <div class="noticiasSlider-date">
-                      <span>Oct 18</span>                        
-                      <div class="sqew"></div>
-                    </div>
-                    <p>Marcapasos: ¿qué son? <br> ¿Cómo se implanta?</p>
-                    <a href="#">Leer Artículo</a>
-                  </div>
-                </div>
-              </div>
-              <div class="noticiasSlider-item">
-                <div class="noticiasSlider-grd">
-                  <div class="noticiasSlider-grd-img">
-                    <img src="<?php echo THEME_URI; ?>/assets/images/noticiasSlider-grd-img-004.png" alt="">
-                    <a href="#" class="overlay-link"></a>
-                  </div>
-                  <div class="noticiasSlider-grd-des">
-                    <div class="noticiasSlider-date">
-                      <span>Oct 18</span>                        
-                      <div class="sqew"></div>
-                    </div>
-                    <p>Marcapasos: ¿qué son? <br> ¿Cómo se implanta?</p>
-                    <a href="#">Leer Artículo</a>
-                  </div>
-                </div>
-              </div>
+              <?php $i++; endwhile; ?>
             </div>
           </div>
+          <?php } wp_reset_postdata(); ?>
         </div>
       </div>
     </div>
   </div>    
 </section>
+
 <?php get_footer(); ?>
