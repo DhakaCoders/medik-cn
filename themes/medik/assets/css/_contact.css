@@ -52,6 +52,9 @@ contact-map-sec-wrp
 	border-bottom: 1px solid #fd6607;
 	padding-bottom: 6px;
 }
+.sec-hdr-title.set-hdr-big-title span {
+    color: #fd6607;
+}
 .contact-info-rgt{
 	width: 37%;
 	float: right;
@@ -371,9 +374,7 @@ a.green-tel-icon:hover{
 	.contact-tel {
 	    text-align: center;
 	}
-	.contact-info-sec-wrp {
-	    padding-top: 0;
-	}
+
 	.contact-info-dsc {
 	    padding-bottom: 75px;
 	}
@@ -469,6 +470,15 @@ a.green-tel-icon:hover{
 	}
 	.servicios-siderbar-form-wrp .dft-page-contact-form-main textarea {
 	    min-height: 150px;
+	}
+	.mk-contact-form-des{
+		padding-top: 20px;
+	}
+	.mk-contact-form-des p{
+		margin-bottom: 0;
+	}
+	.contact-info-sec-wrp {
+	    padding-top: 0;
 	}
 }
 

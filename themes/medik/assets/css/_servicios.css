@@ -975,7 +975,8 @@
 .dft-page-contact-form-main textarea:focus{
 	border-color:#fd6607;
 }
-.dft-page-contact-form-main button{
+.dft-page-contact-form-main button,
+.dft-page-contact-form-main .mwpforms-submit{
 	font-family: 'OpenSans-Semibold';
 	display: block;
 	max-width: 152px;

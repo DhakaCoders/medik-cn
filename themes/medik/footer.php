@@ -1,3 +1,24 @@
+<?php 
+  $logoObj = get_field('logo_footer', 'options');
+  if( is_array($logoObj) ){
+    $logo_tag = '<img src="'.$logoObj['url'].'" alt="'.$logoObj['alt'].'" title="'.$logoObj['title'].'">';
+  }else{
+    $logo_tag = '';
+  }
+
+  $spacialArry = array(".", "/", "+", "-", " ", ")", "(");$replaceArray = '';
+  $adres = get_field('address', 'options');
+  $ftaddress1 = $adres['address_footer'];
+  $ftaddress2 = $adres['address_header'];
+  $gmapsurl = get_field('google_maps', 'options');
+  $telefoon = get_field('telephone', 'options');
+  $fttelephone = $telefoon['telephone_footer'];
+  $copyright_text = get_field('copyright_text', 'options');
+  $gmaplink = !empty($gmapsurl)?$gmapsurl: 'javascript:void()';
+
+  $fburl = get_field('facebook_url', 'options');
+  $youturl = get_field('youtube_url', 'options');
+?>
 <footer class="footer-wrap">
   <div class="ftr-main text-center" style="background:url(<?php echo THEME_URI; ?>/assets/images/ftr-bg.jpg);">
     <div class="container-2">
@@ -10,17 +31,26 @@
             <div class="ftr-col-wrp clearfix">  
               <div class="ftr-col ftr-col-3">
                 <div id="ftr-map" data-lat="50.844924" data-long="4.352091"></div>
-                <p>Sófocles 115, Polanco, Polanco II Secc, 11550 Ciudad de México, CDMX  <a href="" target="_blank">>> (Da Clic Aquí Para Llegar Con Google Maps) <<</a></p>
+                <?php if( !empty( $ftaddress2 ) ): ?>
+                <p><?php echo $ftaddress2; ?>  <a href="<?php echo $gmaplink; ?>" target="_blank">>> (Da Clic Aquí Para Llegar Con Google Maps) <<</a></p>
+                <?php  endif;  ?>
               </div>  
               <div class="ftr-col ftr-col-2">
                 <ul class="ulc hide-sm">
-                  <li>
-                    <a href="#">Calle Sófocles 115 Planta Alta<br>Polanco 11560 Ciudad de México, CDMX</a>
-                  </li>
+                  <?php if( !empty( $ftaddress1 ) ) printf('<li><a href="%s">%s</a></li>', $gmaplink, $ftaddress1); ?>
                   <li>
                     <strong>Teléfonos:</strong><br/>
-                    <a href="#">(55) 5233-6007 - (55) 5233-2312</a><br/>
-                    <a href="#">(55) 5557-5972 - (55) 55775981</a>
+                  <?php 
+                    if($fttelephone): 
+                      $i = 1; $count = 0;
+                      $count = count($fttelephone);
+                      foreach($fttelephone as $ftphone):
+                        $trimphone = trim(str_replace($spacialArry, $replaceArray, $ftphone['telephone']));
+                        $brtag = ($i == 2)? '<br/>': '';
+                        $hyphen = ($i%2 == 0)? '- ': '';
+                  ?>
+                  <?php echo $hyphen; ?><a href="tel:<?php echo $trimphone; ?>"><?php echo $ftphone['telephone']; ?></a>
+                    <?php echo $brtag; $i++; endforeach; endif; ?>
                   </li>
                   <li>
                     <strong>Las citas son de Lunes a Viernes de</strong><br/>
@@ -33,10 +63,16 @@
                 <ul class="ulc show-sm">
                   <li>
                     <strong>Teléfonos:</strong><br/>
-                    <a href="#">(55) 5233-6007</a><br/>
-                    <a href="#">(55) 5233-2312</a><br/>
-                    <a href="#">(55) 5557-5972</a><br/>
-                    <a href="#">(55) 55775981</a>
+                  <?php 
+                  if($fttelephone): 
+                    $i = 1; $count = 0;
+                    $count = count($fttelephone);
+                    foreach($fttelephone as $ftphone):
+                      $trimphone = trim(str_replace($spacialArry, $replaceArray, $ftphone['telephone']));
+                      $brtag = ($i != $count)? '<br/>': '';
+                  ?>
+                    <a href="tel:<?php echo $trimphone; ?>"><?php echo $ftphone['telephone']; ?></a><?php echo $brtag; ?>
+                  <?php $i++; endforeach;  endif; ?>
                   </li>
                   <li>
                     <strong>Las citas son de Lunes a Viernes de</strong><br/>
@@ -47,17 +83,20 @@
                   </li>
                 </ul>
                 <div class="ftr-social">
-                  <a href="#" target="_blank">
+                  <?php if(!empty($fburl)): ?>
+                  <a href="<?php echo esc_url($fburl); ?>" target="_blank">
                     <img src="<?php echo THEME_URI; ?>/assets/images/ftr-fb.png" alt="" />
-                  </a>                  
-                  <a href="#" target="_blank">
+                  </a>  
+                  <?php endif; if(!empty($youturl)): ?>                
+                  <a href="<?php echo esc_url($youturl); ?>" target="_blank">
                     <img src="<?php echo THEME_URI; ?>/assets/images/ftr-yt.png" alt="" />
                   </a>
+                 <?php endif; ?>
                 </div>
               </div> 
               <div class="ftr-col ftr-col-1">
-                <a class="ftr-logo" href="#">
-                  <img src="<?php echo THEME_URI; ?>/assets/images/ftr-left-logo.png" alt="" />
+                <a class="ftr-logo" href="<?php echo esc_url( home_url('/') );?>">
+                  <?php echo $logo_tag; ?>
                 </a>
                 <p>El objetivo de Medik Rama es ser la primer compañía integradora de servicios de calidad médica y calidez humana a costos accesibles y abierto todo público. Nuestra red esta conformada por los mejores médicos del país, mismos que cuentan con una amplia trayectoria y certificación de acuerdo a su especialidad.</p>
               </div> 
@@ -68,33 +107,15 @@
           </div>
 
           <div class="ftr-menu-con show-sm text-center">
-            <ul class="ulc">
-              <li>
-                <a href="#">inicio</a>
-              </li>
-              <li class="menu-item-has-children">
-                <a href="#">servicios</a>
-                <ul class="ulc sub-menu">
-                  <li><a href="#">Sub Menu</a></li>
-                  <li><a href="#">Sub Menu</a></li>
-                  <li><a href="#">Sub Menu</a></li>
-                  <li><a href="#">Sub Menu</a></li>
-                </ul>
-              </li>
-              <li>
-                <a href="#">citas</a>
-              </li>
-              <li>
-                <a href="#">promociones</a>
-              </li>
-              <li>
-                <a href="#">blog</a>
-              </li>
-              <li>
-                <a href="#">contacto</a>
-              </li>
-
-            </ul>  
+          <?php 
+            $cmenuOptions = array( 
+                'theme_location' => 'cbv_main_menu', 
+                'menu_class' => 'clearfix ulc',
+                'container' => 'cmnav',
+                'container_class' => 'cmainnav'
+              );
+            wp_nav_menu( $cmenuOptions ); 
+          ?> 
           </div>
         </div>
       </div>
@@ -102,7 +123,7 @@
   </div>
 
   <div class="ftr-btm-con text-center">
-    <span>Derechos reservados © 2019 MedikRama | Aviso de privacidad</span>
+    <?php if( !empty( $copyright_text ) ) printf( '<span>%s</span>', $copyright_text); ?>
   </div>
 </footer>
 

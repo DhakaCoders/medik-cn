@@ -39,10 +39,7 @@ if( !function_exists('cbv_theme_setup') ){
 		) );
 
 		register_nav_menus( array(
-      'cbv_top_menu' => __( 'Top Main Menu', THEME_NAME ),
-      'cbv_main_menu' => __( 'Main Menu', THEME_NAME ),
-			'cbv_ft_menu' => __( 'Footer Main Menu', THEME_NAME ),
-			'cbv_ftb_menu' => __( 'Copyright Menu', THEME_NAME ),
+      'cbv_main_menu' => __( 'Main Menu', THEME_NAME )
 		) );
 
 	}
