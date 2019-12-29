@@ -80,8 +80,8 @@ if( function_exists('acf_add_options_page') ) {
 	//parent tab
 	//acf_add_options_page( 'Opties' );
     acf_add_options_page(array(
-        'page_title' 	=> __('Opties', THEME_NAME),
-        'menu_title' 	=> __('Opties', THEME_NAME),
+        'page_title' 	=> __('Options', THEME_NAME),
+        'menu_title' 	=> __('Options', THEME_NAME),
         'menu_slug' 	=> 'cbv_options',
         'capability' 	=> 'edit_posts',
         //'redirect' 	    => false
@@ -177,9 +177,6 @@ function custom_body_classes($classes){
     $classes[] = join(' ', array_filter($browsers, function ($browser) {
         return $GLOBALS[$browser];
     }));
-    if ( is_page_template( 'page-about-token.php' ) OR is_page_template( 'page-wallet.php' ) OR is_page_template( 'page-exchange.php' ) ) {
-        $classes[] = 'vt-drk-page-ctlr';
-    }
     return $classes;
 }
 // call the filter for the body class
@@ -190,18 +187,6 @@ function wrapper_class(){
   $class = '';
   if ( is_page_template( 'page-about-token.php' ) ) {
     $class = 'walletDark adExwd';
-  }elseif(is_page_template( 'page-about-us.php' )){
-    $class = 'aboutUs';
-  }elseif(is_page_template( 'page-contact.php' )){
-    $class = 'contactPage';
-  }elseif(is_page_template( 'page-faq.php' )){
-    $class = 'faqOverview';
-  }elseif(is_page_template( 'page-socialmedia-platform.php' )){
-    $class = 'learmMore';
-  }elseif(is_page_template( 'page-wallet.php' )){
-    $class = 'walletDark';
-  }elseif(is_page_template( 'page-exchange.php' )){
-    $class = 'walletDark edExwd';
   }
   return $class;
 }
