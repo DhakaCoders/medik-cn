@@ -277,7 +277,7 @@
 		position: absolute;
 		width:345px;
 		height: 1px;
-		background: #fff;
+		background: #fd8234;
 		bottom: 0;
 		left:50%;
 		-webkit-transform: translateX(-50%);
@@ -308,10 +308,15 @@
 	.ftr-col-2 li a {
 	    font-size: 40px;
 	}
+	.ftr-col::after {
+	    width: 300px;
+	}
 }
 
 @media(max-width: 359px){
-
+	.ftr-col::after {
+	    width: 280px;
+	}
 }
 
 
