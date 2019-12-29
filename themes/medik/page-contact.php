@@ -24,6 +24,7 @@ $dinfo = $contact['director_info'];
 $intro = get_field('introsec', $thisID);
 
 $gmaplink = !empty($gmapsurl)?$gmapsurl: 'javascript:void()';
+$google_map = $intro['google_map'];
 
 ?>
 <section class="contact-map-sec-wrp">
@@ -55,7 +56,7 @@ $gmaplink = !empty($gmapsurl)?$gmapsurl: 'javascript:void()';
       </div>
     </div>
   </div>
-  <div id="contactMap hide-xs" class="contact-map" data-lat="50.844924" data-long="4.352091"></div>
+  <div data-homeurl="<?php echo THEME_URI; ?>" id="contactMap" class="hide-xs" data-latitude="<?php echo $google_map['lat']; ?>" data-longitude="<?php echo $google_map['lng']; ?>" style="width:100%; height:330px"></div>
 </section>
 <?php 
 $dform = get_field('desktop_form', $thisID);

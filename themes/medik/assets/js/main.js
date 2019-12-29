@@ -458,6 +458,7 @@ Start Contact Google Map ->>
 if( $('#contactMap').length ){
 var latitude = $('#contactMap').data('latitude');
 var longitude = $('#contactMap').data('longitude');
+console.log(latitude);
 
  var myCenter= new google.maps.LatLng(latitude,  longitude);
     var iconBase = 'https://maps.google.com/mapfiles/kml/shapes/';
