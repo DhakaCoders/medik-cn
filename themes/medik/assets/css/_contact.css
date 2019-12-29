@@ -374,9 +374,7 @@ a.green-tel-icon:hover{
 	.contact-tel {
 	    text-align: center;
 	}
-	.contact-info-sec-wrp {
-	    padding-top: 0;
-	}
+
 	.contact-info-dsc {
 	    padding-bottom: 75px;
 	}
@@ -478,6 +476,9 @@ a.green-tel-icon:hover{
 	}
 	.mk-contact-form-des p{
 		margin-bottom: 0;
+	}
+	.contact-info-sec-wrp {
+	    padding-top: 0;
 	}
 }
 

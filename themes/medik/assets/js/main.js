@@ -4,7 +4,9 @@ $('.navbar-toggle').on('click', function(){
 	$('#mobile-nav').slideToggle(300);
 });
 
-	
+if($('.matchHeightCol').length){
+  $('.matchHeightCol').matchHeight();
+};
  
 /**
 Responsive on 767px
@@ -454,10 +456,10 @@ Start Contact Google Map ->>
 -----------------------
 */
 if( $('#contactMap').length ){
-    var latitude = $('#contactMap').data('lat');
-    var longitude = $('#contactMap').data('long');
+var latitude = $('#contactMap').data('latitude');
+var longitude = $('#contactMap').data('longitude');
 
-    var myCenter= new google.maps.LatLng(latitude,  longitude);
+ var myCenter= new google.maps.LatLng(latitude,  longitude);
     var iconBase = 'https://maps.google.com/mapfiles/kml/shapes/';
     function initialize(){
         var mapProp = {
@@ -539,6 +541,7 @@ if( $('#contactMap').length ){
     }
 
     google.maps.event.addDomListener(window, 'load', initialize);
+
 }
 
 
