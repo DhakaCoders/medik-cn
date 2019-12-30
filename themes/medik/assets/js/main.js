@@ -104,16 +104,16 @@ var shuffleInstance = new Shuffle(element, {
 $("#all").on("click", function(){
    shuffleInstance.filter();
 });
-$("#cat-one").on("click", function(){
+$("#cat-1").on("click", function(){
    shuffleInstance.filter('blg-cat-1');
 });
-$("#cat-two").on("click", function(){
+$("#cat-2").on("click", function(){
    shuffleInstance.filter('blg-cat-2');
 });
-$("#cat-three").on("click", function(){
+$("#cat-3").on("click", function(){
    shuffleInstance.filter('blg-cat-3');
 });
-$("#cat-four").on("click", function(){
+$("#cat-4").on("click", function(){
    shuffleInstance.filter('blg-cat-4');
 });
 
@@ -775,16 +775,16 @@ if (windowWidth >= 768) {
     $("#all").on("click", function(){
        shuffleInstance.filter();
     });
-    $("#cat-one").on("click", function(){
+    $("#cat-1").on("click", function(){
        shuffleInstance.filter('blg-cat-1');
     });
-    $("#cat-two").on("click", function(){
+    $("#cat-2").on("click", function(){
        shuffleInstance.filter('blg-cat-2');
     });
-    $("#cat-three").on("click", function(){
+    $("#cat-3").on("click", function(){
        shuffleInstance.filter('blg-cat-3');
     });
-    $("#cat-four").on("click", function(){
+    $("#cat-4").on("click", function(){
        shuffleInstance.filter('blg-cat-4');
     });
   }

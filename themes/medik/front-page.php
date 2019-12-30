@@ -44,7 +44,7 @@ if($banner):
 
 $service = get_field('servicesec', HOMEID);
 if($service):
-  $slides = $service['slide'];
+  $services = $service['services'];
 ?>
 
 <section class="hm-service-sec-wrp">
@@ -52,15 +52,15 @@ if($service):
     <div class="row">
       <div class="col-sm-12">
         <div class="section-hdr">
-          <?php if( !empty( $banner['title'] ) ) printf( '<h2 class="sec-hdr-title set-hdr-big-title">%s</h2>', $banner['title']); ?>
+          <?php if( !empty( $service['title'] ) ) printf( '<h2 class="sec-hdr-title set-hdr-big-title">%s</h2>', $service['title']); ?>
           <div class="sec-hdr-title-divider">
             <span><img src="<?php echo THEME_URI; ?>/assets/images/hn-title-icon.png"></span>
           </div>
-          <p>Calidad Médica y Calidez Humana a Costos Accesibles</p>
-          <?php if( !empty( $banner['content'] ) ) echo wpautop($banner['content']); ?>
+          <?php if( !empty( $service['content'] ) ) echo wpautop($service['content']); ?>
         </div>
       </div>
     </div>
+    <?php if($services): ?>
     <div class="row">
       <div class="col-sm-12">
         <div class="hm-service-wrp">
@@ -69,56 +69,38 @@ if($service):
             <span class="rightArrow"><i class="fa fa-angle-right"></i></span>
           </div>
           <div class="hm-service-slider">
+            <?php foreach($services as $servicee): ?>
             <div class="hm-service-slide-item matchHeight">
               <div class="hm-service-slide-item-dsc matchHeightCol">
                 <div class="hm-service-slide-item-hover" style="background: url(<?php echo THEME_URI; ?>/assets/images/service-box-img-hover.png);"></div>
                 <div class="hm-service-slide-item-hover"></div>
-                <span><img src="<?php echo THEME_URI; ?>/assets/images/service-icon-1.png"></span>
-                <span><img src="<?php echo THEME_URI; ?>/assets/images/service-icon-w-1.png"></span>
-                <h4><a href="#">Salud <br> Ocupacional</a></h4>
-                <p>Consiste  en la planeación y  ejecución  de  actividades de medicina, seguridad e higiene industrial , que tienen como objetivo  mantener y mejorar la salud de los trabajadores en las empresas.</p>
-                <a href="#">leer más</a>
+                <?php if(!empty($servicee['icon'])): ?>
+                <span><img src="<?php echo $servicee['icon']; ?>" alt="<?php echo cbv_get_image_alt( $servicee['icon'] ); ?>"></span>
+                <span><img src="<?php echo $servicee['hover_icon']; ?>" alt="<?php echo cbv_get_image_alt( $servicee['hover_icon'] ); ?>"></span>
+                <?php 
+                endif;
+                 $link2 = $servicee['link'];
+                 if( is_array( $link2 ) &&  !empty( $link2['url'] ) ) $lurl2 = $link2['url'];
+                if( !empty( $servicee['title'] ) ) printf( '<h4><a href="%s">%s</a></h4>', $lurl2, $servicee['title']);  
+                if( !empty( $servicee['content'] ) ) echo wpautop($servicee['content']);
+
+                if( is_array( $link2 ) &&  !empty( $link2['url'] ) ){
+                    printf('<a href="%s" target="%s">%s</a>', $link2['url'], $link2['target'], $link2['title']); 
+                }
+              ?>
               </div>
             </div>
-            <div class="hm-service-slide-item matchHeight">
-              <div class="hm-service-slide-item-dsc matchHeightCol">
-                <div class="hm-service-slide-item-hover" style="background: url(<?php echo THEME_URI; ?>/assets/images/service-box-img-hover.png);"></div>
-                <span><img src="<?php echo THEME_URI; ?>/assets/images/service-icon-2.png"></span>
-                <span><img src="<?php echo THEME_URI; ?>/assets/images/service-icon-w-2.png"></span>
-                <h4><a href="#">Campaña de <br> Vacunación</a></h4>
-                <p>La vacunación es una inversión saludable y rentable, ya que reduce las posibilidades de que los colaboradores de tu empresa adquieran enfermedades infecciosas. Además, disminuye el ausentismo y mejora la productividad laboral.</p>
-                <a href="#">leer más</a>
-              </div>
-            </div>
-            <div class="hm-service-slide-item matchHeight">
-              <div class="hm-service-slide-item-dsc matchHeightCol">
-                <div class="hm-service-slide-item-hover" style="background: url(<?php echo THEME_URI; ?>/assets/images/service-box-img-hover.png);"></div>
-                <span><img src="<?php echo THEME_URI; ?>/assets/images/service-icon-3.png"></span>
-                <span><img src="<?php echo THEME_URI; ?>/assets/images/service-icon-w-3.png"></span>
-                <h4><a href="#">Estudios <br> Médicos</a></h4>
-                <p>Contamos con una amplia gama de exstudios médicos, Holter de arritmias,  Ecocardiograma transtorácico, Prueba de esfuerzo,  Electrocardiograma,  Holter de presión (M.A.P.A), Espirometría,  Exámenes de ingresos y  Laboratorio clínico</p>
-                <a href="#">leer más</a>
-              </div>
-            </div>
-            <div class="hm-service-slide-item matchHeight">
-              <div class="hm-service-slide-item-dsc matchHeightCol">
-                <div class="hm-service-slide-item-hover" style="background: url(<?php echo THEME_URI; ?>/assets/images/service-box-img-hover.png);"></div>
-                <span><img src="<?php echo THEME_URI; ?>/assets/images/service-icon-1.png"></span>
-                <span><img src="<?php echo THEME_URI; ?>/assets/images/service-icon-w-1.png"></span>
-                <h4><a href="#">Salud <br> Ocupacional</a></h4>
-                <p>Consiste  en la planeación y  ejecución  de  actividades de medicina, seguridad e higiene industrial , que tienen como objetivo  mantener y mejorar la salud de los trabajadores en las empresas.</p>
-                <a href="#">leer más</a>
-              </div>
-            </div>
-            
-        
+            <?php endforeach; ?>
           </div>
         </div>
       </div>
+
     </div>
+    <?php endif; ?>
   </div>
 </section>
 <?php endif; ?>
+  
 <div class="vt-home-form-slider">
 <div class="vt-home-form-slide">
   <section class="hm-campaign-grid-sec-wrp vt-form-1-sec-wrap matchHeightCol" style="background: url(<?php echo THEME_URI; ?>/assets/images/hm-campaign-grid-sec-bg.jpg);">
@@ -138,138 +120,7 @@ if($service):
                   <h3>COTIZA TU Próxima <span>CAMPAÑA DE VACUNACIÓN</span></h3>
                 </div>
                 <div class="wpcf7cf_multistep">
-                  <div class="wpcf7cf_steps-dots clearfix">
-                    <div class="dot active" data-step="1">
-                      <span class="step-index">1</span>
-                    </div>
-                    <div class="dot">
-                      <span class="step-index" data-step="2">2</span>
-                    </div>
-                    <div class="dot">
-                      <span class="step-index" data-step="3">3</span>
-                    </div>
-                    <div class="dot">
-                      <span class="step-index" data-step="4">4</span>
-                    </div>
-                  </div>
-                  <div class="wpcf7cf_steps clearfix">
-                    <div class="wpcf7cf_step clearfix" data-title="one" data-id="step-1">
-                      <div class="wpcf7cf_step_inner">
-                        <h3>Anote el número aproximado de personas a vacunar, anote cero si no aplica.</h3>
-                        <div class="singup-form-field-ctlr">
-                          <div class="singup-form-field">
-                            <p>
-                              <span class="wpcf7-form-control-wrap">
-                                <input type="number" name="number" placeholder="# Niños (6meses -18 años)">
-                              </span>
-                            </p>
-                          </div>
-                          <div class="singup-form-field">
-                            <p>
-                              <span class="wpcf7-form-control-wrap">
-                                <input type="text" name="text" placeholder="# Adultos">
-                              </span>
-                            </p>
-                          </div>
-                        </div>
-                        <div class="singup-form-field-ctlr">
-                          <div class="singup-form-field">
-                            <p>
-                              <span class="wpcf7-form-control-wrap">
-                                <input type="text" name="text" placeholder="# Embarazadas">
-                              </span>
-                            </p>
-                          </div>
-                        </div>
-
-                      </div>
-                    </div>
-                    <div class="wpcf7cf_step clearfix" data-title="tow" data-id="step-2">
-                      <div class="wpcf7cf_step_inner">
-                        <h3>Anote el número aproximado de vacunas requeridas por tipo, si no la requiere anote cero:</h3>
-                        <div class="singup-form-field-ctlr">
-                          <div class="singup-form-field">
-                            <p>
-                              <span class="wpcf7-form-control-wrap">
-                                <input type="text" name="text" placeholder="# VPH">
-                              </span>
-                            </p>
-                          </div>
-                          <div class="singup-form-field">
-                            <p>
-                              <span class="wpcf7-form-control-wrap">
-                                <input type="text" name="text" placeholder="# Tétanos">
-                              </span>
-                            </p>
-                          </div>
-                        </div>
-                        <div class="singup-form-field-ctlr">
-                          <div class="singup-form-field">
-                            <p>
-                              <span class="wpcf7-form-control-wrap">
-                                <input type="text" name="text" placeholder="# Hepatitis A">
-                              </span>
-                            </p>
-                          </div>
-                          <div class="singup-form-field">
-                            <p>
-                              <span class="wpcf7-form-control-wrap">
-                                <input type="text" name="text" placeholder="# Hepatitis B">
-                              </span>
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="wpcf7cf_step clearfix" data-title="three" data-id="step-3">
-                      <div class="wpcf7cf_step_inner">
-                        <h3>Por favor seleccionar si el servicio es local o foraneo y anotar el horario de la aplicación.</h3>
-                        <div class="singup-form-field-ctlr">
-                          <div class="singup-form-field">
-                            <p>
-                              <span class="wpcf7-form-control-wrap">
-                                <select>
-                                  <option>Servicio Local</option>
-                                  <option>Servicio Local</option>
-                                  <option>Servicio Local</option>
-                                  <option>Servicio Local</option>
-                                </select>
-                              </span>
-                            </p>
-                          </div>
-                          <div class="singup-form-field">
-                            <p>
-                              <span class="wpcf7-form-control-wrap">
-                                <input type="text" name="text" placeholder="Horario de aplicación (00:00 hrs)">
-                              </span>
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="wpcf7cf_step clearfix" data-title="four" data-id="step-4">
-                      <div class="wpcf7cf_step_inner">
-                        <h3>En caso de haber seleccionado servicio foráneo, liste las localidades y número estimado de personas por cada una, puede utilizar este campo para anexar comentarios que considere necesarios para su cotización </h3>
-                        <div class="singup-form-field-ctlr">
-                          <div class="singup-form-txt-field">
-                            <p>
-                              <span class="wpcf7-form-control-wrap">
-                                <textarea placeholder="Ejemplo: Cuernavaca, Morelos (80 personas), Ixtapan De La Sal (30 personas), etc. + Comentarios extra"></textarea>
-                              </span>
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-
-
-                  </div>
-                  <div class="wpcf7cf_step_controls clearfix">
-                    <span class="wpcf7cf_prev-container">
-                      <button type="button" class="wpcf7cf_prev">Paso anterior</button></span>
-                    <span class="wpcf7cf_next-container">
-                      <button type="button" class="wpcf7cf_next">siguiente paso</button></span>
-                  </div>
+                <?php echo do_shortcode('[multi-step-form id="1"]'); ?>
                 </div>
               </div>
             </div>
@@ -652,7 +503,11 @@ if($service):
   </div>
 </section><!-- end of hm-laboratory-content-sec-wrp -->
 
-
+<?php 
+$minsurance = get_field('minsurancesec', HOMEID);
+if($minsurance):
+  $logos = $minsurance['logos'];
+?>
 <section class="hm-brand-logo-sec-wrp">
   <div class="container">
     <div class="row">
@@ -663,42 +518,51 @@ if($service):
             <span class="rightArrow"><i class="fa fa-angle-right"></i></span>
           </div>
           <div class="section-hdr">
-            <h2 class="sec-hdr-title set-hdr-big-title">aquí vale <span style="color: #fd6607;">Tu Seguro médico </span>
-            </h2>
+            <?php if( !empty( $minsurance['title'] ) ) printf( '<h2 class="sec-hdr-title set-hdr-big-title">%s</h2>', $minsurance['title']); ?>
             <div class="sec-hdr-title-divider">
               <span><img src="<?php echo THEME_URI; ?>/assets/images/hn-title-icon.png"></span>
             </div>
           </div>
+          <?php if($logos): ?>
           <div class="hm-brand-logo">
             <ul id="HmBrandLogoSlider">
-              <li><img src="<?php echo THEME_URI; ?>/assets/images/partnar-slider-img-001.png"></li>
-              <li><img src="<?php echo THEME_URI; ?>/assets/images/partnar-slider-img-002.png"></li>
-              <li><img src="<?php echo THEME_URI; ?>/assets/images/partnar-slider-img-003.png"></li>
-              <li><img src="<?php echo THEME_URI; ?>/assets/images/partnar-slider-img-004.png"></li>
-              <li><img src="<?php echo THEME_URI; ?>/assets/images/partnar-slider-img-005.png"></li>
-              <li><img src="<?php echo THEME_URI; ?>/assets/images/partnar-slider-img-001.png"></li>
+              <?php foreach($logos as $logo): ?>
+              <li><img src="<?php echo $logo['logo']; ?>" alt="<?php echo cbv_get_image_alt( $logo['logo'] ); ?>"></li>
+              <?php endforeach; ?>
             </ul>
           </div>
+          <?php endif; ?>
         </div>
       </div>
     </div>
   </div>
 </section><!-- end of hm-brand-logo-sec-wrp -->
-
+<?php endif; 
+$news = get_field('newssec', HOMEID);
+?>
 <section class="hm-btm-grid-sec-wrp">
   <div class="container">
     <div class="row">
       <div class="col-sm-12">
         <div class="section-hdr">
-          <h2 class="sec-hdr-title set-hdr-big-title">Noticias de Salud<span style="color: #fd6607;">y Medicina</span>
-          </h2>
+          <?php if( !empty( $news['title'] ) ) printf( '<h2 class="sec-hdr-title set-hdr-big-title">%s</h2>', $news['title']); ?>
           <div class="sec-hdr-title-divider">
             <span><img src="<?php echo THEME_URI; ?>/assets/images/hn-title-icon.png"></span>
           </div>
-          <p>Información, actualidad y noticias sobre salud y enfermedades. <br> Novedades y avances en medicina a nivel nacional e internacional</p>
+          <?php if( !empty( $news['content'] ) ) echo wpautop($news['content']); ?>
         </div>
       </div>
     </div>
+
+<?php
+  $nQuery = new WP_Query(array(
+    'post_type' => 'post',
+    'posts_per_page'=> 20,
+    'order'=> 'DESC',
+  ));
+
+  if( $nQuery->have_posts() ){
+?>
     <div class="row">
       <div class="col-sm-12">
         <div class="hm-btm-grid-slider-wrp">
@@ -707,83 +571,42 @@ if($service):
             <span class="rightArrow"><i class="fa fa-angle-right"></i></span>
           </div>
             <div class="HmbtmGridSlider">
+            <?php 
+              $i = 1;          
+              while($nQuery->have_posts()): $nQuery->the_post(); 
+              $gridImage = get_post_thumbnail_id(get_the_ID());
+              if(!empty($gridImage)){
+                $refImgtag = cbv_get_image_tag($gridImage, 'hmslgrid');
+              }else{
+                $refImgtag = '<img src="'.THEME_URI.'/assets/images/hm-btm-grid-img-1.png" alt="'.get_the_title().'">';
+              }  
+
+              $classOrange = ($i%2 == 0)? ' hm-btm-grid-orange': '';       
+            ?>
               <div class="HmbtmGridSlide-item">
                 <div class="HmbtmGridSlide-item-hover">
-                  <div class="hm-btm-grid-dsc-inr">
+                  <div class="hm-btm-grid-dsc-inr<?php echo $classOrange; ?>">
                     <div class="hm-btm-grid-img">
-                      <img src="<?php echo THEME_URI; ?>/assets/images/hm-btm-grid-img-1.png">
+                      <?php echo $refImgtag; ?>
                     </div>
                     <div class="hm-btm-grid-dsc">
-                      <strong>Oct 18</strong>
-                      <h6><a href="#">¿Qué hacer ante un <br> posible infarto o <br> ataque al corazón?</a></h6>
+                      <strong><?php echo get_the_date('M d'); ?></strong>
+                      <h6><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h6>
                     </div>
                     <div class="hm-btm-grid-dsc-btn">
-                      <a href="#">Leer Artículo</a>
+                      <a href="<?php the_permalink(); ?>">Leer Artículo</a>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="HmbtmGridSlide-item">
-                <div class="hm-btm-grid-dsc-inr hm-btm-grid-orange">
-                  <div class="hm-btm-grid-img">
-                    <img src="<?php echo THEME_URI; ?>/assets/images/hm-btm-grid-img-2.png">
-                  </div>
-                  <div class="hm-btm-grid-dsc">
-                    <strong>Oct 11</strong>
-                    <h6><a href="#">¿Cómo se trata la <br> diabetes?</a></h6>
-                  </div>
-                  <div class="hm-btm-grid-dsc-btn">
-                    <a href="#">Leer Artículo</a>
-                  </div>
-                </div>
-              </div>
-              <div class="HmbtmGridSlide-item">
-                <div class="hm-btm-grid-dsc-inr">
-                  <div class="hm-btm-grid-img">
-                    <img src="<?php echo THEME_URI; ?>/assets/images/hm-btm-grid-img-3.png">
-                  </div>
-                  <div class="hm-btm-grid-dsc">
-                    <strong>ago 28</strong>
-                    <h6><a href="#">Cuándo se hace un <br> cateterismo cardíaco</a></h6>
-                  </div>
-                  <div class="hm-btm-grid-dsc-btn">
-                    <a href="#">Leer Artículo</a>
-                  </div>
-                </div>
-              </div>
-              <div class="HmbtmGridSlide-item">
-                <div class="hm-btm-grid-dsc-inr hm-btm-grid-orange">
-                  <div class="hm-btm-grid-img">
-                    <img src="<?php echo THEME_URI; ?>/assets/images/hm-btm-grid-img-4.png">
-                  </div>
-                  <div class="hm-btm-grid-dsc">
-                    <strong>ago 17</strong>
-                    <h6><a href="#">Marcapasos: ¿qué son? <br> ¿Cómo se implanta?</a></h6>
-                  </div>
-                  <div class="hm-btm-grid-dsc-btn">
-                    <a href="#">Leer Artículo</a>
-                  </div>
-                </div>
-              </div>
-              <div class="HmbtmGridSlide-item">
-                <div class="hm-btm-grid-dsc-inr hm-btm-grid-orange">
-                  <div class="hm-btm-grid-img">
-                    <img src="<?php echo THEME_URI; ?>/assets/images/hm-btm-grid-img-4.png">
-                  </div>
-                  <div class="hm-btm-grid-dsc">
-                    <strong>ago 17</strong>
-                    <h6><a href="#">Marcapasos: ¿qué son? <br> ¿Cómo se implanta?</a></h6>
-                  </div>
-                  <div class="hm-btm-grid-dsc-btn">
-                    <a href="#">Leer Artículo</a>
-                  </div>
-                </div>
-              </div>
+              <?php $i++; endwhile; ?>
             </div>
           </div>
         </div>
       </div>
+      <?php } wp_reset_postdata(); ?>
     </div>
+
   </div>
 </section><!-- end of hm-btm-grid-sec-wrp -->
 <?php get_footer(); ?>
