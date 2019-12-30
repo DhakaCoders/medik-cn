@@ -183,7 +183,15 @@
     padding-bottom: 50px;
 }
 
+.citas-text p.note-text br {
+    display: none;
+}
 
+.citas-text p.note-text {
+    font-size: 14px;
+    color: #fff;
+    margin-bottom: 10px;
+}
 
 
 @media(max-width: 1199px){ 
