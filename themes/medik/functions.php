@@ -239,7 +239,7 @@ add_filter( 'wpcf7_autop_or_not', '__return_false' );
 function remove_editor() {
   remove_post_type_support('page', 'editor');
 }
-add_action('admin_init', 'remove_editor');
+//add_action('admin_init', 'remove_editor');
 
 /**
 Debug->>

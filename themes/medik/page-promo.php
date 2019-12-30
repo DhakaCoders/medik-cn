@@ -17,51 +17,54 @@ get_header();
         </div>
       </div>
     </div>
+    <?php
+      $pQuery = new WP_Query(array(
+        'post_type' => 'promo',
+        'posts_per_page'=> -1,
+        'order'=> 'DESC',
+      ));
+
+      if( $pQuery->have_posts() ){
+    ?>
     <div class="row">
       <div class="col-sm-12">
         <div class="promo-tabs-wrp">
-          <div class="blog-filter-btn text-center">
+          <div class="bblog-filter-btn text-center">
+            <div class="filter-options">
             <button class="active" id='all'>Mostrar Todas</button>
-            <button id='cat-1'>Laboratorio</button>
-            <button id='cat-2'>Estudios </button>
-            <button id='cat-3'>Consulta </button>
-            <button id='cat-4'>Óptica</button>
+            <?php 
+              $terms = get_terms( 'promo_cat','order=desc&hide_empty=0' );
+              if ( ! empty( $terms ) && ! is_wp_error( $terms ) ){
+                  foreach ( $terms as $term ) {
+                      echo '<button class="azbtn" data-group="'.$term->slug.'">' . $term->name . '</button>';
+                  }
+              }
+            ?>
+            </div>
           </div>
           <div class="tabs-dsc-innr">
-            <ul>
-              <li data-groups='["blg-cat-1"]'>
-                <div class="tabs-box-inr clearfix" style="background: url(<?php echo THEME_URI; ?>/assets/images/promo-box-img.png);">
-                  <a class="fancybox" rel="gallery1" href="<?php echo THEME_URI; ?>/assets/images/promo-box-img.png">
-                  </a>
-                  <div class="tabs-box-tp-logo">
-                    <a href="#">
-                      <img src="<?php echo THEME_URI; ?>/assets/images/tabs-box-tp-logo.png">
-                    </a>
-                  </div>
-                  <!-- <div class="tabs-box-middel-dsc">
-                    <strong>Ver</strong><br>
-                    <span>Promoción</span>
-                    <a href="#"><i class="fa fa-angle-left" aria-hidden="true"></i></a>
-                  </div>
-                  <div class="tabs-box-btn">
-                    <a href="#">Cardiovascular</a>
-                  </div> -->
-                </div>
-              </li>
-              <li data-groups='["blg-cat-2"]'>
-                <div class="tabs-box-inr clearfix" style="background: url(<?php echo THEME_URI; ?>/assets/images/promo-box-img.png);">
-                  <a class="fancybox" rel="gallery1" href="<?php echo THEME_URI; ?>/assets/images/promo-box-img.png">
-                  </a>
-                  <div class="tabs-box-tp-logo">
-                    <a href="#">
-                      <img src="<?php echo THEME_URI; ?>/assets/images/tabs-box-tp-logo.png">
-                    </a>
-                  </div>
-                </div>
-              </li>
-              <li data-groups='["blg-cat-1"]'>
-                <div class="tabs-box-inr clearfix" style="background: url(<?php echo THEME_URI; ?>/assets/images/promo-box-img.png);">
-                  <a class="fancybox" rel="gallery1" href="<?php echo THEME_URI; ?>/assets/images/promo-box-img.png">
+            <ul id="grid">
+            <?php         
+              while($pQuery->have_posts()): $pQuery->the_post(); 
+              $intro = get_field('intro', get_the_ID());
+              if(!empty($intro['image'])){
+                $refImgsrc = cbv_get_image_src($intro['image']);
+                $fullImgsrc = cbv_get_image_src($intro['image']);
+              }else{
+                $refImgsrc = '';
+                $fullImgsrc = '';
+              }     
+              $term_list = get_the_terms(get_the_ID(), 'promo_cat');
+              $types = [];
+              foreach($term_list as $term_single) {
+                   $types[]= $term_single->slug;
+              }
+            
+            
+            ?>
+             <li class="filter-item" data-groups='<?php echo json_encode($types); ?>'>
+                <div class="tabs-box-inr clearfix" style="background: url(<?php echo $refImgsrc; ?>);">
+                  <a class="fancybox" rel="gallery1" href="<?php echo $fullImgsrc; ?>">
                   </a>
                   <div class="tabs-box-tp-logo">
                     <a href="#">
@@ -70,44 +73,14 @@ get_header();
                   </div>
                 </div>
               </li>
-              <li data-groups='["blg-cat-4"]'>
-                <div class="tabs-box-inr clearfix" style="background: url(<?php echo THEME_URI; ?>/assets/images/promo-box-img.png);">
-                  <a class="fancybox" rel="gallery1" href="<?php echo THEME_URI; ?>/assets/images/promo-box-img.png">
-                  </a>
-                  <div class="tabs-box-tp-logo">
-                    <a href="#">
-                      <img src="<?php echo THEME_URI; ?>/assets/images/tabs-box-tp-logo.png">
-                    </a>
-                  </div>
-                </div>
-              </li>
-              <li data-groups='["blg-cat-3"]'>
-                <div class="tabs-box-inr clearfix" style="background: url(<?php echo THEME_URI; ?>/assets/images/promo-box-img.png);">
-                  <a class="fancybox" rel="gallery1" href="<?php echo THEME_URI; ?>/assets/images/promo-box-img.png">
-                  </a>
-                  <div class="tabs-box-tp-logo">
-                    <a href="#">
-                      <img src="<?php echo THEME_URI; ?>/assets/images/tabs-box-tp-logo.png">
-                    </a>
-                  </div>
-                </div>
-              </li>
-              <li data-groups='["blg-cat-4"]'>
-                <div class="tabs-box-inr clearfix" style="background: url(<?php echo THEME_URI; ?>/assets/images/promo-box-img.png);">
-                  <a class="fancybox" rel="gallery1" href="<?php echo THEME_URI; ?>/assets/images/promo-box-img.png">
-                  </a>
-                  <div class="tabs-box-tp-logo">
-                    <a href="#">
-                      <img src="<?php echo THEME_URI; ?>/assets/images/tabs-box-tp-logo.png">
-                    </a>
-                  </div>
-                </div>
-              </li>
+              <?php endwhile; ?>
             </ul>
           </div>
         </div>
       </div>
     </div>
+    <?php } wp_reset_postdata(); ?>
   </div>
 </section><!-- end of promo-tabs-sec-wrp -->
+
 <?php get_footer(); ?>
