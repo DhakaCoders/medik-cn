@@ -1283,9 +1283,12 @@
 	.blog-grd-des p, .noticiasSlider-grd-des p {
 	    font-size: 15px;
 	}
+	.blog-grd-des h6 br,
+	.noticiasSlider-grd-des h6 br,
 	.dft-page-contact-form-hdr p br{
 	    display: none;
 	}
+
 }
 
 @media(max-width: 991px){
