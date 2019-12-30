@@ -2,9 +2,9 @@
 /*Template Name: Citas*/
 get_header();
 $thisID = get_the_ID();
-$introsec = get_field('introsec', $thisID); 
+$introsec = get_field('cintrosec', $thisID); 
 $dinfo = $introsec['doctor_info'];
-
+$schedulesec = $introsec['schedule'];
 
 $spacialArry = array(".", "/", "+", "-", " ", ")", "(");$replaceArray = '';
 $adres = get_field('address', 'options');
@@ -12,6 +12,7 @@ $ftaddress1 = $adres['address_footer'];
 $gmapsurl = get_field('google_maps', 'options');
 $telefoon = get_field('telephone', 'options');
 $fttelephone = $telefoon['telephone_footer']; 
+
 $gmaplink = !empty($gmapsurl)?$gmapsurl: 'javascript:void()';
 ?>
 <section class="citas-main-sec">
@@ -59,10 +60,14 @@ $gmaplink = !empty($gmapsurl)?$gmapsurl: 'javascript:void()';
                         <?php echo $brtag; $i++; endforeach; ?>
                     </div>
                   </li>
-                  <?php endif; ?>
+                  <?php endif; 
+
+                  if(!empty($schedulesec['abscheduletime'])): 
+                  ?>
                   <li>
-                    <span>Las citas son de Lunes a Viernes de <br/> 9:30a.m. - 7p.m.<br/>Sábados de 9.00a.m. a 1p.m.</span> 
+                    <?php printf('<span>%s</span>', $schedulesec['abscheduletime']); ?>
                   </li>
+                  <?php endif;?>
                 </ul> 
 
                 <ul class="ulc show-xs">
@@ -88,10 +93,13 @@ $gmaplink = !empty($gmapsurl)?$gmapsurl: 'javascript:void()';
                         <a class="tel" href="tel:<?php echo $trimphone; ?>"><?php echo $ftphone['telephone']; ?></a><?php echo $brtag; ?>
                     <?php $i++; endforeach; ?>
                   </li>
-                  <?php endif; ?>
+                  <?php endif;                   
+                  if(!empty($schedulesec['abscheduletime'])): 
+                  ?>
                   <li>
-                    <span>Las citas son de Lunes a Viernes de <br/> 9:30a.m. - 7p.m.<br/>Sábados de 9.00a.m. a 1p.m.</span> 
+                    <?php printf('<span>%s</span>', $schedulesec['abscheduletime']); ?>
                   </li>
+                  <?php endif;?>
                 </ul>
               </div>
             <?php endif; 

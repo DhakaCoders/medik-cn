@@ -14,10 +14,13 @@ if($banner):
   <div class="main-slider">
     <?php foreach($slides as $slide): 
       $slideposter = '';
+      $mslideposter = '';
       if(!empty($slide['image'])) $slideposter = cbv_get_image_src($slide['image']);
+      if(!empty($slide['m_image'])) $mslideposter = cbv_get_image_src($slide['m_image']);
     ?>
     <div class="main-slide-item">
-      <div class="main-slide-item-img" style="background: url(<?php echo $slideposter; ?>);"></div>
+      <div class="main-slide-item-img hide-xs" style="background: url(<?php echo $slideposter; ?>);"></div>
+      <div class="main-slide-item-img show-xs" style="background: url(<?php echo $mslideposter; ?>);"></div>
       <div class="container">
         <div class="row">
           <div class="col-sm-12">
@@ -120,7 +123,7 @@ if($service):
                   <h3>COTIZA TU Próxima <span>CAMPAÑA DE VACUNACIÓN</span></h3>
                 </div>
                 <div class="wpcf7cf_multistep">
-                <?php echo do_shortcode('[multi-step-form id="1"]'); ?>
+                <?php //echo do_shortcode('[multi-step-form id="1"]'); ?>
                 </div>
               </div>
             </div>
@@ -395,7 +398,10 @@ if($service):
 </div>
 
 </div>
-
+<?php 
+$lslides = get_field('lslides', HOMEID);
+if($lslides):
+?>
 <section class="hm-laboratory-content-sec-wrp">
   <div class="container">
     <div class="row">
@@ -406,104 +412,55 @@ if($service):
             <span class="rightArrow"><i class="fa fa-angle-right"></i></span>
           </div>
           <div class="hm-laboratory-slider">
+            <?php 
+                foreach($lslides as $lslide):
+                  if(!empty($lslide['image'])){
+                    $slidetag = cbv_get_image_tag($lslide['image']); 
+                  }else{
+                    $slidetag = '';
+                  }
+            ?>
             <div class="hm-laboratory-slide">
               <div class="row">
                 <div class="col-md-6 col-sm-12 pull-right">
                   <div class="hm-laboratory-dsc">
-                    <h3 class="show-sm">ESTUDIOS CARDIOLÓGICOS <span>Y DE LABO RATORIO</span></h3>
+                  <?php if(!empty($lslide['title'])) printf('<h3 class="show-sm">%s</h3>', $lslide['title']); ?>
                   </div>
                   <div class="hm-laboratory-img">
-                    <img src="<?php echo THEME_URI; ?>/assets/images/hm-laboratory-img.png">
+                    <?php echo $slidetag; ?>
                   </div>
                 </div>
                 <div class="col-md-6 col-sm-12">
                   <div class="hm-laboratory-dsc">
-                    <h3 class="hide-sm">ESTUDIOS CARDIOLÓGICOS <span>Y DE LABO RATORIO</span></h3>
-                    <p>Estos estudios pueden ser realizados en nuestras instalaciones o llevamos a su empresa nuestras unidades móviles, puede ver más detalles de este servicio en la sección Salud Ocupacional.</p>
-                    <h6>Exámenes de Diagnóstico del Corazó</h6>
-                    <ul>
-                      <li>Electrocardiograma (ECG o EKG)</li>
-                      <li>Electrocardiograma de Promediación de Señales (su sigla en <br> inglés es SAE)</li>
-                      <li>Examen de estrés (generalmente con ECG; también llamado ECG <br> en cinta de caminar o ECG  de ejercicio)</li>
-                      <li>Ecocardiograma (También llamado “eco”)</li>
-                      <li>Ecocardiograma Transesofágico (su sigla en inglés es TEE)</li>
-                    </ul>
+                    <?php 
+                    if(!empty($lslide['title'])) printf('<h3 class="hide-sm">%s</h3>', $lslide['title']);
+                    if($lslide['content']) echo wpautop( $lslide['content']); 
+                    $clinnk = $lslide['link_1'];
+                    $lllinnk = $lslide['link_2'];
+                    ?>
                     <div class="hm-laboratory-btn">
-                      <a class="ornage-btn" href="#">CARDIOLÓGICOS</a>
-                      <a class="green-btn" href="#">LABORATORIO</a>
+                    <?php 
+                    if( is_array( $clinnk ) &&  !empty( $clinnk['url'] ) ){
+                        printf('<a class="ornage-btn" href="%s" target="%s">%s</a>', $clinnk['url'], $clinnk['target'], $clinnk['title']); 
+                    }
+                    if( is_array( $lllinnk ) &&  !empty( $lllinnk['url'] ) ){
+                        printf('<a class="green-btn" href="%s" target="%s">%s</a>', $lllinnk['url'], $lllinnk['target'], $lllinnk['title']); 
+                    }
+                    ?>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="hm-laboratory-slide">
-              <div class="row">
-                <div class="col-md-6 col-sm-12 pull-right">
-                  <div class="hm-laboratory-dsc">
-                    <h3 class="show-sm">ESTUDIOS CARDIOLÓGICOS <span>Y DE LABO RATORIO</span></h3>
-                  </div>
-                  <div class="hm-laboratory-img">
-                    <img src="<?php echo THEME_URI; ?>/assets/images/hm-laboratory-img.png">
-                  </div>
-                </div>
-                <div class="col-md-6 col-sm-12 clearfix">
-                  <div class="hm-laboratory-dsc">
-                    <h3 class="hide-sm">ESTUDIOS CARDIOLÓGICOS <span>Y DE LABO RATORIO</span></h3>
-                    <p>Estos estudios pueden ser realizados en nuestras instalaciones o llevamos a su empresa nuestras unidades móviles, puede ver más detalles de este servicio en la sección Salud Ocupacional.</p>
-                    <h6>Exámenes de Diagnóstico del Corazó</h6>
-                    <ul>
-                      <li>Electrocardiograma (ECG o EKG)</li>
-                      <li>Electrocardiograma de Promediación de Señales (su sigla en inglés es SAE)</li>
-                      <li>Examen de estrés (generalmente con ECG; también llamado ECG en cinta de caminar o ECG de ejercicio)</li>
-                      <li>Ecocardiograma (También llamado “eco”)</li>
-                      <li>Ecocardiograma Transesofágico (su sigla en inglés es TEE)</li>
-                    </ul>
-                    <div class="hm-laboratory-btn">
-                      <a class="ornage-btn" href="#">CARDIOLÓGICOS</a>
-                      <a class="green-btn" href="#">LABORATORIO</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="hm-laboratory-slide">
-              <div class="row">
-                <div class="col-md-6 col-sm-12 pull-right">
-                  <div class="hm-laboratory-dsc">
-                    <h3 class="show-sm">ESTUDIOS CARDIOLÓGICOS <span>Y DE LABO RATORIO</span></h3>
-                  </div>
-                  <div class="hm-laboratory-img">
-                    <img src="<?php echo THEME_URI; ?>/assets/images/hm-laboratory-img.png">
-                  </div>
-                </div>
-                <div class="col-md-6 col-sm-12">
-                  <div class="hm-laboratory-dsc">
-                    <h3 class="hide-sm">ESTUDIOS CARDIOLÓGICOS <span>Y DE LABO RATORIO</span></h3>
-                    <p>Estos estudios pueden ser realizados en nuestras instalaciones o llevamos a su empresa nuestras unidades móviles, puede ver más detalles de este servicio en la sección Salud Ocupacional.</p>
-                    <h6>Exámenes de Diagnóstico del Corazó</h6>
-                    <ul>
-                      <li>Electrocardiograma (ECG o EKG)</li>
-                      <li>Electrocardiograma de Promediación de Señales (su sigla en inglés es SAE)</li>
-                      <li>Examen de estrés (generalmente con ECG; también llamado ECG en cinta de caminar o ECG de ejercicio)</li>
-                      <li>Ecocardiograma (También llamado “eco”)</li>
-                      <li>Ecocardiograma Transesofágico (su sigla en inglés es TEE)</li>
-                    </ul>
-                    <div class="hm-laboratory-btn">
-                      <a class="ornage-btn" href="#">CARDIOLÓGICOS</a>
-                      <a class="green-btn" href="#">LABORATORIO</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <?php endforeach; ?>
           </div>
         </div>
       </div>
     </div>
   </div>
 </section><!-- end of hm-laboratory-content-sec-wrp -->
-
 <?php 
+endif;
 $minsurance = get_field('minsurancesec', HOMEID);
 if($minsurance):
   $logos = $minsurance['logos'];

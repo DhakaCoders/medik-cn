@@ -1,5 +1,7 @@
 <?php 
-  $logoObj = get_field('logo_footer', 'options');
+  $ftitle = get_field('ftitle', 'options');
+  $cominfo = get_field('company_info', 'options');
+  $logoObj = $cominfo['logo'];
   if( is_array($logoObj) ){
     $logo_tag = '<img src="'.$logoObj['url'].'" alt="'.$logoObj['alt'].'" title="'.$logoObj['title'].'">';
   }else{
@@ -13,6 +15,8 @@
   $gmapsurl = get_field('google_maps', 'options');
   $telefoon = get_field('telephone', 'options');
   $fttelephone = $telefoon['telephone_footer'];
+  $schedulesec = get_field('schedulesec', 'options');
+  $Gmapvalues = get_field('Gmapft', 'options');
   $copyright_text = get_field('copyright_text', 'options');
   $gmaplink = !empty($gmapsurl)?$gmapsurl: 'javascript:void()';
 
@@ -26,11 +30,11 @@
         <div class="col-sm-12">
           <div class="ftr-innr">
             <div class="ftr-head">
-              <h2>¡Qué Esperas, <strong>agenda tu cita Hoy!</strong></h2>
+              <?php if(!empty($ftitle)) printf('<h2>%s</h2>', $ftitle); ?>
             </div>
             <div class="ftr-col-wrp clearfix">  
               <div class="ftr-col ftr-col-3">
-                <div id="ftr-map" data-lat="50.844924" data-long="4.352091"></div>
+                <div id="ftr-map" data-lat="<?php echo $Gmapvalues['lat']; ?>" data-long="<?php echo $Gmapvalues['lng']; ?>"></div>
                 <?php if( !empty( $ftaddress2 ) ): ?>
                 <p><?php echo $ftaddress2; ?>  <a href="<?php echo $gmaplink; ?>" target="_blank">>> (Da Clic Aquí Para Llegar Con Google Maps) <<</a></p>
                 <?php  endif;  ?>
@@ -52,13 +56,14 @@
                   <?php echo $hyphen; ?><a href="tel:<?php echo $trimphone; ?>"><?php echo $ftphone['telephone']; ?></a>
                     <?php echo $brtag; $i++; endforeach; endif; ?>
                   </li>
+                  <?php 
+                  if($schedulesec): 
+                    foreach($schedulesec as $schd):
+                  ?>
                   <li>
-                    <strong>Las citas son de Lunes a Viernes de</strong><br/>
-                    <span>9:30a.m. - 7p.m.</span> 
-                  </li>                  
-                  <li>
-                    <span>Sábados de 9.00a.m. a 1p.m.<br/><em>(Trabajamos con Previa Cita)</em></span> 
-                  </li>
+                    <?php if(!empty($schd['aschedule_time'])) printf('%s', $schd['aschedule_time']); ?>
+                  </li> 
+                  <?php endforeach; endif; ?>                 
                 </ul>
                 <ul class="ulc show-sm">
                   <li>
@@ -98,7 +103,7 @@
                 <a class="ftr-logo" href="<?php echo esc_url( home_url('/') );?>">
                   <?php echo $logo_tag; ?>
                 </a>
-                <p>El objetivo de Medik Rama es ser la primer compañía integradora de servicios de calidad médica y calidez humana a costos accesibles y abierto todo público. Nuestra red esta conformada por los mejores médicos del país, mismos que cuentan con una amplia trayectoria y certificación de acuerdo a su especialidad.</p>
+                <?php if($cominfo['desc']) echo wpautop( $cominfo['desc']); ?>
               </div> 
             </div> 
             <a class="go-top-btn" href="#">

@@ -26,7 +26,7 @@
 </head>
 <body <?php body_class(); ?>>
 <?php 
-  $logoObj = get_field('logo_header', 'options');
+  $logoObj = get_field('logo', 'options');
   if( is_array($logoObj) ){
     $logo_tag = '<img src="'.$logoObj['url'].'" alt="'.$logoObj['alt'].'" title="'.$logoObj['title'].'">';
   }else{
