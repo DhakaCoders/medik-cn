@@ -19,7 +19,7 @@ $hdaddress = $contact['address'];
 $telefoon = get_field('telephone', 'options');
 $fttelephone = $telefoon['telephone_footer'];
 $gmapsurl = $contact['gmap_link'];
-$dinfo = $contact['director_info'];
+$dinfos = $contact['director_info'];
 
 $intro = get_field('introsec', $thisID);
 
@@ -72,8 +72,8 @@ $mform = get_field('mobile_form', $thisID);
               <div class="dft-page-contact-form">
                 <div class="dft-page-contact-form-hdr text-center">
                   <?php 
-                    if(!empty($dform['title'])) printf('<p>%s</p>', $dform['title']); 
-                    if(!empty($dform['doctor_name'])) printf('<h4>%s</h4>', $dform['doctor_name']); 
+                    if(!empty($mform['title'])) printf('<p>%s</p>', $mform['title']); 
+                    if(!empty($mform['doctor_name'])) printf('<h4>%s</h4>', $mform['doctor_name']); 
                   ?>
                 </div>
                 <div class="dft-page-contact-form-main">
@@ -83,6 +83,10 @@ $mform = get_field('mobile_form', $thisID);
             </div>
             <div class="contact-info-dsc hide-xs">
               <?php if(!empty($dform['title'])) printf('<h4>%s</h4>', $dform['title']); ?>
+
+            </div>
+            <div class="contact-infodesc hide-xs">
+              <?php if($dform['content']) echo wpautop( $dform['content']); ?>
             </div>
             <div class="contact-form hide-xs">
               <div class="wpforms-form">
@@ -121,6 +125,10 @@ $mform = get_field('mobile_form', $thisID);
                   if(!empty($contact['website_link'])) printf('<a class="contact-mail-icon-1" href="%s">%s</a>',$contact['website_link'], $contact['website_link'] ); 
                 ?>
               </div>
+              <?php 
+              if($dinfos): 
+                foreach( $dinfos as $dinfo):
+              ?>
               <div class="contact-profile">
                 <?php 
                 if(!empty($dinfo['name'])):
@@ -134,9 +142,10 @@ $mform = get_field('mobile_form', $thisID);
                     $trimphone2 = trim(str_replace($spacialArry, $replaceArray, $dinfo['telephone']));
                    printf('<a class="green-tel-icon" href="tel:%s">Cel: %s</a>', $trimphone2, $dinfo['telephone']); 
                  }
-                 if(!empty($dinfo['email_address'])) printf('<a class="contact-mail-icon" href="mailto:%s">%s</a>',$dinfo['email_address'], $dinfo['email_address'] ); 
+                 if(!empty($dinfo['email'])) printf('<a class="contact-mail-icon" href="mailto:%s">%s</a>',$dinfo['email'], $dinfo['email'] ); 
                 ?>
               </div>
+              <?php endforeach; endif; ?>
             </div>
           </div>
         </div>

@@ -41,7 +41,10 @@ contact-map-sec-wrp
 	padding-right: 55px;
 }
 .contact-info-dsc{
-	padding-bottom: 150px;
+	padding-bottom: 15px;
+}
+.contact-infodesc {
+    padding-bottom: 30px;
 }
 .contact-info-rgt-dsc h4,
 .contact-info-dsc h4{
