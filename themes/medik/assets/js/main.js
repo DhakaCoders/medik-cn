@@ -81,15 +81,16 @@ if (windowWidth <= 991) {
 
 
 
-$(".fancybox").fancybox({
+if($('.fancybox').length){
+$('.fancybox').fancybox({
     openEffect  : 'none',
     closeEffect : 'none'
   });
 
-
+}
 //Shuffle filter
 
-if($('.tabs-dsc-innr').length){
+if($('.promo-tabs-wrp').length){
     var Shuffle = window.Shuffle;
 
     class Demo {
@@ -119,7 +120,7 @@ if($('.tabs-dsc-innr').length){
       }
 
       addFilterButtons() {
-        const options = document.querySelector('.filter-options');
+        const options = document.querySelector('.filter-options1');
         if (!options) {
           return;
         }
@@ -160,7 +161,7 @@ if($('.tabs-dsc-innr').length){
     }
 
   document.addEventListener('DOMContentLoaded', () => {
-    window.demo = new Demo(document.getElementById('grid'));
+    window.demo = new Demo(document.getElementById('grid1'));
   });
 }
 
@@ -789,10 +790,10 @@ $('.menu-item-has-children > a').on('click', function(e){
 
 
 //filter-btn
-$('.blog-filter-btn button').click(function(){
+/*$('.blog-filter-btn button').click(function(){
     $('.blog-filter-btn button').removeClass("active");
     $(this).addClass("active");
-});
+});*/
 
 
 //Shuffle filter
@@ -808,7 +809,7 @@ $('.blog-filter-btn button').click(function(){
 var windowWidth = $(window).width();
 
 if (windowWidth >= 768) {
-  if($('.blog-grd-wrp').length){
+  if($('.blog-main-sec-wrp').length){
     var Shuffle = window.Shuffle;
 
     class Demo {
@@ -838,7 +839,7 @@ if (windowWidth >= 768) {
       }
 
       addFilterButtons() {
-        const options = document.querySelector('.filter-options');
+        const options = document.querySelector('.filter-options2');
         if (!options) {
           return;
         }

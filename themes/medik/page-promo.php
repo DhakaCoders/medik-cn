@@ -30,7 +30,7 @@ get_header();
       <div class="col-sm-12">
         <div class="promo-tabs-wrp">
           <div class="bblog-filter-btn text-center">
-            <div class="filter-options">
+            <div class="filter-options1 blog-filter-btn">
             <button class="active" id='all'>Mostrar Todas</button>
             <?php 
               $terms = get_terms( 'promo_cat','order=desc&hide_empty=0' );
@@ -43,7 +43,7 @@ get_header();
             </div>
           </div>
           <div class="tabs-dsc-innr">
-            <ul id="grid">
+            <ul id="grid1">
             <?php         
               while($pQuery->have_posts()): $pQuery->the_post(); 
               $intro = get_field('intro', get_the_ID());

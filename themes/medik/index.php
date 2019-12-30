@@ -10,17 +10,17 @@
           </div>
           <?php if( have_posts() ): ?>
           <div class="bblog-filter-btn text-center">
-            <div class="filter-options">
-            <button class="active" id='all'>Mostrar Todos</button>
-            <?php 
-              $terms = get_terms( 'category' );
-              if ( ! empty( $terms ) && ! is_wp_error( $terms ) ){
-                  foreach ( $terms as $term ) {
-                     echo '<button class="azbtn" data-group="'.$term->slug.'">' . $term->name . '</button>';
-                  }
-              }
-            ?>
-          </div>
+            <div class="filter-options2 blog-filter-btn">
+              <button class="active" id='all'>Mostrar Todos</button>
+              <?php 
+                $terms = get_terms( 'category' );
+                if ( ! empty( $terms ) && ! is_wp_error( $terms ) ){
+                    foreach ( $terms as $term ) {
+                       echo '<button class="azbtn" data-group="'.$term->slug.'">' . $term->name . '</button>';
+                    }
+                }
+              ?>
+            </div>
           </div>
           <div class="blog-grd-wrp">
             <div class="blogGrdSlider-arrows">
@@ -50,7 +50,7 @@
                       <span><?php echo get_the_date('M d'); ?></span>                        
                       <div class="sqew"></div>
                     </div>
-                    <p><?php the_title(); ?></p>
+                    <h6><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h6>
                     <a href="<?php the_permalink(); ?>">Leer Artículo</a>
                   </div>
                 </div>

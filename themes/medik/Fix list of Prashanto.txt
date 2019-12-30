@@ -128,3 +128,18 @@ Responsive-->
 3. https://www.screencast.com/t/rbbhbokpikZ3
 	br problem. sob jay valo kore dekhe fix koro --done
 
+
+
+
+new v2
+----------------
+citas.html
+
+1. https://www.screencast.com/t/rRd5NcUQ
+     ai 2 ta word right a jabe  
+     max-width 1125 dile thik thake maybe
+2. then ai page ar desktop and responsive ta valo kore check kore fix koro. html markup a change 
+	korte hole jano age. css fix hole kore felo .
+
+
+
