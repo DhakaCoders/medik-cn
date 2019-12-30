@@ -39,9 +39,9 @@
                 <ul class="ulc hide-sm">
                   <?php if( !empty( $ftaddress1 ) ) printf('<li><a href="%s">%s</a></li>', $gmaplink, $ftaddress1); ?>
                   <li>
-                    <strong>Teléfonos:</strong><br/>
+                    <?php _e('<strong>Teléfonos:</strong><br/>', THEME_NAME); ?>
                   <?php 
-                    if($fttelephone): 
+                    if(!empty($fttelephone)): 
                       $i = 1; $count = 0;
                       $count = count($fttelephone);
                       foreach($fttelephone as $ftphone):
@@ -62,9 +62,9 @@
                 </ul>
                 <ul class="ulc show-sm">
                   <li>
-                    <strong>Teléfonos:</strong><br/>
+                    <?php _e('<strong>Teléfonos:</strong><br/>', THEME_NAME); ?>
                   <?php 
-                  if($fttelephone): 
+                  if(!empty($fttelephone)): 
                     $i = 1; $count = 0;
                     $count = count($fttelephone);
                     foreach($fttelephone as $ftphone):

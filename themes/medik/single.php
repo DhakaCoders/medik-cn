@@ -1,7 +1,4 @@
 <?php 
-/*
-  Template Name: Servicios
-*/
 get_header(); 
 $thisID = get_the_ID();
 ?>
