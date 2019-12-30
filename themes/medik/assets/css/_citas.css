@@ -72,8 +72,12 @@
     transform: translateX(-50%);
 }
 .citas-main-hdr p{
+	font-family: "Lato-Regular";
     font-size:18px;
     margin-bottom: 15px;
+}
+.citas-main-hdr p span{
+	font-family: "Lato-Bold";
 }
 .citas-main-lft{
 	width:63.26%;
