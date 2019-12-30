@@ -790,10 +790,10 @@ $('.menu-item-has-children > a').on('click', function(e){
 
 
 //filter-btn
-$('.blog-filter-btn button').click(function(){
+/*$('.blog-filter-btn button').click(function(){
     $('.blog-filter-btn button').removeClass("active");
     $(this).addClass("active");
-});
+});*/
 
 
 //Shuffle filter
