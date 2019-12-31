@@ -1,12 +1,17 @@
-<?php get_header(); ?>
+<?php get_header(); 
+$thisID = get_option( 'page_for_posts' );;
+$intro = get_field('intro', $thisID);
+?>
 <section class="blog-main-sec-wrp">
   <div class="container">
     <div class="row">
       <div class="col-sm-12">
         <div class="blog-main-sec-innr-wrp ">
           <div class="blog-main-hdr">
-            <h1>Noticias de Salud <span>y Medicina</span></h1>
-            <p>Información, actualidad y noticias sobre salud y enfermedades. <br/>Novedades y avances en medicina a nivel nacional e internacional</p>
+            <?php 
+              if( !empty( $intro['title'] ) ) printf( '<h1>%s</h1>', $intro['title']); 
+              if(!empty($intro['content'])) echo wpautop($intro['content']);
+            ?>
           </div>
           <?php if( have_posts() ): ?>
           <div class="bblog-filter-btn text-center">
@@ -31,8 +36,8 @@
               <?php 
                 while( have_posts() ): the_post();
                 $postID = get_the_ID(); 
-                $postImg = wp_get_attachment_image_src( get_post_thumbnail_id( $postID ), 'bloggrid' );
-                if( is_array($postImg) && !empty( $postImg[0] ) ) $useIMG = $postImg[0]; else $useIMG = THEME_URI.'/assets/images/noticiasSlider-grd-img-001.png';
+                $postImg = wp_get_attachment_image_src( get_post_thumbnail_id( $postID ), 'blgrid' );
+                if( is_array($postImg) && !empty( $postImg[0] ) ) $useIMG = $postImg[0]; else $useIMG = THEME_URI.'/assets/images/newsimg.jpg';
                 $term_list = get_the_terms(get_the_ID(), 'category');
                 $types = [];
                 foreach($term_list as $term_single) {

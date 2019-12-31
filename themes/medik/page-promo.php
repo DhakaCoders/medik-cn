@@ -3,14 +3,15 @@
   Template Name: Promo
 */
 get_header(); 
+$thisID = get_the_ID();
+$intro = get_field('intro', $thisID);
 ?>
 <section class="promo-tabs-sec-wrp">
   <div class="container">
     <div class="row">
       <div class="col-sm-12">
         <div class="section-hdr">
-          <h1 class="sec-hdr-title set-hdr-big-title">Promociones <span>Médicas</span>
-          </h1>
+          <?php if( !empty( $intro['title'] ) ) printf( '<h1 class="sec-hdr-title set-hdr-big-title">%s</h1>', $intro['title']); ?>
           <div class="sec-hdr-title-divider">
             <span><img src="<?php echo THEME_URI; ?>/assets/images/hn-title-icon.png"></span>
           </div>
@@ -48,7 +49,7 @@ get_header();
               while($pQuery->have_posts()): $pQuery->the_post(); 
               $intro = get_field('intro', get_the_ID());
               if(!empty($intro['image'])){
-                $refImgsrc = cbv_get_image_src($intro['image']);
+                $refImgsrc = cbv_get_image_src($intro['image'], 'promogrd');
                 $fullImgsrc = cbv_get_image_src($intro['image']);
               }else{
                 $refImgsrc = '';

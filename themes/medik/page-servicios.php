@@ -224,9 +224,9 @@ $thisID = get_the_ID();
                         while($nQuery->have_posts()): $nQuery->the_post(); 
                         $gridImage = get_post_thumbnail_id(get_the_ID());
                         if(!empty($gridImage)){
-                          $refImgtag = cbv_get_image_tag($gridImage, 'hmslgrid');
+                          $refImgtag = cbv_get_image_tag($gridImage, 'sblgrid');
                         }else{
-                          $refImgtag = '<img src="'.THEME_URI.'/assets/images/hm-btm-grid-img-1.png" alt="'.get_the_title().'">';
+                          $refImgtag = '<img src="'.THEME_URI.'/assets/images/blgimg.jpg" alt="'.get_the_title().'">';
                         }  
 
                          
@@ -306,7 +306,7 @@ $news = get_field('newssec', HOMEID);
           <?php
             $pQuery = new WP_Query(array(
               'post_type' => 'post',
-              'posts_per_page'=> 20,
+              'posts_per_page'=> 5,
               'order'=> 'DESC',
             ));
 
@@ -323,9 +323,9 @@ $news = get_field('newssec', HOMEID);
               while($pQuery->have_posts()): $pQuery->the_post(); 
               $gridImage = get_post_thumbnail_id(get_the_ID());
               if(!empty($gridImage)){
-                $refImgtag = cbv_get_image_tag($gridImage, 'hmslgrid');
+                $refImgtag = cbv_get_image_tag($gridImage, 'newsblg');
               }else{
-                $refImgtag = '<img src="'.THEME_URI.'/assets/images/hm-btm-grid-img-1.png" alt="'.get_the_title().'">';
+                $refImgtag = '<img src="'.THEME_URI.'/assets/images/newsimg.jpg" alt="'.get_the_title().'">';
               }      
             ?>
               <div class="noticiasSlider-item">

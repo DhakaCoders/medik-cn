@@ -25,6 +25,9 @@ if( !function_exists('cbv_theme_setup') ){
     add_image_size( 'hmslider', 1368, 432, true );
     add_image_size( 'hmlabrtry', 478, 556, true );
     add_image_size( 'newsblg', 224, 223, true );
+    add_image_size( 'blgrid', 220, 220, true );
+    add_image_size( 'sblgrid', 80, 80, true );
+    add_image_size( 'promogrd', 382, 220, true );
 
 
 		
