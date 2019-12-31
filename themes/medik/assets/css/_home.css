@@ -88,6 +88,15 @@ main-slider-sec-wrp
 	-webkit-transition: all 0.5s;
 	border-radius: 67px;
 	border: 4px solid #ffefe3;
+
+background: rgba(253,102,8,1);
+background: -moz-linear-gradient(left, rgba(253,102,8,1) 0%, rgba(253,102,8,0.95) 39%, rgba(253,102,8,0.93) 51%, rgba(253,102,8,0.92) 63%, rgba(253,102,8,0.9) 76%, rgba(253,102,8,0.9) 77%, rgba(253,102,8,0.9) 100%);
+background: -webkit-gradient(left top, right top, color-stop(0%, rgba(253,102,8,1)), color-stop(39%, rgba(253,102,8,0.95)), color-stop(51%, rgba(253,102,8,0.93)), color-stop(63%, rgba(253,102,8,0.92)), color-stop(76%, rgba(253,102,8,0.9)), color-stop(77%, rgba(253,102,8,0.9)), color-stop(100%, rgba(253,102,8,0.9)));
+background: -webkit-linear-gradient(left, rgba(253,102,8,1) 0%, rgba(253,102,8,0.95) 39%, rgba(253,102,8,0.93) 51%, rgba(253,102,8,0.92) 63%, rgba(253,102,8,0.9) 76%, rgba(253,102,8,0.9) 77%, rgba(253,102,8,0.9) 100%);
+background: -o-linear-gradient(left, rgba(253,102,8,1) 0%, rgba(253,102,8,0.95) 39%, rgba(253,102,8,0.93) 51%, rgba(253,102,8,0.92) 63%, rgba(253,102,8,0.9) 76%, rgba(253,102,8,0.9) 77%, rgba(253,102,8,0.9) 100%);
+background: -ms-linear-gradient(left, rgba(253,102,8,1) 0%, rgba(253,102,8,0.95) 39%, rgba(253,102,8,0.93) 51%, rgba(253,102,8,0.92) 63%, rgba(253,102,8,0.9) 76%, rgba(253,102,8,0.9) 77%, rgba(253,102,8,0.9) 100%);
+background: linear-gradient(to right, rgba(253,102,8,1) 0%, rgba(253,102,8,0.95) 39%, rgba(253,102,8,0.93) 51%, rgba(253,102,8,0.92) 63%, rgba(253,102,8,0.9) 76%, rgba(253,102,8,0.9) 77%, rgba(253,102,8,0.9) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fd6608', endColorstr='#fd6608', GradientType=1 );
 }
 /*.main-slide-item-dsc a:before{
 	content: "";
