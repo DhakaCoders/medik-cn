@@ -172,7 +172,7 @@ if( $('.main-slider').length ){
       pauseOnHover: false,
       autoplay: false,
       autoplaySpeed: 6000,
-      dots: false,
+      dots: true,
       infinite: false,
       arrows:true,
       speed: 1000,

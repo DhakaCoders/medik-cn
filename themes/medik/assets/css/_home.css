@@ -165,6 +165,62 @@ main-slider-sec-wrp
 	text-align: right;
 }
 
+
+.main-slider .slick-dots {
+    bottom: 25px;
+}
+.main-slider .slick-dots li{
+	background-image: url(../images/sky-pagi.png);
+	background-size: 7px 7px;
+	background-position: center center;
+	background-repeat: no-repeat;
+	margin: 0 5px;
+	display: inline-block;
+	vertical-align: baseline;
+	float: none;
+}
+.main-slider .slick-dots li,
+.main-slider .slick-dots li button,
+.main-slider .slick-dots li button:before{
+	width: 21px;
+	height: 21px;
+	padding: 0;
+	-webkit-transition: all .25s ease;
+   -moz-transition: all .25s ease;
+    -ms-transition: all .25s ease;
+     -o-transition: all .25s ease;
+        transition: all .25s ease;
+}
+.main-slider .slick-dots li button:before{
+	content: "";
+}
+.main-slider .slick-dots li.slick-active,
+.main-slider .slick-dots li:hover{
+	background-image: url(../images/yellow-pegi.png);
+	background-size: 21px 21px;
+	background-position: center center;
+	background-repeat: no-repeat;
+	-webkit-transition: all .25s ease;
+   -moz-transition: all .25s ease;
+    -ms-transition: all .25s ease;
+     -o-transition: all .25s ease;
+        transition: all .25s ease;
+}
+.main-slider .slick-dots{
+	max-width: 1170px;
+	width: 100%;
+	left: 50%;
+	transform: translateX(-50%);
+	-ms-transform: translateX(-50%);
+	-webkit-transform: translateX(-50%);
+
+}
+.mainSliderPagiLeft ul.slick-dots{
+	text-align: left;
+}
+.mainSliderPagiRight ul.slick-dots{
+	text-align: right;
+}
 /*
 -----------------------------
  Main Slider Next Prev css
@@ -218,6 +274,8 @@ main-slider-sec-wrp
 	        transition: all .25s ease;
 	opacity: 1;
 }
+
+
 /*
 -----------------------
 hm-service-sec-wrp
@@ -1470,12 +1528,6 @@ hm-btm-grid-sec-wrp
 }
 
 @media(max-width: 1399px){
-	.mainsliderarrows .leftArrow{
-		top: 91%;
-	}
-	.mainsliderarrows .rightArrow{
-		top: 91%;
-	}
 	.hm-service-slider{
 		padding-left: 50px;
 		padding-right: 50px;
@@ -1484,8 +1536,26 @@ hm-btm-grid-sec-wrp
 	    padding-left: 0;
 	    padding-right: 0;
 	}
+	.mainsliderarrows .leftArrow{
+		left: 10px;
+	}
+	.mainsliderarrows .rightArrow{
+		right: 10px;
+	}
 }
 @media(max-width: 1299px){
+	.mainsliderarrows .leftArrow{
+		display: none!important;
+	}
+	.mainsliderarrows .rightArrow{
+		display: none!important;
+	}
+	.mainsliderarrows .leftArrow{
+		top: 91%;
+	}
+	.mainsliderarrows .rightArrow{
+		top: 91%;
+	}
 	.laboratoryarrows .leftArrow{
 		left: 10px;
 	}
