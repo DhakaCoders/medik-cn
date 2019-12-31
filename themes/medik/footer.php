@@ -79,13 +79,14 @@
                     <a href="tel:<?php echo $trimphone; ?>"><?php echo $ftphone['telephone']; ?></a><?php echo $brtag; ?>
                   <?php $i++; endforeach;  endif; ?>
                   </li>
+                  <?php 
+                  if($schedulesec): 
+                    foreach($schedulesec as $schd):
+                  ?>
                   <li>
-                    <strong>Las citas son de Lunes a Viernes de</strong><br/>
-                    <span>9:30a.m. - 7p.m.</span> 
-                  </li>                  
-                  <li>
-                    <span>Sábados de 9.00a.m. a 1p.m.<br/><em>(Trabajamos con Previa Cita)</em></span> 
-                  </li>
+                    <?php if(!empty($schd['aschedule_time'])) printf('%s', $schd['aschedule_time']); ?>
+                  </li> 
+                  <?php endforeach; endif; ?>        
                 </ul>
                 <div class="ftr-social">
                   <?php if(!empty($fburl)): ?>

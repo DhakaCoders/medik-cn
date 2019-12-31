@@ -15,7 +15,7 @@ if($banner):
     <?php foreach($slides as $slide): 
       $slideposter = '';
       $mslideposter = '';
-      if(!empty($slide['image'])) $slideposter = cbv_get_image_src($slide['image']);
+      if(!empty($slide['image'])) $slideposter = cbv_get_image_src($slide['image'], 'hmslider');
       if(!empty($slide['m_image'])) $mslideposter = cbv_get_image_src($slide['m_image']);
     ?>
     <div class="main-slide-item">
@@ -103,7 +103,6 @@ if($service):
   </div>
 </section>
 <?php endif; ?>
-  
 <div class="vt-home-form-slider">
 <div class="vt-home-form-slide">
   <section class="hm-campaign-grid-sec-wrp vt-form-1-sec-wrap matchHeightCol" style="background: url(<?php echo THEME_URI; ?>/assets/images/hm-campaign-grid-sec-bg.jpg);">
