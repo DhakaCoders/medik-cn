@@ -17,8 +17,17 @@ if($banner):
       $mslideposter = '';
       if(!empty($slide['image'])) $slideposter = cbv_get_image_src($slide['image'], 'hmslider');
       if(!empty($slide['m_image'])) $mslideposter = cbv_get_image_src($slide['m_image']);
+
+      $contpositon = '';
+      if(!empty($slide['c_position'])){
+        if($slide['c_position'] == 'center')
+          $contpositon = ' main-slider-center';
+        elseif($slide['c_position'] == 'right')
+          $contpositon = ' main-slider-right'; 
+      }
+
     ?>
-    <div class="main-slide-item">
+    <div class="main-slide-item<?php echo $contpositon; ?>">
       <div class="main-slide-item-img hide-xs" style="background: url(<?php echo $slideposter; ?>);"></div>
       <div class="main-slide-item-img show-xs" style="background: url(<?php echo $mslideposter; ?>);"></div>
       <div class="container">
