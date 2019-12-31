@@ -118,7 +118,7 @@ contact-map-sec-wrp
     -webkit-transition: all 0.5s;
 }
 .location-dsc > a:hover:after{
-	right: 12px;
+	right: 10px;
 }
 .contact-rgt-tel{
 	padding-top: 30px;
@@ -141,13 +141,13 @@ contact-map-sec-wrp
 	background:url(../images/orange-tel-icon.png);
 	background-repeat: no-repeat;
 	background-size: 16px 16px;
-	background-position: left top 4px;
+	background-position: left top 3px;
 }
 .green-tel-icon{
 	background:url(../images/green-tel-icon.png);
 	background-repeat: no-repeat;
 	background-size: 16px 16px;
-	background-position: left top 4px;
+	background-position: left top 1px;
 }
 a.orange-tel-icon:hover{
 	color: #fd6607;
@@ -168,7 +168,7 @@ a.green-tel-icon:hover{
 	background:url(../images/contact-mail-icon.png);
 	background-repeat: no-repeat;
 	background-size: 16px 16px;
-	background-position: left top 4px;
+	background-position: left top 3px;
 }
 .contact-mail-icon-1{
 	background:url(../images/contact-mail-icon-1.png);
