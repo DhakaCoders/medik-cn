@@ -23,6 +23,8 @@ if( !function_exists('cbv_theme_setup') ){
 			add_theme_support('category-thumbnails');
 		}
     add_image_size( 'hmslider', 1368, 432, true );
+    add_image_size( 'hmlabrtry', 478, 556, true );
+    add_image_size( 'newsblg', 224, 223, true );
 
 
 		

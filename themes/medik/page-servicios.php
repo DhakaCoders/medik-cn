@@ -142,7 +142,7 @@ $thisID = get_the_ID();
                 <div class="dft-page-contact-form-hdr text-center">
                   <?php if(!empty($sform['content'])) echo wpautop($sform['content']); ?>
                 </div>
-                <div class="dft-page-contact-form-main">
+                <div class="dft-page-contact-form-main pagesidebar-form">
                   <?php if(!empty($sform['shortcode'])) echo do_shortcode($sform['shortcode']); ?>        
                 </div>  
               </div>
