@@ -68,7 +68,7 @@ $intro = get_field('intro', $thisID);
                   <a class="fancybox" rel="gallery1" href="<?php echo $fullImgsrc; ?>">
                   </a>
                   <div class="tabs-box-tp-logo">
-                    <a href="#">
+                    <a class="fancybox" rel="gallery1" href="<?php echo $fullImgsrc; ?>">
                       <img src="<?php echo THEME_URI; ?>/assets/images/tabs-box-tp-logo.png">
                     </a>
                   </div>

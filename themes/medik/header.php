@@ -4,17 +4,6 @@
   <meta charset="<?php bloginfo('charset'); ?>">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <link rel="stylesheet" href="<?php echo THEME_URI; ?>/assets/css/bootstrap.min.css">
-  <link rel="stylesheet" href="<?php echo THEME_URI; ?>/assets/css/bootstrap-select.min.css">
-  <link rel="stylesheet" type="text/css" href="<?php echo THEME_URI; ?>/assets/fonts/font-awesome/font-awesome.css">
-  <link rel="stylesheet" type="text/css" href="<?php echo THEME_URI; ?>/assets/css/animate.css">
-  <link rel="stylesheet" type="text/css" href="<?php echo THEME_URI; ?>/assets/fancybox3/dist/jquery.fancybox.min.css">
-  <link rel="stylesheet" type="text/css" href="<?php echo THEME_URI; ?>/assets/slick.slider/slick-theme.css">
-  <link rel="stylesheet" type="text/css" href="<?php echo THEME_URI; ?>/assets/slick.slider/slick.css">
-  <link rel="stylesheet" type="text/css" href="<?php echo THEME_URI; ?>/assets/fonts/custom-fonts.css">
-	<link rel="stylesheet" type="text/css" href="<?php echo THEME_URI; ?>/style.css">
-	<link rel="stylesheet" type="text/css" href="<?php echo THEME_URI; ?>/assets/css/responsive.css">
   <?php $favicon = get_theme_mod('favicon'); if(!empty($favicon)) { ?> 
   <link rel="shortcut icon" href="<?php echo $favicon; ?>" />
   <?php } ?>
@@ -57,7 +46,7 @@
             <div class="hdr-rgt-con clearfix">
               <div class="hdr-top-contact clearfix">
                 <div class="hdr-contact">
-                  <h6 class="hide-sm">informes y citas</h6>
+                  <h6 class="hide-sm"><?php _e('informes y citas', THEME_NAME); ?></h6>
                   <div class="contact-info">
                   <?php 
                     if($hdtelephone): 

@@ -25,6 +25,8 @@ if($banner):
         elseif($slide['c_position'] == 'right')
           $contpositon = ' main-slider-right'; 
       }
+      $addbtnColor = '';
+      if(!empty($slide['button_color'])) $addbtnColor = 'style="background:'.$slide['button_color'].'"';
 
     ?>
     <div class="main-slide-item<?php echo $contpositon; ?>">
@@ -40,7 +42,7 @@ if($banner):
 
                 $link1 = $slide['link'];
                 if( is_array( $link1 ) &&  !empty( $link1['url'] ) ){
-                    printf('<a href="%s" target="%s">%s</a>', $link1['url'], $link1['target'], $link1['title']); 
+                    printf('<a %s href="%s" target="%s">%s</a>', $addbtnColor, $link1['url'], $link1['target'], $link1['title']); 
                 }
               ?>
             </div>

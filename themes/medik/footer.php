@@ -132,21 +132,6 @@
     <?php if( !empty( $copyright_text ) ) printf( '<span>%s</span>', $copyright_text); ?>
   </div>
 </footer>
-
-
-<script src="https://code.jquery.com/jquery-3.0.0.js"></script>
-<script src="https://code.jquery.com/jquery-migrate-3.0.0.js"></script>
-<script src="<?php echo THEME_URI; ?>/assets/js/bootstrap.min.js"></script>
-<script src="<?php echo THEME_URI; ?>/assets/js/bootstrap-select.js"></script>
-<script src="<?php echo THEME_URI; ?>/assets/js/ie10-viewport-bug-workaround.js"></script>
-<script src="<?php echo THEME_URI; ?>/assets/fancybox3/dist/jquery.fancybox.min.js"></script>
-<script src="<?php echo THEME_URI; ?>/assets/slick.slider/slick.js"></script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBo2-QJ7RdCkLw3NFZEu71mEKJ_8LczG-c"></script>
-<script src="<?php echo THEME_URI; ?>/assets/js/jquery.matchHeight-min.js"></script>
-<script src="<?php echo THEME_URI; ?>/assets/js/shuffle.min.js"></script>
-<script src="<?php echo THEME_URI; ?>/assets/js/wow.min.js"></script>
-<script src="<?php echo THEME_URI; ?>/assets/js/app.js"></script>
-<script src="<?php echo THEME_URI; ?>/assets/js/main.js"></script>
 <?php wp_footer(); ?>
 </body>
 </html>

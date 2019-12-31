@@ -212,7 +212,9 @@
 	vertical-align: baseline;
 }
 
-
+.ftr-btm-con span p {
+    margin: 0;
+}
 
 
 
