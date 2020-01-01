@@ -61,7 +61,7 @@
                 <div class="hdr-address-innr">
                   <div class="hdr-address">
                 <?php if( !empty( $hdaddress ) ): ?>
-                <span><a href="<?php echo $gmaplink; ?>"><?php echo $hdaddress; ?></a></span> 
+                <span><?php echo $hdaddress; ?></span> 
                 <a href="<?php echo $gmaplink; ?>" target="_blank">(Da Clic Aquí Para Llegar Con Google Maps)</a>
                 <?php  endif;  ?>
                   </div> 
