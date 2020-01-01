@@ -245,7 +245,9 @@
     color: #fff;
     margin-bottom: 10px;
 }
-
+#citas-main-contact-form div.wpcf7-validation-errors{
+	color: #fff;
+}
 
 @media(max-width: 1199px){ 
 
