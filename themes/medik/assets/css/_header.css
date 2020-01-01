@@ -51,6 +51,9 @@ header .hdr-address span a{
 header .hdr-address span a:hover{
 	color: #fd6507;
 }
+header .hdr-address span a:first-child:hover{
+	color: #262626;
+}
 header .hdr-address-innr{
 	float: right;
 	position: relative;
