@@ -17,14 +17,16 @@ promo-tabs-sec-wrp
 	padding-bottom: 60px;
 }
 .tabs-box-inr {
-    background-repeat: no-repeat !important;
-    background-size: cover !important;
-    background-position: left center!important;
-    min-height: 219px !important;
+/*    background-repeat: no-repeat !important;
+    background-size: 100% 100% !important;
+    background-position: left center!important;*/
     border: 2px solid #eef1f7;
-    padding-top: 15px;
-    padding-left: 10px;
+    /*padding-top: 15px;
+    padding-left: 10px;*/
     position: relative;
+}
+.boximg img{
+	width: 100%;
 }
 .tabs-box-inr > a{
 	position: absolute;
