@@ -5,7 +5,7 @@ $thisID = get_the_ID();
 $introsec = get_field('cintrosec', $thisID); 
 $dinfo = $introsec['doctor_info'];
 $schedulesec = $introsec['schedule'];
-
+$ftschedul = get_field('schedulesec', 'options');
 $spacialArry = array(".", "/", "+", "-", " ", ")", "(");$replaceArray = '';
 $adres = get_field('address', 'options');
 $ftaddress1 = $adres['address_footer'];
@@ -94,12 +94,13 @@ $gmaplink = !empty($gmapsurl)?$gmapsurl: 'javascript:void()';
                     <?php $i++; endforeach; ?>
                   </li>
                   <?php endif;                   
-                  if(!empty($schedulesec['abscheduletime'])): 
+                  if($ftschedul): 
+                    foreach($ftschedul as $schd):
                   ?>
                   <li>
-                    <?php printf('<span>%s</span>', $schedulesec['abscheduletime']); ?>
-                  </li>
-                  <?php endif;?>
+                    <?php if(!empty($schd['aschedule_time'])) printf('%s', $schd['aschedule_time']); ?>
+                  </li> 
+                  <?php endforeach; endif; ?> 
                 </ul>
               </div>
             <?php endif; 
