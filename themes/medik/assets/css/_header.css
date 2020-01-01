@@ -5,7 +5,8 @@ header.header{
 	padding: 10px 0 0;
 	border-bottom: 1px solid #eef1f7;
 }
-header.hm-header{
+
+.home header.header{
 	border-bottom: none;
 }
 header .hdr-lft-con{
