@@ -49,10 +49,10 @@ $intro = get_field('intro', $thisID);
               while($pQuery->have_posts()): $pQuery->the_post(); 
               $intro = get_field('intro', get_the_ID());
               if(!empty($intro['image'])){
-                $refImgsrc = cbv_get_image_src($intro['image'], 'promogrd');
+                $refImgtag = cbv_get_image_tag($intro['image'], 'promogrd');
                 $fullImgsrc = cbv_get_image_src($intro['image']);
               }else{
-                $refImgsrc = '';
+                $refImgtag = '';
                 $fullImgsrc = '';
               }     
               $term_list = get_the_terms(get_the_ID(), 'promo_cat');
@@ -64,14 +64,11 @@ $intro = get_field('intro', $thisID);
             
             ?>
              <li class="filter-item" data-groups='<?php echo json_encode($types); ?>'>
-                <div class="tabs-box-inr clearfix" style="background: url(<?php echo $refImgsrc; ?>);">
-                  <a class="fancybox" rel="gallery1" href="<?php echo $fullImgsrc; ?>">
-                  </a>
-                  <div class="tabs-box-tp-logo">
-                    <a class="fancybox" rel="gallery1" href="<?php echo $fullImgsrc; ?>">
-                      <img src="<?php echo THEME_URI; ?>/assets/images/tabs-box-tp-logo.png">
-                    </a>
+                <div class="tabs-box-inr clearfix">
+                  <div class="boximg">
+                    <?php echo $refImgtag; ?>
                   </div>
+                  <a class="fancybox" rel="gallery1" href="<?php echo $fullImgsrc; ?>"></a>
                 </div>
               </li>
               <?php endwhile; ?>
