@@ -12,7 +12,7 @@
     background-repeat: no-repeat;
     background-size: 100% 100%;
     left:30%;
-    top: 50px;
+    top: 40px;
     z-index: 2;
 }
 .citas-main-sec-innr {
@@ -76,7 +76,9 @@
     font-size:18px;
     margin-bottom: 15px;
 }
-.citas-main-hdr p span{
+.citas-main-hdr p span,
+.citas-main-hdr p strong{
+	font-weight: normal;
 	font-family: "Lato-Bold";
 }
 .citas-main-lft{
@@ -168,10 +170,61 @@
 #citas-main-contact-form .dft-page-contact-form-main input {
 	padding: 8px 10px;
 	margin-bottom: 18px;
+	font-size: 14px;
+	font-family: 'OpenSans-Regular';
+	height: 40px;
+}
+#citas-main-contact-form .dft-page-contact-form-main input[type="submit"]{
+	height: 45px;
+	border: none;
+	max-width: 192px;
+	width: 100%;
+	font-size: 20px;
+	font-family: 'OpenSans-Semibold';
+	margin-bottom: 0;
+}
+#citas-main-contact-form .note-text{
+	text-align: center;
+}
+#citas-main-contact-form .ajax-loader{
+	position: absolute;
+}
+#citas-main-contact-form .dft-page-contact-form-main select{
+	padding-top: 5px;
+	padding-bottom: 5px;
 }
 #citas-main-contact-form .dft-page-contact-form-main textarea {
 	min-height: 167px;
+	font-size: 14px;
+	font-family: 'OpenSans-Regular';
 }
+#citas-main-contact-form .dft-page-contact-form-main textarea::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+      font-family: 'OpenSans-Regular';
+}
+#citas-main-contact-form .dft-page-contact-form-main textarea::-moz-placeholder { /* Firefox 19+ */
+      font-family: 'OpenSans-Regular';
+}
+#citas-main-contact-form .dft-page-contact-form-main textarea:-ms-input-placeholder { /* IE 10+ */
+      font-family: 'OpenSans-Regular';
+}
+#citas-main-contact-form .dft-page-contact-form-main textarea:-moz-placeholder { /* Firefox 18- */
+      font-family: 'OpenSans-Regular';
+}
+
+
+#citas-main-contact-form .dft-page-contact-form-main input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+      font-family: 'OpenSans-Regular';
+}
+#citas-main-contact-form .dft-page-contact-form-main input::-moz-placeholder { /* Firefox 19+ */
+      font-family: 'OpenSans-Regular';
+}
+#citas-main-contact-form .dft-page-contact-form-main input:-ms-input-placeholder { /* IE 10+ */
+      font-family: 'OpenSans-Regular';
+}
+#citas-main-contact-form .dft-page-contact-form-main input:-moz-placeholder { /* Firefox 18- */
+      font-family: 'OpenSans-Regular';
+}
+
 #citas-partner-slider-sec{
 	background: #fff;
 }
@@ -241,6 +294,29 @@
 	}
 	.citas-main-lft-innr li strong {
 	    color: #008175;
+	    font-weight: normal;
+	    font-family: "OpenSans-Bold";
+	}
+	.citas-main-lft-innr li:first-child strong{
+		color: #fd6607;
+		font-family: "OpenSans-Bold";
+		font-size: 20px;
+		padding-top: 10px;
+	}
+	.citas-main-lft-innr li:first-child span{
+		font-family: 'OpenSans-Regular';
+		font-size: 17px;
+	}
+	.citas-main-lft-innr li:nth-child(3){
+		padding-top: 10px;
+	}
+	.citas-main-lft-innr li:nth-child(3) strong{
+		color: #209188;
+		font-size: 16px;
+		line-height: 17px;
+	}
+	.citas-main-lft-innr li:nth-child(3) a{
+		font-family: 'OpenSans-LightItalic';
 	}
 	.citas-main-lft-innr {
 	    max-width: 392px;
@@ -251,13 +327,48 @@
 	    margin: 50px auto 0;
 	}
 	.citas-main-hdr h1 {
-	    font-size: 25px;
+	    font-size: 32px;
 	}
 	.citas-main-hdr h1 span {
 	    display: block;
 	}
 	.citas-main-hdr p {
-	    font-size: 16px;
+	    font-size: 17px;
+	    padding-right: 100px;
+	    padding-left: 100px;
+	}
+	.citas-main-hdr{
+		padding-bottom: 5px;
+	}
+	#citas-service-sec-wrp .sec-hdr-title.set-hdr-big-title{
+		font-size: 32px;
+	}
+	.citas-main-sec{
+		padding-bottom: 45px;
+	}
+	.noticias-slider-sec-wrp .noticias-slider-hdr h2 span{
+		display: block;
+	}
+	.noticias-slider-hdr h2{
+		padding-bottom: 25px;
+		font-size: 32px;
+	}
+	.noticias-slider-sec-wrp{
+		padding-top: 0;
+	}
+	#citas-noticias-slider-sec .noticias-slider-innr-wrp {
+	    margin-bottom: 80px;
+	}
+	.CitasSiderbarProSliderCtlr{
+		padding-bottom: 30px;
+	}
+	.citas-main-hdr p strong,
+	.citas-main-hdr p{
+		font-family: 'OpenSans-Regular';
+		font-size: 17px;
+	}
+	.citas-main-lft{
+		padding-right: 0;
 	}
 }
 
@@ -269,12 +380,27 @@
 
 @media(max-width: 575px){
 
-
+	.citas-main-hdr p {
+	    padding-right: 40px;
+	    padding-left: 40px;
+	}
 }
 
 @media(max-width: 479px){
 
-
+	.citas-main-hdr p {
+	    padding-right: 0;
+	    padding-left: 0;
+	}
+	.citas-main-hdr h1,#citas-service-sec-wrp .sec-hdr-title.set-hdr-big-title {
+	    font-size: 30px;
+	}
+	.citas-main-lft-innr li:nth-child(3) a{
+		font-size: 36px;
+	}
+	.noticias-slider-hdr h2{
+		font-size: 30px;
+	}
 }
 
 @media(max-width: 359px){
