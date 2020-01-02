@@ -1931,6 +1931,9 @@ hm-btm-grid-sec-wrp
 	.main-slide-item-dsc h1{
 		line-height: 1.1;
 	}
+	.main-slide-item-img{
+		background-position: center center!important;
+	}
 }
 
 
@@ -1998,7 +2001,9 @@ hm-btm-grid-sec-wrp
 	    padding-left: 25px;
 	    padding-right: 25px;
 	}
-
+	.main-slide-item-dsc h1{
+		font-size: 27px;
+	}
 }
 
 
