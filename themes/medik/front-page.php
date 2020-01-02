@@ -486,7 +486,10 @@ if($minsurance):
             <span class="rightArrow"><i class="fa fa-angle-right"></i></span>
           </div>
           <div class="section-hdr">
-            <?php if( !empty( $minsurance['title'] ) ) printf( '<h2 class="sec-hdr-title set-hdr-big-title">%s</h2>', $minsurance['title']); ?>
+            <?php 
+            if( !empty( $minsurance['title'] ) ) printf( '<h2 class="sec-hdr-title set-hdr-big-title hide-xs">%s</h2>', $minsurance['title']); 
+            if( !empty( $minsurance['mtitle'] ) ) printf( '<h2 class="sec-hdr-title set-hdr-big-title show-xs">%s</h2>', $minsurance['mtitle']); 
+            ?>
             <div class="sec-hdr-title-divider">
               <span><img src="<?php echo THEME_URI; ?>/assets/images/hn-title-icon.png"></span>
             </div>
