@@ -434,6 +434,7 @@ hm-service-sec-wrp
 	-ms-transition: all 1.5s;
 	-webkit-transition: all 1.5s;
 }
+
 .hm-service-slide-item-dsc > a:before{
 	content: "";
 	position: absolute;
@@ -454,6 +455,9 @@ hm-service-sec-wrp
 	opacity: 1;
 	visibility: visible;
 }
+.hm-service-slide-item-dsc:hover > a{
+	right: 2px;
+}
 .hm-service-slide-item-dsc > a{
 	text-decoration: none;
 	font-size: 20px;
@@ -462,7 +466,7 @@ hm-service-sec-wrp
 	font-family: 'OpenSans-Italic';
 	text-transform: uppercase;
 	position: absolute;
-	right: 2px;
+	right: -100px;
 	bottom: 11px;
 	padding-right: 27px;
 	opacity: 0;
@@ -1933,6 +1937,9 @@ hm-btm-grid-sec-wrp
 	}
 	.main-slide-item-img{
 		background-position: center center!important;
+	}
+	.hm-campaign-tp-head h3 span{
+		font-size: 19px;
 	}
 }
 
