@@ -1242,21 +1242,21 @@
 
 
 .noticiasSlider .noticiasSlider-item
-.serviciosPartnerSlider .serviciosPartnerSlider-item,
+/* .serviciosPartnerSlider .serviciosPartnerSlider-item, */
 .siderbarRecentPostSlider .siderbarRecentPostSlider-item,
 .siderbarProSlider .siderbarProSlider-item,
 .llevamosSlider .llevamosSlider-item{
     display: none;
 }
 .noticiasSlider .noticiasSlider-item:first-child,
-.serviciosPartnerSlider .serviciosPartnerSlider-item:first-child,
+/* .serviciosPartnerSlider .serviciosPartnerSlider-item:first-child, */
 .siderbarRecentPostSlider .siderbarRecentPostSlider-item:first-child,
 .siderbarProSlider .siderbarProSlider-item:first-child,
 .llevamosSlider .llevamosSlider-item:first-child{
     display: block;
 }
 .noticiasSlider.slick-initialized .noticiasSlider-item,
-.serviciosPartnerSlider.slick-initialized .serviciosPartnerSlider-item,
+/* .serviciosPartnerSlider.slick-initialized .serviciosPartnerSlider-item, */
 .siderbarRecentPostSlider.slick-initialized .siderbarRecentPostSlider-item,
 .siderbarProSlide.slick-initialized .siderbarProSlider-item,
 .llevamosSlider.slick-initialized .llevamosSlider-item{
