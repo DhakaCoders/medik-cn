@@ -14,7 +14,7 @@
     left:30%;
     top: 40px;
     z-index: 2;
-}
+} 
 .citas-main-sec-innr {
     max-width: 980px;
     margin: 0 auto;
@@ -378,9 +378,10 @@
 	.noticias-slider-sec-wrp .noticias-slider-hdr h2 span{
 		display: block;
 	}
-	.noticias-slider-hdr h2{
-		padding-bottom: 25px;
-		font-size: 32px;
+	.noticias-slider-hdr h2 {
+	    padding-bottom: 25px;
+	    font-size: 32px;
+	    margin-bottom: 35px;
 	}
 	.noticias-slider-sec-wrp{
 		padding-top: 0;
@@ -413,6 +414,9 @@
 	    padding-right: 40px;
 	    padding-left: 40px;
 	}
+	.servicios-siderbar-accordion-title {
+		padding: 17px 40px 17px 50px;
+	}
 }
 
 @media(max-width: 479px){
@@ -429,6 +433,9 @@
 	}
 	.noticias-slider-hdr h2{
 		font-size: 30px;
+	}
+	.serviciosPartnerSlider-hdr h2 {
+	    font-size: 28px;
 	}
 }
 
