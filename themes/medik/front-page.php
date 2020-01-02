@@ -94,6 +94,7 @@ if($service):
                 <?php 
                 endif;
                  $link2 = $servicee['link'];
+                 $lurl2 = '';
                  if( is_array( $link2 ) &&  !empty( $link2['url'] ) ) $lurl2 = $link2['url'];
                 if( !empty( $servicee['title'] ) ) printf( '<h4><a href="%s">%s</a></h4>', $lurl2, $servicee['title']);  
                 if( !empty( $servicee['content'] ) ) echo wpautop($servicee['content']);
