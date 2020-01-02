@@ -339,7 +339,7 @@ $news = get_field('newssec', HOMEID);
                       <span><?php echo get_the_date('M d'); ?></span>                        
                       <div class="sqew"></div>
                     </div>
-                    <p><?php the_title(); ?></p>
+                    <h6><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h6>
                     <a href="<?php the_permalink(); ?>">Leer Artículo</a>
                   </div>
                 </div>

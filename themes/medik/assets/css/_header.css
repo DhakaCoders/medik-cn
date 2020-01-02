@@ -130,6 +130,9 @@ header nav.main-nav > ul > li{
 nav.main-nav li.menu-item-has-children a{
 	padding-right: 25px;
 }
+nav.main-nav > ul > li.menu-item-has-children.current-menu-item > a:after{
+	color: #fff;
+}
 header nav.main-nav > ul > li a::before{
 	content: "";
 	position: absolute;
