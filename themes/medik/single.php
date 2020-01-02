@@ -264,7 +264,10 @@ if($minsurance):
       <div class="col-sm-12">
         <div class="serviciosPartnerSlider-innr-wrp">
           <div class="serviciosPartnerSlider-hdr">
-            <?php if( !empty( $minsurance['title'] ) ) printf( '<h2>%s</h2>', $minsurance['title']); ?>
+            <?php 
+              if( !empty( $minsurance['title'] ) ) printf( '<h2 class="hide-xs">%s</h2>', $minsurance['title']); 
+              if( !empty( $minsurance['mtitle'] ) ) printf( '<h2 class="show-xs">%s</h2>', $minsurance['mtitle']); 
+            ?>
           </div>
           <?php if($logos): ?>
           <div class="serviciosPartnerSlider-wrp">
