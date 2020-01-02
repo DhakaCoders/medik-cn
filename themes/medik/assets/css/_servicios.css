@@ -42,7 +42,7 @@
 	position: relative;
 }
 .llevamosSlider{
-	background-size: 100% 100% !important;
+	background-size: cover !important;
 	background-position: center center !important;
 	background-repeat: no-repeat !important;
 	padding: 42px 50px 60px;
@@ -148,6 +148,7 @@
 	border-bottom: 1px solid #eef1f7;
 	margin-bottom: 25px;
 }
+
 .servicios-accordion-hdr:after{
 	content: "";
     position: absolute;
@@ -163,6 +164,7 @@
 	color:#0e857b;
 	font-family: 'OpenSans-Italic';
 	margin-bottom: 0;
+	text-transform: uppercase;
 }
 .servicios-accordion-hdr h4 span{
 	color:#fd6607;

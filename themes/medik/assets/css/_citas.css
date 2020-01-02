@@ -167,14 +167,18 @@
     margin-bottom: 10px;
 }
 #citas-main-contact-form .dft-page-contact-form-main select,
-#citas-main-contact-form .dft-page-contact-form-main input {
+#citas-main-contact-form .dft-page-contact-form-main input,
+.dft-page-contact-form-main input,
+.dft-page-contact-form-main select{
 	padding: 8px 10px;
 	margin-bottom: 18px;
 	font-size: 14px;
 	font-family: 'OpenSans-Regular';
 	height: 40px;
+	margin-bottom: 9px;
 }
-#citas-main-contact-form .dft-page-contact-form-main input[type="submit"]{
+#citas-main-contact-form .dft-page-contact-form-main input[type="submit"],
+.dft-page-contact-form-main .mwpforms-submit{
 	height: 45px;
 	border: none;
 	max-width: 192px;
@@ -183,8 +187,17 @@
 	font-family: 'OpenSans-Semibold';
 	margin-bottom: 0;
 }
-#citas-main-contact-form .note-text{
+#citas-main-contact-form .dft-page-contact-form-main input[type="submit"]:hover,
+.dft-page-contact-form-main .mwpforms-submit:hover{
+		background-color: #f16005;
+}
+#citas-main-contact-form .note-text,
+.pagesidebar-form .note-text{
 	text-align: center;
+	color: #fff;
+}
+.pagesidebar-form .note-text br{
+	display: none;
 }
 #citas-main-contact-form .ajax-loader{
 	position: absolute;
@@ -193,7 +206,8 @@
 	padding-top: 5px;
 	padding-bottom: 5px;
 }
-#citas-main-contact-form .dft-page-contact-form-main textarea {
+#citas-main-contact-form .dft-page-contact-form-main textarea,
+.dft-page-contact-form-main textarea {
 	min-height: 167px;
 	font-size: 14px;
 	font-family: 'OpenSans-Regular';
@@ -208,6 +222,19 @@
       font-family: 'OpenSans-Regular';
 }
 #citas-main-contact-form .dft-page-contact-form-main textarea:-moz-placeholder { /* Firefox 18- */
+      font-family: 'OpenSans-Regular';
+}
+
+.dft-page-contact-form-main textarea::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+      font-family: 'OpenSans-Regular';
+}
+.dft-page-contact-form-main textarea::-moz-placeholder { /* Firefox 19+ */
+      font-family: 'OpenSans-Regular';
+}
+.dft-page-contact-form-main textarea:-ms-input-placeholder { /* IE 10+ */
+      font-family: 'OpenSans-Regular';
+}
+.dft-page-contact-form-main textarea:-moz-placeholder { /* Firefox 18- */
       font-family: 'OpenSans-Regular';
 }
 
