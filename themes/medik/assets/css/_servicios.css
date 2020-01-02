@@ -1397,6 +1397,7 @@
 	}
 	.servicios-content-head h1 {
 	    font-size: 25px;
+	    text-align: center;
 	}
 	.servicios-dft-img{
 		display: none;
@@ -1468,9 +1469,18 @@
 	.noticias-slider-hdr br{
 	    display: none;
 	}
-
 	.blogGrdSlider-arrows{
 		display: block;
+	}
+	.servicios-content-head::after {
+	    width:55px;
+	    height: 19px;
+	    background-image: url(../images/noticiasSlider-hdr-inc.jpg);
+	    background-repeat: no-repeat;
+	    left: 50%;
+	    -ms-transform: translateX(-50%);
+	    -webkit-transform: translateX(-50%);
+	    transform: translateX(-50%)
 	}
 }
 
