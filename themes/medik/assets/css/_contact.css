@@ -41,7 +41,10 @@ contact-map-sec-wrp
 	padding-right: 55px;
 }
 .contact-info-dsc{
-	padding-bottom: 150px;
+	padding-bottom: 15px;
+}
+.contact-infodesc {
+    padding-bottom: 30px;
 }
 .contact-info-rgt-dsc h4,
 .contact-info-dsc h4{
@@ -51,6 +54,9 @@ contact-map-sec-wrp
 	font-family: 'OpenSans-Italic';
 	border-bottom: 1px solid #fd6607;
 	padding-bottom: 6px;
+}
+.sec-hdr-title.set-hdr-big-title span {
+    color: #fd6607;
 }
 .contact-info-rgt{
 	width: 37%;
@@ -112,7 +118,7 @@ contact-map-sec-wrp
     -webkit-transition: all 0.5s;
 }
 .location-dsc > a:hover:after{
-	right: 12px;
+	right: 10px;
 }
 .contact-rgt-tel{
 	padding-top: 30px;
@@ -135,13 +141,13 @@ contact-map-sec-wrp
 	background:url(../images/orange-tel-icon.png);
 	background-repeat: no-repeat;
 	background-size: 16px 16px;
-	background-position: left top 4px;
+	background-position: left top 3px;
 }
 .green-tel-icon{
 	background:url(../images/green-tel-icon.png);
 	background-repeat: no-repeat;
 	background-size: 16px 16px;
-	background-position: left top 4px;
+	background-position: left top 1px;
 }
 a.orange-tel-icon:hover{
 	color: #fd6607;
@@ -162,7 +168,7 @@ a.green-tel-icon:hover{
 	background:url(../images/contact-mail-icon.png);
 	background-repeat: no-repeat;
 	background-size: 16px 16px;
-	background-position: left top 4px;
+	background-position: left top 3px;
 }
 .contact-mail-icon-1{
 	background:url(../images/contact-mail-icon-1.png);
@@ -337,7 +343,11 @@ a.green-tel-icon:hover{
 	font-weight: 400 !important;
 	padding-top: 10px;
 }
-
+.contact-form span.wpcf7-not-valid-tip {
+    color: #f00;
+    font-size: 14px;
+    padding-top: 5px;
+}
 
 @media(max-width: 1199px){ 
 	.hide-md{
@@ -371,11 +381,9 @@ a.green-tel-icon:hover{
 	.contact-tel {
 	    text-align: center;
 	}
-	.contact-info-sec-wrp {
-	    padding-top: 0;
-	}
+
 	.contact-info-dsc {
-	    padding-bottom: 75px;
+	    padding-bottom: 20px;
 	}
 
 }
@@ -402,6 +410,7 @@ a.green-tel-icon:hover{
 		font-size: 17px;
 		line-height: 30px;
 		text-align: center;
+		margin-bottom: 3px;
 	}
 	.contact-info-sec-wrp {
 	    padding-top: 0;
@@ -455,6 +464,65 @@ a.green-tel-icon:hover{
 		display: inline-block;
 		vertical-align: baseline;
 	}
+	.servicios-siderbar-form-wrp .dft-page-contact-form-main input {
+	    width: 100%;
+	    padding: 14px 10px;
+	    font-size: 14px;
+	    height: 47px;
+	}
+	.servicios-siderbar-form-wrp .dft-page-contact-form-main select {
+	    height: 47px;
+	}
+	.servicios-siderbar-form-wrp .dft-page-contact-form-main textarea {
+	    min-height: 205px;
+	}
+	.servicios-siderbar-form-wrp .dft-page-contact-form-main textarea {
+	    min-height: 150px;
+	}
+	.mk-contact-form-des{
+		padding-top: 20px;
+	}
+	.mk-contact-form-des p{
+		margin-bottom: 0;
+	}
+	.contact-info-sec-wrp {
+	    padding-top: 0;
+	}
+	.contact-info-lft .servicios-siderbar-form-wrp .dft-page-contact-form-main input[type="submit"]{
+		border: none;
+		max-width: 237px;
+		height: 55px;
+		font-size: 25px;
+		font-family: 'OpenSans-Semibold';
+	}
+	.contact-info-lft .dft-page-contact-form-main p{
+		margin-bottom: 15px;
+	}
+	.dft-page-contact-form .ajax-loader{
+		position: absolute;
+		bottom: 0;
+	}
+	.dft-page-contact-form div.wpcf7-validation-errors, 
+	.dft-page-contact-form div.wpcf7-acceptance-missing{
+		color: #fff;
+	}
+	.dft-page-contact-form-main textarea, 
+	.dft-page-contact-form-main input,
+	.servicios-siderbar-form-wrp .dft-page-contact-form-main input,
+	.servicios-siderbar-form-wrp .dft-page-contact-form-main select,
+	.contact-info-lft .dft-page-contact-form-main textarea {
+	    font-size: 18px;
+	    font-family: 'OpenSans-Regular';
+	}
+	.contact-info-rgt-dsc h4{
+		font-size: 30px;
+	}
+	.contact-info-wrp  .dft-page-contact-form-hdr p{
+		font-size: 23px;
+	}
+	.contact-info-lft .dft-page-contact-form-hdr h4{
+		font-size: 27px;
+	}
 }
 
 
@@ -477,7 +545,40 @@ a.green-tel-icon:hover{
 		padding-right: 10px;
 		padding-left: 10px;
 	}
-
+	.contact-map-sec-wrp .section-hdr p{
+		line-height: 27px;
+	}
+	.dft-page-contact-form {
+	    padding: 40px 15px 10px;
+	}
+	.contact-info-lft .servicios-siderbar-form-wrp .dft-page-contact-form-main input[type="submit"] {
+	    border: none;
+	    max-width: 185px;
+	    height: 47px;
+	    font-size: 22px;
+	    padding-top: 10px;
+	}
+	.contact-info-lft .dft-page-contact-form-main p{
+		padding-left: 0;
+		padding-right: 0;
+	}
+	.location-dsc > a{
+		margin-left: 20px;
+	}
+	.dft-page-contact-form-main textarea, 
+	.dft-page-contact-form-main input,
+	.servicios-siderbar-form-wrp .dft-page-contact-form-main input,
+	.servicios-siderbar-form-wrp .dft-page-contact-form-main select,
+	.contact-info-lft .dft-page-contact-form-main textarea {
+	    font-size: 16px;
+	}
+	.contact-info-wrp  .dft-page-contact-form-hdr p{
+		font-size: 18px;
+	}
+	.contact-info-lft .dft-page-contact-form-hdr h4 {
+	    font-size: 19px;
+	    margin-bottom: 0;
+	}
 }
 
 

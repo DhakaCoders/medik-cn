@@ -1,53 +1,44 @@
 (function($) {
-
+var windowWidth = $(window).width();
 $('.navbar-toggle').on('click', function(){
 	$('#mobile-nav').slideToggle(300);
 });
 
-	
- 
+//matchHeight
+if($('.matchHeightCol').length){
+  $('.matchHeightCol').matchHeight();
+};
+
+if($('.blog-grd').length){
+    $('.blog-grd').matchHeight();
+}; 
+
+
+$('.toggle-btn').on('click', function(){
+  $(this).toggleClass('menu-expend');
+  $('.toggle-bar ul').slideToggle(500);
+});
+
+
+if($('.fancybox').length){
+$('.fancybox').fancybox({
+    openEffect  : 'none',
+    closeEffect : 'none'
+  });
+
+}
+
+
+
 /**
 Responsive on 767px
 */
-var windowWidth = $(window).width();
 
 if (windowWidth > 768) {
   if($('.matchHeightCol').length){
     $('.matchHeightCol').matchHeight();
   };
 }
-
-
-
-// if (windowWidth <= 767) {
-
-  $('.toggle-btn').on('click', function(){
-    $(this).toggleClass('menu-expend');
-    $('.toggle-bar ul').slideToggle(500);
-  });
-
-
-/**
-Responsive on 767px
-*/
-var windowWidth = $(window).width();
-/*if (windowWidth <= 991) {
-  $('header.header .opener-inner').on('click', function(){
-    $(this).toggleClass('menu-expend');
-    $('header.header nav.main-nav > ul').slideToggle(500);
-  });
-  $('.opener-inner').on('click', function(){
-    $(this).toggleClass('menu-expend');
-    $('nav.main-nav > ul').slideToggle(500);
-  });
-
-  $('nav.main-nav li.menu-item-has-children > a').on('click', function(e){
-    e.preventDefault();
-    $('.main-nav').toggleClass("color-changes-mobile");
-    $(this).toggleClass('menu-expend-sub');
-    $(this).parent().find('.sub-menu').slideToggle(500);
-  });
-}*/
 
 if (windowWidth <= 991) {
   $('.nav-opener').on('click', function(){
@@ -68,62 +59,16 @@ if (windowWidth <= 991) {
 }
 
 
-// }
 
+/*Sliders*/
 
-// http://codepen.io/norman_pixelkings/pen/NNbqgG
-// https://stackoverflow.com/questions/38686650/slick-slides-on-pagination-hover
-
-
-//$("[data-fancybox]").fancybox({});
-
-
-
-$(".fancybox").fancybox({
-    openEffect  : 'none',
-    closeEffect : 'none'
-  });
-
-
-//Shuffle filter
-
-if($('.tabs-dsc-innr').length){
-    
-
-var Shuffle = window.Shuffle;
-var element = document.querySelector('.tabs-dsc-innr ul');
-//var sizer = element.querySelector('.my-sizer-element');
-
-var shuffleInstance = new Shuffle(element, {
-  itemSelector: '.tabs-dsc-innr ul li',
-  //sizer: sizer 
-});
-
-$("#all").on("click", function(){
-   shuffleInstance.filter();
-});
-$("#cat-one").on("click", function(){
-   shuffleInstance.filter('blg-cat-1');
-});
-$("#cat-two").on("click", function(){
-   shuffleInstance.filter('blg-cat-2');
-});
-$("#cat-three").on("click", function(){
-   shuffleInstance.filter('blg-cat-3');
-});
-$("#cat-four").on("click", function(){
-   shuffleInstance.filter('blg-cat-4');
-});
-
-
-}
 
 if( $('.main-slider').length ){
     $('.main-slider').slick({
       pauseOnHover: false,
       autoplay: false,
       autoplaySpeed: 6000,
-      dots: false,
+      dots: true,
       infinite: false,
       arrows:true,
       speed: 1000,
@@ -254,7 +199,7 @@ if( $('#HmBrandLogoSlider').length ){
 
 if( $('.HmbtmGridSlider').length ){
     $('.HmbtmGridSlider').slick({
-      autoplay: true,
+      autoplay: false,
       autoplaySpeed: 6000,
       dots: true,
       infinite: true,
@@ -297,69 +242,7 @@ if( $('.HmbtmGridSlider').length ){
 
 
 
-
-/**
-Slick slider
-*/
-
-if( $('.responsive-slider').length ){
-    $('.responsive-slider').slick({      
-      dots: true,
-      infinite: false,
-      speed: 300,
-      slidesToShow: 1,
-      slidesToScroll: 1,
-      dots: true,
-      responsive: [
-        {
-          breakpoint: 1024,
-          settings: {
-            slidesToShow: 3,
-            slidesToScroll: 3,
-            infinite: true,
-            dots: true
-          }
-        },
-        {
-          breakpoint: 600,
-          settings: {
-            slidesToShow: 2,
-            slidesToScroll: 2
-          }
-        },
-        {
-          breakpoint: 480,
-          settings: {
-            slidesToShow: 1,
-            slidesToScroll: 1
-          }
-        }
-        // You can unslick at a given breakpoint now by adding:
-        // settings: "unslick"
-        // instead of a settings object
-      ]
-    });
-}
-
-
-
-
-
-
-/*
-  Proshanto
-*/
-
-/*
------------------------
-Start Contact Google Map ->> 
------------------------
-
-
 /*Google map */
-
-
-
 if( $('#ftr-map').length ){
     var latitude = $('#ftr-map').data('lat');
     var longitude = $('#ftr-map').data('long');
@@ -448,16 +331,12 @@ if( $('#ftr-map').length ){
     google.maps.event.addDomListener(window, 'load', initialize);
 }
 
-/*
------------------------
-Start Contact Google Map ->> 
------------------------
-*/
 if( $('#contactMap').length ){
-    var latitude = $('#contactMap').data('lat');
-    var longitude = $('#contactMap').data('long');
+var latitude = $('#contactMap').data('latitude');
+var longitude = $('#contactMap').data('longitude');
+console.log(latitude);
 
-    var myCenter= new google.maps.LatLng(latitude,  longitude);
+ var myCenter= new google.maps.LatLng(latitude,  longitude);
     var iconBase = 'https://maps.google.com/mapfiles/kml/shapes/';
     function initialize(){
         var mapProp = {
@@ -539,6 +418,7 @@ if( $('#contactMap').length ){
     }
 
     google.maps.event.addDomListener(window, 'load', initialize);
+
 }
 
 
@@ -722,12 +602,6 @@ if ($('.servicios-siderbar-accordion').length){
   });
 }
 
-//matchHeight
-if($('.blog-grd').length){
-    $('.blog-grd').matchHeight();
-};
-
-
 
 //xs footer menu
 $('.menu-item-has-children > a').on('click', function(e){
@@ -738,50 +612,159 @@ $('.menu-item-has-children > a').on('click', function(e){
 
 
 
-//filter-btn
-$('.blog-filter-btn button').click(function(){
-    $('.blog-filter-btn button').removeClass("active");
-    $(this).addClass("active");
-});
-
-
 //Shuffle filter
 
-// if($('.blog-grd-wrp').length){
-    
+if($('.promo-tabs-wrp').length){
+    var Shuffle = window.Shuffle;
 
+    class Demo {
+      constructor(element) {
+        this.element = element;
+        this.shuffle = new Shuffle(element, {
+          itemSelector: '.filter-item'
+        });
 
+        // Log events.
+        this.addShuffleEventListeners();
+        this._activeFilters = [];
+        this.addFilterButtons();
+      }
 
-// }
+      /**
+       * Shuffle uses the CustomEvent constructor to dispatch events. You can listen
+       * for them like you normally would (with jQuery for example).
+       */
+      addShuffleEventListeners() {
+        this.shuffle.on(Shuffle.EventType.LAYOUT, (data) => {
+          console.log('layout. data:', data);
+        });
+        this.shuffle.on(Shuffle.EventType.REMOVED, (data) => {
+          console.log('removed. data:', data);
+        });
+      }
+
+      addFilterButtons() {
+        const options = document.querySelector('.filter-options1');
+        if (!options) {
+          return;
+        }
+        
+        const filterButtons = Array.from(options.children);
+        const onClick = this._handleFilterClick.bind(this);
+        filterButtons.forEach((button) => {
+          button.addEventListener('click', onClick, false);
+        });
+      }
+
+      _handleFilterClick(evt) {
+        const btn = evt.currentTarget;
+        const isActive = btn.classList.contains('active');
+        const btnGroup = btn.getAttribute('data-group');
+        
+        this._removeActiveClassFromChildren(btn.parentNode);
+        
+        let filterGroup;
+        if (isActive) {
+          btn.classList.remove('active');
+          filterGroup = Shuffle.ALL_ITEMS;
+        } else {
+          btn.classList.add('active');
+          filterGroup = btnGroup;
+        }
+        
+        this.shuffle.filter(filterGroup);
+      }
+
+      _removeActiveClassFromChildren(parent) {
+        const { children } = parent;
+        for (let i = children.length - 1; i >= 0; i--) {
+          children[i].classList.remove('active');
+        }
+      }
+
+    }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    window.demo = new Demo(document.getElementById('grid1'));
+  });
+}
+
 
 
 var windowWidth = $(window).width();
 
 if (windowWidth >= 768) {
-  if($('.blog-grd-wrp').length){
+  if($('.blog-main-sec-wrp').length){
     var Shuffle = window.Shuffle;
-    var element = document.querySelector('.blog-grd-wrp ul');
-    //var sizer = element.querySelector('.my-sizer-element');
 
-    var shuffleInstance = new Shuffle(element, {
-      itemSelector: '.blog-item',
-      //sizer: sizer 
-    });
+    class Demo {
+      constructor(element) {
+        this.element = element;
+        this.shuffle = new Shuffle(element, {
+          itemSelector: '.blog-item'
+        });
 
-    $("#all").on("click", function(){
-       shuffleInstance.filter();
-    });
-    $("#cat-one").on("click", function(){
-       shuffleInstance.filter('blg-cat-1');
-    });
-    $("#cat-two").on("click", function(){
-       shuffleInstance.filter('blg-cat-2');
-    });
-    $("#cat-three").on("click", function(){
-       shuffleInstance.filter('blg-cat-3');
-    });
-    $("#cat-four").on("click", function(){
-       shuffleInstance.filter('blg-cat-4');
+        // Log events.
+        this.addShuffleEventListeners();
+        this._activeFilters = [];
+        this.addFilterButtons();
+      }
+
+      /**
+       * Shuffle uses the CustomEvent constructor to dispatch events. You can listen
+       * for them like you normally would (with jQuery for example).
+       */
+      addShuffleEventListeners() {
+        this.shuffle.on(Shuffle.EventType.LAYOUT, (data) => {
+          console.log('layout. data:', data);
+        });
+        this.shuffle.on(Shuffle.EventType.REMOVED, (data) => {
+          console.log('removed. data:', data);
+        });
+      }
+
+      addFilterButtons() {
+        const options = document.querySelector('.filter-options2');
+        if (!options) {
+          return;
+        }
+        
+        const filterButtons = Array.from(options.children);
+        const onClick = this._handleFilterClick.bind(this);
+        filterButtons.forEach((button) => {
+          button.addEventListener('click', onClick, false);
+        });
+      }
+
+      _handleFilterClick(evt) {
+        const btn = evt.currentTarget;
+        const isActive = btn.classList.contains('active');
+        const btnGroup = btn.getAttribute('data-group');
+        
+        this._removeActiveClassFromChildren(btn.parentNode);
+        
+        let filterGroup;
+        if (isActive) {
+          btn.classList.remove('active');
+          filterGroup = Shuffle.ALL_ITEMS;
+        } else {
+          btn.classList.add('active');
+          filterGroup = btnGroup;
+        }
+        
+        this.shuffle.filter(filterGroup);
+      }
+
+      _removeActiveClassFromChildren(parent) {
+        const { children } = parent;
+        for (let i = children.length - 1; i >= 0; i--) {
+          children[i].classList.remove('active');
+        }
+      }
+
+    }
+    document.addEventListener('DOMContentLoaded', () => {
+      window.demo = new Demo(document.getElementById('grid'));
     });
   }
 } else{
@@ -828,12 +811,3 @@ if (windowWidth >= 768) {
   new WOW().init();
 
 })(jQuery);
-
-
-
-
-
-
-
-
-

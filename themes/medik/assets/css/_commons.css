@@ -100,7 +100,9 @@ Containers
 .container-md{}
 
 .container-sm{}
-
+.footer-wrap .container-2{
+	max-width: 1300px;
+}
 
 .ulc{
 	margin: 0;

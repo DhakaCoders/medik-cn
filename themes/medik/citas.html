@@ -26,7 +26,7 @@
 </head>
 
 <body>
-<header class="header">
+<header class="header hm-header">
   <div class="container">
       <div class="row">
         <div class="col-sm-12">
@@ -55,15 +55,7 @@
                   </div> 
                 </div>
               </div> 
-              <nav class="main-nav">
-                <div class="nav-opener hide-md">
-                  <div class="opener-inner">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                  </div>
-                </div>
+              <nav class="main-nav hide-sm">
                 <ul class="clearfix">
                   <li class="current-menu-item"><a href="#">inicio</a></li>
                   <li class="menu-item-has-children">
@@ -117,9 +109,11 @@
                     <a href="#">Calle Sófocles 115 Planta Alta<br>Polanco 11560 Ciudad de México, CDMX</a>
                   </li>
                   <li>
-                    <strong>Teléfonos:</strong><br/>
-                    <a class="tel" href="#">(55) 5233-6007 - (55) 5233-2312</a><br/>
-                    <a class="tel" href="#">(55) 5557-5972 - (55) 55775981</a>
+                    <div class="tel-wrapper">
+                      <strong>Teléfonos:</strong><br/>
+                      <a class="tel" href="#">(55) 5233-6007</a> - <a class="tel" href="#">(55) 5233-2312</a><br/>
+                      <a class="tel" href="#">(55) 5557-5972</a> - <a class="tel" href="#">(55) 55775981</a>
+                    </div>
                   </li>
                   <li>
                     <span>Las citas son de Lunes a Viernes de <br/> 9:30a.m. - 7p.m.<br/>Sábados de 9.00a.m. a 1p.m.</span> 
@@ -188,7 +182,7 @@
     <div class="row">
       <div class="col-sm-12">
         <div class="section-hdr">
-          <h2 class="sec-hdr-title set-hdr-big-title">Servicios <span style="color: #fd6607;">medik Rama</span>
+          <h2 class="sec-hdr-title set-hdr-big-title">Servicios <span>medik Rama</span>
           </h2>
           <div class="sec-hdr-title-divider">
             <span><img src="assets/images/hn-title-icon.png"></span>
@@ -255,7 +249,7 @@
 </section>
 
 
-<section class="servicios-partner-slider-sec" id="citas-partner-slider-sec">
+<section class="servicios-partner-slider-sec hide-xs" id="citas-partner-slider-sec">
   <div class="container">
     <div class="row">
       <div class="col-sm-12">
@@ -335,7 +329,7 @@
                       <span>Oct 18</span>                        
                       <div class="sqew"></div>
                     </div>
-                    <p>¿Qué hacer ante un <br> posible infarto o <br> ataque al corazón?</p>
+                    <h6><a href="#">¿Qué hacer ante un <br> posible infarto o <br> ataque al corazón?</a></h6>
                     <a href="#">Leer Artículo</a>
                   </div>
                 </div>
@@ -351,7 +345,7 @@
                       <span>Ago 28</span>                        
                       <div class="sqew"></div>
                     </div>
-                    <p>¿Cómo se trata la <br> diabetes?</p>
+                    <h6><a href="#">¿Cómo se trata la <br> diabetes?</a></h6>
                     <a href="#">Leer Artículo</a>
                   </div>
                 </div>
@@ -367,7 +361,7 @@
                       <span>Ago 17</span>                        
                       <div class="sqew"></div>
                     </div>
-                    <p>Cuándo se hace un <br> cateterismo cardíaco</p>
+                    <h6><a href="#">Cuándo se hace un <br> cateterismo cardíaco</a></h6>
                     <a href="#">Leer Artículo</a>
                   </div>
                 </div>
@@ -383,7 +377,7 @@
                       <span>Oct 18</span>                        
                       <div class="sqew"></div>
                     </div>
-                    <p>Marcapasos: ¿qué son? <br> ¿Cómo se implanta?</p>
+                    <h6><a href="#">Marcapasos: ¿qué son? <br> ¿Cómo se implanta?</a></h6>
                     <a href="#">Leer Artículo</a>
                   </div>
                 </div>
@@ -399,7 +393,7 @@
                       <span>Oct 18</span>                        
                       <div class="sqew"></div>
                     </div>
-                    <p>Marcapasos: ¿qué son? <br> ¿Cómo se implanta?</p>
+                    <h6><a href="#">Marcapasos: ¿qué son? <br> ¿Cómo se implanta?</a></h6>
                     <a href="#">Leer Artículo</a>
                   </div>
                 </div>
@@ -412,6 +406,31 @@
   </div>    
 </section>
 
+
+<section class="CitasSiderbarProSliderCtlr show-xs">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="siderbarProSlider-wrp">
+          <div class="siderbarProSlider">
+            <div class="siderbarProSlider-item">
+              <img src="assets/images/siderbarProSlider-bg.jpg" alt="" />
+              <a href="" class="overlay-link"></a>
+            </div>
+            <div class="siderbarProSlider-item">
+              <img src="assets/images/siderbarProSlider-bg.jpg" alt="" />
+              <a href="" class="overlay-link"></a>                  
+            </div>
+            <div class="siderbarProSlider-item">
+              <img src="assets/images/siderbarProSlider-bg.jpg" alt="" />
+              <a href="" class="overlay-link"></a>                 
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 <footer class="footer-wrap">
   <div class="ftr-main text-center" style="background:url(assets/images/ftr-bg.jpg);">
@@ -520,6 +539,42 @@
     <span>Derechos reservados © 2019 MedikRama | Aviso de privacidad</span>
   </div>
 </footer>
+<div class="show-sm">
+  <div class="xs-popup-menu">
+    <div class="xs-menu-close-btn-controller">
+       <span><img src="assets/images/close-icon.png"></span>
+    </div>
+    <nav class="xs-main-nav">
+      <ul class="clearfix">
+        <li class="current-menu-item"><a href="#">inicio</a></li>
+        <li class="menu-item-has-children">
+          <a href="#">servicios</a>
+          <ul class="sub-menu">
+            <li><a href="#">Sub Menu</a></li>
+            <li><a href="#">Sub Menu</a></li>
+            <li><a href="#">Sub Menu</a></li>
+            <li><a href="#">Sub Menu</a></li>
+            <li><a href="#">Sub Menu</a></li>
+            <li><a href="#">Sub Menu</a></li>
+            <li><a href="#">Sub Menu</a></li>
+          </ul>
+        </li>
+        <li><a href="#">citas</a></li>
+        <li><a href="#">promociones </a></li>
+        <li><a href="#">blog</a></li>
+        <li><a href="#">contacto</a></li>                            
+      </ul>
+    </nav>
+  </div>
+</div>
+<div class="nav-opener show-sm">
+  <div class="opener-inner">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
 
 
 
