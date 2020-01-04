@@ -1538,6 +1538,130 @@ hm-btm-grid-sec-wrp
 	border-bottom: 2px solid #0e857b;
 }
 
+
+/*forms css*/
+
+.cf7mls_progress_bar{
+	padding: 0;
+	max-width: 330px;
+	height: 30px;
+	width: 100%;
+	margin: 0 auto;
+	text-align: center;
+	position: relative;
+}
+.cf7mls_progress_bar:after{
+	content: "";
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 50%;
+	transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	-webkit-transform: translateY(-50%);
+	height: 1px;
+	background: #eef1f7;
+	z-index: 1;
+}
+.cf7mls_progress_bar li{
+	width: 30px!important;
+	height: 30px!important;
+	border-radius: 100% 100%;
+	background: #eef1f7;
+	float: none;
+	display: inline-block;
+	vertical-align: baseline;
+	position: relative;
+	z-index: 2;
+	font-weight: normal;
+	font-family: "OpenSans-Bold";
+	font-size: 15px;
+	line-height: 16px;
+	padding-top: 7px!important;
+	color: #c7cad1;
+	position: absolute;
+	top: 0;
+}
+.cf7mls_progress_bar li:nth-child(1){
+	left: 0;
+}
+.cf7mls_progress_bar li:nth-child(2){
+	left: 100px;
+}
+.cf7mls_progress_bar li:nth-child(3){
+	left: 200px;
+}
+.cf7mls_progress_bar li:nth-child(4){
+	right: 0;
+}
+.cf7mls_progress_bar li:before,
+.cf7mls_progress_bar li:after{
+	content: none;
+}
+.cf7mls_progress_bar li.active.current{
+	background: #0e857b;
+	color: #fff;
+}
+.fieldset-cf7mls-wrapper{
+	padding-left: 5px;
+	padding-right: 5px;
+}
+.wpcf7cf_step_inner{
+	padding-top: 35px;
+}
+/*.wpcf7cf_step_inner h3{
+	padding-left: 0;
+	padding-right: 0;
+}*/
+
+.cf7mls_next.action-button,
+.cf7mls_back.action-button{
+	width: 243px;
+	height: 52px;
+	display: inline-block;
+	vertical-align: baseline;
+	color: #fff;
+	font-size: 21px;
+	line-height: 22px;
+	padding: 14px 0 18px;
+	font-weight: normal;
+	font-family: 'OpenSans-Italic';
+	text-transform: uppercase;
+	margin-left: 0;
+	margin-right: 0;
+	position: relative;
+}
+.cf7mls_next.action-button{
+	background: url(../images/sign-up-btn-bg.png);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	padding-left: 30px;
+	text-align: left;
+}
+.cf7mls_back.action-button{
+	background: url(../images/sign-up-btn-bg-prv-bg.png);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	margin-right: 9px;
+}
+
+.cf7mls_next.action-button:after{
+	content: ""!important;
+	position: absolute;
+	right: 10px;
+	top: 50%;
+	transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	-webkit-transform: translateY(-50%);
+	background: url(../images/wpcf7cf_next_arrow.png);
+	width: 17px!important;
+	height: 16px!important;
+	background-size: 100% auto;
+	background-repeat: no-repeat;
+	opacity: 1;
+}
+
+
 @media(max-width: 1399px){
 	.hm-service-slider{
 		padding-left: 50px;
