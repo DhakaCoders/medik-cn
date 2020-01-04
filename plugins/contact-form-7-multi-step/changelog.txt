@@ -1,0 +1,103 @@
+06/27/2019: (version 2.3)
+- Fixed: Error message for checkboxes
+- Fixed: Checkboxes with use_label_element
+
+05/28/2019: (version 2.2)
+- Added: Turn on/off for animation effect
+
+04/26/2019: (version 2.1)
+- Added: Name for checkbox field (-cbmls) (e.g: checkbox-123-cbmls)
+- Fixed: Njt Answer for default option of radio button
+
+05/11/2018: (version 2.0.1)
+- Added: Add class "current" into present steps
+- Improved: CSS style
+- Fixed: Some bugs
+
+02/11/2018: (version 2.0)
+- Added: Scroll to top of form when pressed "Next", "Back"
+- Improved: CSS style
+- Fixed: Red border of required fields missing
+- Fixed: Some bugs
+
+06/06/2018: (version 1.9.9.6)
+- Improved: CSS style
+- Fixed: Some bugs
+
+02/21/2018: (version 1.9.9.5)
+- Added: WordPress Hooks
+
+06/25/2017: (version 1.9.9.4)
+- Fixed: Compatible with contact form 7 4.8
+
+04/20/2017: (version 1.9.9.3)
+- Added: Display what user said in form
+
+03/03/2017: (version 1.9.9.2)
+- Added: Preview Button
+
+03/03/2017: (version 1.9.9.1)
+- Removed more deprecated functions
+
+02/13/2017: (version 1.9.9)
+- Change last button's background color, text color in admin panel
+- Removed WPCF7_Shortcode
+- Fixed small bugs
+
+02/13/2017: (version 1.9.8)
+- Change last button's title in admin panel
+
+01/02/2017: (version 1.9.7)
+- Remove wpcf7_add_shortcode
+
+25/01/2017: (version 1.9.6)
+- Added some js functions, save user’s information every step (work with “Contact Form 7 Database“)
+
+20/09/2016: (version 1.9.5)
+- Fixed: Fix js bug with some hosts.
+
+20/09/2016: (version 1.9.4)
+- Added some hooks for developers, fix changing button's background color.
+
+14/09/2016: (version 1.9.3)
+- Fixed: Fix bug with multi forms
+
+06/08/2016: (version 1.9.2)
+- Fixed: Fix small bug
+
+16/07/2016: (version 1.9.1)
+- Fixed: Conflict with Visual Composer
+
+07/04/2016: (version 1.9)
+- Added: Press Enter to submit
+
+06/04/2016: (version 1.8)
+- Added: Color picker for button
+- Fixed: work good with response tag
+
+01/04/2016: (version 1.7)
+- Added: Loading animation
+- Fixed: Auto p
+- Fixed: Validation with select
+- Fixed: Acceptance tags
+
+28/03/2016: (version 1.6)
+- Fixed: Validation
+
+24/03/2016: (version 1.5)
+- Added: POT file for translate
+
+24/03/2016: (version 1.4)
+- Added: Language translate
+
+23/03/2016: (version 1.3)
+- Fixed: CSS
+
+23/03/2016: (version 1.2)
+- Fixed: Translate default text in CF7 Message tab
+
+21/03/2016: (version 1.1)
+- Fixed: JS conflict
+
+07/03/2016: (version 1.0)
+- Version 1.0 Initial Release
