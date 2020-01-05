@@ -11,7 +11,7 @@ if($banner):
     <span class="leftArrow"><i class="fa fa-angle-left"></i></span>
     <span class="rightArrow"><i class="fa fa-angle-right"></i></span>
   </div>
-  <div class="main-slider">
+  <div class="main-slider clearfix">
     <?php foreach($slides as $slide): 
       $slideposter = '';
       $mslideposter = '';
@@ -115,61 +115,62 @@ if($service):
   </div>
 </section>
 <?php endif; ?>
-<div class="vt-home-form-slider">
-<div class="vt-home-form-slide">
-  <section class="hm-campaign-grid-sec-wrp vt-form-1-sec-wrap matchHeightCol" style="background: url(<?php echo THEME_URI; ?>/assets/images/hm-campaign-grid-sec-bg.jpg);">
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-12">
-          <div class="hm-campaign-grid-wrp clearfix">
-            <div class="hm-campaign-grid-lft-con hide-sm">
-              <div class="hm-campaign-grid-lft-img">
-                <img src="<?php echo THEME_URI; ?>/assets/images/hm-campaign-grid-lft-img.png">
-              </div>
-            </div>
-            <div class="hm-campaign-grid-rgt-con">
-              <div class="hm-campaign-grid-rgt-wrp clearfix">
-                <div class="hm-campaign-tp-head clearfix">
-                  <span><img src="<?php echo THEME_URI; ?>/assets/images/hm-campaign-tp-icon.png"></span>
-                  <h3>COTIZA TU Próxima <span>CAMPAÑA DE VACUNACIÓN</span></h3>
+
+<div class="vt-home-form-slider clearfix">
+  <div class="vt-home-form-slide">
+    <section class="hm-campaign-grid-sec-wrp vt-form-1-sec-wrap matchHeightCol" style="background: url(<?php echo THEME_URI; ?>/assets/images/hm-campaign-grid-sec-bg.jpg);">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="hm-campaign-grid-wrp clearfix">
+              <div class="hm-campaign-grid-lft-con hide-md">
+                <div class="hm-campaign-grid-lft-img">
+                  <img src="<?php echo THEME_URI; ?>/assets/images/hm-campaign-grid-lft-img.png">
                 </div>
-                <div class="wpcf7cf_multistep">
-                <?php echo do_shortcode('[contact-form-7 id="141" title="Home Multi Step Form 1"]'); ?>
+              </div>
+              <div class="hm-campaign-grid-rgt-con">
+                <div class="hm-campaign-grid-rgt-wrp clearfix">
+                  <div class="hm-campaign-tp-head clearfix">
+                    <span><img src="<?php echo THEME_URI; ?>/assets/images/hm-campaign-tp-icon.png"></span>
+                    <h3>COTIZA TU Próxima <span>CAMPAÑA DE VACUNACIÓN</span></h3>
+                  </div>
+                  <div class="wpcf7cf_multistep">
+                  <?php echo do_shortcode('[contact-form-7 id="141" title="Home Multi Step Form 1"]'); ?>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
-</div>
+    </section>
+  </div>
 
-<div class="vt-home-form-slide">
-  <section class="vt-form-2-sec-wrap matchHeightCol" style="background: url(<?php echo THEME_URI; ?>/assets/images/hm-campaign-grid-sec-bg.jpg);">
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-12">
-          <div class="vt-form-2-sec-des-ctlr" style="background: url(<?php echo THEME_URI; ?>/assets/images/vt-form-2-sec-des-ctlr-bg.jpg);">
-            <span class="home-form-2-center-icon"><img src="<?php echo THEME_URI; ?>/assets/images/home-form-2-center-icon.png"></span>
-            <div class="vt-form-2-sec-hdr">
-              <h3>COTIZA TU Próximo <span>exámenen médico</span></h3>
-            </div>
-
-            <div class="wpcf7cf_multistep">
-              <div class="wpcf7cf_steps clearfix">
-                <?php echo do_shortcode('[contact-form-7 id="365" title="Home Multi Step Form 2"]'); ?>
-
+  <div class="vt-home-form-slide">
+    <section class="vt-form-2-sec-wrap matchHeightCol" style="background: url(<?php echo THEME_URI; ?>/assets/images/hm-campaign-grid-sec-bg.jpg);">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="vt-form-2-sec-des-ctlr" style="background: url(<?php echo THEME_URI; ?>/assets/images/vt-form-2-sec-des-ctlr-bg.jpg);">
+              <span class="home-form-2-center-icon"><img src="<?php echo THEME_URI; ?>/assets/images/home-form-2-center-icon.png"></span>
+              <div class="vt-form-2-sec-hdr">
+                <h3>COTIZA TU Próximo <span>exámenen médico</span></h3>
               </div>
-            </div>
+
+              <div class="wpcf7cf_multistep">
+                <div class="wpcf7cf_steps clearfix">
+                  <?php echo do_shortcode('[contact-form-7 id="365" title="Home Multi Step Form 2"]'); ?>
+
+                </div>
+              </div>
 
 
+          </div>
         </div>
       </div>
-    </div>
-    </div>
-  </section>  
-</div>
+      </div>
+    </section>  
+  </div>
 
 </div>
 <?php 

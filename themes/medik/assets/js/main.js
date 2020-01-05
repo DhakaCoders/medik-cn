@@ -813,15 +813,30 @@ cf7mls_back
 wpcf7-submit
 
 -*/
-
+if( $('.vt-home-form-slider').length ){
+    $('.vt-home-form-slider').slick({
+      dots: true,
+      autoplay: false,
+      autoplaySpeed: 4000,
+      infinite: true,
+      speed: 1000,
+      arrows:false,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      adaptiveHeight: true
+    });
+}
 
 
 $('fieldset').each( function(){
    $(this).find('.cform-btns').append($(this).find('.cf7mls_back'));
   $(this).find('.cform-btns').append($(this).find('.cf7mls_next'));
   $(this).find('.cform-btns').append($(this).find('.wpcf7-submit'));
-});
+  //$(this).find('.cform-submmit-btn').prepend($(this).find('.wpcf7-submit'));
 
+/*  $(this).find('.wpcf7-form-control.wpcf7-submit').before('<div class="">');
+  $(this).find('.wpcf7-form-control.wpcf7-submit').after('</div>');*/
+});
 
 
 })(jQuery);
