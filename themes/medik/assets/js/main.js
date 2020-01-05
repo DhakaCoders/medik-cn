@@ -813,6 +813,10 @@ cf7mls_back
 wpcf7-submit
 
 -*/
+
+$('.vt-home-form-slider').on('init', function(event, slick){
+
+});
 if( $('.vt-home-form-slider').length ){
     $('.vt-home-form-slider').slick({
       dots: true,
@@ -823,11 +827,14 @@ if( $('.vt-home-form-slider').length ){
       arrows:false,
       slidesToShow: 1,
       slidesToScroll: 1,
-      adaptiveHeight: true
+      fade: true
+      //adaptiveHeight: true
     });
 }
 
+$('.vt-home-form-slider').on('load', function(event, slick){
 
+});
 
 
 $('fieldset').each( function(){
@@ -841,23 +848,41 @@ $('fieldset').each( function(){
 });
 
 document.addEventListener( 'wpcf7submit', function( event ) {
-  $(window).trigger('resize');
-  window.dispatchEvent(new Event('resize'));
-  $('.vt-home-form-slider').slick('refresh');
-  
+
+
+
+
+
+
+  //$(window).trigger('resize');
+  //window.dispatchEvent(new Event('resize'));
+  //$('.vt-home-form-slider').slick('refresh');
+  //$("#content").load($(this).attr('href'));
+    //$('.vt-home-form-slider').slick('setPosition');
+
+  //window.scrollBy(0, 300);
+  //var text = $('.hm-campaign-grid-rgt-wrp').height();
+
   //$('.vt-home-form-slider').slick('resize');
   //$('.vt-home-form-slider')[0].slick.animateHeight();
   //$('.vt-home-form-slider').slick('setOption', null, null, true);
 }, false );
 
 document.addEventListener( 'wpcf7invalid', function( event ) {
-  $(window).trigger('resize');
-  window.dispatchEvent(new Event('resize'));
-  $('.vt-home-form-slider').slick('refresh');
+  //$(window).trigger('resize');
+  //window.dispatchEvent(new Event('resize'));
+  //$('.vt-home-form-slider').slick('refresh');
+    //$('.vt-home-form-slider').slick('setPosition');
+
+  //window.scrollBy(0, 300);
+
+  //$(".hm-campaign-grid-rgt-wrp")
   //$('.vt-home-form-slider')[0].slick('refresh');
   //$('.vt-home-form-slider').slick('resize');
   //$('.vt-home-form-slider')[0].slick.animateHeight();
   //$('.vt-home-form-slider').slick('setOption', null, null, true);
 }, false );
+
+
 
 })(jQuery);

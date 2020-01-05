@@ -249,7 +249,7 @@
         if (_.options.slidesToShow === 1 && _.options.adaptiveHeight === true && _.options.vertical === false) {
             var targetHeight = _.$slides.eq(_.currentSlide).outerHeight(true);
             _.$list.animate({
-                height: targetHeight
+                minHeight: targetHeight
             }, _.options.speed);
         }
     };
