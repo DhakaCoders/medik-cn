@@ -806,8 +806,22 @@ if (windowWidth >= 768) {
 }
             
 
+/*--
+Form buttons wrap
+cf7mls_next
+cf7mls_back
+wpcf7-submit
+
+-*/
 
 
-  new WOW().init();
+
+$('fieldset').each( function(){
+   $(this).find('.cform-btns').append($(this).find('.cf7mls_back'));
+  $(this).find('.cform-btns').append($(this).find('.cf7mls_next'));
+  $(this).find('.cform-btns').append($(this).find('.wpcf7-submit'));
+});
+
+
 
 })(jQuery);
