@@ -466,7 +466,7 @@ hm-service-sec-wrp
 	font-family: 'OpenSans-Italic';
 	text-transform: uppercase;
 	position: absolute;
-	right: -100px;
+	right: 0;
 	bottom: 11px;
 	padding-right: 27px;
 	opacity: 0;
