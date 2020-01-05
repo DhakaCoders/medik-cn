@@ -320,8 +320,9 @@ a.green-tel-icon:hover{
     transition: all 0.5s;
     position: relative;
     float: right;
-    border-radius: 50px;
+    border-radius: 50px!important;
     font-family: 'OpenSans-Semibold';
+    padding: 0!important;
 }
 .contact-form .wpforms-submit-container .wpforms-submit:hover{
 	background-color: #c75208 !important;
