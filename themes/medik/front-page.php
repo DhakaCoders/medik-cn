@@ -118,7 +118,7 @@ if($service):
 
 <div class="vt-home-form-slider clearfix">
   <div class="vt-home-form-slide">
-    <section class="hm-campaign-grid-sec-wrp vt-form-1-sec-wrap matchHeightCol" style="background: url(<?php echo THEME_URI; ?>/assets/images/hm-campaign-grid-sec-bg.jpg);">
+    <section class="hm-campaign-grid-sec-wrp vt-form-1-sec-wrap" style="background: url(<?php echo THEME_URI; ?>/assets/images/hm-campaign-grid-sec-bg.jpg);">
       <div class="container">
         <div class="row">
           <div class="col-sm-12">
@@ -147,7 +147,7 @@ if($service):
   </div>
 
   <div class="vt-home-form-slide">
-    <section class="vt-form-2-sec-wrap matchHeightCol" style="background: url(<?php echo THEME_URI; ?>/assets/images/hm-campaign-grid-sec-bg.jpg);">
+    <section class="vt-form-2-sec-wrap" style="background: url(<?php echo THEME_URI; ?>/assets/images/hm-campaign-grid-sec-bg.jpg);">
       <div class="container">
         <div class="row">
           <div class="col-sm-12">

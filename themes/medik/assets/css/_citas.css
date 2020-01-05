@@ -184,8 +184,10 @@
 	max-width: 192px;
 	width: 100%;
 	font-size: 20px;
-	font-family: 'OpenSans-Semibold';
+	font-family: 'OpenSans-Semibold'!important;
+	font-style: normal!important;
 	margin-bottom: 0;
+	border-radius: 30px!important;
 }
 #citas-main-contact-form .dft-page-contact-form-main input[type="submit"]:hover,
 .dft-page-contact-form-main .mwpforms-submit:hover{
