@@ -1804,9 +1804,22 @@ hm-btm-grid-sec-wrp
 .hm-btm-grid-orange .hm-btm-grid-dsc-btn{
 	border-bottom: 2px solid #0e857b;
 }
-
-
-
+.vt-home-form-slider .fieldset-cf7mls-wrapper .fieldset-cf7mls{
+	display: none;
+}
+.vt-home-form-slider .fieldset-cf7mls-wrapper .fieldset-cf7mls:first-child,
+.vt-home-form-slider.slick-initialized .fieldset-cf7mls-wrapper .fieldset-cf7mls{
+	display: block;
+}
+.slick-slide .vt-home-form-slide{
+	height: 0;
+	overflow: hidden;
+	transition: height 0.5s;
+}
+.slick-slide.slick-active .vt-home-form-slide{
+	height: auto;
+	overflow: initial;	
+}
 
 @media(max-width: 1399px){
 	.hm-service-slider{
