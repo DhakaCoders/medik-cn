@@ -303,6 +303,9 @@
 	border-radius: 0 35px 35px 0; 
 	border-left: 3px solid #0e857b;
 }
+.servicios-siderbar-accordion-title:hover span{
+	color: #fd6708;
+}
 .servicios-siderbar-accordion-con.active .servicios-siderbar-accordion-title{
 	background: #fd6607;
 }

@@ -399,21 +399,21 @@ hm-service-sec-wrp
 	z-index: 1;
 }
 .hm-service-slide-item-dsc span:last-of-type{
-	/*display: none;*/
 	opacity: 0;
 }
 .hm-service-slide-item-dsc:hover span:last-of-type{
-	/*display: block;*/
 	opacity: 1;
 }
 .hm-service-slide-item-dsc:hover span:first-of-type{
-	/*display: none;*/
 	opacity: 0;
 }
 .hm-service-slide-item-dsc span{
 	display: inline-block;
 	vertical-align: baseline;
 	padding-bottom: 15px;
+		transition: all 0.5s;
+	-ms-transition: all 0.5s;
+	-webkit-transition: all 0.5s;
 }
 .hm-service-slide-item-dsc h4 {
     margin: 0;
@@ -1060,6 +1060,12 @@ hm-campaign-grid-sec-wrp
 	font-size: 16px;
 	line-height: 18px;
 }
+.singup-form-field input[type="number"]:focus,
+.singup-form-field input[type="text"]:focus,
+.singup-form-field input[type="email"]:focus,
+.singup-form-field input[type="tel"]:focus{
+	background: #efebeb;
+}
 .submit-btn{
 	max-width: 278px;
 	width: 100%;
@@ -1505,6 +1511,7 @@ hm-laboratory-content-sec-wrp
 }
 .hm-laboratory-btn a.green-btn:before{
 	background: url(../images/green-btn-bg.png);
+	background-repeat: no-repeat;
 }
 .hm-laboratory-btn a.green-btn:after,
 .hm-laboratory-btn a.ornage-btn:after {
@@ -1524,18 +1531,22 @@ hm-laboratory-content-sec-wrp
 }
 .hm-laboratory-btn a.green-btn:after{
 	background: url(../images/green-btn-angle.png);
+	background-repeat: no-repeat;
 }
 .hm-laboratory-btn a.ornage-btn:hover{
 	color: #0e857b;
 }
 .hm-laboratory-btn a.ornage-btn:hover:after{
 	background: url(../images/ornage-btn-angle-hover.png);
+	background-repeat: no-repeat;
+	right: 20px;
 }
 .hm-laboratory-btn a.green-btn:hover{
 	color: #fd6406;
 }
 .hm-laboratory-btn a.green-btn:hover:after{
 	background: url(../images/green-btn-angle-hover.png);
+	right: 20px;
 }
 
 /*
@@ -2413,6 +2424,9 @@ input[type="button"].cf7mls_back.action-button{
 	    margin-left: auto;
 	    margin-right: auto;
 	    display: table;
+	}
+	.servicee-grd-icon-ctrl{
+		min-height: 55px;
 	}
 }
 
