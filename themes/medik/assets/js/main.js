@@ -79,7 +79,7 @@ if( $('.main-slider').length ){
       nextArrow: $('.mainsliderarrows .rightArrow'),
       responsive: [
         {
-          breakpoint: 767,
+          breakpoint: 768,
           settings: {
             slidesToShow: 1,
             slidesToScroll: 1,
@@ -168,7 +168,7 @@ if( $('#HmBrandLogoSlider').length ){
           }
         },
         {
-          breakpoint: 991,
+          breakpoint: 992,
           settings: {
             dots: true,
             slidesToShow: 3,
@@ -176,7 +176,7 @@ if( $('#HmBrandLogoSlider').length ){
           }
         },
         {
-          breakpoint: 767,
+          breakpoint: 768,
           settings: {
             dots: true,
             slidesToShow: 2,
@@ -184,7 +184,7 @@ if( $('#HmBrandLogoSlider').length ){
           }
         },
         {
-          breakpoint: 575,
+          breakpoint: 576,
           settings: {
             dots: true,
             slidesToShow: 1,
@@ -212,7 +212,7 @@ if( $('.HmbtmGridSlider').length ){
       nextArrow: $('.hmgirdarrows .rightArrow'),
       responsive: [
         {
-          breakpoint: 991,
+          breakpoint: 992,
           settings: {
             slidesToShow: 3,
             slidesToScroll: 3,
@@ -221,14 +221,14 @@ if( $('.HmbtmGridSlider').length ){
           }
         },
         {
-          breakpoint: 767,
+          breakpoint: 768,
           settings: {
             slidesToShow: 2,
             slidesToScroll: 2
           }
         },
         {
-          breakpoint: 575,
+          breakpoint: 576,
           settings: {
             slidesToShow: 1,
             slidesToScroll: 1
