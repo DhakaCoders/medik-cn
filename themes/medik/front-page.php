@@ -114,9 +114,42 @@ if($service):
     <?php endif; ?>
   </div>
 </section>
-<?php endif; ?>
+<?php endif; 
 
+$msforms = get_field('msforms', HOMEID);
+if($msforms):
+?>
 <div class="vt-home-form-slider clearfix">
+  <?php
+    $i = 1;
+    foreach($msforms as $msform): 
+    $bgimgsrc = '';
+    if(!empty($msform['bck_image'])) $bgimgsrc = cbv_get_image_src($msform['bck_image']);
+    if($i == 2){
+  ?>
+  <div class="vt-home-form-slide">
+    <section class="vt-form-2-sec-wrap" style="background: url(<?php echo THEME_URI; ?>/assets/images/hm-campaign-grid-sec-bg.jpg);">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="vt-form-2-sec-des-ctlr" style="background: url(<?php echo $bgimgsrc; ?>);">
+              <span class="home-form-2-center-icon"><img src="<?php echo THEME_URI; ?>/assets/images/home-form-2-center-icon.png"></span>
+              <div class="vt-form-2-sec-hdr">
+              <?php if(!empty($msform['title'])) printf('<h3>%s</h3>', $msform['title']); ?>
+              </div>
+              <div class="wpcf7cf_multistep">
+                <div class="wpcf7cf_steps clearfix">
+                <?php if(!empty($msform['form_shortcode'])) echo do_shortcode($msform['form_shortcode']); ?>
+
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+      </div>
+    </section>  
+  </div>
+  <?php }else{ ?>
   <div class="vt-home-form-slide">
     <section class="hm-campaign-grid-sec-wrp vt-form-1-sec-wrap" style="background: url(<?php echo THEME_URI; ?>/assets/images/hm-campaign-grid-sec-bg.jpg);">
       <div class="container">
@@ -125,17 +158,17 @@ if($service):
             <div class="hm-campaign-grid-wrp clearfix">
               <div class="hm-campaign-grid-lft-con hide-md">
                 <div class="hm-campaign-grid-lft-img">
-                  <img src="<?php echo THEME_URI; ?>/assets/images/hm-campaign-grid-lft-img.png">
+                  <img src="<?php echo $bgimgsrc; ?>" alt="<?php echo cbv_get_image_alt($bgimgsrc); ?>">
                 </div>
               </div>
               <div class="hm-campaign-grid-rgt-con">
                 <div class="hm-campaign-grid-rgt-wrp clearfix">
                   <div class="hm-campaign-tp-head clearfix">
                     <span><img src="<?php echo THEME_URI; ?>/assets/images/hm-campaign-tp-icon.png"></span>
-                    <h3>COTIZA TU Próxima <span>CAMPAÑA DE VACUNACIÓN</span></h3>
+                    <?php if(!empty($msform['title'])) printf('<h3>%s</h3>', $msform['title']); ?>
                   </div>
                   <div class="wpcf7cf_multistep">
-                  <?php echo do_shortcode('[contact-form-7 id="141" title="Home Multi Step Form 1"]'); ?>
+                  <?php if(!empty($msform['form_shortcode'])) echo do_shortcode($msform['form_shortcode']); ?>
                   </div>
                 </div>
               </div>
@@ -145,35 +178,10 @@ if($service):
       </div>
     </section>
   </div>
-
-  <div class="vt-home-form-slide">
-    <section class="vt-form-2-sec-wrap" style="background: url(<?php echo THEME_URI; ?>/assets/images/hm-campaign-grid-sec-bg.jpg);">
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-12">
-            <div class="vt-form-2-sec-des-ctlr" style="background: url(<?php echo THEME_URI; ?>/assets/images/vt-form-2-sec-des-ctlr-bg.jpg);">
-              <span class="home-form-2-center-icon"><img src="<?php echo THEME_URI; ?>/assets/images/home-form-2-center-icon.png"></span>
-              <div class="vt-form-2-sec-hdr">
-                <h3>COTIZA TU Próximo <span>exámenen médico</span></h3>
-              </div>
-
-              <div class="wpcf7cf_multistep">
-                <div class="wpcf7cf_steps clearfix">
-                  <?php echo do_shortcode('[contact-form-7 id="365" title="Home Multi Step Form 2"]'); ?>
-
-                </div>
-              </div>
-
-
-          </div>
-        </div>
-      </div>
-      </div>
-    </section>  
-  </div>
-
+  <?php } $i++; endforeach; ?>
 </div>
 <?php 
+endif;
 $lslides = get_field('lslides', HOMEID);
 if($lslides):
 ?>
