@@ -106,7 +106,7 @@ if( $('.hm-service-slider').length ){
       nextArrow: $('.sersliderarrows .rightArrow'),
       responsive: [
         {
-          breakpoint: 991,
+          breakpoint: 992,
           settings: {
             slidesToShow: 2,
             slidesToScroll: 2,
@@ -115,11 +115,12 @@ if( $('.hm-service-slider').length ){
           }
         },
         {
-          breakpoint: 767,
+          breakpoint: 768,
           settings: {
             dots: true,
             slidesToShow: 1,
-            slidesToScroll: 1
+            slidesToScroll: 1,
+            adaptiveHeight: true
           }
         },
       ]
