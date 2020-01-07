@@ -142,22 +142,24 @@ header nav.main-nav > ul > li a::before{
 	background-size: 100% 100%;
 	top: 0;
 	left: 0;
-	right: 0;
 	bottom: 0;
 	-ms-transition: all 0.5s;
 	-webkit-transition: all 0.5s;
 	transition: all 0.5s;
 	z-index: -1;
+	width: 0;
 }
 header nav.main-nav > ul > li a::before{
 	opacity: 0;
 	visibility: hidden;
 }
-header nav.main-nav > ul > li a:hover::before{
+header nav.main-nav > ul > li:hover a:before{
+	width: 100%;
 	opacity: 1;
 	visibility: visible;
 }
 header nav.main-nav > ul > li.current-menu-item a::before{
+	width: 100%;
 	opacity: 1;
 	visibility: visible;
 }
