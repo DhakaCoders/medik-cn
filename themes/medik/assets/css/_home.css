@@ -1714,6 +1714,13 @@ hm-btm-grid-sec-wrp
 }
 .HmbtmGridSlider .slick-dots{
 	bottom: -30px;
+	left: 0;
+	right: 0;
+}
+.hm-laboratory-content-sec-wrp .slick-dots,
+.vt-home-form-slider .slick-dots{
+	left: 0;
+	right: 0;
 }
 .HmbtmGridSlide-item{
 	padding: 0 10px;
@@ -2191,26 +2198,26 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fd6306', end
 		width: 20px;
 		height: 20px;
 		padding: 0;
-		-webkit-transition: all .25s ease;
-	   -moz-transition: all .25s ease;
-	    -ms-transition: all .25s ease;
-	     -o-transition: all .25s ease;
-	        transition: all .25s ease;
-	}
+    -webkit-transition: all .25s cubic-bezier(0.4, 0, 1, 1);
+    -moz-transition: all .25s cubic-bezier(0.4, 0, 1, 1);
+    -ms-transition: all .25s cubic-bezier(0.4, 0, 1, 1);
+    -o-transition: all .25s cubic-bezier(0.4, 0, 1, 1);
+    transition: all .25s cubic-bezier(0.4, 0, 1, 1);	
+    }
 	.main-slider .slick-dots li button:before{
 		content: "";
 	}
 	.main-slider .slick-dots li.slick-active,
 	.main-slider .slick-dots li:hover{
 		background-image: url(../images/yellow-pegi.png);
-		background-size: 21px 21px;
+		background-size: 20px 20px;
 		background-position: center center;
 		background-repeat: no-repeat;
-		-webkit-transition: all .25s ease;
-	   -moz-transition: all .25s ease;
-	    -ms-transition: all .25s ease;
-	     -o-transition: all .25s ease;
-	        transition: all .25s ease;
+    -webkit-transition: all .25s cubic-bezier(0.4, 0, 1, 1);
+    -moz-transition: all .25s cubic-bezier(0.4, 0, 1, 1);
+    -ms-transition: all .25s cubic-bezier(0.4, 0, 1, 1);
+    -o-transition: all .25s cubic-bezier(0.4, 0, 1, 1);
+    transition: all .25s cubic-bezier(0.4, 0, 1, 1);
 	}
 	.main-slide-item-dsc {
 	    max-width: 565px;
