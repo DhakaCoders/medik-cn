@@ -187,9 +187,9 @@
     font-weight: normal;
     text-decoration: inherit;
     color: #feddbf;
-    font-size: 14px;
+    font-size: 10px;
     position: absolute;
-    top: 3px;
+    top: 6px;
     right: -16px;
 }
 .ftr-menu-con > ul > li.menu-item-has-children > a.sub-menu-expend:after {
