@@ -55,8 +55,8 @@ $thisID = get_the_ID();
             <?php endif; if($intronoff){ if($occs): ?>
             <div class="llevamosSlider-wrp">
               <div class="llevamosSlider-arrows">
-                <span class="leftArrow"></span>
-                <span class="rightArrow"></span>
+                <span class="leftArrow"><i class="fa fa-angle-left"></i></span>
+                <span class="rightArrow"><i class="fa fa-angle-right"></i></span>
               </div>            
               <div class="llevamosSlider" style="background:url(<?php echo THEME_URI; ?>/assets/images/llevamosSlider-bg.png);">
                 <?php foreach( $occs as $occ): ?>
@@ -210,8 +210,8 @@ $thisID = get_the_ID();
             ?>
             <div class="siderbarRecentPostSlider-wrp">
               <div class="recentPost-sliderarrows">
-                <span class="leftArrow"></span>
-                <span class="rightArrow"></span>
+                <span class="leftArrow"><i class="fa fa-angle-left"></i></span>
+                <span class="rightArrow"><i class="fa fa-angle-right"></i></span>
               </div>
               <div class="siderbarRecentPost-hdr text-center">
                 <?php _e('<h5>Artículos <span>Recientes</span></h5>', THEME_NAME); ?>
@@ -275,8 +275,8 @@ if($minsurance):
           <?php if($logos): ?>
           <div class="serviciosPartnerSlider-wrp">
             <div class="serviciosPartnerSlider-arrows">
-              <span class="leftArrow"></span>
-              <span class="rightArrow"></span>
+              <span class="leftArrow"><i class="fa fa-angle-left"></i></span>
+              <span class="rightArrow"><i class="fa fa-angle-right"></i></span>
             </div>
 
             <ul class="ulc clearfix serviciosPartnerSlider">
@@ -317,8 +317,8 @@ $news = get_field('newssec', HOMEID);
           ?>
           <div class="noticiasSlider-wrp">
             <div class="noticiasSlider-arrows">
-              <span class="leftArrow"></span>
-              <span class="rightArrow"></span>
+              <span class="leftArrow"><i class="fa fa-angle-left"></i></span>
+              <span class="rightArrow"><i class="fa fa-angle-right"></i></span>
             </div>          
             <div class="ulc noticiasSlider">
             <?php 
