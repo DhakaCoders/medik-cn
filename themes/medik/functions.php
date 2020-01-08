@@ -29,6 +29,7 @@ if( !function_exists('cbv_theme_setup') ){
     add_image_size( 'sblgrid', 80, 80, true );
     add_image_size( 'promogrd', 382, 220, true );
     add_image_size( 'bgocupt', 848, 492, true );
+    add_image_size( 'bgcitas', 666, 812, true );
 
 
 		

@@ -14,9 +14,13 @@ $telefoon = get_field('telephone', 'options');
 $fttelephone = $telefoon['telephone_footer']; 
 
 $gmaplink = !empty($gmapsurl)?$gmapsurl: 'javascript:void()';
+
+$pgbgimg = get_post_thumbnail_id(get_the_ID());
+$bgimgsrc = '';
+if(!empty($pgbgimg)) $bgimgsrc = cbv_get_image_src($pgbgimg, 'bgcitas'); 
 ?>
 <section class="citas-main-sec">
-  <div class="citas-main-sec-fea-img" style="background: url(<?php echo THEME_URI; ?>/assets/images/citas-main-sec-bg-hart.jpg);"></div>
+  <div class="citas-main-sec-fea-img" style="background: url(<?php echo $bgimgsrc; ?>);"></div>
   <div class="container">
     <div class="row">
       <div class="col-sm-12">
@@ -128,7 +132,6 @@ $gmaplink = !empty($gmapsurl)?$gmapsurl: 'javascript:void()';
 </section>
 
 <?php 
-$cservsec = get_field('servicessec', $thisID); 
 $service = get_field('servicesec', HOMEID);
 if($service):
   $services = $service['services'];
@@ -140,22 +143,14 @@ if($service):
       <div class="col-sm-12">
         <div class="section-hdr">
           <?php
-          if(!empty($cservsec['title'])){
-              if( !empty( $cservsec['title'] ) ) printf( '<h2 class="sec-hdr-title set-hdr-big-title">%s</h2>', $cservsec['title']);
-          }else{
-            if( !empty( $service['title'] ) ) printf( '<h2 class="sec-hdr-title set-hdr-big-title">%s</h2>', $service['title']);
-          } 
+          if( !empty( $service['title'] ) ) printf( '<h2 class="sec-hdr-title set-hdr-big-title">%s</h2>', $service['title']); 
           
           ?>
           <div class="sec-hdr-title-divider">
             <span><img src="<?php echo THEME_URI; ?>/assets/images/hn-title-icon.png"></span>
           </div>
           <?php 
-          if(!empty($cservsec['content'])){
-            if( !empty( $cservsec['content'] ) ) echo wpautop($cservsec['content']);
-          }else{
             if( !empty( $service['content'] ) ) echo wpautop($service['content']);
-          }
           ?>
         </div>
       </div>

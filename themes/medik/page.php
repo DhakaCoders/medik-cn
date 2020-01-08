@@ -1,4 +1,7 @@
 <?php 
+/*
+  Template Name: Servicios
+*/
 get_header(); 
 $thisID = get_the_ID();
 ?>
@@ -9,47 +12,52 @@ $thisID = get_the_ID();
       <div class="col-sm-12">
         <div class="servicios-main-innr clearfix">
           <div class="servicios-content">
-            <?php 
-              $toopsbar = get_field('sidebarsec', $thisID);
-              $tsevs = $toopsbar['services'];
-              if($tsevs):
-            ?>
-            <div class="servicios-siderbar-accordion show-xs">
-              <?php $i= 1; foreach( $tsevs as $tsev): $activeClass = ($i ==2)? ' active': ''; ?>
-              <div class="servicios-siderbar-accordion-con<?php echo $activeClass; ?>">
-                <div class="servicios-siderbar-accordion-title">
-                  <?php 
-                  if( !empty( $tsev['title'] ) ) printf( '<span>%s</span>', $tsev['title']); 
-                  if(!empty($tsev['icon'])){
-                  ?>
-                  <i>
-                    <img src="<?php echo $tsev['icon']; ?>" alt="<?php echo cbv_get_image_alt( $tsev['icon'] ); ?>" />
-                    <?php if(!empty($tsev['hover_icon'])){ ?>
-                    <img src="<?php echo $tsev['hover_icon']; ?>" alt="<?php echo cbv_get_image_alt( $tsev['hover_icon'] ); ?>" />
-                    <?php } ?>
-                  </i>
-                  <?php } ?>
-                </div>
-                <div class="servicios-siderbar-accordion-des">
-                  <?php if(!empty($tsev['content'])) echo wpautop($tsev['content']); ?>
-                </div>
-              </div> 
-              <?php $i++; endforeach; ?>
-            </div>
-            <?php 
-            endif;
+              <?php 
+              if(have_rows('sidebarcont')){ 
+              while ( have_rows('sidebarcont') ) : the_row(); 
+                if( get_row_layout() == 'ahservices' ){
+                    $tsevs = get_sub_field('services');
+                    if($tsevs){
+                    echo '<div class="servicios-siderbar-accordion show-xs">';
+                    $i= 1; 
+                    foreach( $tsevs as $tsev): $activeClass = ($i ==2)? ' active': '';
+                      echo '<div class="servicios-siderbar-accordion-con'.$activeClass.'">';
+                      echo '<div class="servicios-siderbar-accordion-title">';
+                      if( !empty( $tsev['title'] ) ) printf( '<span>%s</span>', $tsev['title']);
+                      if(!empty($tsev['icon'])){ 
+                      echo '<i><img src="'.$tsev['icon'].'" alt="'.cbv_get_image_alt( $tsev['icon'] ).'" />';
+                      if(!empty($tsev['hover_icon'])){
+                      echo '<img src="'.$tsev['hover_icon'].'" alt="'.cbv_get_image_alt( $tsev['hover_icon'] ).'" />';
+                      }
+                      echo '</i>';
+                      }
+                      echo '</div><div class="servicios-siderbar-accordion-des">';
+                      if(!empty($tsev['content'])) echo wpautop($tsev['content']);
+                      echo '</div></div>';
+                    $i++; 
+                    endforeach;
+                    echo '</div>';
+                    }
+                }
+              endwhile;
+              }
+
               $introsec = get_field('introsec', $thisID);
               $introtitle = get_field('titleg', $thisID);
               $desc = get_field('descriptions', $thisID);
               $occsec = $introsec['occupationalsec'];
               $occs = $occsec['occupational'];
               $intronoff = $introsec['show_hideintr'];
-              if( !empty( $introtitle['title'] ) ):
+              $pagetitle = get_the_title($thisID);
+              if( !empty( $introtitle['title'] ) ) 
+                $hdtitle = $introtitle['title'];
+              else
+                $hdtitle = $pagetitle;
             ?>
             <div class="servicios-content-head">   
-              <?php  printf( '<h1>%s</h1>', $introtitle['title']); ?>      
+              <?php  printf( '<h1>%s</h1>', $hdtitle); ?>      
             </div>
-            <?php endif; if($intronoff){ if($occs): ?>
+            <?php if($intronoff){ if($occs): ?>
             <div class="llevamosSlider-wrp">
               <div class="llevamosSlider-arrows">
                 <span class="leftArrow"></span>
@@ -127,125 +135,105 @@ $thisID = get_the_ID();
             </div> 
             <?php endif; ?> 
           </div>
-          <?php 
-          $sform = $toopsbar['form'];
-          $show_hidefrom = $toopsbar['show_hidefrom']; 
-
-          ?>
           <div class="servicios-siderbar">
-            <?php if($show_hidefrom): ?>
-            <div class="servicios-siderbar-form-wrp"> 
-              <div class="dft-page-contact-form">
-                <div class="dft-page-contact-form-hdr text-center">
-                  <?php if(!empty($sform['content'])) echo wpautop($sform['content']); ?>
-                </div>
-                <div class="dft-page-contact-form-main">
-                  <?php if(!empty($sform['shortcode'])) echo do_shortcode($sform['shortcode']); ?>        
-                </div>  
-              </div>
-            </div>
             <?php 
-              endif;
-              $tsevs = $toopsbar['services'];
-              $show_hidesrv = $toopsbar['show_hidesrv'];
-              if($show_hidesrv){
-              if($tsevs):
-            ?>
-            <div class="servicios-siderbar-accordion hide-xs">
-              <?php $i= 1; foreach( $tsevs as $tsev): $activeClass = ($i ==2)? ' active': ''; ?>
-              <div class="servicios-siderbar-accordion-con<?php echo $activeClass; ?>">
-                <div class="servicios-siderbar-accordion-title">
-                  <?php 
-                  if( !empty( $tsev['title'] ) ) printf( '<span>%s</span>', $tsev['title']); 
-                  if(!empty($tsev['icon'])){
-                  ?>
-                  <i>
-                    <img src="<?php echo $tsev['icon']; ?>" alt="<?php echo cbv_get_image_alt( $tsev['icon'] ); ?>" />
-                    <?php if(!empty($tsev['hover_icon'])){ ?>
-                    <img src="<?php echo $tsev['hover_icon']; ?>" alt="<?php echo cbv_get_image_alt( $tsev['hover_icon'] ); ?>" />
-                    <?php } ?>
-                  </i>
-                  <?php } ?>
-                </div>
-                <div class="servicios-siderbar-accordion-des">
-                  <?php if(!empty($tsev['content'])) echo wpautop($tsev['content']); ?>
-                </div>
-              </div>  
-              <?php $i++; endforeach; ?>          
-            </div>
-            <?php endif; } 
-              $promos = $toopsbar['promo'];
-              if($promos):
-            ?>
-            <div class="siderbarProSlider-wrp">
-              <div class="siderbarProSlider">
-                <?php 
-                foreach( $promos as $promos):
-                  $ppostertag = ''; 
-                  if(!empty($promos['image'])) $ppostertag = cbv_get_image_tag($promos['image']);
-                  $plink = $promos['link'];
-                ?>
-                <div class="siderbarProSlider-item">
-                  <?php echo $ppostertag; 
-                  if( is_array( $plink ) &&  !empty( $plink['url'] ) ){
-                  ?>
-                  <a href="<?php echo $plink['url']; ?>" class="overlay-link"></a>
-                <?php } ?>
-                </div>
-                <?php endforeach; ?>
-              </div>
-            </div>
-            <?php endif; ?>
-            <?php
-              $nQuery = new WP_Query(array(
-                'post_type' => 'post',
-                'posts_per_page'=> 9,
-                'order'=> 'DESC',
-              ));
+              if(have_rows('sidebarcont')){ 
+              while ( have_rows('sidebarcont') ) : the_row(); 
+                if( get_row_layout() == 'sidebar_form' ){
+                  $sform = get_sub_field('form');
+                  echo '<div class="servicios-siderbar-form-wrp"><div class="dft-page-contact-form"><div class="dft-page-contact-form-hdr text-center">';
+                    if(!empty($sform['content'])) echo wpautop($sform['content']);
+                  echo '</div><div class="dft-page-contact-form-main pagesidebar-form">';
+                    if(!empty($sform['shortcode'])) echo do_shortcode($sform['shortcode']);
+                  echo '</div></div></div>';
+                   
+                }elseif( get_row_layout() == 'ahservices' ){
+                    $tsevs = get_sub_field('services');
+                    if($tsevs):
+                    echo '<div class="servicios-siderbar-accordion">';
+                    $i= 1; 
+                    foreach( $tsevs as $tsev): $activeClass = ($i ==2)? ' active': '';
+                      echo '<div class="servicios-siderbar-accordion-con'.$activeClass.'">';
+                      echo '<div class="servicios-siderbar-accordion-title">';
+                      if( !empty( $tsev['title'] ) ) printf( '<span>%s</span>', $tsev['title']);
+                      if(!empty($tsev['icon'])){ 
+                      echo '<i><img src="'.$tsev['icon'].'" alt="'.cbv_get_image_alt( $tsev['icon'] ).'" />';
+                      if(!empty($tsev['hover_icon'])){
+                      echo '<img src="'.$tsev['hover_icon'].'" alt="'.cbv_get_image_alt( $tsev['hover_icon'] ).'" />';
+                      }
+                      echo '</i>';
+                      }
+                      echo '</div><div class="servicios-siderbar-accordion-des">';
+                      if(!empty($tsev['content'])) echo wpautop($tsev['content']);
+                      echo '</div></div>';
+                    $i++; 
+                    endforeach;
+                    echo '</div>';
+                    endif;  
+                }elseif( get_row_layout() == 'promo_slider' ){
+                  $promos = get_sub_field('promo');
+                  if($promos):
+                  echo '<div class="siderbarProSlider-wrp"><div class="siderbarProSlider">';
+                  foreach( $promos as $promos):
+                    $ppostertag = ''; 
+                    if(!empty($promos['image'])) $ppostertag = cbv_get_image_tag($promos['image']);
+                    $plink = $promos['link'];
+                    echo '<div class="siderbarProSlider-item">';
+                    echo $ppostertag; 
+                    if( is_array( $plink ) &&  !empty( $plink['url'] ) ){
+                      echo '<a href="'.$plink['url'].'" class="overlay-link"></a>';
+                    } 
+                    echo '</div>';
+                 endforeach; 
+                  echo '</div></div>';
+                  endif;
+                }elseif( get_row_layout() == 'blog_slide' ){
+                  $fctitle = get_sub_field('title');
+                  $nQuery = new WP_Query(array(
+                    'post_type' => 'post',
+                    'posts_per_page'=> 9,
+                    'order'=> 'DESC',
+                  ));
 
-              if( $nQuery->have_posts() ){
-            ?>
-            <div class="siderbarRecentPostSlider-wrp">
-              <div class="recentPost-sliderarrows">
-                <span class="leftArrow"></span>
-                <span class="rightArrow"></span>
-              </div>
-              <div class="siderbarRecentPost-hdr text-center">
-                <?php _e('<h5>Artículos <span>Recientes</span></h5>', THEME_NAME); ?>
-              </div> 
-              <div class="siderbarRecentPostSlider">
-                
-                      <?php
-                      $index = 1; 
-                      $countPost = $nQuery->found_posts;          
-                        while($nQuery->have_posts()): $nQuery->the_post(); 
-                        $gridImage = get_post_thumbnail_id(get_the_ID());
-                        if(!empty($gridImage)){
-                          $refImgtag = cbv_get_image_tag($gridImage, 'sblgrid');
-                        }else{
-                          $refImgtag = '<img src="'.THEME_URI.'/assets/images/blgimg.jpg" alt="'.get_the_title().'">';
-                        }  
+                  if( $nQuery->have_posts() ){
+                  echo '<div class="siderbarRecentPostSlider-wrp">';
+                  echo '<div class="recentPost-sliderarrows">
+                    <span class="leftArrow"></span>
+                    <span class="rightArrow"></span>
+                    </div>';
+                  echo '<div class="siderbarRecentPost-hdr text-center">';
+                  if(!empty($fctitle)) printf('<h5>%s</h5>', $fctitle);
+                  echo '</div><div class="siderbarRecentPostSlider">';
 
-                         
-                        echo ($index % 3 == 1 || $index == 1) ? '<div class="siderbarRecentPostSlider-item"><div class="servicios-siderbar-recent-post-innr"><ul class="ulc">' : '';      
-                      ?>
-                      <li>
-                        <i>
-                          <a href="<?php the_permalink(); ?>">
-                            <?php echo $refImgtag; ?>
-                          </a>                        
-                        </i>  
-                        <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-                        <span class="post-date"><?php echo get_the_date('F d, Y'); ?></span>
-                      </li>
-                      <?php
-                       echo ($index % 3 == 0 || $index == $countPost) ? '</ul></div></div>' : '';
-                       $index++;
-                       endwhile; 
-                       ?>
-              </div>
-            </div>
-            <?php } wp_reset_postdata(); ?>
+
+                  $index = 1; 
+                  $countPost = $nQuery->found_posts;          
+                    while($nQuery->have_posts()): $nQuery->the_post(); 
+                    $gridImage = get_post_thumbnail_id(get_the_ID());
+                    if(!empty($gridImage)){
+                      $refImgtag = cbv_get_image_tag($gridImage, 'sblgrid');
+                    }else{
+                      $refImgtag = '<img src="'.THEME_URI.'/assets/images/blgimg.jpg" alt="'.get_the_title().'">';
+                    }  
+
+                     
+                    echo ($index % 3 == 1 || $index == 1) ? '<div class="siderbarRecentPostSlider-item"><div class="servicios-siderbar-recent-post-innr"><ul class="ulc">' : ''; 
+                    echo '<li>';
+                      echo '<i><a href="'.get_the_permalink().'">'.$refImgtag.'</a></i>'; 
+                      echo '<a href="'.get_the_permalink().'">'.get_the_title().'</a>';
+                      echo '<span class="post-date">'.get_the_date('F d, Y').'</span>';
+                    echo '</li>';
+
+                    echo ($index % 3 == 0 || $index == $countPost) ? '</ul></div></div>' : '';
+                   $index++;
+                   endwhile; 
+
+                  echo '</div></div>';
+                  wp_reset_postdata(); } 
+                }
+              endwhile;
+              }
+            ?>
           </div>        
         </div>  
       </div>
@@ -264,9 +252,9 @@ if($minsurance):
       <div class="col-sm-12">
         <div class="serviciosPartnerSlider-innr-wrp">
           <div class="serviciosPartnerSlider-hdr">
-           <?php 
-              if( !empty( $minsurance['title'] ) ) printf( '<h2 class="hide-xs">%s</h2>', $minsurance['title']); 
-              if( !empty( $minsurance['mtitle'] ) ) printf( '<h2 class="show-xs">%s</h2>', $minsurance['mtitle']); 
+            <?php 
+            if( !empty( $minsurance['title'] ) ) printf( '<h2 class="hide-xs">%s</h2>', $minsurance['title']); 
+            if( !empty( $minsurance['mtitle'] ) ) printf( '<h2 class="show-xs">%s</h2>', $minsurance['mtitle']); 
             ?>
           </div>
           <?php if($logos): ?>
@@ -339,7 +327,7 @@ $news = get_field('newssec', HOMEID);
                       <span><?php echo get_the_date('M d'); ?></span>                        
                       <div class="sqew"></div>
                     </div>
-                    <p><?php the_title(); ?></p>
+                    <h6><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h6>
                     <a href="<?php the_permalink(); ?>">Leer Artículo</a>
                   </div>
                 </div>
