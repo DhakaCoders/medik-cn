@@ -1714,6 +1714,13 @@ hm-btm-grid-sec-wrp
 }
 .HmbtmGridSlider .slick-dots{
 	bottom: -30px;
+	left: 0;
+	right: 0;
+}
+.hm-laboratory-content-sec-wrp .slick-dots,
+.vt-home-form-slider .slick-dots{
+	left: 0;
+	right: 0;
 }
 .HmbtmGridSlide-item{
 	padding: 0 10px;

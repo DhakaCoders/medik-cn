@@ -1154,6 +1154,7 @@
 .noticiasSlider .slick-dots,
 .llevamosSlider .slick-dots{
 	left: 0;
+	right: 0;
 }
 .blogGrdSlider .slick-dots li,
 .serviciosPartnerSlider .slick-dots li,
@@ -1262,7 +1263,7 @@
 
 
 
-
+.recentPost-sliderarrows span i{display: none;}
 
 
 
