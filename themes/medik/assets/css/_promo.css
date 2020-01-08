@@ -24,6 +24,12 @@ promo-tabs-sec-wrp
     /*padding-top: 15px;
     padding-left: 10px;*/
     position: relative;
+   	transition: all 0.5s;
+	-ms-transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+}
+.tabs-box-inr:hover{
+	border-color: #fd6306;
 }
 .boximg img{
 	width: 100%;
