@@ -127,6 +127,19 @@ header nav.main-nav > ul > li{
     position: relative;
     padding-bottom: 20px;
 }
+header nav.main-nav > ul > li > a{
+	display: inline-block;
+	vertical-align: baseline;
+	color:#414141;
+	text-decoration: none;
+	text-transform: uppercase;
+	position: relative;
+	z-index: 1;
+	padding: 11px 21px 9px 23px;
+	-ms-transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+	transition: all 0.5s;
+}
 nav.main-nav li.menu-item-has-children a{
 	padding-right: 25px;
 }
@@ -137,44 +150,38 @@ header nav.main-nav > ul > li a::before{
 	content: "";
 	position: absolute;
 	background: url(../images/hdr-menu-hover.png);
-	background-repeat: no-repeat;
-	background-position: center center;
-	background-size: 100% 100%;
+	background: rgb(253,99,6); /* Old browsers */
+	background: -moz-linear-gradient(-45deg,  rgba(253,99,6,1) 0%, rgba(251,139,25,1) 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(-45deg,  rgba(253,99,6,1) 0%,rgba(251,139,25,1) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(135deg,  rgba(253,99,6,1) 0%,rgba(251,139,25,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fd6306', endColorstr='#fb8b19',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */	
 	top: 0;
-	left: 0;
+	left: 50%;
 	bottom: 0;
 	-ms-transition: all 0.5s;
 	-webkit-transition: all 0.5s;
 	transition: all 0.5s;
 	z-index: -1;
-	width: 0;
+	width: 1px;
+	transform: skewX(-20deg);
 }
 header nav.main-nav > ul > li a::before{
 	opacity: 0;
 	visibility: hidden;
 }
 header nav.main-nav > ul > li:hover a:before{
-	width: 100%;
+	left: 0;
+	right: 0;
 	opacity: 1;
 	visibility: visible;
+	width: 100%;
 }
 header nav.main-nav > ul > li.current-menu-item a::before{
-	width: 100%;
+	left: 0;
+	right: 0;
 	opacity: 1;
 	visibility: visible;
-}
-header nav.main-nav > ul > li > a{
-	display: inline-block;
-	vertical-align: baseline;
-	color:#414141;
-	text-decoration: none;
-	text-transform: uppercase;
-	position: relative;
-	z-index: 1;
-	padding: 11px 22px 9px;
-	-ms-transition: all 0.5s;
-	-webkit-transition: all 0.5s;
-	transition: all 0.5s;
+	width: 100%;
 }
 nav.main-nav li.menu-item-has-children > ul.sub-menu  li a:before{
 	content: none;
