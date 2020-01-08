@@ -34,3 +34,12 @@ div.wpcf7-aborted{
 .citas-main-rgt div.wpcf7-mail-sent-ng{
 	color: #fff!important;
 }
+
+.HmbtmGridSlider .HmbtmGridSlide-item,
+.noticiasSlider .noticiasSlider-item{
+	max-width: 300px;
+}
+.HmbtmGridSlider.slick-initialized .HmbtmGridSlide-item,
+.noticiasSlider.slick-initialized .noticiasSlider-item{
+	max-width: inherit;
+}

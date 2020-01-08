@@ -290,6 +290,17 @@
 	.ftr-menu-con > ul > li.menu-item-has-children > ul{
 		list-style: none;
 	}
+	.ftr-col.ftr-col-3{
+		padding-top: 10px;
+	}
+	.ftr-col.ftr-col-2 ul li:first-child a{
+		    font-family: 'OpenSans-LightItalic';
+		    margin-bottom: 7px;
+		    font-size: 40px;
+	}
+	.ftr-col.ftr-col-2 ul li:last-child span{
+		font-size: 16px;
+	}
 
 }
 
@@ -322,6 +333,10 @@
 @media(max-width: 359px){
 	.ftr-col::after {
 	    width: 280px;
+	}
+	.ftr-col.ftr-col-2 ul li:first-child a {
+	    margin-bottom: 4px;
+	    font-size: 35px;
 	}
 }
 

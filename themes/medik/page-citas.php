@@ -213,8 +213,8 @@ if($minsurance):
           <?php if($logos): ?>
           <div class="serviciosPartnerSlider-wrp">
             <div class="serviciosPartnerSlider-arrows">
-              <span class="leftArrow"></span>
-              <span class="rightArrow"></span>
+              <span class="leftArrow"><i class="fa fa-angle-left"></i></span>
+              <span class="rightArrow"><i class="fa fa-angle-right"></i></span>
             </div>
             <ul class="ulc clearfix serviciosPartnerSlider">
               <?php foreach($logos as $logo): ?>
@@ -254,8 +254,8 @@ $news = get_field('newssec', HOMEID);
           ?>
           <div class="noticiasSlider-wrp">
             <div class="noticiasSlider-arrows">
-              <span class="leftArrow"></span>
-              <span class="rightArrow"></span>
+              <span class="leftArrow"><i class="fa fa-angle-left"></i></span>
+              <span class="rightArrow"><i class="fa fa-angle-right"></i></span>
             </div>          
             <div class="ulc noticiasSlider">
             <?php          

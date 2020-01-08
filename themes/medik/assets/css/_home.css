@@ -138,16 +138,28 @@ main-slider-sec-wrp
 	fill: #0e857b;
 }
 .hm-service-slider .hm-service-slide-item,
-.main-slider .main-slide-item{
-	display: none !important;
+.main-slider .main-slide-item,
+.HmbtmGridSlider .HmbtmGridSlide-item,
+#HmBrandLogoSlider li,
+.hm-laboratory-slider .hm-laboratory-slide,
+.serviciosPartnerSlider .serviciosPartnerSlider-item{
+	display: none;
 }
 .hm-service-slider .hm-service-slide-item:first-child,
-.main-slider .main-slide-item:first-child{
-	display: block !important;
+.main-slider .main-slide-item:first-child,
+.HmbtmGridSlider .HmbtmGridSlide-item:first-child,
+#HmBrandLogoSlider li:first-child,
+.hm-laboratory-slider .hm-laboratory-slide:first-child,
+.serviciosPartnerSlider .serviciosPartnerSlider-item:first-child{
+	display: block;
 }
 .hm-service-slider.slick-initialized .hm-service-slide-item,
-.main-slider.slick-initialized .main-slide-item{
-	display: block !important;
+.main-slider.slick-initialized .main-slide-item,
+.HmbtmGridSlider.slick-initialized .HmbtmGridSlide-item,
+#HmBrandLogoSlider.slick-initialized li,
+.hm-laboratory-slider.slick-initialized .hm-laboratory-slide,
+.serviciosPartnerSlider.slick-initialized .serviciosPartnerSlider-item{
+	display: block;
 }
 .main-slider .slick-dotted.slick-slider {
 	margin-bottom: 0;
@@ -441,14 +453,16 @@ hm-service-sec-wrp
 	position: absolute;
 	left: 0;
 	bottom: 0;
-	width: 105px;
+	width: 0;
 	height: 1px;
 	background: #fff;
-	transition: all 1.5s;
-	-ms-transition: all 1.5s;
-	-webkit-transition: all 1.5s;
+	transition: all .7s;
+	-ms-transition: all .7s;
+	-webkit-transition: all .7s;
 }
-
+.hm-service-slide-item-dsc:hover h4:after{
+	width: 105px;
+}
 .hm-service-slide-item-dsc > a:before{
 	content: "";
 	position: absolute;
@@ -2174,8 +2188,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fd6306', end
 	.main-slider .slick-dots li,
 	.main-slider .slick-dots li button,
 	.main-slider .slick-dots li button:before{
-		width: 21px;
-		height: 21px;
+		width: 20px;
+		height: 20px;
 		padding: 0;
 		-webkit-transition: all .25s ease;
 	   -moz-transition: all .25s ease;

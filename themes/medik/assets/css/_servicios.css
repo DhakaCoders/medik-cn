@@ -1058,15 +1058,17 @@
     position: absolute;
     width: 46px;
     height: 46px;
-    background-image: url(../images/medik-lft-arrow.png);
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
+    font-size: 30px;
+    line-height: 40px;
 	left: 2px;
 	top: 50%;
 	border-radius: 100%;
+	border: 2px solid #0e857b;
+	text-align: center;
 	cursor: pointer;
 	z-index: 5;
 	opacity: .5;
+	color: #fd6406;
 	-webkit-transition: all .5s ease;
 	   -moz-transition: all .5s ease;
 	    -ms-transition: all .5s ease;
@@ -1086,15 +1088,17 @@
     position: absolute;
     width: 46px;
     height: 46px;
-    background-image: url(../images/medik-rgt-arrow.png);
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
+    border: 2px solid #0e857b;
 	right: 2px;
 	top: 50%;
 	border-radius: 100%;
 	cursor: pointer;
 	z-index: 5;
 	opacity: .5;
+	color: #fd6406;
+	text-align: center;
+	    font-size: 30px;
+    line-height: 40px;
 	-webkit-transition: all .5s ease;
 	   -moz-transition: all .5s ease;
 	    -ms-transition: all .5s ease;
@@ -1159,12 +1163,12 @@
 .llevamosSlider .slick-dots li{
 	background-image: url(../images/sky-pagi.png);
 	background-size: 7px 7px;
-	background-position: center center;
-	background-repeat: no-repeat;
-	margin: 0 5px;
-	display: inline-block;
-	vertical-align: baseline;
-	float: none;
+    background-position: center center;
+    background-repeat: no-repeat;
+    padding: 0 5px;
+    display: inline-block;
+    vertical-align: baseline;
+    float: none;
 }
 .blogGrdSlider .slick-dots li,
 .blogGrdSlider .slick-dots li button,
@@ -1214,7 +1218,7 @@
 .llevamosSlider .slick-dots li.slick-active,
 .llevamosSlider .slick-dots li:hover{
 	background-image: url(../images/yellow-pegi.png);
-	background-size: 21px 21px;
+	background-size: 20px 20px;
 	background-position: center center;
 	background-repeat: no-repeat;
 	-webkit-transition: all .25s ease;
@@ -1238,21 +1242,18 @@
 
 
 .noticiasSlider .noticiasSlider-item
-/* .serviciosPartnerSlider .serviciosPartnerSlider-item, */
 .siderbarRecentPostSlider .siderbarRecentPostSlider-item,
 .siderbarProSlider .siderbarProSlider-item,
 .llevamosSlider .llevamosSlider-item{
     display: none;
 }
 .noticiasSlider .noticiasSlider-item:first-child,
-/* .serviciosPartnerSlider .serviciosPartnerSlider-item:first-child, */
 .siderbarRecentPostSlider .siderbarRecentPostSlider-item:first-child,
 .siderbarProSlider .siderbarProSlider-item:first-child,
 .llevamosSlider .llevamosSlider-item:first-child{
     display: block;
 }
 .noticiasSlider.slick-initialized .noticiasSlider-item,
-/* .serviciosPartnerSlider.slick-initialized .serviciosPartnerSlider-item, */
 .siderbarRecentPostSlider.slick-initialized .siderbarRecentPostSlider-item,
 .siderbarProSlide.slick-initialized .siderbarProSlider-item,
 .llevamosSlider.slick-initialized .llevamosSlider-item{

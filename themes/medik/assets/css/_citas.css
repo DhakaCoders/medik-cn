@@ -277,20 +277,31 @@
 }
 
 
-@media(max-width: 1799px){ 
+@media(max-width: 1869px){ 
 	.citas-main-sec-fea-img{
-		left: 25%;
+		left: 24%;
+	}
+}
+
+@media(max-width: 1599px){ 
+	.citas-main-sec-fea-img{
+		left: 20%;
+	}
+}
+
+@media(max-width: 1399px){ 
+	.citas-main-sec-fea-img{
+		left: 15%;
 	}
 }
 
 @media(max-width: 1199px){ 
-
+	.citas-main-sec-fea-img{
+		left: 7%;
+	}
 }
 
 @media(max-width: 991px){
-	.citas-main-sec-fea-img {
-	    content: none;
-	}
 	#citas-main-contact-form .dft-page-contact-form-hdr strong {
 	    font-size: 18px;
 	}
@@ -309,6 +320,9 @@
 	}
 	#citas-main-contact-form .form-spn br{
 		display: none;
+	}
+	.citas-main-sec-fea-img{
+		left: 2%;
 	}
 }
 
@@ -406,6 +420,9 @@
 	}
 	.citas-main-lft{
 		padding-right: 0;
+	}
+	.citas-main-sec-fea-img {
+	    display: none;
 	}
 }
 

@@ -146,7 +146,7 @@ $thisID = get_the_ID();
                 }elseif( get_row_layout() == 'ahservices' ){
                     $tsevs = get_sub_field('services');
                     if($tsevs):
-                    echo '<div class="servicios-siderbar-accordion">';
+                    echo '<div class="servicios-siderbar-accordion hide-xs">';
                     $i= 1; 
                     foreach( $tsevs as $tsev): $activeClass = ($i ==2)? ' active': '';
                       echo '<div class="servicios-siderbar-accordion-con'.$activeClass.'">';
