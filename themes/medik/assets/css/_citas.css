@@ -3,14 +3,12 @@
 	padding: 25px 0 85px;
 	position: relative;
 } 
-.citas-main-sec:after{
-	content: "";
+.citas-main-sec-fea-img{
     position: absolute;
     width: 666px;
     height: 812px;
-    background-image: url(../images/citas-main-sec-bg-hart.jpg);
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
+    background-repeat: no-repeat!important;
+    background-size: 100% 100%!important;
     left:30%;
     top: 40px;
     z-index: 2;
@@ -278,12 +276,19 @@
 	color: #fff;
 }
 
+
+@media(max-width: 1799px){ 
+	.citas-main-sec-fea-img{
+		left: 25%;
+	}
+}
+
 @media(max-width: 1199px){ 
 
 }
 
 @media(max-width: 991px){
-	.citas-main-sec:after {
+	.citas-main-sec-fea-img {
 	    content: none;
 	}
 	#citas-main-contact-form .dft-page-contact-form-hdr strong {

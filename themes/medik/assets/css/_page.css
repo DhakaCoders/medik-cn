@@ -18,3 +18,19 @@
 .sitemap-content ol li{
 	padding: 0 0 15px;
 }
+
+.wpcf7-validation-errors,
+div.wpcf7-mail-sent-ng, 
+div.wpcf7-aborted{
+	padding: 10px!important;
+	font-size: 14px;
+}
+div.wpcf7-validation-errors,
+div.wpcf7-mail-sent-ng, 
+div.wpcf7-aborted{
+	border-width: 1px!important;
+}
+
+.citas-main-rgt div.wpcf7-mail-sent-ng{
+	color: #fff!important;
+}

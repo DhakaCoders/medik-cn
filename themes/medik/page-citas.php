@@ -16,6 +16,7 @@ $fttelephone = $telefoon['telephone_footer'];
 $gmaplink = !empty($gmapsurl)?$gmapsurl: 'javascript:void()';
 ?>
 <section class="citas-main-sec">
+  <div class="citas-main-sec-fea-img" style="background: url(<?php echo THEME_URI; ?>/assets/images/citas-main-sec-bg-hart.jpg);"></div>
   <div class="container">
     <div class="row">
       <div class="col-sm-12">
