@@ -1877,7 +1877,7 @@ input[type="button"].cf7mls_back.action-button{
 /**
 New added
 */
-{
+.no{
 /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#fd6306+0,fb8b19+100 */
 background: rgb(253,99,6); /* Old browsers */
 background: -moz-linear-gradient(-45deg,  rgba(253,99,6,1) 0%, rgba(251,139,25,1) 100%); /* FF3.6-15 */
@@ -2512,7 +2512,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fd6306', end
 	    height: 35px;
 	    width: 35px;
 	    font-size: 25px;
-	    line-height: 22px;
+	    line-height: 30px;
 	}
 	.nav-opener {
 	    right: 10px;
